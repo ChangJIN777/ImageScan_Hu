@@ -22,7 +22,7 @@ function varargout = ESRControl(varargin)
 
 % Edit the above text to modify the response to help ESRControl
 
-% Last Modified by GUIDE v2.5 13-Oct-2020 16:52:55
+% Last Modified by GUIDE v2.5 01-Jul-2021 23:34:31
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -2373,6 +2373,99 @@ function userVar3_Callback(hObject, eventdata, handles)
 end
 function userVar3_CreateFcn(hObject, eventdata, handles)
 % hObject    handle to userVar3 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+end
+
+
+
+function centerFreqB_Callback(hObject, eventdata, handles)
+% hObject    handle to centerFreqB (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of centerFreqB as text
+%        str2double(get(hObject,'String')) returns contents of centerFreqB as a double
+end
+
+% --- Executes during object creation, after setting all properties.
+function centerFreqB_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to centerFreqB (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+end
+
+
+function centerFreqC_Callback(hObject, eventdata, handles)
+% hObject    handle to centerFreqC (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of centerFreqC as text
+%        str2double(get(hObject,'String')) returns contents of centerFreqC as a double
+end
+
+% --- Executes during object creation, after setting all properties.
+function centerFreqC_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to centerFreqC (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+end
+
+
+function amplitudeB_Callback(hObject, eventdata, handles)
+% hObject    handle to amplitudeB (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of amplitudeB as text
+%        str2double(get(hObject,'String')) returns contents of amplitudeB as a double
+end
+
+% --- Executes during object creation, after setting all properties.
+function amplitudeB_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to amplitudeB (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+end
+
+
+function amplitudeC_Callback(hObject, eventdata, handles)
+% hObject    handle to amplitudeC (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of amplitudeC as text
+%        str2double(get(hObject,'String')) returns contents of amplitudeC as a double
+end
+
+% --- Executes during object creation, after setting all properties.
+function amplitudeC_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to amplitudeC (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 

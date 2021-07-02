@@ -114,14 +114,7 @@ classdef EsrGlobalMethods < handle
             % maximum allowed value
             output = 0;
             if amp > maxamp
-                danger = questdlg('The amplitude is high for a pulsed measurement. Do you still want to run?','High power warning!','Abort','Run','Abort');
-                switch(danger)
-                    case 'Abort'
-                        return
-                        % exit the perform sequence if user chooses to stop
-                    case 'Run'
-                        % continue on  
-                end
+                danger = quest
             end
         end
         

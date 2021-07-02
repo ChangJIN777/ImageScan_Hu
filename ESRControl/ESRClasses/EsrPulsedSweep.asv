@@ -1360,9 +1360,17 @@ classdef EsrPulsedSweep < handle
             %==============================================================
             
             %Open the RF generator and initialize a list of SG states
+            fopen(obj.srs);
+            fprintf(obj.srs, ['LSTC? ', num2str(length(listFreq))]); % create a list of SG states
+            fprintf(obj.srs, '*CLS');
             listFreq = listFreq*(10^6); % change to Hz units
-            obj.srs.create_list(listFreq);
-
+            for i = 1:length(listFreq)
+                   % pre-load each state of the list into the SG384 memory
+                   fprintf(obj.srs, ['LSTP ',num2str(i-1),',',num2str(listFreq(i)),',N,N,N,N,N,N,N,N,N,N,N,N,N,N']);
+            end
+            % enable the list
+            fprintf(obj.srs,'LSTE 1');  % 1 or 0 for enabled or disabled
+            
             %==============================================================
             %added just to be able to initialize the AOM
             %==============================================================
@@ -1432,7 +1440,7 @@ classdef EsrPulsedSweep < handle
                 jFreqStep = 1;
                 % we cut and paste the ClearTasks from here for tracking
                 while jFreqStep <= length(listFreq) && obj.gesr.stopScan == false
-                    obj.srs.list_trigger(); % trigger the list to next frequency
+                    fprintf(obj.srs, '*TRG'); % trigger the list to next frequency
                     
                     obj.DAQ.ClearTask('RunningCounter'); % if tracking
                     obj.DAQ.ClearTask('RunningPulseTrain');
@@ -1661,17 +1669,10 @@ classdef EsrPulsedSweep < handle
             
         end
         
-        function PerformRedSpecSequence(obj, esrGUI) 
+        function PerformRedSpecSequence(obj, esrGUI) % (NEED TO ENCAPSOLATE)
             obj.gesr.UpdateFileNumber(esrGUI);
              
-            %safety check 
-            inputAmp = str2double(get(esrGUI.amplitude,'String'));
-            inputAmp2 = str2double(get(esrGUI.amplitudeB,'String'));
-            inputAmp3 = str2double(get(esrGUI.amplitudeC,'String'));
-            maxAmp = max([inputAmp,inputAmp2,inputAmp3]);
-            if obj.gesr.CheckAmp(maxAmp,0) % if amplitude is higher than 0 dBm
-                return % interrupt the function
-            end
+            
             
             obj.srs.enableNType();
             obj.gesr.stopScan = false; %Stop any scans if they are already running
@@ -2012,20 +2013,23 @@ classdef EsrPulsedSweep < handle
             end
         end
         
-        function PerformPiPulsePowerCalibration(obj, esrGUI) 
+        function PerformPiPulsePowerCalibration(obj, esrGUI) % (NEED TO ENCAPSOLATE)
             obj.gesr.UpdateFileNumber(esrGUI);
             
-            %safety check 
-            inputAmp = str2double(get(esrGUI.amplitude,'String'));
-            inputAmp2 = str2double(get(esrGUI.amplitudeB,'String'));
-            inputAmp3 = str2double(get(esrGUI.amplitudeC,'String'));
-            maxAmp = max([inputAmp,inputAmp2,inputAmp3]);
-            if obj.gesr.CheckAmp(maxAmp,0) % if amplitude is higher than 0 dBm
-                return % interrupt the function
-            end
-            
-            obj.srs.enableNType();
-            
+%             %safety check
+%             inputAmp = str2double(get(esrGUI.amplitude,'String'));
+%             if inputAmp > -1
+%                 danger = questdlg('The amplitude is high for a pulsed esr measurement. Do you still want to run?','High power warning!','Abort','Run','Abort');
+%                 switch(danger)
+%                     case 'Abort'
+%                         return
+%                         % exit the perform sequence if user chooses to stop
+% 
+%                     case 'Run'
+%                         % continue on  
+%                 end
+%             end 
+            obj.srs.disableNType();
             obj.gesr.stopScan = false; %Stop any scans if they are already running
             obj.gesr.DisableGui(esrGUI); %disable the gui so the user cannot chnge parameters during a sweep
             obj.gesr.setAmp(esrGUI); %Set the amplitude
