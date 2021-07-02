@@ -1,0 +1,6 @@
+0	0	0	0	i+a+u+t+p+w-a+g+a-c-x+c
+1	14680576	0	0	x-c+h+z+c
+2	0	0	0	c+v-b-z-c+b+s+r-s-b+b+s
+3	0	0	0	i+a+u+y-t+p+w-a+g+a-c-x+c
+4	14680576	0	0	x-c+h+z+c
+5	0	1	0	c+v-b-z-c+b+s+r-s-b+b+s

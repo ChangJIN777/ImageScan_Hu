@@ -1,0 +1,2 @@
+bHaveInverterBoard	bHaveNanoscopeAFM	numUSBFilterWheels	bHaveZurichInstr	bHaveMCLXYZScanner	dataFolder	sequenceFolder	bMagnetGui	xScanMicronsPerVolt	yScanMicronsPerVolt	zScanMicronsPerVolt	xMinVolts	xMaxVolts	yMinVolts	yMaxVolts	zMinVolts	zMaxVolts	imageScanBGColorR	imageScanBGColorG	imageScanBGColorB	bHaveMicronixSerial
+0	0	0	1	1	C:\Users\lab\Documents\Data\	C:\Users\lab\Documents\MATLAB\ImageScan\NewPulseBlaster\SavedPulseSequences\	0	143.66999999999999	136.97300000000001	10	-4.9002699999999999	4.9002699999999999	-4.9002699999999999	4.9002699999999999	0	10	228	240	230	1

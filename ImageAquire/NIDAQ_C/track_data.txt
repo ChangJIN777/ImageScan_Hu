@@ -1,0 +1,4 @@
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max

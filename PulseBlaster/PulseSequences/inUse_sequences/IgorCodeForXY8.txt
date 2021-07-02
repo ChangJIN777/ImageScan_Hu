@@ -1,0 +1,427 @@
+
+	Variable maxIndex; 	// each sweep has a number index, give the highest one to be included
+	Variable repsPerTau;
+	Variable halfTwoTau; // If it is =1 then cut the X wave in half for short eseem or ramsey
+					//if it is = 8 then make the axis 8 pi for a t,2t,2t,2t,t XY4 sequence
+					// or 16 for 16tau, 24 for 24tau,..
+	Variable piTime_ns;
+	Variable doPiRef;
+	String folderName;
+	String pathName;
+	String TwoTauWave1, SweepSigWave1, SweepRefWave1, TotalNormWave1;
+	String TwoTauWave2, SweepSigWave2, SweepRefWave2, TotalNormWave2; 
+	/// channel 1
+	String RunningSigCounts;
+	String RunningRefCounts;
+	String RunningMeanX;
+	String RunningMeanY;
+	String RunningMeanZ;
+	String RunningOldMeanX;
+	String RunningOldMeanY;
+	String RunningOldMeanZ;
+	String RunningSX;
+	String RunningSY;
+	String RunningSZ;
+	String StandardDeviationX;
+	String StandardDeviationY;
+	String StandardDeviationZ;
+	String StandardErrorOfMeanX;
+	String StandardErrorOfMeanY;
+	String StandardErrorOfMeanZ;
+	String RunningCn;
+	String RunningCovarianceXY;
+	// channel 2
+	String RunningSigCounts2;
+	String RunningRefCounts2;
+	String RunningMeanX2;
+	String RunningMeanY2;
+	String RunningMeanZ2;
+	String RunningOldMeanX2;
+	String RunningOldMeanY2;
+	String RunningOldMeanZ2;
+	String RunningSX2;
+	String RunningSY2;
+	String RunningSZ2;
+	String StandardDeviationX2;
+	String StandardDeviationY2;
+	String StandardDeviationZ2;
+	String StandardErrorOfMeanX2;
+	String StandardErrorOfMeanY2;
+	String StandardErrorOfMeanZ2;
+	String RunningCn2;
+	String RunningCovarianceXY2;
+	String StandardDeviationYDiff;
+	String StandardErrorOfMeanYDiff;
+	
+	String MeanDiff;
+	String XwithPiTime;
+	///
+	//String ShotNoiseTotalSig;
+	//String ShotNoiseTotalRef;
+	String fileName;	
+	Variable j;	
+	Variable k;
+	Variable maxTime; // The final twoTau point
+	Variable refTime = 0.35; // in microseconds, readout time
+	Variable sigTime = 0.35; // in microseconds, readout time
+		
+		CheckCreatePath(pathName); // Create the symbolic path if it doesn't already exist
+		
+		// channel 1
+		sprintf RunningSigCounts, "RunningSigCounts";
+		sprintf RunningRefCounts, "RunningRefCounts";
+		sprintf RunningMeanX, "RunningMeanX"; // signal mean counts per sweep
+		sprintf RunningMeanY, "RunningMeanY"; // reference mean counts per sweep
+		sprintf RunningMeanZ, "RunningMeanZ"; // sig-ref mean counts per sweep
+		sprintf RunningOldMeanX, "RunningOldMeanX"; // signal mean counts per sweep
+		sprintf RunningOldMeanY, "RunningOldMeanY"; // reference mean counts per sweep
+		sprintf RunningOldMeanZ, "RunningOldMeanZ"; // sig-ref mean counts per sweep
+		sprintf RunningSX,"RunningSX"; // compute pre variance  each loop
+		sprintf RunningSY,"RunningSY"; // compute pre variance.  each loop
+		sprintf RunningSZ,"RunningSZ";
+		sprintf StandardDeviationX, "StandardDeviationX";
+		sprintf StandardDeviationY, "StandardDeviationY";
+		sprintf StandardDeviationZ, "StandardDeviationZ";
+		sprintf StandardErrorOfMeanX, "StandardErrorOfMeanX";
+		sprintf StandardErrorOfMeanY, "StandardErrorOfMeanY";
+		sprintf StandardErrorOfMeanZ, "StandardErrorOfMeanZ";
+		sprintf RunningCn, "RunningCn";
+		sprintf RunningCovarianceXY, "RunningCovarianceXY";
+		// channel 2
+		sprintf RunningSigCounts2, "RunningSigCounts2";
+		sprintf RunningRefCounts2, "RunningRefCounts2";
+		sprintf RunningMeanX2, "RunningMeanX2"; // signal mean counts per sweep
+		sprintf RunningMeanY2, "RunningMeanY2"; // reference mean counts per sweep
+		sprintf RunningMeanZ2, "RunningMeanZ2"; // sig-ref mean counts per sweep
+		sprintf RunningOldMeanX2, "RunningOldMeanX2"; // signal mean counts per sweep
+		sprintf RunningOldMeanY2, "RunningOldMeanY2"; // reference mean counts per sweep
+		sprintf RunningOldMeanZ2, "RunningOldMeanZ2"; // sig-ref mean counts per sweep
+		sprintf RunningSX2,"RunningSX2"; // compute pre variance  each loop
+		sprintf RunningSY2,"RunningSY2"; // compute pre variance.  each loop
+		sprintf RunningSZ2,"RunningSZ2";
+		sprintf StandardDeviationX2, "StandardDeviationX2";
+		sprintf StandardDeviationY2, "StandardDeviationY2";
+		sprintf StandardDeviationZ2, "StandardDeviationZ2";
+		sprintf StandardErrorOfMeanX2, "StandardErrorOfMeanX2";
+		sprintf StandardErrorOfMeanY2, "StandardErrorOfMeanY2";
+		sprintf StandardErrorOfMeanZ2, "StandardErrorOfMeanZ2";
+		sprintf RunningCn2, "RunningCn2";
+		sprintf RunningCovarianceXY2, "RunningCovarianceXY2";
+		
+		sprintf StandardDeviationYDiff, "StandardDeviationYDiff";
+		sprintf StandardErrorOfMeanYDiff, "StandardErrorOfMeanYDiff";
+		
+		sprintf MeanDiff, "MeanDiff";
+		sprintf XwithPiTime, "XwithPiTime";
+		
+		//channel 1
+		Wave sigTotal = $RunningSigCounts;
+		Wave refTotal = $RunningRefCounts;
+		Wave sigMean = $RunningMeanX;
+		Wave refMean = $RunningMeanY;
+		Wave nvMean = $RunningMeanZ;
+		Wave sigOldMean = $RunningOldMeanX;
+		Wave refOldMean = $RunningOldMeanY;
+		Wave nvOldMean = $RunningOldMeanZ;
+		Wave sigSvalue = $RunningSX;
+		Wave refSvalue = $RunningSY;
+		Wave nvSvalue = $RunningSZ;
+		Wave sigStdDev = $StandardDeviationX;
+		Wave refStdDev = $StandardDeviationY;
+		Wave nvStdDev = $StandardDeviationZ;
+		Wave sigStdErrMean = $StandardErrorOfMeanX;
+		Wave refStdErrMean = $StandardErrorOfMeanY;
+		Wave nvStdErrMean = $StandardErrorOfMeanZ;
+		Wave Cn = $RunningCn;
+		Wave CovXY = $RunningCovarianceXY;
+		//channel 2
+		Wave sigTotal2 = $RunningSigCounts2;
+		Wave refTotal2 = $RunningRefCounts2;
+		Wave sigMean2 = $RunningMeanX2;
+		Wave refMean2 = $RunningMeanY2;
+		Wave nvMean2 = $RunningMeanZ2;
+		Wave sigOldMean2 = $RunningOldMeanX2;
+		Wave refOldMean2 = $RunningOldMeanY2;
+		Wave nvOldMean2 = $RunningOldMeanZ2;
+		Wave sigSvalue2 = $RunningSX2;
+		Wave refSvalue2 = $RunningSY2;
+		Wave nvSvalue2 = $RunningSZ2;
+		Wave sigStdDev2 = $StandardDeviationX2;
+		Wave refStdDev2 = $StandardDeviationY2;
+		Wave nvStdDev2 = $StandardDeviationZ2;
+		Wave sigStdErrMean2 = $StandardErrorOfMeanX2;
+		Wave refStdErrMean2 = $StandardErrorOfMeanY2;
+		Wave nvStdErrMean2 = $StandardErrorOfMeanZ2;
+		Wave Cn2 = $RunningCn2;
+		Wave CovXY2 = $RunningCovarianceXY2;
+		
+		Wave diffStdDev = $StandardDeviationYDiff;
+		Wave diffStdErrMean = $StandardErrorOfMeanYDiff;
+		
+		Wave meanDiffy= $MeanDiff;
+		Wave XpiTime = $XwithPiTime;
+		
+		for (j=0; j<=maxIndex; j+=1) // j starts at 0 for the pulse data, 1 for the cw sweep
+			
+			// channel 1 data file for sweep #j
+			sprintf fileName, ":%s:%s_1_%d.txt", folderName, folderName, j;
+			//print filename
+			//print pathName
+			LoadWave/J/D/V={"\t", " $",0,0}/L={0,1,0,0,0}/P=$pathName/O/N=tempname/K=0 fileName;
+			sprintf TwoTauWave1, "TwoTau%d_chan1",  j;
+			sprintf SweepSigWave1, "SweepSig%d_chan1",  j;
+			sprintf SweepRefWave1, "SweepRef%d_chan1",  j;
+			sprintf TotalNormWave1, "TotalNorm%d_chan1",  j;
+			Make /O $TwoTauWave1, $SweepSigWave1, $SweepRefWave1, $TotalNormWave1; 
+			Duplicate /O tempname0, $TwoTauWave1;
+			Duplicate /O tempname1, $SweepSigWave1;
+			Duplicate /O tempname2, $SweepRefWave1;
+			Duplicate /O tempname3, $TotalNormWave1;
+			KillWaves tempname0,tempname1,tempname2,tempname3;
+			Wave ttw1 = $TwoTauWave1;
+			Wave ssw1 = $SweepSigWave1;
+			Wave srw1 = $SweepRefWave1;
+			Wave tnw1 = $TotalNormWave1;
+			
+			// channel 2 data file for sweep #j
+			sprintf fileName, ":%s:%s_2_%d.txt", folderName, folderName, j;
+			//print filename
+			//print pathName
+			LoadWave/J/D/V={"\t", " $",0,0}/L={0,1,0,0,0}/P=$pathName/O/N=tempname/K=0 fileName;
+			sprintf TwoTauWave2, "TwoTau%d_chan2",  j;
+			sprintf SweepSigWave2, "SweepSig%d_chan2",  j;
+			sprintf SweepRefWave2, "SweepRef%d_chan2",  j;
+			sprintf TotalNormWave2, "TotalNorm%d_chan2",  j;
+			Make /O $TwoTauWave2, $SweepSigWave2, $SweepRefWave2, $TotalNormWave2; 
+			Duplicate /O tempname0, $TwoTauWave2;
+			Duplicate /O tempname1, $SweepSigWave2;
+			Duplicate /O tempname2, $SweepRefWave2;
+			Duplicate /O tempname3, $TotalNormWave2;
+			KillWaves tempname0,tempname1,tempname2,tempname3;
+			Wave ttw2 = $TwoTauWave2;
+			Wave ssw2 = $SweepSigWave2;
+			Wave srw2 = $SweepRefWave2;
+			Wave tnw2 = $TotalNormWave2;
+			
+			
+			
+			// need to fix the channel 2 data and append
+			maxTime = ttw2[numpnts(ttw2)-1]; 	// get the last value in the twoTau wave 
+			ttw2 = maxTime - ttw2;				// compute the reversed times from twoTau wave
+			Sort ttw2, ttw2, ssw2, srw2, tnw2;		// Sort the four waves of channel 2 from smallest to largest times
+			
+			k = j+1; // so first number is j=0=>k=1
+			if (k==1)
+				
+				// for photon shot noise errors
+				Duplicate /O ssw1 sigTotal;
+				Duplicate /O srw1 refTotal;
+				sigTotal = (sigTotal*1000) * (sigTime*10^-6) * repsPerTau;
+				refTotal = (refTotal*1000) * (refTime*10^-6) * repsPerTau;
+				Duplicate /O sigTotal shotNoiseSig;  // wave with same # elements
+				Duplicate /O refTotal shotNoiseRef;  // wave with same # elements
+				Duplicate /O sigTotal shotNoiseSigRate;
+				Duplicate /O refTotal shotNoiseRefRate;
+				Duplicate /O sigTotal shotNoiseSigRateStdErr;
+				Duplicate /O refTotal shotNoiseRefRateStdErr;
+				Duplicate /O sigTotal shotNoiseNVrate;
+				Duplicate /O sigTotal shotNoiseNVrateStdErr;
+				
+				Duplicate /O ssw2 sigTotal2;
+				Duplicate /O srw2 refTotal2;
+				sigTotal2 = (sigTotal2*1000) * (sigTime*10^-6) * repsPerTau;
+				refTotal2 = (refTotal2*1000) * (refTime*10^-6) * repsPerTau;
+				Duplicate /O sigTotal2 shotNoiseSig2;  // wave with same # elements
+				Duplicate /O refTotal2 shotNoiseRef2;  // wave with same # elements
+				Duplicate /O sigTotal2 shotNoiseSigRate2;
+				Duplicate /O refTotal2 shotNoiseRefRate2;
+				Duplicate /O sigTotal2 shotNoiseSigRateStdErr2;
+				Duplicate /O refTotal2 shotNoiseRefRateStdErr2;
+				Duplicate /O sigTotal2 shotNoiseNVrate2;
+				Duplicate /O sigTotal2 shotNoiseNVrateStdErr2;
+				//////////////////////////////////////////
+				
+				// for running standard deviation errors (total error)
+				Duplicate /O ssw1 sigMean; // make a wave of same length as # of tau for mean sig
+				Duplicate /O srw1 refMean; // make a wave of same length as # of tau for mean Ref
+				Duplicate /O ssw1 nvMean;
+				Duplicate /O sigMean sigOldMean; // make a wave of same length as # of tau for mean sig
+				Duplicate /O refMean refOldMean; // make a wave of same length as # of tau for mean Ref
+				Duplicate /O sigMean nvOldMean;
+				Duplicate /O ssw1 sigSvalue;// make a wave of same length of all tau for errors value
+				Duplicate /O srw1 refSvalue;// make a wave of same length of all tau for errors value
+				Duplicate /O ssw1 nvSvalue;// make a wave of same length of all tau for errors value
+				Duplicate /O ssw1 Cn; // running covariance calculation parameters
+				Duplicate /O ssw1 CovXY; // running covariance between signal and reference
+				
+				Duplicate /O ssw2 sigMean2; // make a wave of same length as # of tau for mean sig
+				Duplicate /O srw2 refMean2; // make a wave of same length as # of tau for mean Ref
+				Duplicate /O ssw2 nvMean2;
+				Duplicate /O sigMean2 sigOldMean2; // make a wave of same length as # of tau for mean sig
+				Duplicate /O refMean2 refOldMean2; // make a wave of same length as # of tau for mean Ref
+				Duplicate /O sigMean2 nvOldMean2;
+				Duplicate /O ssw2 sigSvalue2;// make a wave of same length of all tau for errors value
+				Duplicate /O srw2 refSvalue2;// make a wave of same length of all tau for errors value
+				Duplicate /O ssw2 nvSvalue2;// make a wave of same length of all tau for errors value
+				Duplicate /O ssw2 Cn2; // running covariance calculation parameters
+				Duplicate /O ssw2 CovXY2; // running covariance between signal and reference
+				
+				// Since it is the first sweep all the errors for each tau are 0.0.
+				sigSvalue = 0;
+				refSvalue = 0;
+				nvSvalue = 0;
+				Cn = 0;
+				CovXY = 0;
+				
+				sigSvalue2 = 0;
+				refSvalue2 = 0;
+				nvSvalue2 = 0;
+				Cn2 = 0;
+				CovXY2 = 0;
+				//////////////////////////////////////////
+				
+			else
+				// this is not the first sweep, so compute the running calculations
+				
+				// for photon shot noise errors
+				sigTotal = sigTotal +  (ssw1*1000) * (sigTime*10^-6) * repsPerTau;
+				refTotal = refTotal + (srw1*1000) * (refTime*10^-6) * repsPerTau;
+				
+				sigTotal2 = sigTotal2 +  (ssw2*1000) * (sigTime*10^-6) * repsPerTau;
+				refTotal2 = refTotal2 + (srw2*1000) * (refTime*10^-6) * repsPerTau;
+				////////////////////////////////////////
+				
+				// for running standard deviation (total error)
+				// new mean = old mean + (new sweep - old mean)/(num sweeps so far)
+				sigMean = sigOldMean + (ssw1 - sigOldMean)/k;
+				refMean = refOldMean + (srw1 - refOldMean)/k;
+				
+				sigMean2 = sigOldMean2 + (ssw2 - sigOldMean2)/k;
+				refMean2 = refOldMean2 + (srw2 - refOldMean2)/k;
+				
+				// new S value = old S value + (new sweep-old mean)*(new sweep - new mean)
+				// no variable "sigSOldvalue" is really needed since we use only sigSvalue as the "old" one
+				// also no variable oldCn of oldCovXY is needed for the same reason
+				sigSvalue = sigSvalue + (ssw1 - sigOldMean)*(ssw1 - sigMean);
+				refSvalue = refSvalue + (srw1 - refOldMean)*(srw1 - refMean);
+				Cn = Cn + (ssw1 - sigMean)*(srw1 - refOldMean);
+				CovXY = (CovXY*(k-1) + (ssw1 - sigMean)*(srw1 - refOldMean))/k; // last update is final, don't repeat
+				
+				sigSvalue2 = sigSvalue2 + (ssw2 - sigOldMean2)*(ssw2 - sigMean2);
+				refSvalue2 = refSvalue2 + (srw2 - refOldMean2)*(srw2 - refMean2);
+				Cn2 = Cn2 + (ssw2 - sigMean2)*(srw2 - refOldMean2);
+				CovXY2 = (CovXY2*(k-1) + (ssw2 - sigMean2)*(srw2 - refOldMean2))/k; // last update is final, don't repeat
+				
+				// update old mean to new mean now
+				sigOldMean = sigMean;
+				refOldMean = refMean;
+				
+				sigOldMean2 = sigMean2;
+				refOldMean2 = refMean2;
+				////////////////////////////////////////////
+				
+			endif
+			
+			killWaves ssw1, srw1, ssw2, srw2;
+			killwaves tnw2, tnw1;
+			
+		endfor
+		
+		// sigMean and refMean are now the mean number of photon counts per sweep
+		// sigSvalue and refSvalue are quantities that can be used at any time (now at the end)
+		// to compute the variance--> standard deviation --> standard error of the mean
+		Duplicate /O sigSValue sigStdDev;
+		Duplicate /O refSValue refStdDev;
+		Duplicate /O nvSValue nvStdDev;
+		Duplicate /O sigSValue sigStdErrMean;
+		Duplicate /O refSValue refStdErrMean;
+		Duplicate /O nvSValue nvStdErrMean;
+		
+		Duplicate /O sigSValue2 sigStdDev2;
+		Duplicate /O refSValue2 refStdDev2;
+		Duplicate /O nvSValue2 nvStdDev2;
+		Duplicate /O sigSValue2 sigStdErrMean2;
+		Duplicate /O refSValue2 refStdErrMean2;
+		Duplicate /O nvSValue2 nvStdErrMean2;
+		Duplicate /O refSValue2 diffStdDev;
+		Duplicate /O nvSValue2 diffStdErrMean;
+		
+		sigStdDev = sqrt(sigSvalue/(k-1)); // std dev = sqrt of sample variance (divide by N-1)
+		refStdDev = sqrt(refSvalue/(k-1)); // std dev = sqrt of sample variance (divide by N-1)
+		sigStdErrMean = sigStdDev / sqrt(k); 
+		refStdErrMean = refStdDev / sqrt(k);
+		
+		sigStdDev2 = sqrt(sigSvalue2/(k-1)); // std dev = sqrt of sample variance (divide by N-1)
+		refStdDev2 = sqrt(refSvalue2/(k-1)); // std dev = sqrt of sample variance (divide by N-1)
+		sigStdErrMean2 = sigStdDev2 / sqrt(k); 
+		refStdErrMean2 = refStdDev2 / sqrt(k);
+		
+		// the thing to plot is a quantity that gets rid of background counts
+		if (doPiRef==1)
+			// relies on channel 1 having pi pulse reference (don't use for signal subtraction)
+			// and channel 2 having the 0 state reference (use for for signal subtractions)
+			// technically should mean I need to use the other reference StdDev2 for error prop here too
+			// but the errors should be of the same order on the pi pulse reference during same shot.
+			Duplicate /O refMean2, tempRef0;
+			Reverse tempRef0;
+			nvMean = sigMean - tempRef0;
+		else
+			// the prior case where we had no pi pulse reference
+			nvMean = sigMean - refMean;
+		endif
+		// to propagate errors, use the covariance matrix
+		nvStdDev = sqrt(sigStdDev^2 + refStdDev^2 - 2*CovXY);
+		nvStdErrMean = nvStdDev / sqrt(k);
+		
+		nvMean2 = sigMean2 - refMean2;
+		// to propagate errors, use the covariance matrix
+		nvStdDev2 = sqrt(sigStdDev2^2 + refStdDev2^2 - 2*CovXY2);
+		nvStdErrMean2 = nvStdDev2 / sqrt(k);
+		
+		// propagate std dev errors finally to the difference curve
+		diffStdDev = sqrt(nvStdDev^2+nvStdDev2^2);
+		diffStdErrMean = diffStdDev / sqrt(k);
+
+		// for shot noise based errors, take sqrt of total # counts
+		shotNoiseSig = sqrt(sigTotal);
+		shotNoiseRef = sqrt(refTotal);
+		shotNoiseSigRate = sqrt(sigTotal) / (1000*sigTime*10^-6* repsPerTau *k); //convert tto 
+		shotNoiseRefRate = sqrt(refTotal) / (1000*refTime*10^-6* repsPerTau *k);
+		shotNoiseNVrate = sqrt(shotNoiseSigRate^2 + shotNoiseRefRate^2);
+		shotNoiseNVrateStdErr = shotNoiseNVrate/sqrt(k);
+		shotNoiseSigRateStdErr = shotNoiseSigRate/sqrt(k);
+		shotNoiseRefRateStdErr = shotNoiseRefRate/sqrt(k);
+		
+		shotNoiseSig2 = sqrt(sigTotal2);
+		shotNoiseRef2 = sqrt(refTotal2);
+		shotNoiseSigRate2 = sqrt(sigTotal2) / (1000*sigTime*10^-6* repsPerTau *k); //convert tto 
+		shotNoiseRefRate2 = sqrt(refTotal2) / (1000*refTime*10^-6* repsPerTau *k);
+		shotNoiseNVrate2 = sqrt(shotNoiseSigRate2^2 + shotNoiseRefRate2^2);
+		shotNoiseNVrateStdErr2 = shotNoiseNVrate2/sqrt(k);
+		shotNoiseSigRateStdErr2 = shotNoiseSigRate2/sqrt(k);
+		shotNoiseRefRateStdErr2 = shotNoiseRefRate2/sqrt(k);
+			
+		// compute the contrast as mean(ref0) - mean(refpi)
+		Duplicate /O refMean, tempContrastWave;
+		tempContrastWave = -refMean2+refMean;
+		Variable tempContrast = mean(refMean2) - mean(refMean); // counts full contrast between 0 and -1 states.
+			
+		// go to microseconds for the 2tau, regardless of xrange
+		ttw1 *= 10^-3;
+		ttw2 *= 10^-3;	
+		if (halfTwoTau == 1)
+			ttw1 = ttw1/2;
+			ttw2 = ttw2/2;
+		endif
+		if (halfTwoTau > 1) // halfTwoTau is essentially # pulses*2
+						// ttw1 begins as twoTau so multiply by number of pulses = halfTwoTau/2.
+			ttw1 = ttw1* halfTwoTau/2;
+			ttw2 = ttw2* halfTwoTau/2;
+		endif
+		
+		Duplicate /O ttw1, XpiTime;
+		// don't add pi time if it is just halfTwoTau =1
+		if (halfTwoTau!=1)
+		
+			XpiTime = XpiTime + 0.001*piTime_ns*halfTwoTau/2; // add to each tau point the duration of all pi pulses
+			XpiTime = 1000*halfTwoTau / (4 * XpiTime) //convert to larmor precession frequency in KHz.

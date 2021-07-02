@@ -1,0 +1,3 @@
+0	0	0	0	i+u
+1	0	0	0	y+w+s+r+i+u
+2	0	1	0	s+r+i+u+v+w+s+r+i+u+s+r

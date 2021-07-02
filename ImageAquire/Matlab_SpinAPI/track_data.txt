@@ -1,0 +1,233 @@
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+14-Jul-2016 22:12:57	4.1299	-6.6925	73.4697	469.1029	612.3814	1	4.1267	-6.74	73.4203	625.4
+14-Jul-2016 22:13:10	4.1232	-6.6767	73.5516	610.23	612.37	0	4.1299	-6.6925	73.4697	606.1
+14-Jul-2016 22:13:22	4.1274	-6.6935	73.5464	609.1186	613.2014	0	4.1299	-6.6925	73.4697	606
+14-Jul-2016 22:13:34	4.1379	-6.6911	73.5593	599.5114	613.6729	1	4.1299	-6.6925	73.6697	608.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+14-Jul-2016 22:32:16	4.1162	-6.6327	73.5564	452.4943	607.9729	1	4.1067	-6.6433	73.5593	672
+14-Jul-2016 22:32:28	4.1112	-6.6347	73.5627	587.1143	602.53	1	4.1162	-6.6327	73.5564	614.8
+14-Jul-2016 22:32:41	4.1153	-6.6473	73.5644	626.9586	618.9029	0	4.1112	-6.6347	73.5627	607.6
+14-Jul-2016 22:32:53	4.117	-6.6311	73.5595	620.7657	601.4186	0	4.1112	-6.768	73.5627	608.5
+14-Jul-2016 22:33:05	4.1264	-6.6337	73.5373	633.2157	636.5343	0	4.1112	-6.6347	73.3627	624.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+14-Jul-2016 22:58:33	4.1355	-6.6565	73.5163	531.2371	531.0057	0	4.1112	-6.6347	73.3627	563.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+14-Jul-2016 23:02:32	4.1452	-6.6296	73.5465	519.0043	514.5457	0	4.1112	-6.6347	73.3627	520.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+14-Jul-2016 23:22:36	4.1354	-6.6454	73.6213	602.7929	627.9786	1	4.1112	-6.6347	73.5627	632.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+14-Jul-2016 23:27:38	4.1296	-6.6243	73.5532	598.4614	594.9729	0	4.1354	-6.6454	73.6213	591.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+14-Jul-2016 23:41:52	4.1518	-6.6478	73.5332	521.1243	531.66	1	4.1354	-6.6454	73.4213	522.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+14-Jul-2016 23:45:51	4.1459	-6.6702	73.5157	526.9229	529.0457	0	4.1518	-6.7811	73.5332	550.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 00:05:55	4.1357	-6.6551	73.6146	666.47	672.24	0	4.1518	-6.6478	73.5332	665
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 00:10:57	4.1133	-6.6641	73.5393	638.3286	635.2843	0	4.1518	-6.7811	73.5332	630.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 00:25:13	4.1315	-6.6636	73.4822	548.4129	556.7186	1	4.1518	-6.6478	73.3332	555.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 00:29:12	4.1324	-6.6499	73.4658	576.5514	572.8857	0	4.1315	-6.6636	73.4822	576
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 00:49:16	4.1321	-6.6472	73.6139	660.18	662.1657	0	4.1315	-6.6636	73.6822	654.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 00:54:18	4.1216	-6.661	73.5246	611.9686	614.22	0	4.1315	-6.6636	73.6822	612.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 01:08:27	4.1515	-6.6551	73.4482	532.1457	538.3857	1	4.1315	-6.6636	73.2822	565.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 01:12:25	4.1388	-6.6694	73.4581	549.7514	547.7114	0	4.1515	-6.7884	73.4482	540.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 01:32:22	4.1088	-6.6405	73.6061	635.6871	653.4071	1	4.1515	-6.6551	73.6482	702.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 01:37:23	4.1233	-6.6665	73.5571	622.4171	631.3514	1	4.1088	-6.6405	73.6061	629.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 01:51:31	4.1362	-6.6565	73.4892	512.0829	527.2729	1	4.1233	-6.6665	73.3571	553.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 01:55:29	4.126	-6.6613	73.4737	515.7871	516.0129	0	4.1362	-6.6565	73.2892	526.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 02:15:26	4.1233	-6.6474	73.5967	647.4529	656.0271	1	4.1362	-6.6565	73.4892	670.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 02:20:26	4.1135	-6.666	73.5376	591.8586	601.7186	1	4.1233	-6.6474	73.3967	613.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 02:34:33	4.1441	-6.6833	73.4853	513.46	514.0386	0	4.1135	-6.666	73.3376	502.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 02:38:31	4.1399	-6.6697	73.4538	523.5286	524.8943	0	4.1135	-6.666	73.3376	555.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 02:58:28	4.1052	-6.6571	73.5894	646.8586	649.89	0	4.1135	-6.666	73.5376	649.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 03:03:29	4.1133	-6.67	73.538	608.3686	592.2957	0	4.1135	-6.666	73.5376	602.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 03:17:34	4.1325	-6.6641	73.4744	493.44	494.1214	0	4.1135	-6.666	73.3376	509.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 03:21:32	4.1332	-6.6749	73.4985	508.0643	518.3371	1	4.1135	-6.7993	73.5376	507
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 03:41:28	4.1155	-6.6743	73.5831	641.5957	645.3629	0	4.1332	-6.6749	73.4985	623.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 03:46:28	4.111	-6.6765	73.4918	599.47	615.9843	1	4.1332	-6.6749	73.4985	624
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 04:00:35	4.1043	-6.7005	73.451	501.58	512.76	1	4.111	-6.6765	73.4918	475
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 04:04:34	4.1357	-6.6744	73.4424	520.1457	534.7486	1	4.1043	-6.7005	73.451	537.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 04:24:29	4.1035	-6.6806	73.5607	638.9929	662.7643	1	4.1357	-6.6744	73.6424	651.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 04:29:30	4.1212	-6.6744	73.5082	601.0043	612.12	1	4.1035	-6.6806	73.5607	612.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 04:43:38	4.1332	-6.6718	73.4587	521.9914	516.6586	0	4.1212	-6.6744	73.3082	526
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 04:47:37	4.1563	-6.6679	73.4702	524.08	526.5057	0	4.1212	-6.6744	73.3082	531.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 05:07:33	4.1122	-6.661	73.5766	646.2329	637.3843	0	4.1212	-6.6744	73.5082	633
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 05:12:34	4.1246	-6.6818	73.4987	580.6071	609.4314	1	4.1212	-6.6744	73.3082	601
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 05:26:40	4.155	-6.6831	73.4323	525.2971	545.7786	1	4.1246	-6.6818	73.2987	563
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 05:30:39	4.1406	-6.6874	73.4292	566.4929	561.4314	0	4.155	-6.6831	73.4323	544.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 05:50:35	4.1228	-6.658	73.5487	675.4871	674.8414	0	4.155	-6.6831	73.4323	680.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 05:55:36	4.1136	-6.6772	73.466	605.7757	629.6143	1	4.155	-6.6831	73.4323	595.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 06:09:43	4.115	-6.682	73.4334	515.3971	504.2671	0	4.1136	-6.6772	73.266	525.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 06:13:41	4.1318	-6.6795	73.455	519.3271	520.9929	0	4.1136	-6.6772	73.266	504.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 06:33:37	4.1166	-6.6591	73.5466	628.1086	630.4571	0	4.1136	-6.6772	73.466	633.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 06:38:38	4.1174	-6.6681	73.4703	588.1571	585.2357	0	4.1136	-6.6772	73.466	588.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 06:52:44	4.1378	-6.6787	73.4166	488.2743	509.7	1	4.1136	-6.6772	73.266	520.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 06:56:43	4.133	-6.6901	73.4349	503.62	496.0171	0	4.1378	-6.812	73.4166	511.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 07:16:39	4.1328	-6.6641	73.55	628.5329	633.5571	0	4.1378	-6.6787	73.6166	650.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 07:21:40	4.1256	-6.6852	73.4508	600.5971	580.0257	0	4.1378	-6.6787	73.4166	593.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 07:35:47	4.1464	-6.693	73.4139	526.1943	521.0029	0	4.1378	-6.6787	73.4166	509.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 07:39:45	4.1719	-6.6986	73.4397	528.5171	531.1886	0	4.1378	-6.812	73.4166	524.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 07:59:41	4.1219	-6.6849	73.5364	588.8557	601.4657	1	4.1378	-6.6787	73.8166	604
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 08:04:42	4.1311	-6.6663	73.5024	593.3443	597.1086	0	4.1219	-6.6849	73.3364	588.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 08:18:49	4.1701	-6.6436	73.4531	491.6771	515.4829	1	4.1219	-6.6849	73.3364	506.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 08:22:48	4.1619	-6.6791	73.461	516.6086	517.3529	0	4.1701	-6.7769	73.4531	519.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 08:42:43	4.1628	-6.658	73.5526	624.13	637.5886	1	4.1701	-6.6436	73.6531	639.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 08:47:44	4.159	-6.6655	73.4933	595.5057	604.6829	1	4.1628	-6.658	73.3526	599.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 09:01:52	4.1658	-6.6672	73.4435	507.9414	509.66	0	4.159	-6.6655	73.2933	520
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 09:05:50	4.1799	-6.6657	73.4549	514.7614	516.39	0	4.159	-6.6655	73.2933	523.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 09:25:47	4.1678	-6.6652	73.5665	647.85	663.2371	1	4.159	-6.6655	73.6933	660.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 09:30:48	4.1449	-6.6676	73.5048	582.5186	585.4414	0	4.1678	-6.6652	73.3665	595
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 09:44:54	4.1837	-6.6578	73.4881	507.0214	509.4986	0	4.1678	-6.6652	73.3665	526.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 09:48:52	4.1986	-6.6531	73.4732	506.8186	508.83	0	4.1678	-6.6652	73.3665	524.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 10:08:50	4.1793	-6.6415	73.5882	627.6843	637.2757	1	4.1678	-6.6652	73.3665	616.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 10:13:50	4.1765	-6.6692	73.5076	564.49	586.0657	1	4.1793	-6.6415	73.3882	599.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 10:27:58	4.1905	-6.6614	73.4532	519.8343	521.25	0	4.1765	-6.6692	73.3076	534.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 10:31:57	4.1983	-6.6657	73.4645	520.0886	523.5629	0	4.1765	-6.6692	73.3076	534.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 10:51:53	4.1719	-6.6409	73.5572	665.6729	660.3357	0	4.1765	-6.6692	73.5076	652.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 10:56:53	4.1876	-6.6644	73.4895	592.8786	593.68	0	4.1765	-6.6692	73.5076	588.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 11:10:59	4.2071	-6.6531	73.4582	505.8957	515.1029	1	4.1765	-6.6692	73.3076	529.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 11:14:57	4.2233	-6.6431	73.4454	497.1729	493.7171	0	4.2071	-6.6531	73.2582	540.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 11:34:52	4.2122	-6.6523	73.5614	612.2743	638.0871	1	4.2071	-6.6531	73.6582	625.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 11:39:53	4.2265	-6.6518	73.5177	590.0914	578	0	4.2122	-6.6523	73.3614	558.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+15-Jul-2016 15:52:43	4.107	-6.6391	73.437	427.6629	539.6071	1	4.1033	-6.6933	73.3614	563.2
+15-Jul-2016 15:52:55	4.0926	-6.6405	73.3832	531.8471	538.5314	1	4.107	-6.6391	73.237	531.2

@@ -1,0 +1,24 @@
+IGOR
+X display /I/W=(0,0,5.8333,4.375)
+X Display/HOST=#/W=(0.81167,-0.029976,0.87167,0.99902)
+X SetAxis bottom -1,2
+X SetAxis left 0,6
+X Label bottom ""
+X Label left ""
+X ModifyGraph grid(bottom)=0
+X ModifyGraph grid(left)=0
+X TextBox/C/N=text0/F=0/A=MT/E ""
+X ModifyGraph log(left)=0
+X ModifyGraph log(bottom)=0
+X ModifyGraph tick=2,mirror=1,axThick=2,fStyle=1,standoff=0
+X Display/HOST=##/W=(0.045345,-0.03095,0.86585,0.99595)
+X SetAxis bottom -500,500
+X SetAxis left -500,500
+X Label bottom "X(nanometers)"
+X Label left "Y(nanometers)"
+X ModifyGraph grid(bottom)=0
+X ModifyGraph grid(left)=0
+X TextBox/C/N=text0/F=0/A=MT/E "T1guess"
+X ModifyGraph log(left)=0
+X ModifyGraph log(bottom)=0
+X ModifyGraph tick=2,mirror=1,axThick=2,fStyle=1,standoff=0
