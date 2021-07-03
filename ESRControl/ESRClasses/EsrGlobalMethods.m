@@ -184,15 +184,9 @@ classdef EsrGlobalMethods < handle
            % fclose(obj.srs);
             switch newValue
                 case 0
-                    fopen(obj.srs);
-                    fprintf(obj.srs, ['MODL ', '0']);
-                    fclose(obj.srs);
+                    obj.srs.set_IQ_off(); % disable IQ modulation
                 case 1
-                     fopen(obj.srs);
-                     fprintf(obj.srs, ['MODL ', '1']);
-                     fprintf(obj.srs, ['TYPE ', '6']);
-                     fprintf(obj.srs, ['QFNC ', '5']);
-                     fclose(obj.srs);
+                     obj.srs.set_IQ_on(); % enable IQ modulation
             end
         end
         

@@ -288,10 +288,10 @@ classdef EsrPulsedSweep < handle
 %                 fprintf(obj.srs, ['ENBR ', '1']);
 %             fclose(obj.srs);
 
-            % in case there is any frequency modulation, turn off
-            obj.srs.set_IQ_off();
-            obj.srs2.set_IQ_off();
-            obj.srs3.set_IQ_off();
+%             % in case there is any frequency modulation, turn off
+%             obj.srs.set_IQ_off();
+%             obj.srs2.set_IQ_off();
+%             obj.srs3.set_IQ_off();
             
             % place for adding an amplitude check
             %%%%
@@ -1479,63 +1479,103 @@ classdef EsrPulsedSweep < handle
                     ylabel(currentAxes,'PL (kCounts/s)');
                     jFreqStep = jFreqStep + 1;
                     obj.pulseBlaster.stopPulse();
-                    %################################################
-                    % tracking sequence
-                    %################################################
+%                     %################################################
+%                     % tracking sequence (looking at the PL count)
+%                     %################################################
+%                     compteur = compteur + 1;
+%                     if get(esrGUI.checkboxUseTracking,'Value')==1 && ~isempty(obj.imageScanHandles)
+%                     
+%                         if(refReady == 0)
+%                     
+%                             if(garbage == 1)
+%                         
+%                                 if(compteur == str2num(get(esrGUI.trackingGarbagePoints,'String')))
+%                                 
+%                                     garbage = 0;
+%                                     ref = 0;
+%                                     refReady = 0;
+%                                     compteur = 0;
+%                                 end
+%                             else
+%                             
+%                                 ref = ref + refPoint;
+%                                 
+%                                 if(compteur == str2num(get(esrGUI.pulseTrackingPeriod,'String')))
+%                                         ref = ref/(compteur);
+%                                         refReady = 1;
+%                                         compteur = 0;
+%                                 end
+%                             
+%                             
+%                             end
+%                             
+%                             tempTSteps = str2num(get(esrGUI.stepsSinceTracking,'String'));
+%                             set(esrGUI.stepsSinceTracking, 'String', num2str(tempTSteps+1));
+%                         
+%                         else
+%                     
+%                             signal = signal + refPoint;
+%                     
+%                             if(compteur == str2num(get(esrGUI.pulseTrackingPeriod,'String')))
+%                             
+%                                 signal = signal/(compteur);
+%                                 
+%                                 if(signal > str2num(get(esrGUI.trackingCountThreshold,'String'))*ref)
+%                                 
+%                                     signal = 0;
+%                                     compteur = 0;
+%                                     tempTSteps = str2num(get(esrGUI.stepsSinceTracking, 'String'));
+%                                     set(esrGUI.stepsSinceTracking, 'String', num2str(tempTSteps+1));
+%                             
+%                                 else
+%                           
+%                                     ref = 0;
+%                                     refReady = 0;
+%                                     garbage = 1;
+%                                     signal = 0;
+%                                     compteur = 0;
+%                                     
+%                                     %initialisation of the AOM for tracking
+%                                     obj.pulseBlaster.setCurrentPulse( pulseTrackingNum);
+%                                     obj.pulseBlaster.loadToPulseblaster();
+%                                     obj.pulseBlaster.runPulse();
+%                                     pause(str2num(get(esrGUI.preMeasurePause,'String'))); 
+%                                     
+%                                     obj.gesr.RunSingleTrackPulsedESR(obj.imageScanHandles)
+%                         
+%                                     set(esrGUI.stepsSinceTracking, 'String', num2str(0));
+%                         
+%                                     %added here on 05/11/2012 to re-initialize the AOM
+%                                     %before starting a new measurement
+%                                     %==================================================
+%                                     obj.pulseBlaster.stopPulse();
+%                                     obj.pulseBlaster.setCurrentPulse(totalSequence);
+%                                     obj.pulseBlaster.loadToPulseblaster();
+%                                     obj.pulseBlaster.runPulse();
+%                                     pause(str2num(get(esrGUI.preMeasurePause,'String')));
+%                                     %==================================================
+%                                 end
+%                             else
+%                             
+%                                 tempTSteps = str2num(get(esrGUI.stepsSinceTracking, 'String'));
+%                                 set(esrGUI.stepsSinceTracking, 'String', num2str(tempTSteps+1));
+%                             end
+%                         end
+%                     end
+%                        
+%                     %################### Tracking done ##########################
+%                   ######################  Tracking #######################################
+                    totalTauCounter = str2num(get(esrGUI.numCompleted,'String'))*length(listTauTime)+jTauTime;
                     compteur = compteur + 1;
                     if get(esrGUI.checkboxUseTracking,'Value')==1 && ~isempty(obj.imageScanHandles)
-                    
-                        if(refReady == 0)
-                    
-                            if(garbage == 1)
                         
-                                if(compteur == str2num(get(esrGUI.trackingGarbagePoints,'String')))
-                                
-                                    garbage = 0;
-                                    ref = 0;
-                                    refReady = 0;
-                                    compteur = 0;
-                                end
-                            else
-                            
-                                ref = ref + refPoint;
-                                
-                                if(compteur == str2num(get(esrGUI.pulseTrackingPeriod,'String')))
-                                        ref = ref/(compteur);
-                                        refReady = 1;
-                                        compteur = 0;
-                                end
-                            
-                            
-                            end
-                            
-                            tempTSteps = str2num(get(esrGUI.stepsSinceTracking,'String'));
-                            set(esrGUI.stepsSinceTracking, 'String', num2str(tempTSteps+1));
+                        %Added 04/24/14 to change pulse sequence tracking
+                        %to be every fixed number of steps instead of
+                        %looking at the PL
+                        tempTSteps = str2num(get(esrGUI.stepsSinceTracking, 'String')) 
                         
-                        else
-                    
-                            signal = signal + refPoint;
-                    
-                            if(compteur == str2num(get(esrGUI.pulseTrackingPeriod,'String')))
-                            
-                                signal = signal/(compteur);
-                                
-                                if(signal > str2num(get(esrGUI.trackingCountThreshold,'String'))*ref)
-                                
-                                    signal = 0;
-                                    compteur = 0;
-                                    tempTSteps = str2num(get(esrGUI.stepsSinceTracking, 'String'));
-                                    set(esrGUI.stepsSinceTracking, 'String', num2str(tempTSteps+1));
-                            
-                                else
-                          
-                                    ref = 0;
-                                    refReady = 0;
-                                    garbage = 1;
-                                    signal = 0;
-                                    compteur = 0;
-                                    
-                                    %initialisation of the AOM for tracking
+                        if tempTSteps >= str2num(get(esrGUI.pulseTrackingPeriod, 'String'))
+                             %initialisation of the AOM for tracking
                                     obj.pulseBlaster.setCurrentPulse( pulseTrackingNum);
                                     obj.pulseBlaster.loadToPulseblaster();
                                     obj.pulseBlaster.runPulse();
@@ -1548,22 +1588,19 @@ classdef EsrPulsedSweep < handle
                                     %added here on 05/11/2012 to re-initialize the AOM
                                     %before starting a new measurement
                                     %==================================================
-                                    obj.pulseBlaster.stopPulse();
                                     obj.pulseBlaster.setCurrentPulse(totalSequence);
                                     obj.pulseBlaster.loadToPulseblaster();
                                     obj.pulseBlaster.runPulse();
                                     pause(str2num(get(esrGUI.preMeasurePause,'String')));
-                                    %==================================================
-                                end
-                            else
-                            
-                                tempTSteps = str2num(get(esrGUI.stepsSinceTracking, 'String'));
-                                set(esrGUI.stepsSinceTracking, 'String', num2str(tempTSteps+1));
-                            end
+                                    obj.pulseBlaster.stopPulse();
+                        else
+                             
+                             set(esrGUI.stepsSinceTracking, 'String', num2str(tempTSteps+1));     
                         end
+                        
                     end
                        
-                    %################### Tracking done ##########################
+                % ################### Tracking done ########################## 
                 end % end loop through frequency points sweep
               
                 rawNormPlot(:,1) = rawSignalPlot(:,1)./rawRefPlot(:,1);
