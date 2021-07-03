@@ -650,7 +650,8 @@ classdef EsrPulsedSweep < handle
 %                         pause(0.01);
 %                     end
 %                     contact_step = contact_step+1;
-                    %totalSequence
+                    totalSequence
+                    func_PulseSeqVisual(esrGUI, totalSequence) % Yuanqi: for display of pulse sequence (Jul 2, 2021)
                     obj.pulseBlaster.setCurrentPulse(totalSequence);
                     obj.pulseBlaster.loadToPulseblaster();
                     obj.pulseBlaster.runPulse();
