@@ -2628,8 +2628,7 @@ classdef EsrPulsedSweep < handle
             confocalTuplesOutV = reshape(VoltageMatrix,[],2,1);
             
         end
-       
-        
+              
         function PerformImageRegistration(obj, esrGUI, bOriginalImage)
             
             cursorInX = str2double(get(obj.imageScanHandles.editPositionX,'String'));
