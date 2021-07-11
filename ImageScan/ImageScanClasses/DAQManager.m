@@ -18,16 +18,20 @@ classdef DAQManager < handle
     properties
         DAQ;
         isDAQlocked = false;
-        %         AnalogOutMinVoltages;
-        %         AnalogOutMaxVoltages;
-        defaultVoltage = 0.0;               % default output voltage e.g. for confocal intialization
+        AnalogOutMinVoltages = [-5 -5 0.0];%[-4.0 -4.0 0.0];
+        AnalogOutMaxVoltages = [5.0 5 10.0];%[3.0 3.0 10.0];
+        defaultVoltage = 0.0; % default output voltage e.g. for confocal intialization
     end
     
     properties (Constant)
         X = 1;
         Y = 2;
         Z = 3;
-        % confocal XYZ output voltage lines:
+        %set the hardcoded voltage limits for XYZ
+        %galvos for XY can theoretically go up to +/-10 V
+        %hard limit for MCL piezo Z voltage
+        
+         % confocal XYZ output voltage lines:
         confocalX = 'PXI1Slot2/ao0';
         confocalY = 'PXI1Slot2/ao1';
         confocalZ = 'PXI1Slot2/ao2';
@@ -41,80 +45,87 @@ classdef DAQManager < handle
         triggerLine2 = '/PXI1Slot2/PFI13'; % external PulseBlaster counter TTL line
 %         triggerLine3 = '/PXI1Slot3/PFI7';  % external PulseBlaster RF TTL line for counting up/down
         
-        % GPIB address:
-        srsGPIB = 24;
-        
         %analog in for correlated counter, voltage measurement
         counterVoltageAI = 'PXI1Slot2/ai1'
         
-        % photodiode analog input line:
-        %photoDiodeAI = 'PXI1Slot2/ai7'
         
-        
-        
-        
-        % not sure yet, what is going on with these:
         strDims = 'XYZ';
         CTR1 = 1;
         CTR2 = 2;
-        CTR3 = 3;
         CLK1 = 1;
         CLK2 = 2;
-        CLK3 = 3;
-        %         ratioZtoX = 2.5;
-        %         ratioYtoX = 1.0;
+        ratioZtoX = 2.5;
+        ratioYtoX = 1.0;
+        
+        % GPIB address:
+        % Chang Jin 7/10/21
+        srsGPIB = 22;
+        srs2GPIB = 16; 
+        srs3GPIB = 24;
+        %-----------------
     end
     
     methods
-        function obj = DAQManager(handles)
-            % needs ImageScan handles, to e.g. get confocal piezo limits from ConfigureImageScan class
-            %
-            %             % unnecessary after software rewrite 2019 - SB
-            %             obj.AnalogOutMinVoltages = [handles.configS.xMinVolts,handles.configS.yMinVolts,handles.configS.zMinVolts];
-            %             obj.AnalogOutMaxVoltages = [handles.configS.xMaxVolts,handles.configS.yMaxVolts,handles.configS.zMaxVolts];
+        function obj = DAQManager(handles,configStruct)
+               
+            % moved AnalogOutMinVoltages and MaxVoltages from constant to
+            % nont constant properties
+            obj.AnalogOutMinVoltages = [configStruct.xMinVolts,configStruct.yMinVolts,configStruct.zMinVolts];
+            obj.AnalogOutMaxVoltages = [configStruct.xMaxVolts,configStruct.yMaxVolts,configStruct.zMaxVolts];
             
-            
-            % load the NIDAQ_Driver
+            % set up DAQ lines for the scan
             LibraryName = 'nidaqmx';
-            LibraryFilePath = 'C:\WINDOWS\system32\nicaiu.dll'; % location of C header file for DLL.  Might need to modify due to unsupported datatypes
+            LibraryFilePath = 'C:\WINDOWS\system32\nicaiu.dll';
+            % location of C header file for DLL.  Might need to modify due to unsupported datatypes
             HeaderFilePath = 'NIDAQmx.h';
             DeviceChannel = 'PXI1Slot2';
-            % instantiate the driver
-            obj.DAQ = NIDAQ_Driver(LibraryName,LibraryFilePath,HeaderFilePath,DeviceChannel);
-            
-            
+            % instantiate the driver (modified by Chang 07/10/21)
+            if exist('handles', 'var')
+                if handles.bSimulatedData == false
+                    obj.DAQ = NIDAQ_Driver(LibraryName,LibraryFilePath,HeaderFilePath,DeviceChannel);
+                else
+                    obj.DAQ = SimulatedDAQ(LibraryName,LibraryFilePath,HeaderFilePath,DeviceChannel);
+                end
+            else
+                obj.DAQ = NIDAQ_Driver(LibraryName,LibraryFilePath,HeaderFilePath,DeviceChannel);
+            end
+
             % add confocal analog output lines
-            obj.DAQ.addAOLine(obj.confocalX, obj.defaultVoltage, handles.configS.AnalogOutMinVoltages(obj.X), handles.configS.AnalogOutMaxVoltages(obj.X)); %X voltage
-            obj.DAQ.addAOLine(obj.confocalY, obj.defaultVoltage, handles.configS.AnalogOutMinVoltages(obj.Y), handles.configS.AnalogOutMaxVoltages(obj.Y)); %Y voltage
-            obj.DAQ.addAOLine(obj.confocalZ, obj.defaultVoltage, handles.configS.AnalogOutMinVoltages(obj.Z), handles.configS.AnalogOutMaxVoltages(obj.Z)); %Z voltage
-            % set all output lines to default voltage upon opening ImageScan
-            obj.DAQ.WriteAnalogOutAllLines;
+            obj.DAQ.addAOLine(obj.confocalX, obj.defaultVoltage, obj.AnalogOutMinVoltages(obj.X), obj.AnalogOutMaxVoltages(obj.X));%X voltage
+            obj.DAQ.addAOLine(obj.confocalY, obj.defaultVoltage, obj.AnalogOutMinVoltages(obj.Y), obj.AnalogOutMaxVoltages(obj.Y));%Y voltage
+            obj.DAQ.addAOLine(obj.confocalZ, obj.defaultVoltage, obj.AnalogOutMinVoltages(obj.Z), obj.AnalogOutMaxVoltages(obj.Z));%Z voltage
+            %analog in for corelated counter, voltage measurment
             
-            
-            % add photoDiode analog input line
+            % add counter voltage analog input line
             obj.DAQ.addAILine(obj.counterVoltageAI);
-            %obj.DAQ.addAILine(obj.photoDiodeAI);
+%             % set all output lines to default voltage upon opening ImageScan
+%             obj.DAQ.WriteAnalogOutAllLines();
+
+
+            % add Clock Line
+            obj.DAQ.addClockLine('PXI1Slot2/ctr0',obj.triggerLine1);
+            obj.DAQ.addClockLine('PXI1Slot2/ctr1',obj.triggerLine2);             
+            
+
+        % 'Slot2' refers to our DAQ card being in '2' slot of the chassis.
+        % the counter we use is PFI0 and trigger is PFI12
+        % therefore, since there are 14 PFI labeled then perhaps for the 
+        % other BNC block we use 'PFI15' instead of 'PFI0' and
+        % 'PFI27' instead of 'PFI12' by just following the convention as
+        % above where say 'ao2' is the 'AO0' of BNC block 2 for z piezo
+
+        obj.DAQ.addCounterInLine('PXI1Slot2/ctr2',obj.counterLine1,DAQManager.CLK2);
+        obj.DAQ.addCounterInLine('PXI1Slot2/ctr3',obj.counterLine2,DAQManager.CLK1);
+
             
             
-            
-            % add Clock Lines
-            obj.DAQ.addClockLine('PXI1Slot2/ctr1', obj.triggerLine2);
-            obj.DAQ.addClockLine('PXI1Slot2/ctr0', obj.triggerLine1);
-            %             obj.DAQ.addClockLine('PIXISlot3/ctr3', obj.triggerLine3); % for up/down counting
-            
-            
-            % add Counter Lines
-            obj.DAQ.addCounterInLine('PXI1Slot2/ctr3', obj.counterLine2, DAQManager.CLK1);
-            obj.DAQ.addCounterInLine('PXI1Slot2/ctr2', obj.counterLine1, DAQManager.CLK2);%Ctr1
-            
+
         end
-        
-        
         
         function delete(obj)
             obj.DAQ.AnalogOutVoltages = zeros(length(obj.DAQ.AnalogOutVoltages));
             obj.DAQ.WriteAnalogOutAllLines();
-            obj.DAQ.delete();
+           % obj.DAQ.delete();
         end
     end
     
