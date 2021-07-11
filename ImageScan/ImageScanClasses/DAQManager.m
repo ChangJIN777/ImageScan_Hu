@@ -48,7 +48,6 @@ classdef DAQManager < handle
         %analog in for correlated counter, voltage measurement
         counterVoltageAI = 'PXI1Slot2/ai1'
         
-        
         strDims = 'XYZ';
         CTR1 = 1;
         CTR2 = 2;
@@ -67,11 +66,11 @@ classdef DAQManager < handle
     
     methods
         function obj = DAQManager(handles,configStruct)
-               
+            
             % moved AnalogOutMinVoltages and MaxVoltages from constant to
             % nont constant properties
-            obj.AnalogOutMinVoltages = [configStruct.xMinVolts,configStruct.yMinVolts,configStruct.zMinVolts];
-            obj.AnalogOutMaxVoltages = [configStruct.xMaxVolts,configStruct.yMaxVolts,configStruct.zMaxVolts];
+            obj.AnalogOutMinVoltages = [configStruct.xMinVolts configStruct.yMinVolts configStruct.zMinVolts];
+            obj.AnalogOutMaxVoltages = [configStruct.xMaxVolts configStruct.yMaxVolts configStruct.zMaxVolts];
             
             % set up DAQ lines for the scan
             LibraryName = 'nidaqmx';
@@ -80,15 +79,16 @@ classdef DAQManager < handle
             HeaderFilePath = 'NIDAQmx.h';
             DeviceChannel = 'PXI1Slot2';
             % instantiate the driver (modified by Chang 07/10/21)
-            if exist('handles', 'var')
-                if handles.bSimulatedData == false
-                    obj.DAQ = NIDAQ_Driver(LibraryName,LibraryFilePath,HeaderFilePath,DeviceChannel);
-                else
-                    obj.DAQ = SimulatedDAQ(LibraryName,LibraryFilePath,HeaderFilePath,DeviceChannel);
-                end
-            else
-                obj.DAQ = NIDAQ_Driver(LibraryName,LibraryFilePath,HeaderFilePath,DeviceChannel);
-            end
+            obj.DAQ = NIDAQ_Driver(LibraryName,LibraryFilePath,HeaderFilePath,DeviceChannel);
+%             if exist('handles', 'var')
+%                 if handles.bSimulatedData == false
+%                     obj.DAQ = NIDAQ_Driver(LibraryName,LibraryFilePath,HeaderFilePath,DeviceChannel);
+%                 else
+%                     obj.DAQ = SimulatedDAQ(LibraryName,LibraryFilePath,HeaderFilePath,DeviceChannel);
+%                 end
+%             else
+%                 obj.DAQ = NIDAQ_Driver(LibraryName,LibraryFilePath,HeaderFilePath,DeviceChannel);
+%             end
 
             % add confocal analog output lines
             obj.DAQ.addAOLine(obj.confocalX, obj.defaultVoltage, obj.AnalogOutMinVoltages(obj.X), obj.AnalogOutMaxVoltages(obj.X));%X voltage

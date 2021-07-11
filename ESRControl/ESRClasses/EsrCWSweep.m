@@ -5,6 +5,8 @@ classdef EsrCWSweep < handle
     properties
        DAQ;
        srs;
+       srs2;
+       srs3;
 %        ESRControlFig;
        pulseBlaster;
        gesr;

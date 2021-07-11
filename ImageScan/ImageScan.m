@@ -80,7 +80,9 @@ function ImageScan_OpeningFcn(hObject, ~, handles, varargin)
 
 %     handles.bSimulatedData = false;
     %%%% load the NIDAQ
-    handles.DAQManager = DAQManager(handles);
+    % added by Chang 07/10/21
+    configStruct = ConfigureImageScan();
+    handles.DAQManager = DAQManager(handles,configStruct);
 
     %%% load the confocal control classes
     handles.ScanControl = ScanControl(handles);
