@@ -4,16 +4,18 @@ classdef ConfigureImageScan < handle
     
     properties
         bAutoSave =     1;          % autosave images
-        bHaveInverterBoard = 0;     % inverter board      
-%         bHaveNanoscopeAFM = 0;      % AFM
-%         numUSBFilterWheels = 1;     % 
-%         bHaveZurichInstr = 1;       % Zurich Instruments
-%         bHaveMCLXYZScanner = 1;     %
-%         bMagnetGui = 0;             %
+        bHaveInverterBoard = 1;     % inverter board      
+        bHaveNanoscopeAFM = 1;      % AFM
+        numUSBFilterWheels = 2;     % 
+        bHaveZurichInstr = 0;       % Zurich Instruments
+        bHaveMCLXYZScanner = 0;     %
+        bMagnetGui = 1;             %
         
         dataFolder  =    'C:\Users\lab\Documents\dataIm\2019_Apr_25\';
-        sequenceFolder = 'C:\Users\lab\Documents\MATLAB\ImageScan_v2019\PulseBlaster\PulseSequences\';
- 
+        % modified by Chang 7/11/21 (subject to change)
+%         sequenceFolder = 'C:\Users\lab\Documents\MATLAB\ImageScan_v2019\PulseBlaster\PulseSequences\';
+        sequenceFolder = 'C:\Users\lab\Documents\MATLAB\ImageScan_in_development\ImageScan_v2019_1219setup\PulseBlaster\PulseSequences\';
+        
         % confocal piezo calibration
 %         xScanMicronsPerVolt =   6;     % x [mu/V], old definition removed with v2019
 %         yScanMicronsPerVolt =   6;     % y [mu/V]
@@ -43,10 +45,12 @@ classdef ConfigureImageScan < handle
         photoDiodeDark =        0;     % [V]
         
         % other parameters
-        imageScanBGColorR = 228;
-        imageScanBGColorG = 240;
-        imageScanBGColorB = 230;
-        
+        imageScanBGColorR = 231;
+        imageScanBGColorG = 231;
+        imageScanBGColorB = 231;
+        xScanMicronsPerVolt = 25.508796;
+        yScanMicronsPerVolt = 25.508796;
+        zScanMicronsPerVolt = 10;
         
     end %properties
     

@@ -92,8 +92,7 @@ classdef EsrCWSweep < handle
 %             fprintf(obj.srs, ['ENBL ', '0']);
 %             fprintf(obj.srs, ['ENBR ', '1']);
 %             fclose(obj.srs);
-            obj.srs.disable_BNC();
-            obj.srs.enableNType();
+            obj.srs.
             
             obj.gesr.stopScan = false; % Stop any scans if they are already running
             obj.gesr.DisableGui(esrGUI);      % Disable the GUI while running
@@ -103,17 +102,16 @@ classdef EsrCWSweep < handle
             set(esrGUI.numCompleted,'String', num2str(0));
             
             % create a list of frequency states in the SRS sig-gen
-%             fopen(obj.srs);
-%             fprintf(obj.srs, ['LSTC? ', num2str(length(freqValues))]); % create a list of SG states
-%             fprintf(obj.srs, '*CLS');
-%             freqHz = freqValues*(10^6);
-%             for i = 1:length(freqHz)
-%                    % pre-load each state of the list into the SG384 memory
-%                    fprintf(obj.srs, ['LSTP ',num2str(i-1),',',num2str(freqHz(i)),',N,N,N,N,N,N,N,N,N,N,N,N,N,N']);
-%             end
-%             % enable the list
-%             fprintf(obj.srs,'LSTE 1');  % 1 or 0 for enabled or disabled
-            obj.srs.create_list(freqValues);
+            fopen(obj.srs);
+            fprintf(obj.srs, ['LSTC? ', num2str(length(freqValues))]); % create a list of SG states
+            fprintf(obj.srs, '*CLS');
+            freqHz = freqValues*(10^6);
+            for i = 1:length(freqHz)
+                   % pre-load each state of the list into the SG384 memory
+                   fprintf(obj.srs, ['LSTP ',num2str(i-1),',',num2str(freqHz(i)),',N,N,N,N,N,N,N,N,N,N,N,N,N,N']);
+            end
+            % enable the list
+            fprintf(obj.srs,'LSTE 1');  % 1 or 0 for enabled or disabled
             
             %Initialize the DAQ to collect data
             obj.gesr.NsamplesAcquired = 0;
@@ -144,8 +142,7 @@ classdef EsrCWSweep < handle
 
                 tstep = timeStep*10^-6;
                 for i = 1:flength
-%                     fprintf(obj.srs, '*TRG');
-                    obj.srs.list_trigger();% trigger the list
+                    fprintf(obj.srs, '*TRG');                 % trigger the list
                     obj.DAQ.StartTask('RunningCounter');
                     obj.DAQ.StartTask('RunningPulseTrain');
                     tic
@@ -229,14 +226,11 @@ classdef EsrCWSweep < handle
 %                 obj.pulseBlaster.loadToPulseblaster();
 %                 obj.pulseBlaster.runPulse();
 %             end
-%             fprintf(obj.srs,'LSTE 0');  % 1 or 0 for enabled or disabled
-%             fprintf(obj.srs, 'LSTD');   % destroy the list after sweep
-%             fprintf(obj.srs, '*CLS');
-            obj.srs.disable_list();
-            obj.srs.destroy_list();
-            obj.srs.overload_prevent();
+            fprintf(obj.srs,'LSTE 0');  % 1 or 0 for enabled or disabled
+            fprintf(obj.srs, 'LSTD');   % destroy the list after sweep
+            fprintf(obj.srs, '*CLS');
 %             fprintf(obj.srs, ['ENBR ', '0']); % turn off the N RF output
-%             fclose(obj.srs);
+            fclose(obj.srs);
             
             % fit the data with the chosen conditions
             if get(esrGUI.checkboxDoAutoFit,'Value') == 1 
@@ -268,11 +262,10 @@ classdef EsrCWSweep < handle
             end 
             
             % in case there is any frequency modulation, turn off.
-%             fclose(obj.srs);
-%             fopen(obj.srs);
-%             fprintf(obj.srs, 'MODL0');
-%             fclose(obj.srs);
-            obj.srs.set_IQ_off();
+            fclose(obj.srs);
+            fopen(obj.srs);
+            fprintf(obj.srs, 'MODL0');
+            fclose(obj.srs);
             
             % get some parameters from string inputs on the ESR GUI
             centerFreq = str2double(get(esrGUI.centerFreq, 'String'));
@@ -296,12 +289,10 @@ classdef EsrCWSweep < handle
             
             
             % enable the Ntype SRS output, disable the low frequency BNC
-%             fopen(obj.srs);
-%             fprintf(obj.srs, ['ENBL ', '0']);
-%             fprintf(obj.srs, ['ENBR ', '1']);
-%             fclose(obj.srs);
-            obj.srs.enableNType();
-            obj.srs.disable_BNC();
+            fopen(obj.srs);
+            fprintf(obj.srs, ['ENBL ', '0']);
+            fprintf(obj.srs, ['ENBR ', '1']);
+            fclose(obj.srs);
             
             obj.gesr.stopScan = false; % Stop any scans if they are already running
             obj.gesr.DisableGui(esrGUI);      % Disable the GUI while running
@@ -311,19 +302,17 @@ classdef EsrCWSweep < handle
             set(esrGUI.numCompleted,'String', num2str(0));
             
             % create a list of frequency states in the SRS sig-gen
-%             fopen(obj.srs);
-%             fprintf(obj.srs, ['LSTC? ', num2str(length(freqValues))]); % create a list of SG states
-%             fprintf(obj.srs, '*CLS');
-%             freqHz = freqValues*(10^6);
-%             for i = 1:length(freqHz)
-%                    % pre-load each state of the list into the SG384 memory
-%                    fprintf(obj.srs, ['LSTP ',num2str(i-1),',',num2str(freqHz(i)),',N,N,N,N,N,N,N,N,N,N,N,N,N,N']);
-%             end
-%             % enable the list
-%             fprintf(obj.srs,'LSTE 1');  % 1 or 0 for enabled or disabled
-%             
-            obj.srs.create_list(freqValues);
-
+            fopen(obj.srs);
+            fprintf(obj.srs, ['LSTC? ', num2str(length(freqValues))]); % create a list of SG states
+            fprintf(obj.srs, '*CLS');
+            freqHz = freqValues*(10^6);
+            for i = 1:length(freqHz)
+                   % pre-load each state of the list into the SG384 memory
+                   fprintf(obj.srs, ['LSTP ',num2str(i-1),',',num2str(freqHz(i)),',N,N,N,N,N,N,N,N,N,N,N,N,N,N']);
+            end
+            % enable the list
+            fprintf(obj.srs,'LSTE 1');  % 1 or 0 for enabled or disabled
+            
             %Initialize the DAQ to collect data
             YData = zeros(1,length(freqValues));
             averageYData = zeros(1,length(freqValues));
@@ -341,8 +330,7 @@ classdef EsrCWSweep < handle
                 flength = length(freqValues);
                 
                 for i = 1:flength
-%                     fprintf(obj.srs, '*TRG');  
-                    obj.srs.list_trigger();% trigger the list
+                    fprintf(obj.srs, '*TRG');                 % trigger the list
                     obj.DAQ.StartTask('Counter');
                     
                     w = 0;
@@ -422,15 +410,12 @@ classdef EsrCWSweep < handle
                 obj.pulseBlaster.loadToPulseblaster();
                 obj.pulseBlaster.runPulse();
             end
-%             fprintf(obj.srs,'LSTE 0');  % 1 or 0 for enabled or disabled
-%             fprintf(obj.srs, 'LSTD');   % destroy the list after sweep
-%             fprintf(obj.srs, '*CLS');
-%             fprintf(obj.srs, ['ENBR ', '0']); % turn off the N RF output
-%             fclose(obj.srs);
-            obj.srs.disable_list();
-            obj.srs.destroy_list();
-            obj.srs.overload_prevent();
-            obj.srs.disableNType();
+            fprintf(obj.srs,'LSTE 0');  % 1 or 0 for enabled or disabled
+            fprintf(obj.srs, 'LSTD');   % destroy the list after sweep
+            fprintf(obj.srs, '*CLS');
+            fprintf(obj.srs, ['ENBR ', '0']); % turn off the N RF output
+            fclose(obj.srs);
+            
              
             % fit the data with the chosen conditions
             if get(esrGUI.checkboxDoAutoFit,'Value') == 1
@@ -471,19 +456,17 @@ classdef EsrCWSweep < handle
             set(esrGUI.numCompleted,'String', num2str(0));
             
             % create a list of frequency states in the SRS sig-gen
-%             fclose(obj.srs);
-%             fopen(obj.srs);
-%             fprintf(obj.srs, ['LSTC? ', num2str(length(freqValues))]); % create a list of SG states
-%             fprintf(obj.srs, '*CLS');
-%             freqHz = freqValues*(10^6);
-%             for i = 1:length(freqHz)
-%                    % pre-load each state of the list into the SG384 memory
-%                    fprintf(obj.srs, ['LSTP ',num2str(i-1),',',num2str(freqHz(i)),',N,N,N,N,N,N,N,N,N,N,N,N,N,N']);
-%             end
-%             % enable the list
-%             fprintf(obj.srs,'LSTE 1');  % 1 or 0 for enabled or disabled
-            obj.srs.create_list(freqValues);
-            
+            fclose(obj.srs);
+            fopen(obj.srs);
+            fprintf(obj.srs, ['LSTC? ', num2str(length(freqValues))]); % create a list of SG states
+            fprintf(obj.srs, '*CLS');
+            freqHz = freqValues*(10^6);
+            for i = 1:length(freqHz)
+                   % pre-load each state of the list into the SG384 memory
+                   fprintf(obj.srs, ['LSTP ',num2str(i-1),',',num2str(freqHz(i)),',N,N,N,N,N,N,N,N,N,N,N,N,N,N']);
+            end
+            % enable the list
+            fprintf(obj.srs,'LSTE 1');  % 1 or 0 for enabled or disabled
             
             %Initialize the DAQ to collect data
             obj.gesr.NsamplesAcquired = 0;
@@ -517,8 +500,7 @@ classdef EsrCWSweep < handle
 
                 tstep = timeStep*10^-6;
                 for i = 1:flength
-%                     fprintf(obj.srs, '*TRG');
-                    obj.srs.list_trigger(); % trigger the list
+                    fprintf(obj.srs, '*TRG');                 % trigger the list
                     obj.DAQ.StartTask('RunningCounter');
                     obj.DAQ.StartTask('RunningPulseTrain');
                     tic
@@ -586,13 +568,10 @@ classdef EsrCWSweep < handle
             obj.DAQ.ClearTask('RunningCounter');
             obj.DAQ.ClearTask('RunningPulseTrain');
             
-%             fprintf(obj.srs,'LSTE 0');  % 1 or 0 for enabled or disabled
-%             fprintf(obj.srs, 'LSTD');   % destroy the list after sweep
-%             fprintf(obj.srs, '*CLS');
-%             fclose(obj.srs);
-            obj.srs.disable_list();
-            obj.srs.destroy_list();
-            obj.srs.overload_prevent();
+            fprintf(obj.srs,'LSTE 0');  % 1 or 0 for enabled or disabled
+            fprintf(obj.srs, 'LSTD');   % destroy the list after sweep
+            fprintf(obj.srs, '*CLS');
+            fclose(obj.srs);
             
             obj.gesr.EnableGui(esrGUI);
             obj.gesr.stopScan = false;
@@ -660,8 +639,7 @@ classdef EsrCWSweep < handle
                 flength = length(freqValues);
                 
                 for i = 1:flength
-%                     fprintf(obj.srs, '*TRG'); 
-                    obj.srs.list_trigger(); % trigger the list
+                    fprintf(obj.srs, '*TRG');                 % trigger the list
                     pause(0.005)
                     [contrast(i), countDiff(i), countTotal(i)] = get_count_contrast(NPulseSamples);
                     
@@ -713,13 +691,10 @@ classdef EsrCWSweep < handle
             obj.gesr.saveDiffEsrMatFile(esrGUI,freqValues,averageContrast,averageContrastError,indContrastTraces,indCountDiffTraces,indCountTotalTraces,'PerformScanDiffCWESR')
             clear indDataTraces
             
-%             fprintf(obj.srs,'LSTE 0');  % 1 or 0 for enabled or disabled
-%             fprintf(obj.srs, 'LSTD');   % destroy the list after sweep
-%             fprintf(obj.srs, '*CLS');
-%             fclose(obj.srs);
-            obj.srs.disable_list();
-            obj.srs.destroy_list();
-            obj.srs.overload_prevent();
+            fprintf(obj.srs,'LSTE 0');  % 1 or 0 for enabled or disabled
+            fprintf(obj.srs, 'LSTD');   % destroy the list after sweep
+            fprintf(obj.srs, '*CLS');
+            fclose(obj.srs);
             
             % fit the data with the chosen conditions
             %             fitCWESR(freqValues, averageYData);
