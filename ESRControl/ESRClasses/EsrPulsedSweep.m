@@ -548,6 +548,108 @@ classdef EsrPulsedSweep < handle
             contact_step = 0;
             global t1retract;
             
+            % added by Chang 07/10/21 for implementing quantum interpolation
+            quantInterpXY8 = get(esrGUI.quantInterpXY8,'Value');
+            if quantInterpXY8 == 1
+               disp('Quantum Interpolation Called');
+            end
+            
+            global storeLastSequenceCell
+            % added by Chang 07/10/21 
+            % code for allowing the users to choose if they want to
+            % preallocate all sequences of each tau points 
+            bRunNormal = get(esrGUI.prelocateSwitch,'Value');
+            
+%==========================================================================
+% new for 04-17-2014 (on Alice), new for 03/08/16 (on 1219 afm)
+%, preallocate all sequences of each tau, so
+% that time is not wasted redoing it on every sweep
+            if bRunNormal==1
+                disp('preallocating all sequences of each tau.');
+                allSequencesCell = cell(1, length(listTauTime));
+                for kTauTime = 1:length(listTauTime)
+                    tic
+                    nowTauTime = listTauTime(kTauTime); %pulseStr has the information encoded into it. Can expand it beforehand, then use the properly calculated delay to input the proper delays for each tau time.
+                    %numInstructions would also have to change. This is
+                    %just a row vector with the number of instructions per
+                    %bit.. no big deal to change it.
+                    for mb = 1:numBits
+                        tempCell = pulseStr{mb}; %added here and removed below so it doesn't remake it on every iteration. Dolev 1/10/2018
+                        
+                        if quantInterpXY8 == 1
+                            [tempCell, numInstructions(1,mb)] = quantumInterpolationExpansion_compress(obj,tempCell,nowTauTime,pulseTimeStruct.n,pulseTimeStruct.y); %Quantum interpolation. Dolev 1/11/18
+                        end
+                        %what we want to do now is add a button in the
+                        %EsrGUI that gives the option for XY8-quantum
+                        %interpolation. We will then have an if statement
+                        %here that will expand tempcell appropriately, bit
+                        %by bit, and leave it in the same format it was
+                        %before (num, num, num, cell, cell)
+                        for k = 1:numInstructions(1,mb)
+                            %tempCell = pulseStr{mb} removed so that it
+                            %doesn't make it again on every iteration.
+                            aomExpr = obj.FlipAOMBitForNoInverter(tempCell{1,2}(k));
+                            durExpr = ReplacePulseVariables(obj, tempCell{1,5}(k), nowTauTime, pulseTimeStruct);
+                            durExprSingle = durExpr{1};
+                            durExpr2 = ReplaceLoopVariables(obj, tempCell{1,4}(k), pulseTimeStruct.n);
+                            durExprSingle2 = durExpr2{1};
+
+                            pulseNum{mb}(k,5) = eval(durExprSingle);
+                            pulseNum{mb}(k,4) = eval(durExprSingle2);
+                            pulseNum{mb}(k,3) = tempCell{1,3}(k);
+                            if (mb == 1)  %&& obj.imageScanHandles.configS.bHaveInverterBoard==0)
+                                if tempCell{1,2}(k) == 0
+                                    pulseNum{mb}(k,2) = 14680065;
+                                elseif tempCell{1,2}(k) == 14680065
+                                    pulseNum{mb}(k,2) = 0;
+                                end
+                            else
+                                pulseNum{mb}(k,2) = tempCell{1,2}(k);
+                            end
+                            pulseNum{mb}(k,1) = tempCell{1,1}(k);
+                        end
+                    end
+
+                    % next, must reconcile these sequences and change the
+                    % stop command to a branch command
+                    pulseSequenceString = []; % reset the sequence string
+                    for nn = 1:numBits
+                        if nn==numBits
+                            pulseSequenceString = [pulseSequenceString 'pulseNum{' num2str(nn) '}'];
+                        else
+                            pulseSequenceString = [pulseSequenceString 'pulseNum{' num2str(nn) '},'];
+                        end
+                    end
+                    totalSequence = eval(['obj.pulseBlaster.reconcilePulses(' pulseSequenceString ')' ]);
+                    [totalNumInstructions, ~] = size(totalSequence);
+                    if totalSequence(totalNumInstructions,3) == INST_STOP
+                        totalSequence(totalNumInstructions,3) = INST_BRANCH;
+                    end
+                    if totalSequence(totalNumInstructions,5) < MINPULSE
+                        totalSequence(totalNumInstructions,5) = MINPULSE;
+                        % in case combining the pulses somehow makes the
+                        % last pulse duration = 0, which is not good
+                    end
+
+                    % finally, add this total sequence to the global cell array
+                    % holding sequences of all the tau points.
+                    allSequencesCell{1,kTauTime} = totalSequence;
+                    [num2str(kTauTime) ' tau is done, here is sequence']
+                    totalSequence
+                    [num2str(kTauTime) ' sequence stored']
+                    toc
+                end
+                
+                storeLastSequenceCell = allSequencesCell;
+                %============ end preallocation of sequences ==============
+            else
+                % if we just want to use past sequence:
+                allSequencesCell = storeLastSequenceCell;
+                disp('skipping store, using last sequences');
+            end
+%==========================================================================
+            
+
             % START THE PULSE SEQUENCE, FOR EACH TAU DO THE FOLLOWING
             % 2) replace its operators and variables with one number
             % 3) now each is in pulseInterpreter form
@@ -569,6 +671,7 @@ classdef EsrPulsedSweep < handle
                     
                     for mb = 1:numBits
                         tempCell = pulseStr{mb};  %added here and removed below so it doesn't remake it on every iteration. Dolev 1/10/2018
+                        
                         for k = 1:numInstructions(1,mb)
                             
                            
@@ -2853,8 +2956,185 @@ classdef EsrPulsedSweep < handle
            end
         end
     
-        
+        function [final_Instruction, numInstructions] = quantumInterpolationExpansion_compress(obj,Instruction,nowTauTime,nn,yy)
+
+            %NOTE: This function was implemented by Dolev Bluvstein on 1/18/2018. It
+            %allows for "supersampling" beoynd the 2 ns resolution of the pulseblaster in 
+            %an XY8 measurement. If you, for example, are doing 64 pulses with 
+            %2 tau = 200 ns spacing, the next best you can do is 2 tau = 204 ns
+            %spacing. With this interpolation technique, you can make 63 pulses 2 tau =
+            %200 ns, and one of the 64 pulses you make 2 tau = 204 ns. Now you
+            %effectively have 2 tau = 200.0625 ns. Your frequency resolution improves
+            %by orders of magnitude. This "quantum interpolation" technique is taken
+            %from "Quantum Interpolation for High Resolution Sensing" by Ashok Ajoy
+            %(2017). The supplement explains how to construct the optimal supersampling
+            %sequence, and MATLAB code is given at the end, in part modified here.
+
+            %AS WRITTEN, this function will only work for an XY8 sequence with loops of t and y-t loop.
+            %using y in any other way will not work and will compile your interpolation incorrectly.
+            %YOU MUST also write the pulse sequence with 't' and never '2t'. So you have to
+            %repeat a line that has '2t' delay and write 't' and then 't' again on the next line.
+
+            delay{nn*16,1}=[];% Initialize cell array 'delay' 
+            count=1; mm=0;
+
+            sample = mod(nowTauTime,2)/2;
+
+            t_floor = num2str(2*floor(nowTauTime/2));
+            t_floor_2 = num2str(2*floor(nowTauTime/2)+2);
+
+            for jj=1:(4*nn) % HerenisXYBcyclenumber 
+                mm = mm + sample;
+            % sample is a fraction number between 0 and 1, rounded to multiples of 1/(4*n);
+                    if abs(mm) <= 1/2
+                        delay{count} = t_floor;
+                        delay{count+1} = t_floor;
+                        delay{count+2} = t_floor;
+                        delay{count+3} = t_floor;
+                        count = count+4;
+                    else
+                        delay{count} = t_floor_2;
+                        delay{count+1} = t_floor_2;
+                        delay{count+2} = t_floor_2;
+                        delay{count+3} = t_floor_2; %2 ns is dt, the resolution of pulse blaster
+                        count = count+4; 
+                        mm = mm-1;
+                    end
+            end
+
+            delay_y{nn*16,1}=[];% Initialize cell array 'delay_y' 
+            count=1; mm=0;
+
+            sample = mod(yy-nowTauTime,2)/2; %%yy-nowTauTime is the time of the second measurement, y-t. Important to remember that y -> y+t
+
+            yminust_floor = num2str(2*floor((yy-nowTauTime)/2));
+            yminust_floor_2 = num2str(2*floor((yy-nowTauTime)/2)+2);
+
+            for jj=1:(4*nn) % HerenisXYBcyclenumber 
+                mm = mm + sample;
+            % sample is a fraction number between 0 and 1, rounded to multiples of 1/(4*n);
+                    if abs(mm) <= 1/2
+                        delay_y{count} = yminust_floor;
+                        delay_y{count+1} = yminust_floor;
+                        delay_y{count+2} = yminust_floor;
+                        delay_y{count+3} = yminust_floor;
+                        count = count+4;
+                    else
+                        delay_y{count} = yminust_floor_2;
+                        delay_y{count+1} = yminust_floor_2;
+                        delay_y{count+2} = yminust_floor_2;
+                        delay_y{count+3} = yminust_floor_2; %2 ns is dt, the resolution of pulse blaster
+                        count = count+4; 
+                        mm = mm-1;
+                    end
+            end
+
+            Instruction{4} = str2double(regexprep(Instruction{4},'n',num2str(nn)));
+            Instruction{1} = (0:(length(Instruction{1})-1))';
+
+            find(Instruction{3}==2);
+            loop_ends = Instruction{1}(Instruction{3}==3);
+            loop_starts = Instruction{4}(loop_ends+1);
+
+            temp_loopmat_num = [];
+            temp_loopmat_let = {};
+
+            %NOTE. AS WRITTEN THIS WILL NOT ALLOW FOR NESTED LOOPS. THIS IS FINE FOR
+            %THE XY8 MEASUREMENTS I HAVE PLANNED, WHERE THE XY8 IS WRITTEN EXPLICLITY.
+            %AS IS, THIS QUANTUM INTERPOLATION SCHEME IS SPECIFICALLY FOR XY8 AND
+            %FURTHER CALCULATIONS AND CODING WOULD NEED TO BE DONE FOR XY4,XY16, OR
+            %ANY OTHER PULSE SEQUENCE ASIDE FROM XY8-N
+            for iL=1:length(loop_starts)
+                number_mats = cell2mat(Instruction(2:3));
+
+                if iL == 1
+                    top_num = number_mats(1:loop_starts(iL),:);
+                    top_let = Instruction{5}(1:loop_starts(iL),:);
+                else
+                    top_num = number_mats((loop_ends(iL-1) + 2):loop_starts(iL),:);
+                    top_let = Instruction{5}((loop_ends(iL-1) + 2):loop_starts(iL),:);
+                end
+
+                middle_num = number_mats((loop_starts(iL)+1):(loop_ends(iL)+1),:);
+                middle_let = Instruction{5}((loop_starts(iL)+1):(loop_ends(iL)+1),:);
+
+                if iL == length(loop_starts)
+                    bottom_num = number_mats((loop_ends(iL)+2):end,:);
+                    bottom_let = Instruction{5}((loop_ends(iL)+2):end,:);
+                else
+                    bottom_num = [];
+                    bottom_let = {};
+                end
+
+                middle_num(1,2) = 0;
+                middle_num(end,2) = 0;
+
+                middle_num_expand = repmat(middle_num,nn,1);
+                middle_let_expand = repmat(middle_let,nn,1); %expand loops
+
+                middle_dt_added = middle_let_expand;
+
+                contains_yminust = any(~cellfun('isempty',strfind(middle_let,'y-t'))); %finds if there are any y-t in here. In that case, use y-t for this expansion.
+
+                iii = 0;
+                if ~contains_yminust
+                    t_index = strfind(middle_let_expand,'t');
+                    for ii = 1:length(middle_let_expand)
+                        if t_index{ii} ~= 0
+                            iii = iii+1;
+                            middle_dt_added{ii} = regexprep(middle_let_expand{ii},'t',['(',delay{iii},')']);
+                        end
+                    end
+                end
+
+                if contains_yminust
+                    y_index = strfind(middle_let_expand,'y-t');
+                    for ii = 1:length(middle_let_expand)
+                        if y_index{ii} ~= 0
+                            iii = iii+1;
+                            middle_dt_added{ii} = regexprep(middle_let_expand{ii},'y-t',['(',delay_y{iii},')']);
+                        end
+                    end
+                end
+
+                temp_loopmat_num = [temp_loopmat_num; top_num; middle_num_expand; bottom_num];
+                temp_loopmat_let = [temp_loopmat_let; top_let; middle_dt_added; bottom_let];
+
+                %have to renumber instruction{1}, have to expand instruction{2} (no dt
+                %adding needed), have to make all of instruction{3} = 0 except the end
+                %value which has to equal 1, and have to set all instruction{4} = 0.
+                %This is because we already expanded the loop.
+            end
+
+            %now compress efficiently, allowing for negative delay values and also substantially
+            %increasing the speed of the PulseInterpreter function
+
+            for instruction_index = 1:(length(temp_loopmat_let) - 1)
+                if temp_loopmat_num(instruction_index,1) == temp_loopmat_num(instruction_index+1,1) %if it's the same instruction, then combine their durations
+                    temp_loopmat_let{instruction_index+1} = [temp_loopmat_let{instruction_index},'+',temp_loopmat_let{instruction_index+1}];
+                    temp_loopmat_num(instruction_index,2) = 0.1; %mark the top line for later deletion since we added the duration to the bottom line
+                end
+            end
+            delete_index = (temp_loopmat_num(:,2) == 0.1);
+
+            temp_loopmat_let(delete_index) = [];
+            temp_loopmat_num(delete_index,:) = []; 
+
+            %now prepare to pass to the normal pulse interpreter function
+            final_Instruction{1,5} = [];
+
+            final_Instruction{1,1} = (0:(length(temp_loopmat_let)-1))'; %renumber first column from 0 to end
+            final_Instruction{1,2} = temp_loopmat_num(:,1); %bit on/off instruction, expanded
+            final_Instruction{1,3} = temp_loopmat_num(:,2); %should be all 0s except 1 at end. I remove all of the loop instructions.
+            final_Instruction{1,4} = repmat({'0'},length(temp_loopmat_let),1); %all 0s
+            final_Instruction{1,5} = temp_loopmat_let; %delay times, expanded and with +2 in the appropriate locations.
+
+            numInstructions = length(final_Instruction{1,5});
+            %final instruction is the expanded form of the commands for 1 bit, with the proper dt's
+            %inserted, in the same format from the beginning. It can now be passed onto
+            %the remainder of the function as normal, and used for quantum
+            %interpolation.
     end
-    
+           
 end
 

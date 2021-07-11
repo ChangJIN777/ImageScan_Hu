@@ -22,7 +22,7 @@ function varargout = ESRControl(varargin)
 
 % Edit the above text to modify the response to help ESRControl
 
-% Last Modified by GUIDE v2.5 10-Jul-2021 17:14:37
+% Last Modified by GUIDE v2.5 10-Jul-2021 22:00:45
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -170,26 +170,26 @@ function buttonBrowseSequences_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
             
-           [filename pathname] = uigetfile('*.esr', 'Select Pulse Sequence',...
-                    handles.EsrGlobalMethods.imageScanHandles.configS.sequenceFolder);
-            try
-                 file1 = [pathname filename];
-            catch err %#ok
-                 file1 = [];
-            end
-            
-            %return if no good file is available
-            if isempty(file1) || ~ischar(file1)
-                return;
-            end
-            %Check to see that the file is good
-            fid = fopen(file1);
-            if fid == -1
-                return;
-            end
-            fclose(fid);
-            % if the file looks fine set the path/file on GUI:
-            set(handles.fileboxPulseSequence, 'String', file1);
+   [filename pathname] = uigetfile('*.esr', 'Select Pulse Sequence',...
+            handles.EsrGlobalMethods.imageScanHandles.configS.sequenceFolder);
+    try
+         file1 = [pathname filename];
+    catch err %#ok
+         file1 = [];
+    end
+
+    %return if no good file is available
+    if isempty(file1) || ~ischar(file1)
+        return;
+    end
+    %Check to see that the file is good
+    fid = fopen(file1);
+    if fid == -1
+        return;
+    end
+    fclose(fid);
+    % if the file looks fine set the path/file on GUI:
+    set(handles.fileboxPulseSequence, 'String', file1);
 end
 
 
@@ -2497,3 +2497,23 @@ function useSRS2inPESR_Callback(hObject, eventdata, handles)
 
 % Hint: get(hObject,'Value') returns toggle state of useSRS2inPESR
 end
+
+
+% --- Executes on button press in quantInterpXY8.
+function quantInterpXY8_Callback(hObject, eventdata, handles)
+% hObject    handle to quantInterpXY8 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of quantInterpXY8
+end
+
+
+% --- Executes on button press in prelocateSwitch.
+function prelocateSwitch_Callback(hObject, eventdata, handles)
+% hObject    handle to prelocateSwitch (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of prelocateSwitch
+end 
