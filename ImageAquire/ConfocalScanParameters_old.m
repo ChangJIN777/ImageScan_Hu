@@ -19,7 +19,7 @@ classdef ConfocalScanParameters < handle
         % ConfocalScanParameters class made in ScanControl
         % instance, microns-volts conversion
         micronsPerVoltX = 143.67;%25; % hardcoded for 60x oil objective and galvo.
-         micronsPerVoltY = 136.973;%25; % hardcoded for 60x oil objective and galvo.
+        micronsPerVoltY = 136.973;%25; % hardcoded for 60x oil objective and galvo.
         micronsPerVoltZ = 10; % hardcoded for the MCL objective piezo
         voltsPerMicronX = 0.006960395;%0.04; % inverse
         voltsPerMicronY = 0.00730070;%0.04; % inverse
