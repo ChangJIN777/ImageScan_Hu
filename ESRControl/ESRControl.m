@@ -22,7 +22,7 @@ function varargout = ESRControl(varargin)
 
 % Edit the above text to modify the response to help ESRControl
 
-% Last Modified by GUIDE v2.5 10-Jul-2021 14:15:45
+% Last Modified by GUIDE v2.5 10-Jul-2021 17:14:37
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -2487,3 +2487,12 @@ function checkboxSaveDataPerShot_Callback(hObject, eventdata, handles)
 
 % Hint: get(hObject,'Value') returns toggle state of checkboxSaveDataPerShot
 end
+
+
+% --- Executes on button press in useSRS2inPESR.
+function useSRS2inPESR_Callback(hObject, eventdata, handles)
+% hObject    handle to useSRS2inPESR (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of useSRS2inPESR

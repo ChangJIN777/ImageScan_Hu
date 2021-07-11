@@ -261,7 +261,6 @@ classdef EsrPulsedSweep < handle
            obj.pulseBlaster.stopPulse(); 
         end            
         
-        % finish updating the code for PerofmrSequence func (Note: need to add the amplitude check)
         function PerformSequence(obj,esrGUI)
             % update the file number to prevent saving over your data
             obj.gesr.UpdateFileNumber(esrGUI);
@@ -1277,10 +1276,14 @@ classdef EsrPulsedSweep < handle
             % enabling only the first srs for the pulse ESR sequence
             obj.srs.enableNType();
             
+            useSRS2inPESR = get(esrGUI.useSRS2inPESR,'Value'); % added by Chang 07/10/21 for sweeping SRS2 frequency
+            
             obj.gesr.stopScan = false; %Stop any scans if they are already running
             obj.gesr.DisableGui(esrGUI); %disable the gui so the user cannot chnge parameters during a sweep
-            obj.gesr.setAmp(esrGUI); %Set the power
+            obj.gesr.setAmp(esrGUI); %Set the power (srs1)
             obj.gesr.setFreq(esrGUI);
+            obj.gesr.setAmp2(esrGUI); %Set the power (srs2)
+            obj.gesr.setFreq2(esrGUI);
             set(esrGUI.numCompleted, 'String', num2str(0)); % reset this before starting new
             set(esrGUI.stepsSinceTracking, 'String', num2str(0)); % reset this before starting new
             
@@ -1313,7 +1316,13 @@ classdef EsrPulsedSweep < handle
                 pulseNum{nb} = zeros(numInstructions(1,nb),5);
             end
             
-            centerFreq = str2num(get(esrGUI.centerFreq, 'String'));
+            % added for the option to sweep SRS2 frequency (Chang 07/10/21)
+            if get(esrGUI.useSRS2inPESR,'Value') == 1
+                centerFreq = str2num(get(esrGUI.centerFreqB, 'String'));
+            else
+                centerFreq = str2num(get(esrGUI.centerFreq, 'String'));
+            end
+            % ----------------------------------------------------------
             numFreqSteps = str2num(get(esrGUI.numPulseFreqPoints, 'String'));
             numAverages = str2num(get(esrGUI.numAverages, 'String'));
             repsPerFreqPoint = str2num(get(esrGUI.repsPerFreqPoint,'String'));
@@ -1398,8 +1407,12 @@ classdef EsrPulsedSweep < handle
             
             %Open the RF generator and initialize a list of SG states
             listFreq = listFreq*(10^6); % change to Hz units
-            obj.srs.create_list(listFreq);
-
+            if useSRS2inPESR == 1
+                obj.srs2.create_list(listFreq);
+            else
+                obj.srs.create_list(listFreq);
+            end % modified by Chang 07/10/21 for the option to sweep SRS2 freq
+            
             %==============================================================
             %added just to be able to initialize the AOM
             %==============================================================
@@ -1469,7 +1482,14 @@ classdef EsrPulsedSweep < handle
                 jFreqStep = 1;
                 % we cut and paste the ClearTasks from here for tracking
                 while jFreqStep <= length(listFreq) && obj.gesr.stopScan == false
-                    obj.srs.list_trigger(); % trigger the list to next frequency
+                    % added by Chang to allow for frequency sweeps of SRS 2
+                    % (07/10/21)
+                    if useSRS2inPESR == 1
+                        obj.srs2.list_trigger(); % trigger the list to next frequency
+                    else
+                        obj.srs.list_trigger(); % trigger the list to next frequency
+                    end 
+                    % -----------------------------------------------------
                     
                     obj.DAQ.ClearTask('RunningCounter'); % if tracking
                     obj.DAQ.ClearTask('RunningPulseTrain');
@@ -1681,7 +1701,9 @@ classdef EsrPulsedSweep < handle
                 obj.pulseBlaster.runPulse();
             end
             %fopen(obj.srs);
-            obj.srs.disableNType();
+            obj.srs.disableNType(); % turn off N RF output
+            obj.srs2.disableNType();
+            obj.srs3.disableNType();
             obj.gesr.EnableGui(esrGUI);
             obj.gesr.stopScan = false;
         end
