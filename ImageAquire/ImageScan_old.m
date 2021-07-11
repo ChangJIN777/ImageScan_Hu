@@ -22,7 +22,7 @@ function varargout = ImageScan(varargin)
 
     % Edit the above text to modify the response to help ImageScan
 
-    % Last Modified by GUIDE v2.5 07-Aug-2019 14:24:15
+    % Last Modified by GUIDE v2.5 10-Jul-2021 22:08:43
 
     % Begin initialization code - DO NOT EDIT
     gui_Singleton = 1;
@@ -352,8 +352,8 @@ function ImageScan_OpeningFcn(hObject, eventdata, handles, varargin)
     set(handles.confocalAxes,'YDir','normal');
     xlim(handles.confocalAxes,[-125,125]);
     ylim(handles.confocalAxes,[-125,125]);
-    xlabel(handles.confocalAxes,'X (µm)');
-    ylabel(handles.confocalAxes,'Y (µm)');
+    xlabel(handles.confocalAxes,'X (Âµm)');
+    ylabel(handles.confocalAxes,'Y (Âµm)');
     
     guidata(hObject, handles);
     
@@ -1050,7 +1050,7 @@ function zoomOutCallback(hObject, ~, handles)
 %tab = get(handles.tabGroup, 'SelectedTab');
 set(hObject, 'State', 'off');
 
-% xlim and ylim will now be in µm, so translate from voltages on DAQ props.
+% xlim and ylim will now be in Âµm, so translate from voltages on DAQ props.
 % the accessed index of ScanParameters will not matter since microns to
 % volts conversion will be the same for all tabs, so just use "1"
 mpvx = handles.ScanControl.ScanParameters(1).micronsPerVoltX;
