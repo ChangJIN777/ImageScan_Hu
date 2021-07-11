@@ -18,6 +18,7 @@ classdef EsrGlobalMethods < handle
        NSamples = 2;
        counterData = [];
        counterData2 = [];
+       counterDataPerShot = []; % added for taking per shot data points
        
        fileWriteFrequency = [];
        fileWritePathname = [];
@@ -182,6 +183,7 @@ classdef EsrGlobalMethods < handle
         
         function IQmodulationON(obj, newValue)
            % fclose(obj.srs);
+           % Currently only allowing IQ modulation on SRS1
             switch newValue
                 case 0
                     obj.srs.set_IQ_off(); % disable IQ modulation

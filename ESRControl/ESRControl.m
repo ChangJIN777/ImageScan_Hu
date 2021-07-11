@@ -22,7 +22,7 @@ function varargout = ESRControl(varargin)
 
 % Edit the above text to modify the response to help ESRControl
 
-% Last Modified by GUIDE v2.5 01-Jul-2021 23:34:31
+% Last Modified by GUIDE v2.5 10-Jul-2021 14:15:45
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -1489,6 +1489,7 @@ settingsS.initTime = str2double(get(handles.initTime,'String'));
 settingsS.readoutTime = str2double(get(handles.readoutTime,'String'));
 settingsS.fileboxPulseSequence = get(handles.fileboxPulseSequence,'String');
 settingsS.radio1Channel = get(handles.radio1Channel,'Value');
+settingsS.checkboxSaveDataPerShot = get(handles.checkboxSaveDataPerShot,'Value');
 % settingsS.radio2Channel = get(handles.radio2Channel,'Value');
 % settingsS.radio4Channel = get(handles.radio4Channel,'Value');
 settingsS.radio1Trig2Sig = get(handles.radio1Trig2Sig,'Value');
@@ -1565,6 +1566,7 @@ set(handles.radioCheckRedSpec,'Value',settingsS.radioCheckRedSpec);
 set(handles.checkboxIQEnabled,'Value',settingsS.checkboxIQEnabled);
 set(handles.checkboxSignal50ns,'Value',settingsS.checkboxSignal50ns);
 set(handles.checkboxReference50ns,'Value',settingsS.checkboxReference50ns);
+set(handles.checkboxSaveDataPerShot,'Value',settingsS.checkboxSaveDataPerShot);
 
 guidata(hObject, handles);
 end
@@ -2474,4 +2476,14 @@ function amplitudeC_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+end
+
+
+% --- Executes on button press in checkboxSaveDataPerShot.
+function checkboxSaveDataPerShot_Callback(hObject, eventdata, handles)
+% hObject    handle to checkboxSaveDataPerShot (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of checkboxSaveDataPerShot
 end

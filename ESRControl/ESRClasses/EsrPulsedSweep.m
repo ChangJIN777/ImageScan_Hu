@@ -275,23 +275,13 @@ classdef EsrPulsedSweep < handle
             inputAmp2 = str2double(get(esrGUI.amplitudeB,'String'));
             inputAmp3 = str2double(get(esrGUI.amplitudeC,'String'));
             maxAmp = max([inputAmp,inputAmp2,inputAmp3]);
-            if obj.gesr.CheckAmp(maxAmp,0) % if amplitude is higher than 0 dBm
+            if obj.gesr.CheckAmp(maxAmp,4) % if amplitude is higher than 4 dBm
                 return % interrupt the function
             end
 
             fclose(obj.srs);
             fclose(obj.srs2);
             fclose(obj.srs3);
-%             fopen(obj.srs);
-%                 % Ntype selected
-%                 fprintf(obj.srs, ['ENBL ', '0']);
-%                 fprintf(obj.srs, ['ENBR ', '1']);
-%             fclose(obj.srs);
-
-%             % in case there is any frequency modulation, turn off
-%             obj.srs.set_IQ_off();
-%             obj.srs2.set_IQ_off();
-%             obj.srs3.set_IQ_off();
             
             % place for adding an amplitude check
             %%%%
@@ -320,9 +310,11 @@ classdef EsrPulsedSweep < handle
             set(esrGUI.stepsSinceTracking, 'String', num2str(0)); % reset this before starting new
            
             
+            % used for setting the number of signal and traces for the data
+            % taking process
             if get(esrGUI.radio1Channel,'Value') == 1
-                numTriggers = 1;
-                numSignalBuffers = 1;
+                numTriggers = 1; % 1 trigger
+                numSignalBuffers = 1; % 1 signal
                 numReadBuffersPerCounter = 4; %1/1 = 1
 %             elseif get(esrGUI.radio2Channel,'Value') == 1
 %                 numTriggers = 2;
@@ -333,8 +325,8 @@ classdef EsrPulsedSweep < handle
 %                 numSignalBuffers = 4;
 %                 numReadBuffersPerCounter = 8; %4/2 = 2
             elseif get(esrGUI.radio1Trig2Sig,'Value') == 1
-                numTriggers = 1;
-                numSignalBuffers = 2;
+                numTriggers = 1; % 1 trace 
+                numSignalBuffers = 2; % 2 signal 
                 numReadBuffersPerCounter = 8; %2/1 = 2
             end
             
@@ -386,23 +378,31 @@ classdef EsrPulsedSweep < handle
             end
             listTauTime = listTauTime';
             %------------------------------------------------------
-            
-                rawSignalPlot = zeros(length(listTauTime),1);
-                rawdarkPlot = zeros(length(listTauTime),1);
-                rawRefPlot = zeros(length(listTauTime),1);
-                rawNormPlot = zeros(length(listTauTime),1);
-                avgSignalPlot = zeros(length(listTauTime),1);
-                avgRefPlot = zeros(length(listTauTime),1);
-                totalNormPlot = zeros(length(listTauTime),1);
-                if numSignalBuffers == 2
-                    rawSignalPlot2 = zeros(length(listTauTime),1);
-                    rawdarkPlot2 = zeros(length(listTauTime),1);
-                    rawRefPlot2 = zeros(length(listTauTime),1);
-                    rawNormPlot2 = zeros(length(listTauTime),1);
-                    avgSignalPlot2 = zeros(length(listTauTime),1);
-                    avgRefPlot2 = zeros(length(listTauTime),1);
-                    totalNormPlot2 = zeros(length(listTauTime),1);
-                end
+            %===========(codes added for taking per shot data)=============
+            bPerShot = get(esrGUI.checkboxSaveDataPerShot,'Value');
+            if bPerShot==true
+                rawSignalList = zeros(length(listTauTime),repsPerTau);
+                rawRefList = zeros(length(listTauTime),repsPerTau);
+                rawSignalList2 = zeros(length(listTauTime),repsPerTau);
+                rawRefList2 = zeros(length(listTauTime),repsPerTau);
+            end
+            %=======================================================
+            rawSignalPlot = zeros(length(listTauTime),1);
+            rawdarkPlot = zeros(length(listTauTime),1);
+            rawRefPlot = zeros(length(listTauTime),1);
+            rawNormPlot = zeros(length(listTauTime),1);
+            avgSignalPlot = zeros(length(listTauTime),1);
+            avgRefPlot = zeros(length(listTauTime),1);
+            totalNormPlot = zeros(length(listTauTime),1);
+            if numSignalBuffers == 2
+                rawSignalPlot2 = zeros(length(listTauTime),1);
+                rawdarkPlot2 = zeros(length(listTauTime),1);
+                rawRefPlot2 = zeros(length(listTauTime),1);
+                rawNormPlot2 = zeros(length(listTauTime),1);
+                avgSignalPlot2 = zeros(length(listTauTime),1);
+                avgRefPlot2 = zeros(length(listTauTime),1);
+                totalNormPlot2 = zeros(length(listTauTime),1);
+            end
             thresholdXAxisUnits = 5000; % max obj.tauEnd to plot us or ns
             obj.gesr.fileWriteFrequency = str2num(get(esrGUI.writeDataFreq,'String'));
             obj.gesr.fileWritePathname = get(esrGUI.esrSavePath,'String');
@@ -427,6 +427,8 @@ classdef EsrPulsedSweep < handle
             NPulseSamples = repsPerTau*numReadBuffersPerCounter+1; 
             obj.gesr.counterData = zeros(1,NPulseSamples);
             obj.gesr.counterData2 = zeros(1,NPulseSamples);
+            % added for taking per shots data
+            obj.gesr.counterDataPerShot = zeros(1,NPulseSamples);
             %====================================================
             
             %====================
@@ -464,15 +466,14 @@ classdef EsrPulsedSweep < handle
                 pulseTrackingNum(k,4) = eval(durExprSingle2);
                 pulseTrackingNum(k,3) = tempCell{1,3}(k);
                 
-                               if tempCell{1,2}(k) == 14680064
-                                   pulseTrackingNum(k,2) = 14680065;
-                               elseif tempCell{1,2}(k) == 14680065
-                                   pulseTrackingNum(k,2) = 14680064;
-                               end
+                   if tempCell{1,2}(k) == 14680064
+                       pulseTrackingNum(k,2) = 14680065;
+                   elseif tempCell{1,2}(k) == 14680065
+                       pulseTrackingNum(k,2) = 14680064;
+                   end
                 
                 pulseTrackingNum(k,1) = tempCell{1,1}(k);
              end
-             
                         
              clear tempCell;
             %==============================================================
@@ -564,6 +565,8 @@ classdef EsrPulsedSweep < handle
                     
                     obj.DAQ.ClearTask('RunningCounter'); % if tracking
                     obj.DAQ.ClearTask('RunningPulseTrain');
+                    disp('time start measure while loop');
+                    tic
                     
                     for mb = 1:numBits
                         tempCell = pulseStr{mb};  %added here and removed below so it doesn't remake it on every iteration. Dolev 1/10/2018
@@ -664,6 +667,18 @@ classdef EsrPulsedSweep < handle
                     
                     obj.gesr.counterData = diff(obj.gesr.counterData);
                    
+                    % added by Chang 07/10/21 for storing per shot data
+                    if bPerShot==true
+                        obj.gesr.counterDataPerShot = obj.gesr.counterData;
+                        rawSignalList(jTauTime,:) = obj.gesr.counterData(1:numReadBuffersPerCounter:end);
+                        rawRefList(jTauTime,:) = obj.gesr.counterData(3:numReadBuffersPerCounter:end);
+                    end
+                    'green';
+                    obj.gesr.counterData(1:numReadBuffersPerCounter:end);
+                    'yellow';
+                    obj.gesr.counterData(3:numReadBuffersPerCounter:end);
+                    % -----------------------------------------------------
+                    
 %                      disp(depopTime+nowTauTime+waitTime)
                     signalPoint = sum(obj.gesr.counterData(1:numReadBuffersPerCounter:end))/(repsPerTau*(signalReadoutTime)*1e-6);
                     darkPoint = sum(obj.gesr.counterData(2:numReadBuffersPerCounter:end))/(repsPerTau*(depopTime+initTime+waitTime)*1e-6);
@@ -682,10 +697,16 @@ classdef EsrPulsedSweep < handle
                             refPoint2 = sum(obj.gesr.counterData2(3:numReadBuffersPerCounter:end))/(repsPerTau*(refReadoutTime)*1e-6);
                             rawSignalPlot2(jTauTime,1) = signalPoint2;
                             rawRefPlot2(jTauTime,1) = refPoint2;
-
                             obj.DAQ.StopTask('Counter2');
                             obj.DAQ.ClearTask('Counter2');
                         elseif (numTriggers == 1)
+                            % added by Chang 07/10/21 for storing per shot
+                            % data ----------------------------------------
+                            if bPerShot==true
+                                rawSignalList2(jTauTime,:) = obj.gesr.counterData(5:numReadBuffersPerCounter:end);
+                                rawRefList2(jTauTime,:) = obj.gesr.counterData(7:numReadBuffersPerCounter:end);
+                            end
+                            %---------------------------------------------
                             signalPoint2 = sum(obj.gesr.counterData(5:numReadBuffersPerCounter:end))/(repsPerTau*(signalReadoutTime)*1e-6);
                             darkPoint2 = sum(obj.gesr.counterData(4:numReadBuffersPerCounter:end))/(repsPerTau*(depopTime+initTime+waitTime+2*tauEnd-nowTauTime)*1e-6);
                             refPoint2 = sum(obj.gesr.counterData(7:numReadBuffersPerCounter:end))/(repsPerTau*(refReadoutTime)*1e-6);
@@ -697,7 +718,7 @@ classdef EsrPulsedSweep < handle
                     
                    % signalPoint-signalPoint2
                     %refPoint-refPoint2
-                    
+                    toc
                     if obj.gesr.stopScan
                         break; % made sure to have this AFTER stopTask on DAQ.
                     end
@@ -826,21 +847,21 @@ classdef EsrPulsedSweep < handle
                 avgSignalPlot = (avgSignalPlot.*(jCounter-1)+rawSignalPlot(:,1) )/jCounter;
                 avgRefPlot = (avgRefPlot.*(jCounter-1)+rawRefPlot(:,1) )/jCounter;
                 totalNormPlot = ( totalNormPlot*(jCounter-1) + rawNormPlot(:,1))/jCounter;
-                        signalCounts = rawSignalPlot(:,1)+(jCounter-1).*avgSignalPlot;
-                        signalCounts = signalCounts*repsPerTau*(signalReadoutTime)*1e-9*1000; % kCounts/s -> Counts
-                        refCounts = rawRefPlot(:,1)+(jCounter-1).*avgRefPlot;
-                        refCounts = refCounts*repsPerTau*(signalReadoutTime)*1e-9*1000; % kCounts/s -> Counts
-                        diffSigCounts = signalCounts-refCounts;
-                if (numSignalBuffers == 2)
+                signalCounts = rawSignalPlot(:,1)+(jCounter-1).*avgSignalPlot;
+                signalCounts = signalCounts*repsPerTau*(signalReadoutTime)*1e-9*1000; % kCounts/s -> Counts
+                refCounts = rawRefPlot(:,1)+(jCounter-1).*avgRefPlot;
+                refCounts = refCounts*repsPerTau*(signalReadoutTime)*1e-9*1000; % kCounts/s -> Counts
+                diffSigCounts = signalCounts-refCounts;
+                if (numSignalBuffers == 2) % if we are using 1 trigger 2 signal 
                     rawNormPlot2(:,1) = rawSignalPlot2(:,1)./rawRefPlot2(:,1);
                     avgSignalPlot2 = (avgSignalPlot2.*(jCounter-1)+rawSignalPlot2(:,1) )/jCounter;
                     avgRefPlot2 = (avgRefPlot2.*(jCounter-1)+rawRefPlot2(:,1) )/jCounter;
                     totalNormPlot2 = ( totalNormPlot2*(jCounter-1) + rawNormPlot2(:,1))/jCounter;
-                        signalCounts2 = rawSignalPlot2(:,1)+(jCounter-1).*avgSignalPlot2;
-                        signalCounts2 = signalCounts2*repsPerTau*(signalReadoutTime)*1e-9*1000; % kCounts/s -> Counts
-                        refCounts2 = rawRefPlot2(:,1)+(jCounter-1).*avgRefPlot2;
-                        refCounts2 = refCounts2*repsPerTau*(signalReadoutTime)*1e-9*1000; % kCounts/s -> Counts
-                        diffSigCounts2=signalCounts2-refCounts2;
+                    signalCounts2 = rawSignalPlot2(:,1)+(jCounter-1).*avgSignalPlot2;
+                    signalCounts2 = signalCounts2*repsPerTau*(signalReadoutTime)*1e-9*1000; % kCounts/s -> Counts
+                    refCounts2 = rawRefPlot2(:,1)+(jCounter-1).*avgRefPlot2;
+                    refCounts2 = refCounts2*repsPerTau*(signalReadoutTime)*1e-9*1000; % kCounts/s -> Counts
+                    diffSigCounts2=signalCounts2-refCounts2;
                 end
                 
                 if tauEnd > thresholdXAxisUnits
@@ -850,22 +871,22 @@ classdef EsrPulsedSweep < handle
                 end
                 
                 if (numSignalBuffers == 1)
-                    if get(esrGUI.checkboxShowTotalCounts,'Value')==1
-
-%                         plot(averageAxes,tempXTau,signalCounts,'r--',...
-%                            tempXTau,refCounts,'r-.', ...
-%                             tempXTau,signalCounts-refCounts,'r-');
-                        
-                        shotSignal = sqrt(signalCounts);
-                        shotRef = sqrt(refCounts);
-                        shotDiff = sqrt(shotSignal.^2 + shotRef.^2);
+                    if get(esrGUI.checkboxShowTotalCounts,'Value')==1 % if we are plotting sig - ref data
+                        shotSignal = sqrt(signalCounts); % shot noise of the signal 
+                        shotRef = sqrt(refCounts); % shot noise of the reference
+                        shotDiff = sqrt(shotSignal.^2 + shotRef.^2); % shot noise of the difference
                         errorbar(averageAxes,tempXTau,diffSigCounts,shotDiff,'r-');
                         legend(currentAxes, 'Signal counts','Reference counts','Signal-Reference counts','Location','South');
                         ylabel(averageAxes,'PL (Total photon counts)');
                         title(averageAxes,'Difference in total photon counts');
                         
-                    else
-                        plot(averageAxes,tempXTau,totalNormPlot,'r');
+                    else 
+                        % Chang 07/10/21: added shot noise to the plot of normalized data
+                        shotSignal = sqrt(signalCounts); % shot noise of the signal 
+                        shotRef = sqrt(refCounts); % shot noise of the reference
+                        shotNorm = totalNormPlot*sqrt((shotSignal./signalCounts).^2 + (shotRef./refCounts).^2);
+                        errorbar(averageAxes,tempXTau,totalNormPlot,shotNorm,'r-');
+                        %--------------------------------------------------------------------
                         ylabel(averageAxes,'PL (sig)/ref');
                         title(averageAxes, 'normalized to reference after each sweep, sweeps averaged');
                     end
@@ -921,6 +942,21 @@ classdef EsrPulsedSweep < handle
                         fclose(fidb);
                         clear fidb
                     end
+                    
+                    % added by Chang 07/10/21 for storing per shot data
+                    if (bPerShot)
+                        % write the large matrices for the per-shot counts
+                        saveToFullPath = [obj.gesr.fileWritePathname obj.gesr.fileWriteFilename obj.gesr.fileWriteFileNum '\'];
+                        fname_a = [ saveToFullPath obj.gesr.fileWriteFilename obj.gesr.fileWriteFileNum '_Scnt_1_' get(esrGUI.numCompleted,'String') '.txt'];
+                        fname_b = [ saveToFullPath obj.gesr.fileWriteFilename obj.gesr.fileWriteFileNum '_Scnt_2_' get(esrGUI.numCompleted,'String') '.txt'];
+                        fname_c = [ saveToFullPath obj.gesr.fileWriteFilename obj.gesr.fileWriteFileNum '_Rcnt_1_' get(esrGUI.numCompleted,'String') '.txt'];
+                        fname_d = [ saveToFullPath obj.gesr.fileWriteFilename obj.gesr.fileWriteFileNum '_Rcnt_2_' get(esrGUI.numCompleted,'String') '.txt'];
+                        dlmwrite(fname_a,int16(rawSignalList),'\t');
+                        dlmwrite(fname_b,int16(rawSignalList2),'\t');
+                        dlmwrite(fname_c,int16(rawRefList),'\t');
+                        dlmwrite(fname_d,int16(rawRefList2),'\t');
+                    end
+                    % ------------------------------------------------------------
                     
                     if jCounter == 1
                         %Saving Metadata - added by Cole Williams 11/17/2018
@@ -1834,8 +1870,6 @@ classdef EsrPulsedSweep < handle
              clear tempCell;
             %==============================================================
             
-            
-            
             %==============================================================
             %added just to be able to initialize the AOM
             %==============================================================
@@ -2041,9 +2075,6 @@ classdef EsrPulsedSweep < handle
                      obj.pulseBlaster.loadToPulseblaster();
                      obj.pulseBlaster.runPulse();
 %                 end
-%                 fopen(obj.srs);
-%                 fprintf(obj.srs, ['ENBR ', '0']); % turn off the N RF output
-%                 fclose(obj.srs);
                 obj.srs.disableNType();
                 obj.gesr.EnableGui(esrGUI);
                 obj.gesr.stopScan = false;

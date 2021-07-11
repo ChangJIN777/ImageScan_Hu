@@ -275,23 +275,13 @@ classdef EsrPulsedSweep < handle
             inputAmp2 = str2double(get(esrGUI.amplitudeB,'String'));
             inputAmp3 = str2double(get(esrGUI.amplitudeC,'String'));
             maxAmp = max([inputAmp,inputAmp2,inputAmp3]);
-            if obj.gesr.CheckAmp(maxAmp,0) % if amplitude is higher than 0 dBm
+            if obj.gesr.CheckAmp(maxAmp,4) % if amplitude is higher than 4 dBm
                 return % interrupt the function
             end
 
             fclose(obj.srs);
             fclose(obj.srs2);
             fclose(obj.srs3);
-%             fopen(obj.srs);
-%                 % Ntype selected
-%                 fprintf(obj.srs, ['ENBL ', '0']);
-%                 fprintf(obj.srs, ['ENBR ', '1']);
-%             fclose(obj.srs);
-
-            % in case there is any frequency modulation, turn off
-            obj.srs.set_IQ_off();
-            obj.srs2.set_IQ_off();
-            obj.srs3.set_IQ_off();
             
             % place for adding an amplitude check
             %%%%
@@ -320,9 +310,11 @@ classdef EsrPulsedSweep < handle
             set(esrGUI.stepsSinceTracking, 'String', num2str(0)); % reset this before starting new
            
             
+            % used for setting the number of signal and traces for the data
+            % taking process
             if get(esrGUI.radio1Channel,'Value') == 1
-                numTriggers = 1;
-                numSignalBuffers = 1;
+                numTriggers = 1; % 1 trigger
+                numSignalBuffers = 1; % 1 signal
                 numReadBuffersPerCounter = 4; %1/1 = 1
 %             elseif get(esrGUI.radio2Channel,'Value') == 1
 %                 numTriggers = 2;
@@ -333,8 +325,8 @@ classdef EsrPulsedSweep < handle
 %                 numSignalBuffers = 4;
 %                 numReadBuffersPerCounter = 8; %4/2 = 2
             elseif get(esrGUI.radio1Trig2Sig,'Value') == 1
-                numTriggers = 1;
-                numSignalBuffers = 2;
+                numTriggers = 1; % 1 trace 
+                numSignalBuffers = 2; % 2 signal 
                 numReadBuffersPerCounter = 8; %2/1 = 2
             end
             
@@ -386,23 +378,31 @@ classdef EsrPulsedSweep < handle
             end
             listTauTime = listTauTime';
             %------------------------------------------------------
-            
-                rawSignalPlot = zeros(length(listTauTime),1);
-                rawdarkPlot = zeros(length(listTauTime),1);
-                rawRefPlot = zeros(length(listTauTime),1);
-                rawNormPlot = zeros(length(listTauTime),1);
-                avgSignalPlot = zeros(length(listTauTime),1);
-                avgRefPlot = zeros(length(listTauTime),1);
-                totalNormPlot = zeros(length(listTauTime),1);
-                if numSignalBuffers == 2
-                    rawSignalPlot2 = zeros(length(listTauTime),1);
-                    rawdarkPlot2 = zeros(length(listTauTime),1);
-                    rawRefPlot2 = zeros(length(listTauTime),1);
-                    rawNormPlot2 = zeros(length(listTauTime),1);
-                    avgSignalPlot2 = zeros(length(listTauTime),1);
-                    avgRefPlot2 = zeros(length(listTauTime),1);
-                    totalNormPlot2 = zeros(length(listTauTime),1);
-                end
+            %===========(codes added for taking per shot data)=============
+            bPerShot = get(esrGUI.checkboxSaveDataPerShot,'Value');
+            if bPerShot==true
+                rawSignalList = zeros(length(listTauTime),repsPerTau);
+                rawRefList = zeros(length(listTauTime),repsPerTau);
+                rawSignalList2 = zeros(length(listTauTime),repsPerTau);
+                rawRefList2 = zeros(length(listTauTime),repsPerTau);
+            end
+            %=======================================================
+            rawSignalPlot = zeros(length(listTauTime),1);
+            rawdarkPlot = zeros(length(listTauTime),1);
+            rawRefPlot = zeros(length(listTauTime),1);
+            rawNormPlot = zeros(length(listTauTime),1);
+            avgSignalPlot = zeros(length(listTauTime),1);
+            avgRefPlot = zeros(length(listTauTime),1);
+            totalNormPlot = zeros(length(listTauTime),1);
+            if numSignalBuffers == 2
+                rawSignalPlot2 = zeros(length(listTauTime),1);
+                rawdarkPlot2 = zeros(length(listTauTime),1);
+                rawRefPlot2 = zeros(length(listTauTime),1);
+                rawNormPlot2 = zeros(length(listTauTime),1);
+                avgSignalPlot2 = zeros(length(listTauTime),1);
+                avgRefPlot2 = zeros(length(listTauTime),1);
+                totalNormPlot2 = zeros(length(listTauTime),1);
+            end
             thresholdXAxisUnits = 5000; % max obj.tauEnd to plot us or ns
             obj.gesr.fileWriteFrequency = str2num(get(esrGUI.writeDataFreq,'String'));
             obj.gesr.fileWritePathname = get(esrGUI.esrSavePath,'String');
@@ -427,6 +427,8 @@ classdef EsrPulsedSweep < handle
             NPulseSamples = repsPerTau*numReadBuffersPerCounter+1; 
             obj.gesr.counterData = zeros(1,NPulseSamples);
             obj.gesr.counterData2 = zeros(1,NPulseSamples);
+            % added for taking per shots data
+            obj.gesr.counterDataPerShot = zeros(1,NPulseSamples);
             %====================================================
             
             %====================
@@ -464,15 +466,14 @@ classdef EsrPulsedSweep < handle
                 pulseTrackingNum(k,4) = eval(durExprSingle2);
                 pulseTrackingNum(k,3) = tempCell{1,3}(k);
                 
-                               if tempCell{1,2}(k) == 14680064
-                                   pulseTrackingNum(k,2) = 14680065;
-                               elseif tempCell{1,2}(k) == 14680065
-                                   pulseTrackingNum(k,2) = 14680064;
-                               end
+                   if tempCell{1,2}(k) == 14680064
+                       pulseTrackingNum(k,2) = 14680065;
+                   elseif tempCell{1,2}(k) == 14680065
+                       pulseTrackingNum(k,2) = 14680064;
+                   end
                 
                 pulseTrackingNum(k,1) = tempCell{1,1}(k);
              end
-             
                         
              clear tempCell;
             %==============================================================
@@ -650,7 +651,8 @@ classdef EsrPulsedSweep < handle
 %                         pause(0.01);
 %                     end
 %                     contact_step = contact_step+1;
-                    %totalSequence
+                    totalSequence
+                    func_PulseSeqVisual(esrGUI, totalSequence) % Yuanqi: for display of pulse sequence (Jul 2, 2021)
                     obj.pulseBlaster.setCurrentPulse(totalSequence);
                     obj.pulseBlaster.loadToPulseblaster();
                     obj.pulseBlaster.runPulse();
@@ -825,21 +827,21 @@ classdef EsrPulsedSweep < handle
                 avgSignalPlot = (avgSignalPlot.*(jCounter-1)+rawSignalPlot(:,1) )/jCounter;
                 avgRefPlot = (avgRefPlot.*(jCounter-1)+rawRefPlot(:,1) )/jCounter;
                 totalNormPlot = ( totalNormPlot*(jCounter-1) + rawNormPlot(:,1))/jCounter;
-                        signalCounts = rawSignalPlot(:,1)+(jCounter-1).*avgSignalPlot;
-                        signalCounts = signalCounts*repsPerTau*(signalReadoutTime)*1e-9*1000; % kCounts/s -> Counts
-                        refCounts = rawRefPlot(:,1)+(jCounter-1).*avgRefPlot;
-                        refCounts = refCounts*repsPerTau*(signalReadoutTime)*1e-9*1000; % kCounts/s -> Counts
-                        diffSigCounts = signalCounts-refCounts;
-                if (numSignalBuffers == 2)
+                signalCounts = rawSignalPlot(:,1)+(jCounter-1).*avgSignalPlot;
+                signalCounts = signalCounts*repsPerTau*(signalReadoutTime)*1e-9*1000; % kCounts/s -> Counts
+                refCounts = rawRefPlot(:,1)+(jCounter-1).*avgRefPlot;
+                refCounts = refCounts*repsPerTau*(signalReadoutTime)*1e-9*1000; % kCounts/s -> Counts
+                diffSigCounts = signalCounts-refCounts;
+                if (numSignalBuffers == 2) % if we are using 1 trigger 2 signal 
                     rawNormPlot2(:,1) = rawSignalPlot2(:,1)./rawRefPlot2(:,1);
                     avgSignalPlot2 = (avgSignalPlot2.*(jCounter-1)+rawSignalPlot2(:,1) )/jCounter;
                     avgRefPlot2 = (avgRefPlot2.*(jCounter-1)+rawRefPlot2(:,1) )/jCounter;
                     totalNormPlot2 = ( totalNormPlot2*(jCounter-1) + rawNormPlot2(:,1))/jCounter;
-                        signalCounts2 = rawSignalPlot2(:,1)+(jCounter-1).*avgSignalPlot2;
-                        signalCounts2 = signalCounts2*repsPerTau*(signalReadoutTime)*1e-9*1000; % kCounts/s -> Counts
-                        refCounts2 = rawRefPlot2(:,1)+(jCounter-1).*avgRefPlot2;
-                        refCounts2 = refCounts2*repsPerTau*(signalReadoutTime)*1e-9*1000; % kCounts/s -> Counts
-                        diffSigCounts2=signalCounts2-refCounts2;
+                    signalCounts2 = rawSignalPlot2(:,1)+(jCounter-1).*avgSignalPlot2;
+                    signalCounts2 = signalCounts2*repsPerTau*(signalReadoutTime)*1e-9*1000; % kCounts/s -> Counts
+                    refCounts2 = rawRefPlot2(:,1)+(jCounter-1).*avgRefPlot2;
+                    refCounts2 = refCounts2*repsPerTau*(signalReadoutTime)*1e-9*1000; % kCounts/s -> Counts
+                    diffSigCounts2=signalCounts2-refCounts2;
                 end
                 
                 if tauEnd > thresholdXAxisUnits
@@ -849,22 +851,23 @@ classdef EsrPulsedSweep < handle
                 end
                 
                 if (numSignalBuffers == 1)
-                    if get(esrGUI.checkboxShowTotalCounts,'Value')==1
-
-%                         plot(averageAxes,tempXTau,signalCounts,'r--',...
-%                            tempXTau,refCounts,'r-.', ...
-%                             tempXTau,signalCounts-refCounts,'r-');
-                        
-                        shotSignal = sqrt(signalCounts);
-                        shotRef = sqrt(refCounts);
-                        shotDiff = sqrt(shotSignal.^2 + shotRef.^2);
+                    if get(esrGUI.checkboxShowTotalCounts,'Value')==1 % if we are plotting sig - ref data
+                        shotSignal = sqrt(signalCounts); % shot noise of the signal 
+                        shotRef = sqrt(refCounts); % shot noise of the reference
+                        shotDiff = sqrt(shotSignal.^2 + shotRef.^2); % shot noise of the difference
                         errorbar(averageAxes,tempXTau,diffSigCounts,shotDiff,'r-');
                         legend(currentAxes, 'Signal counts','Reference counts','Signal-Reference counts','Location','South');
                         ylabel(averageAxes,'PL (Total photon counts)');
                         title(averageAxes,'Difference in total photon counts');
                         
-                    else
-                        plot(averageAxes,tempXTau,totalNormPlot,'r');
+                    else 
+                        % Chang 07/10/21: added shot noise to the plot of normalized data
+                        shotSignal = sqrt(signalCounts); % shot noise of the signal 
+                        shotRef = sqrt(refCounts); % shot noise of the reference
+                        shotNorm = totalNormPlot*sqrt((shotSignal./signalCounts).^2 + (shotRef./refCounts).^2);
+                        errorbar(averageAxes,tempXTau,totalNormPlot,shotNorm,'r-');
+                        legend(currentAxes, 'Signal counts','Reference counts','SignalReference counts','Location','South');
+                        %--------------------------------------------------------------------
                         ylabel(averageAxes,'PL (sig)/ref');
                         title(averageAxes, 'normalized to reference after each sweep, sweeps averaged');
                     end
@@ -1198,6 +1201,17 @@ classdef EsrPulsedSweep < handle
 
                 obj.gesr.counterData = diff(obj.gesr.counterData);
                 
+                if bPerShot==true
+                    obj.gesr.counterDataPerShot = obj.gesr.counterData;
+                    rawSignalList(jTauTime,:) = obj.gesr.counterData(1:numReadBuffersPerCounter:end);
+                    rawRefList(jTauTime,:) = obj.gesr.counterData(3:numReadBuffersPerCounter:end);
+                end
+                'green';
+                obj.gesr.counterData(1:numReadBuffersPerCounter:end);
+                'yellow';
+                obj.gesr.counterData(3:numReadBuffersPerCounter:end);
+                
+                
                 %                      disp(depopTime+nowTauTime+waitTime)
                 signalPoint = sum(obj.gesr.counterData(1:obj.numReadBuffersPerCounter:end));
                 refPoint = sum(obj.gesr.counterData(3:obj.numReadBuffersPerCounter:end));
@@ -1360,17 +1374,9 @@ classdef EsrPulsedSweep < handle
             %==============================================================
             
             %Open the RF generator and initialize a list of SG states
-            fopen(obj.srs);
-            fprintf(obj.srs, ['LSTC? ', num2str(length(listFreq))]); % create a list of SG states
-            fprintf(obj.srs, '*CLS');
             listFreq = listFreq*(10^6); % change to Hz units
-            for i = 1:length(listFreq)
-                   % pre-load each state of the list into the SG384 memory
-                   fprintf(obj.srs, ['LSTP ',num2str(i-1),',',num2str(listFreq(i)),',N,N,N,N,N,N,N,N,N,N,N,N,N,N']);
-            end
-            % enable the list
-            fprintf(obj.srs,'LSTE 1');  % 1 or 0 for enabled or disabled
-            
+            obj.srs.create_list(listFreq);
+
             %==============================================================
             %added just to be able to initialize the AOM
             %==============================================================
@@ -1440,7 +1446,7 @@ classdef EsrPulsedSweep < handle
                 jFreqStep = 1;
                 % we cut and paste the ClearTasks from here for tracking
                 while jFreqStep <= length(listFreq) && obj.gesr.stopScan == false
-                    fprintf(obj.srs, '*TRG'); % trigger the list to next frequency
+                    obj.srs.list_trigger(); % trigger the list to next frequency
                     
                     obj.DAQ.ClearTask('RunningCounter'); % if tracking
                     obj.DAQ.ClearTask('RunningPulseTrain');
@@ -1486,63 +1492,103 @@ classdef EsrPulsedSweep < handle
                     ylabel(currentAxes,'PL (kCounts/s)');
                     jFreqStep = jFreqStep + 1;
                     obj.pulseBlaster.stopPulse();
-                    %################################################
-                    % tracking sequence
-                    %################################################
+%                     %################################################
+%                     % tracking sequence (looking at the PL count)
+%                     %################################################
+%                     compteur = compteur + 1;
+%                     if get(esrGUI.checkboxUseTracking,'Value')==1 && ~isempty(obj.imageScanHandles)
+%                     
+%                         if(refReady == 0)
+%                     
+%                             if(garbage == 1)
+%                         
+%                                 if(compteur == str2num(get(esrGUI.trackingGarbagePoints,'String')))
+%                                 
+%                                     garbage = 0;
+%                                     ref = 0;
+%                                     refReady = 0;
+%                                     compteur = 0;
+%                                 end
+%                             else
+%                             
+%                                 ref = ref + refPoint;
+%                                 
+%                                 if(compteur == str2num(get(esrGUI.pulseTrackingPeriod,'String')))
+%                                         ref = ref/(compteur);
+%                                         refReady = 1;
+%                                         compteur = 0;
+%                                 end
+%                             
+%                             
+%                             end
+%                             
+%                             tempTSteps = str2num(get(esrGUI.stepsSinceTracking,'String'));
+%                             set(esrGUI.stepsSinceTracking, 'String', num2str(tempTSteps+1));
+%                         
+%                         else
+%                     
+%                             signal = signal + refPoint;
+%                     
+%                             if(compteur == str2num(get(esrGUI.pulseTrackingPeriod,'String')))
+%                             
+%                                 signal = signal/(compteur);
+%                                 
+%                                 if(signal > str2num(get(esrGUI.trackingCountThreshold,'String'))*ref)
+%                                 
+%                                     signal = 0;
+%                                     compteur = 0;
+%                                     tempTSteps = str2num(get(esrGUI.stepsSinceTracking, 'String'));
+%                                     set(esrGUI.stepsSinceTracking, 'String', num2str(tempTSteps+1));
+%                             
+%                                 else
+%                           
+%                                     ref = 0;
+%                                     refReady = 0;
+%                                     garbage = 1;
+%                                     signal = 0;
+%                                     compteur = 0;
+%                                     
+%                                     %initialisation of the AOM for tracking
+%                                     obj.pulseBlaster.setCurrentPulse( pulseTrackingNum);
+%                                     obj.pulseBlaster.loadToPulseblaster();
+%                                     obj.pulseBlaster.runPulse();
+%                                     pause(str2num(get(esrGUI.preMeasurePause,'String'))); 
+%                                     
+%                                     obj.gesr.RunSingleTrackPulsedESR(obj.imageScanHandles)
+%                         
+%                                     set(esrGUI.stepsSinceTracking, 'String', num2str(0));
+%                         
+%                                     %added here on 05/11/2012 to re-initialize the AOM
+%                                     %before starting a new measurement
+%                                     %==================================================
+%                                     obj.pulseBlaster.stopPulse();
+%                                     obj.pulseBlaster.setCurrentPulse(totalSequence);
+%                                     obj.pulseBlaster.loadToPulseblaster();
+%                                     obj.pulseBlaster.runPulse();
+%                                     pause(str2num(get(esrGUI.preMeasurePause,'String')));
+%                                     %==================================================
+%                                 end
+%                             else
+%                             
+%                                 tempTSteps = str2num(get(esrGUI.stepsSinceTracking, 'String'));
+%                                 set(esrGUI.stepsSinceTracking, 'String', num2str(tempTSteps+1));
+%                             end
+%                         end
+%                     end
+%                        
+%                     %################### Tracking done ##########################
+%                   ######################  Tracking #######################################
+                    totalTauCounter = str2num(get(esrGUI.numCompleted,'String'))*length(listTauTime)+jTauTime;
                     compteur = compteur + 1;
                     if get(esrGUI.checkboxUseTracking,'Value')==1 && ~isempty(obj.imageScanHandles)
-                    
-                        if(refReady == 0)
-                    
-                            if(garbage == 1)
                         
-                                if(compteur == str2num(get(esrGUI.trackingGarbagePoints,'String')))
-                                
-                                    garbage = 0;
-                                    ref = 0;
-                                    refReady = 0;
-                                    compteur = 0;
-                                end
-                            else
-                            
-                                ref = ref + refPoint;
-                                
-                                if(compteur == str2num(get(esrGUI.pulseTrackingPeriod,'String')))
-                                        ref = ref/(compteur);
-                                        refReady = 1;
-                                        compteur = 0;
-                                end
-                            
-                            
-                            end
-                            
-                            tempTSteps = str2num(get(esrGUI.stepsSinceTracking,'String'));
-                            set(esrGUI.stepsSinceTracking, 'String', num2str(tempTSteps+1));
+                        %Added 04/24/14 to change pulse sequence tracking
+                        %to be every fixed number of steps instead of
+                        %looking at the PL
+                        tempTSteps = str2num(get(esrGUI.stepsSinceTracking, 'String')) 
                         
-                        else
-                    
-                            signal = signal + refPoint;
-                    
-                            if(compteur == str2num(get(esrGUI.pulseTrackingPeriod,'String')))
-                            
-                                signal = signal/(compteur);
-                                
-                                if(signal > str2num(get(esrGUI.trackingCountThreshold,'String'))*ref)
-                                
-                                    signal = 0;
-                                    compteur = 0;
-                                    tempTSteps = str2num(get(esrGUI.stepsSinceTracking, 'String'));
-                                    set(esrGUI.stepsSinceTracking, 'String', num2str(tempTSteps+1));
-                            
-                                else
-                          
-                                    ref = 0;
-                                    refReady = 0;
-                                    garbage = 1;
-                                    signal = 0;
-                                    compteur = 0;
-                                    
-                                    %initialisation of the AOM for tracking
+                        if tempTSteps >= str2num(get(esrGUI.pulseTrackingPeriod, 'String'))
+                             %initialisation of the AOM for tracking
                                     obj.pulseBlaster.setCurrentPulse( pulseTrackingNum);
                                     obj.pulseBlaster.loadToPulseblaster();
                                     obj.pulseBlaster.runPulse();
@@ -1555,22 +1601,19 @@ classdef EsrPulsedSweep < handle
                                     %added here on 05/11/2012 to re-initialize the AOM
                                     %before starting a new measurement
                                     %==================================================
-                                    obj.pulseBlaster.stopPulse();
                                     obj.pulseBlaster.setCurrentPulse(totalSequence);
                                     obj.pulseBlaster.loadToPulseblaster();
                                     obj.pulseBlaster.runPulse();
                                     pause(str2num(get(esrGUI.preMeasurePause,'String')));
-                                    %==================================================
-                                end
-                            else
-                            
-                                tempTSteps = str2num(get(esrGUI.stepsSinceTracking, 'String'));
-                                set(esrGUI.stepsSinceTracking, 'String', num2str(tempTSteps+1));
-                            end
+                                    obj.pulseBlaster.stopPulse();
+                        else
+                             
+                             set(esrGUI.stepsSinceTracking, 'String', num2str(tempTSteps+1));     
                         end
+                        
                     end
                        
-                    %################### Tracking done ##########################
+                % ################### Tracking done ########################## 
                 end % end loop through frequency points sweep
               
                 rawNormPlot(:,1) = rawSignalPlot(:,1)./rawRefPlot(:,1);
@@ -1669,10 +1712,17 @@ classdef EsrPulsedSweep < handle
             
         end
         
-        function PerformRedSpecSequence(obj, esrGUI) % (NEED TO ENCAPSOLATE)
+        function PerformRedSpecSequence(obj, esrGUI) 
             obj.gesr.UpdateFileNumber(esrGUI);
              
-            
+            %safety check 
+            inputAmp = str2double(get(esrGUI.amplitude,'String'));
+            inputAmp2 = str2double(get(esrGUI.amplitudeB,'String'));
+            inputAmp3 = str2double(get(esrGUI.amplitudeC,'String'));
+            maxAmp = max([inputAmp,inputAmp2,inputAmp3]);
+            if obj.gesr.CheckAmp(maxAmp,0) % if amplitude is higher than 0 dBm
+                return % interrupt the function
+            end
             
             obj.srs.enableNType();
             obj.gesr.stopScan = false; %Stop any scans if they are already running
@@ -1796,8 +1846,6 @@ classdef EsrPulsedSweep < handle
                         
              clear tempCell;
             %==============================================================
-            
-            
             
             %==============================================================
             %added just to be able to initialize the AOM
@@ -2004,32 +2052,26 @@ classdef EsrPulsedSweep < handle
                      obj.pulseBlaster.loadToPulseblaster();
                      obj.pulseBlaster.runPulse();
 %                 end
-%                 fopen(obj.srs);
-%                 fprintf(obj.srs, ['ENBR ', '0']); % turn off the N RF output
-%                 fclose(obj.srs);
                 obj.srs.disableNType();
                 obj.gesr.EnableGui(esrGUI);
                 obj.gesr.stopScan = false;
             end
         end
         
-        function PerformPiPulsePowerCalibration(obj, esrGUI) % (NEED TO ENCAPSOLATE)
+        function PerformPiPulsePowerCalibration(obj, esrGUI) 
             obj.gesr.UpdateFileNumber(esrGUI);
             
-%             %safety check
-%             inputAmp = str2double(get(esrGUI.amplitude,'String'));
-%             if inputAmp > -1
-%                 danger = questdlg('The amplitude is high for a pulsed esr measurement. Do you still want to run?','High power warning!','Abort','Run','Abort');
-%                 switch(danger)
-%                     case 'Abort'
-%                         return
-%                         % exit the perform sequence if user chooses to stop
-% 
-%                     case 'Run'
-%                         % continue on  
-%                 end
-%             end 
-            obj.srs.disableNType();
+            %safety check 
+            inputAmp = str2double(get(esrGUI.amplitude,'String'));
+            inputAmp2 = str2double(get(esrGUI.amplitudeB,'String'));
+            inputAmp3 = str2double(get(esrGUI.amplitudeC,'String'));
+            maxAmp = max([inputAmp,inputAmp2,inputAmp3]);
+            if obj.gesr.CheckAmp(maxAmp,0) % if amplitude is higher than 0 dBm
+                return % interrupt the function
+            end
+            
+            obj.srs.enableNType();
+            
             obj.gesr.stopScan = false; %Stop any scans if they are already running
             obj.gesr.DisableGui(esrGUI); %disable the gui so the user cannot chnge parameters during a sweep
             obj.gesr.setAmp(esrGUI); %Set the amplitude
@@ -2594,8 +2636,7 @@ classdef EsrPulsedSweep < handle
             confocalTuplesOutV = reshape(VoltageMatrix,[],2,1);
             
         end
-       
-        
+              
         function PerformImageRegistration(obj, esrGUI, bOriginalImage)
             
             cursorInX = str2double(get(obj.imageScanHandles.editPositionX,'String'));
