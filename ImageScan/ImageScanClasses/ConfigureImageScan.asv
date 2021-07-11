@@ -10,7 +10,6 @@ classdef ConfigureImageScan < handle
         bHaveZurichInstr = 1;       % Zurich Instruments
         bHaveMCLXYZScanner = 1;     %
         bMagnetGui = 0;             %
-        bHaveMicronixSerial = 1;
         
         dataFolder  =    'C:\Users\lab\Documents\Data';
         % modified by Chang 7/11/21 (subject to change)
@@ -46,9 +45,9 @@ classdef ConfigureImageScan < handle
         photoDiodeDark =        0;     % [V]
         
         % other parameters
-        imageScanBGColorR = 228;
-        imageScanBGColorG = 240;
-        imageScanBGColorB = 230;
+        imageScanBGColorR = 231;
+        imageScanBGColorG = 231;
+        imageScanBGColorB = 231;
         xScanMicronsPerVolt = 25.508796;
         yScanMicronsPerVolt = 25.508796;
         zScanMicronsPerVolt = 10;
