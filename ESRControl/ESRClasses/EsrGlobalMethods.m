@@ -44,7 +44,22 @@ classdef EsrGlobalMethods < handle
             obj.srs3 = SRS3;
             obj.trackParameters = handles.TrackingParameters;            
             
-       end
+        end
+        
+       function hardStopScan(obj)
+            obj.srs1.disable_list();
+            obj.srs1.destroy_list();
+            obj.srs1.overload_prevent();
+            obj.srs2.disable_list();
+            obj.srs2.destroy_list();
+            obj.srs2.overload_prevent();
+            obj.srs3.disable_list();
+            obj.srs3.destroy_list();
+            obj.srs3.overload_prevent();
+            obj.srs1.disableNType();
+            obj.srs2.disableNType();
+            obj.srs3.disableNType();
+        end
         
         function setAmp(obj,esrGUI)
             %Sets the Amplitude of the RF output manually.
@@ -110,7 +125,7 @@ classdef EsrGlobalMethods < handle
 %             fclose(obj.srs);
         end
         
-        function output = CheckAmp(~,amp,maxamp):
+        function output = CheckAmp(~,amp,maxamp)
             % Display a warning when RF output amplitude exceeds the
             % maximum allowed value
             output = 0;

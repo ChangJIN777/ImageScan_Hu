@@ -15,7 +15,7 @@ classdef EsrCWSweep < handle
     
     methods
         % ----- initialize the EsrCWSweeps class ----------------------------------------------
-        function obj = EsrCWSweep(handles,DAQ,PulseInterpret,SRS,gESR)
+        function obj = EsrCWSweep(handles,DAQ,PulseInterpret,SRS,SRS2,SRS3,gESR)
            
            % handle to the AFM GUI called in ImageScan 
            % this is useless though since that GUI is not opened yet = []
@@ -27,6 +27,8 @@ classdef EsrCWSweep < handle
             % these devices already have handles, which are passed in
             obj.pulseBlaster = PulseInterpret;
             obj.srs = SRS;
+            obj.srs2 = SRS2;
+            obj.srs3 = SRS3;
             obj.trackParameters = handles.TrackingParameters;            
             obj.gesr = gESR;
         end
@@ -45,17 +47,10 @@ classdef EsrCWSweep < handle
             
             %safety check
             inputAmp = str2double(get(esrGUI.amplitude,'String'));
-            if inputAmp > -2
-                danger = questdlg('The amplitude is high for a cw esr measurement. Do you still want to run?','High power warning!','Abort','Run','Abort');
-                switch(danger)
-                    case 'Abort'
-                        return
-                        % exit the perform sequence if user chooses to stop
-
-                    case 'Run'
-                        % continue on  
-                end
-            end 
+            
+            if obj.gesr.CheckAmp(inputAmp,-12) % if amplitude is higher than -12 dBm
+                return % interrupt the function
+            end
             
             % in case there is any frequency modulation, turn off.
             fclose(obj.srs);

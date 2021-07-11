@@ -88,17 +88,19 @@ function ImageScan_OpeningFcn(hObject, ~, handles, varargin)
     handles.StateControl = StateControl();
     handles.StateControl.initializeState(handles); % initialize the state machine
     
-    %%%% start up SRS
-    handles.srs = gpib('ni', 0, handles.DAQManager.srsGPIB);
+    %%%% start up SRS (modified by Chang 07/10/21: added 2 additional srs)
+    handles.srs = SG384('ni', 0, handles.DAQManager.srsGPIB);
+    handles.srs2 = SG384('ni', 0, handles.DAQManager.srs2GPIB);
+    handles.srs3 = SG384('ni', 0, handles.DAQManager.srs3GPIB);
     
     %%% load ESR control
 %     handles.ESRControl = [];
     handles.EsrGlobalMethods = EsrGlobalMethods(handles.DAQManager.DAQ,...
-        handles.PulseInterpreter,handles.srs,handles);
+        handles.PulseInterpreter,handles.srs,handles.srs2,handles.srs3,handles);
     handles.EsrCWSweep = EsrCWSweep(handles,handles.DAQManager.DAQ,...
-        handles.PulseInterpreter,handles.srs,handles.EsrGlobalMethods);
+        handles.PulseInterpreter,handles.srs,handles.srs2,handles.srs3,handles.EsrGlobalMethods);
     handles.EsrPulsedSweep = EsrPulsedSweep(handles,handles.DAQManager.DAQ,...
-        handles.PulseInterpreter,handles.srs,handles.EsrGlobalMethods);
+        handles.PulseInterpreter,handles.srs,handles.srs2,handles.srs3,handles.EsrGlobalMethods);
     handles.EsrAutomation = EsrAutomation(handles);
     %%%%%%%%%%%%%%
     
