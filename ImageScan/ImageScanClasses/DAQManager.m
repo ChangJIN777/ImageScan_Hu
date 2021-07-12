@@ -46,7 +46,8 @@ classdef DAQManager < handle
 %         triggerLine3 = '/PXI1Slot3/PFI7';  % external PulseBlaster RF TTL line for counting up/down
         
         %analog in for correlated counter, voltage measurement
-        counterVoltageAI = 'PXI1Slot2/ai1'
+        counterVoltageAI = 'PXI1Slot2/ai1';
+        photoDiodeAI = 'PXI1Slot2/ai7';
         
         strDims = 'XYZ';
         CTR1 = 1;
@@ -98,14 +99,18 @@ classdef DAQManager < handle
             
             % add counter voltage analog input line
             obj.DAQ.addAILine(obj.counterVoltageAI);
+            obj.DAQ.addAILine(obj.photoDiodeAI);
+%             obj.DAQ.addAILine('PXI1Slot2/ai1');
 %             % set all output lines to default voltage upon opening ImageScan
 %             obj.DAQ.WriteAnalogOutAllLines();
 
 
             % add Clock Line
             obj.DAQ.addClockLine('PXI1Slot2/ctr0',obj.triggerLine1);
-            obj.DAQ.addClockLine('PXI1Slot2/ctr1',obj.triggerLine2);             
-            
+            obj.DAQ.addClockLine('PXI1Slot2/ctr1',obj.triggerLine2);   
+%             obj.DAQ.addClockLine('PXI1Slot2/ctr1','/PXI1Slot2/PFI13');
+%             obj.DAQ.addClockLine('PXI1Slot2/ctr0','/PXI1Slot2/PFI12');             
+          
 
         % 'Slot2' refers to our DAQ card being in '2' slot of the chassis.
         % the counter we use is PFI0 and trigger is PFI12
@@ -116,7 +121,8 @@ classdef DAQManager < handle
 
         obj.DAQ.addCounterInLine('PXI1Slot2/ctr2',obj.counterLine1,DAQManager.CLK2);
         obj.DAQ.addCounterInLine('PXI1Slot2/ctr3',obj.counterLine2,DAQManager.CLK1);
-
+%         obj.DAQ.addCounterInLine('PXI1Slot2/ctr3','/PXI1Slot2/PFI1',DAQManager.CLK1);
+%         obj.DAQ.addCounterInLine('PXI1Slot2/ctr2','/PXI1Slot2/PFI0',DAQManager.CLK2);
             
             
 
@@ -125,7 +131,7 @@ classdef DAQManager < handle
         function delete(obj)
             obj.DAQ.AnalogOutVoltages = zeros(length(obj.DAQ.AnalogOutVoltages));
             obj.DAQ.WriteAnalogOutAllLines();
-           % obj.DAQ.delete();
+%             obj.DAQ.delete();
         end
     end
     

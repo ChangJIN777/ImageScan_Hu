@@ -55,10 +55,6 @@ classdef EsrCWSweep < handle
             end
             
             % in case there is any frequency modulation, turn off.
-%             fclose(obj.srs);
-%             fopen(obj.srs);
-%             fprintf(obj.srs, 'MODL0');
-%             fclose(obj.srs);
             obj.srs.set_IQ_off();
             
             % get some parameters from string inputs on the ESR GUI
@@ -88,10 +84,6 @@ classdef EsrCWSweep < handle
             
             
             % enable the Ntype SRS output, disable the low frequency BNC
-%             fopen(obj.srs);
-%             fprintf(obj.srs, ['ENBL ', '0']);
-%             fprintf(obj.srs, ['ENBR ', '1']);
-%             fclose(obj.srs);
             obj.srs.disable_BNC();
             obj.srs.enableNType();
             
@@ -103,16 +95,6 @@ classdef EsrCWSweep < handle
             set(esrGUI.numCompleted,'String', num2str(0));
             
             % create a list of frequency states in the SRS sig-gen
-%             fopen(obj.srs);
-%             fprintf(obj.srs, ['LSTC? ', num2str(length(freqValues))]); % create a list of SG states
-%             fprintf(obj.srs, '*CLS');
-%             freqHz = freqValues*(10^6);
-%             for i = 1:length(freqHz)
-%                    % pre-load each state of the list into the SG384 memory
-%                    fprintf(obj.srs, ['LSTP ',num2str(i-1),',',num2str(freqHz(i)),',N,N,N,N,N,N,N,N,N,N,N,N,N,N']);
-%             end
-%             % enable the list
-%             fprintf(obj.srs,'LSTE 1');  % 1 or 0 for enabled or disabled
             obj.srs.create_list(freqValues);
             
             %Initialize the DAQ to collect data

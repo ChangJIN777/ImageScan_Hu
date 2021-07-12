@@ -12,6 +12,7 @@ classdef ConfigureImageScan < handle
         bMagnetGui = 0;             %
         bHaveMicronixSerial = 1;
         
+        
         dataFolder  =    'C:\Users\lab\Documents\Data';
         % modified by Chang 7/11/21 (subject to change)
 %         sequenceFolder = 'C:\Users\lab\Documents\MATLAB\ImageScan_v2019\PulseBlaster\PulseSequences\';
@@ -49,8 +50,8 @@ classdef ConfigureImageScan < handle
         imageScanBGColorR = 228;
         imageScanBGColorG = 240;
         imageScanBGColorB = 230;
-        xScanMicronsPerVolt = 25.508796;
-        yScanMicronsPerVolt = 25.508796;
+        xScanMicronsPerVolt = 143.669999999999;
+        yScanMicronsPerVolt = 136.973;
         zScanMicronsPerVolt = 10;
         
     end %properties

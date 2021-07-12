@@ -278,9 +278,9 @@ classdef EsrPulsedSweep < handle
                 return % interrupt the function
             end
 
-            fclose(obj.srs);
-            fclose(obj.srs2);
-            fclose(obj.srs3);
+%             fclose(obj.srs);
+%             fclose(obj.srs2);
+%             fclose(obj.srs3);
             
             % place for adding an amplitude check
             %%%%
@@ -986,7 +986,7 @@ classdef EsrPulsedSweep < handle
                         % Chang 07/10/21: added shot noise to the plot of normalized data
                         shotSignal = sqrt(signalCounts); % shot noise of the signal 
                         shotRef = sqrt(refCounts); % shot noise of the reference
-                        shotNorm = totalNormPlot*sqrt((shotSignal./signalCounts).^2 + (shotRef./refCounts).^2);
+                        shotNorm = totalNormPlot.*sqrt((shotSignal./signalCounts).^2 + (shotRef./refCounts).^2);
                         errorbar(averageAxes,tempXTau,totalNormPlot,shotNorm,'r-');
                         %--------------------------------------------------------------------
                         ylabel(averageAxes,'PL (sig)/ref');

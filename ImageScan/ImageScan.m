@@ -77,6 +77,9 @@ function ImageScan_OpeningFcn(hObject, ~, handles, varargin)
     %%%% start pulseBlaster
     handles.PulseInterpreter = PulseInterpreter();
     handles.PulseInterpreter.clearPulseblaster();
+    
+    [handles.configS.sequenceFolder 'bit1_on.txt']
+    pause(2)
 
 %     handles.bSimulatedData = false;
     %%%% load the NIDAQ

@@ -104,6 +104,8 @@ classdef NIDAQ_Driver < handle
         
         function obj = addAILine(obj,Name)
             obj.AnalogInLines{end+1} = Name;
+            xx = obj.AnalogInLines{1,:}
+            size(xx)
         end
         
         function obj = addClockLine(obj,Name,PhysicalName)
@@ -139,36 +141,36 @@ classdef NIDAQ_Driver < handle
             end
         end
         
-        %%% not working: only mNIDAQ commands are still functional
-        %         function WriteDigitalIO(obj,Device,Value)
-        %
-        %                 % create a task
-        %                 [status,b,obj.TaskHandles] = ...
-        %                     calllib(obj.LibraryName,'DAQmxCreateTask','',obj.TaskHandles);
-        %                 obj.CheckErrorStatus(status);
-        %
-        %                 % designate a digital output channel with new task
-        %                 [status,b,c] = calllib(obj.LibraryName,'DAQmxCreateDOChan',obj.TaskHandles,Device,'MyDO',0);
-        %                 obj.CheckErrorStatus(status);
-        %
-        %                 % start the task
-        %                 [status] = calllib(obj.LibraryName,'DAQmxStartTask',obj.TaskHandles);
-        %                 obj.CheckErrorStatus(status);
-        %
-        %                 % write the Value to the digital line defined in Task
-        %                 [status,b,c,d] = calllib(obj.LibraryName,'DAQmxWriteDigitalLines',obj.TaskHandles,1,1,10.0,0,Value,0,[]);
-        %                 obj.CheckErrorStatus(status);
-        %
-        %                 % close up shop
-        %                 [status]=calllib(obj.LibraryName,'DAQmxStopTask',obj.TaskHandles);
-        %                 obj.CheckErrorStatus(status);
-        %
-        %                 [status]=calllib(obj.LibraryName,'DAQmxClearTask',obj.TaskHandles);
-        %                 obj.CheckErrorStatus(status);
-        %
-        %                 % return the TaskHandles back to 1
-        %                 obj.TaskHandles = 0;
-        %         end
+%         %%% not working: only mNIDAQ commands are still functional
+%                 function WriteDigitalIO(obj,Device,Value)
+%         
+%                         % create a task
+%                         [status,b,obj.TaskHandles] = ...
+%                             calllib(obj.LibraryName,'DAQmxCreateTask','',obj.TaskHandles);
+%                         obj.CheckErrorStatus(status);
+%         
+%                         % designate a digital output channel with new task
+%                         [status,b,c] = calllib(obj.LibraryName,'DAQmxCreateDOChan',obj.TaskHandles,Device,'MyDO',0);
+%                         obj.CheckErrorStatus(status);
+%         
+%                         % start the task
+%                         [status] = calllib(obj.LibraryName,'DAQmxStartTask',obj.TaskHandles);
+%                         obj.CheckErrorStatus(status);
+%         
+%                         % write the Value to the digital line defined in Task
+%                         [status,b,c,d] = calllib(obj.LibraryName,'DAQmxWriteDigitalLines',obj.TaskHandles,1,1,10.0,0,Value,0,[]);
+%                         obj.CheckErrorStatus(status);
+%         
+%                         % close up shop
+%                         [status]=calllib(obj.LibraryName,'DAQmxStopTask',obj.TaskHandles);
+%                         obj.CheckErrorStatus(status);
+%         
+%                         [status]=calllib(obj.LibraryName,'DAQmxClearTask',obj.TaskHandles);
+%                         obj.CheckErrorStatus(status);
+%         
+%                         % return the TaskHandles back to 1
+%                         obj.TaskHandles = 0;
+%                 end
         
         
         function WriteAnalogOutLine(obj,Line)
