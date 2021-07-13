@@ -180,7 +180,7 @@ classdef EsrCWSweep < handle
                % create array of individual data traces for Matlab saving routine
                indDataTraces(j,:) = obj.gesr.counterData*0.001;
                 
-%                 pause(0.1); % and pausing a whole second makes the sweep even faster
+                pause(0.1); % and pausing a whole second makes the sweep even faster
 
                 %Run tracking once if we are supposed to on this step and
                 % this will also reset the DAQ for data taking

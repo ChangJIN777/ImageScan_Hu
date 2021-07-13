@@ -1724,7 +1724,8 @@ classdef EsrPulsedSweep < handle
 %                        
 %                     %################### Tracking done ##########################
 %                   ######################  Tracking #######################################
-                    totalTauCounter = str2num(get(esrGUI.numCompleted,'String'))*length(listTauTime)+jTauTime;
+                    % modified by Chang 07/12/21 for adapting the tracking code for the pulsed ESR
+                    totalTauCounter = str2num(get(esrGUI.numCompleted,'String'))*length(listFreq)+jFreqStep;
                     compteur = compteur + 1;
                     if get(esrGUI.checkboxUseTracking,'Value')==1 && ~isempty(obj.imageScanHandles)
                         
