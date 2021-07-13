@@ -887,13 +887,13 @@ void mexFunction( int nlhs, mxArray *plhs[],
         
         if(tn == -1)
         {
-            // MessageBox(0,"No Task4",0,0);
+            MessageBox(0,"No Task4",0,0);
             plhs[0] = mxCreateDoubleScalar(0);
             nlhs = 1;
         }
         else
         {
-            uInt32 data;
+			uInt32 data;
             error = DAQmxGetReadAvailSampPerChan(th_static[tn],&data);
             if(error != 0) error_codes.push_back(error);
             
