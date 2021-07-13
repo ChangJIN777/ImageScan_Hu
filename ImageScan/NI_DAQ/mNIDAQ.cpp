@@ -885,10 +885,9 @@ void mexFunction( int nlhs, mxArray *plhs[],
         
         int tn = find_task_num(task_name);
         
-        
         if(tn == -1)
         {
-            //MessageBox(0,"No Task4",0,0);
+            // MessageBox(0,"No Task4",0,0);
             plhs[0] = mxCreateDoubleScalar(0);
             nlhs = 1;
         }
