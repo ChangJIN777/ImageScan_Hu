@@ -76,7 +76,8 @@ myFormattedDate = [myyear '_' mymonth '_' myday '\'];
 
 handles.esrSavePath.String = handles.EsrGlobalMethods.imageScanHandles.configS.dataFolder; 
 % set(handles.esrSavePath,'String',[handles.EsrGlobalMethods.imageScanHandles.configS.dataFolder myFormattedDate]);
-set(handles.esrSavePath,'String','C:\Users\lab\Documents\Data\2021_Jul_14\esr_000001');
+set(handles.esrSavePath,'String',['C:\Users\PSBSouthCageSetup\Documents\data\2021_Jan_11\esr_000001']);
+
 set(handles.fileboxPulseSequence,'String',[handles.EsrGlobalMethods.imageScanHandles.configS.sequenceFolder 'inUseSequences\']);
 
 % disable SavePath editing and SaveFileNumber editing, because now the

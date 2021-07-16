@@ -213,45 +213,84 @@ classdef EsrGlobalMethods < handle
         
         % ----- ESR file number update --------------------------------------------------------
         function UpdateFileNumber(~, esrGUI, ~)
-            % sequence that checks what the last file # in the current Data folder is and
-            % adds +1 to that (updated 06April2017,SB)
-            fileDateFolder = get(esrGUI.esrSavePath,'String');
-            d = dir([fileDateFolder '*.mat']);
-            [~,newestIndex] = max([d.datenum]); % find the newest file
-            if isempty(newestIndex)
-                imageSaveCounter = '000000';
-            else
-                newestFile = d(newestIndex).name;
-                k = strfind(newestFile,'_');
-                if max(size(k))>= 2
-                    imageSaveCounter = newestFile(k(end-2)+1:k(end-1)-1);
-                else
-                    imageSaveCounter = newestFile(k(end-1)-7:k(end-1)-1); % this case should not happen but if it does, just assume the number is 6 digits long
-                end
-    
+            % not working (revert to the old version) [modified by Chang 07/15/21] ================================
+%             % sequence that checks what the last file # in the current Data folder is and
+%             % adds +1 to that (updated 06April2017,SB)
+%             fileDateFolder = get(esrGUI.esrSavePath,'String');
+%             d = dir([fileDateFolder '*.mat']);
+%             [~,newestIndex] = max([d.datenum]); % find the newest file
+%             if isempty(newestIndex)
+%                 imageSaveCounter = '000000';
+%             else
+%                 newestFile = d(newestIndex).name;
+%                 k = strfind(newestFile,'_');
+%                 if max(size(k))>= 2
+%                     imageSaveCounter = newestFile(k(end-2)+1:k(end-1)-1);
+%                 else
+%                     imageSaveCounter = newestFile(k(end-1)-7:k(end-1)-1); % this case should not happen but if it does, just assume the number is 6 digits long
+%                 end
+%     
+%             end
+%             imageSaveCounter = sprintf('_%06d', str2double(imageSaveCounter)+1); % add 1 to last counter
+%             set(esrGUI.esrSaveFileNum,'String', imageSaveCounter);
+%         
+%             clear fileDateFolder d newestIndex k* newestFile* imageSaveCounter oldPrefixSize
+            % end ==================================================================================================
+            imageSaveCounter = str2num(get(esrGUI.esrSaveFileNum,'String'));
+            imageSaveCounter = imageSaveCounter+1;
+            if imageSaveCounter >99999
+               imageSaveCounter = 0; 
             end
-            imageSaveCounter = sprintf('_%06d', str2double(imageSaveCounter)+1); % add 1 to last counter
-            set(esrGUI.esrSaveFileNum,'String', imageSaveCounter);
-        
-            clear fileDateFolder d newestIndex k* newestFile* imageSaveCounter oldPrefixSize
+            padded0Str = sprintf('%05d', imageSaveCounter); % pad with zeroes for 5 digits (100,000 images)
+            set(esrGUI.esrSaveFileNum,'String', padded0Str);
+            
         end
         
         % ----- automatic save folder update --------------------------------------------------
         function UpdateFolder(obj, esrGUI)
+%             % the following sequence checks if the save folder is at the current date 
+%             % when starting a sweep in case it is not, it updates the gui and 
+%             % creates the new folder (added 06/April/2017,SB)
+%             d = datestr(now,'yyyy_mmm_dd');
+%             fileDateFolder = get(esrGUI.esrSavePath,'String');
+% 
+%             if ~strcmp(fileDateFolder(end-11:end-1),d) % compare date strings if not equal update in GUI and create folder
+%                 newfileDateFolder = [fileDateFolder(1:end-12) d '\']; % warining, in case the whole date save path structure changes, this line might mess up and might need to be reprogrammed
+%     
+%                 set(esrGUI.esrSavePath,'String', newfileDateFolder);
+%                 obj.fileWritePathname = [newfileDateFolder '\'];
+%                 fileDateFolder = newfileDateFolder;
+%             end
+%             if exist(fileDateFolder,'dir') ~= 7 % if directory exists matlab returns 7
+%                 mkdir(fileDateFolder)
+%             end
+%             clear d fileDateFolder newfileDateFolder
+            
             % the following sequence checks if the save folder is at the current date 
             % when starting a sweep in case it is not, it updates the gui and 
             % creates the new folder (added 06/April/2017,SB)
-            d = datestr(now,'yyyy_mmm_dd');
+            d = datestr(now,'yyyy_mmm_dd')
             fileDateFolder = get(esrGUI.esrSavePath,'String');
-
-            if ~strcmp(fileDateFolder(end-11:end-1),d) % compare date strings if not equal update in GUI and create folder
-                newfileDateFolder = [fileDateFolder(1:end-12) d '\']; % warining, in case the whole date save path structure changes, this line might mess up and might need to be reprogrammed
-    
+            % code added by Chang for storing data sets in different
+            % folders
+            tempInt = 28 + length(d);
+            fileDateFolder = fileDateFolder(1:tempInt);
+%             debugging 
+%             disp(get(esrGUI.esrSavePath,'String'))
+%             disp('----')
+    % Updated by Chang - 7/15/2021 
+    % code for updating the name of the data folder 
+    % Note: warining, in case the whole date save path structure changes, this line might mess up and might need to be reprogrammed
+    %             if ~strcmp(fileDateFolder(end-11:end-1),d) % compare date strings if not equal update in GUI and create folder
+                imageSaveCounter = [get(esrGUI.esrSaveFilePrefix,'String') get(esrGUI.esrSaveFileNum,'String')];
+                newfileDateFolder = [fileDateFolder(1:end-11) d '\' imageSaveCounter '\']; % warining, in case the whole date save path structure changes, this line might mess up and might need to be reprogrammed
                 set(esrGUI.esrSavePath,'String', newfileDateFolder);
-                obj.fileWritePathname = [newfileDateFolder '\'];
+                obj.fileWritePathname = [newfileDateFolder];
                 fileDateFolder = newfileDateFolder;
-            end
+%             end
+
             if exist(fileDateFolder,'dir') ~= 7 % if directory exists matlab returns 7
+                disp(fileDateFolder)
                 mkdir(fileDateFolder)
             end
             clear d fileDateFolder newfileDateFolder

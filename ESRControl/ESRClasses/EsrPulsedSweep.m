@@ -264,6 +264,7 @@ classdef EsrPulsedSweep < handle
         function PerformSequence(obj,esrGUI)
             % update the file number to prevent saving over your data
             obj.gesr.UpdateFileNumber(esrGUI);
+            obj.gesr.UpdateFolder(esrGUI);
             
             % this new Perform sequence (replacing SweepControl...) will
             % now include all the combinations of # of counter
@@ -1366,6 +1367,7 @@ classdef EsrPulsedSweep < handle
         
         function PerformPulsedESRSequence(obj, esrGUI) 
             obj.gesr.UpdateFileNumber(esrGUI); % update the number attached after the filename
+            obj.gesr.UpdateFolder(esrGUI); 
             
              %safety check 
             inputAmp = str2double(get(esrGUI.amplitude,'String'));
@@ -1862,7 +1864,8 @@ classdef EsrPulsedSweep < handle
         end
         
         function PerformRedSpecSequence(obj, esrGUI) 
-            obj.gesr.UpdateFileNumber(esrGUI);
+            obj.gesr.UpdateFileNumber(esrGUI); % update the number attached after the filename
+            obj.gesr.UpdateFolder(esrGUI); 
              
             %safety check 
             inputAmp = str2double(get(esrGUI.amplitude,'String'));
@@ -2208,7 +2211,8 @@ classdef EsrPulsedSweep < handle
         end
         
         function PerformPiPulsePowerCalibration(obj, esrGUI) 
-            obj.gesr.UpdateFileNumber(esrGUI);
+            obj.gesr.UpdateFileNumber(esrGUI); % update the number attached after the filename
+            obj.gesr.UpdateFolder(esrGUI); 
             
             %safety check 
             inputAmp = str2double(get(esrGUI.amplitude,'String'));

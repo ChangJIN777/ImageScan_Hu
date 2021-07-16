@@ -42,10 +42,8 @@ classdef EsrCWSweep < handle
         
         % ----- perform CW-ESR from ESR_GUI ---------------------------------------------------
         function PerformCWESR(obj,esrGUI)
-            % make sure data is saved in current date folder
-            obj.gesr.UpdateFolder(esrGUI);
-            % update the file number to prevent saving over your data
-            obj.gesr.UpdateFileNumber(esrGUI);
+            obj.gesr.UpdateFileNumber(esrGUI); % update the number attached after the filename
+            obj.gesr.UpdateFolder(esrGUI); 
             
             %safety check
             inputAmp = str2double(get(esrGUI.amplitude,'String'));
@@ -230,10 +228,8 @@ classdef EsrCWSweep < handle
         end
         
         function PerformDiffCWESR(obj,esrGUI)
-            % make sure data is saved in current date folder
-            obj.gesr.UpdateFolder(esrGUI);
-            % update the file number to prevent saving over your data
-            obj.gesr.UpdateFileNumber(esrGUI);
+            obj.gesr.UpdateFileNumber(esrGUI); % update the number attached after the filename
+            obj.gesr.UpdateFolder(esrGUI); 
             
             %safety check
             inputAmp = str2double(get(esrGUI.amplitude,'String'));
@@ -582,10 +578,8 @@ classdef EsrCWSweep < handle
         
         % ------ CW-ESR with RF on/off as used from AFM scan software -------------------------
         function PerformScanDiffCWESR(obj,esrGUI)
-            % make sure data is saved in current date folder
-            obj.gesr.UpdateFolder(esrGUI);
-            % update the file number to prevent saving over your data
-            obj.gesr.UpdateFileNumber(esrGUI); 
+            obj.gesr.UpdateFileNumber(esrGUI); % update the number attached after the filename
+            obj.gesr.UpdateFolder(esrGUI); 
             
             % get some parameters from string inputs on the ESR GUI
             centerFreq = str2double(get(esrGUI.centerFreq, 'String'));
