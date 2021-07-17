@@ -1587,14 +1587,22 @@ classdef EsrPulsedSweep < handle
             jPlot = 1;
             while jPlot <= numAverages && obj.gesr.stopScan == false
                 jFreqStep = 1;
+                % added by Chang 07/16/21 (speeding up the scan)
+                fopen(obj.srs.srs);
+                fopen(obj.srs2.srs);
+                
                 % we cut and paste the ClearTasks from here for tracking
                 while jFreqStep <= length(listFreq) && obj.gesr.stopScan == false
                     % added by Chang to allow for frequency sweeps of SRS 2
                     % (07/10/21)
                     if useSRS2inPESR == 1
-                        obj.srs2.list_trigger(); % trigger the list to next frequency
+                        % added for speeding up the scan
+%                         obj.srs2.list_trigger(); % trigger the list to next frequency
+                          fprintf(obj.srs.srs, '*TRG');
                     else
-                        obj.srs.list_trigger(); % trigger the list to next frequency
+                        % added for speeding up the scan
+%                         obj.srs.list_trigger(); % trigger the list to next frequency
+                          fprintf(obj.srs2.srs, '*TRG');
                     end 
                     % -----------------------------------------------------
                     
@@ -1767,6 +1775,9 @@ classdef EsrPulsedSweep < handle
                 % ################### Tracking done ########################## 
                 end % end loop through frequency points sweep
               
+                fclose(obj.srs.srs);
+                fclose(obj.srs2.srs);
+                
                 rawNormPlot(:,1) = rawSignalPlot(:,1)./rawRefPlot(:,1);
                 
                 avgSignalPlot = (avgSignalPlot.*(jPlot-1)+rawSignalPlot(:,1) )/jPlot;

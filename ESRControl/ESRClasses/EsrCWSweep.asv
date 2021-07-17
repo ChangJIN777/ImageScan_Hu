@@ -112,7 +112,7 @@ classdef EsrCWSweep < handle
             obj.DAQ.CreateTask('RunningCounter');
             counterLine = 1;
             obj.DAQ.ConfigureCounterIn('RunningCounter',counterLine,obj.gesr.NSamples);
-            fopen(obj.srs.srs); 
+            fopen(obj.srs.srs);
             for j = 1:numAverages
                 obj.gesr.counterData = [];
                 flength = length(freqValues);
@@ -124,7 +124,7 @@ classdef EsrCWSweep < handle
                 
                 tstep = timeStep*10^-6;
                 for i = 1:flength
-                    fprintf(obj.srs, '*TRG'); % faster CW scan than the wrapper program
+                    fprintf(obj.srs, '*TRG');
 %                     obj.srs.list_trigger();% trigger the list
                     obj.DAQ.StartTask('RunningCounter');
                     obj.DAQ.StartTask('RunningPulseTrain');
@@ -193,8 +193,7 @@ classdef EsrCWSweep < handle
                 
                 drawnow();
             end
-            fclose(obj.srs.srs);
-
+            flc
             obj.gesr.saveEsrMatFile(esrGUI,freqValues,averageYData,averageYErrorBars,indDataTraces,'PerformCWESR')
             clear indDataTraces
             
