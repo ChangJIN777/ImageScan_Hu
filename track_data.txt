@@ -19,3 +19,9 @@ date	x	y	z	old	new	moved	xmax	ymax	zmax	max
 Starting Tracking
 date	x	y	z	old	new	moved	xmax	ymax	zmax	max
 16-Jul-2021 18:32:28	-32.9042	48.7517	61.5883	0	0	0	-33.1542	48.5017	60.0883	0
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+16-Jul-2021 18:49:54	-32.9168	48.8031	61.6874	298.426	302.154	1	-32.9	48.8	61.5883	286
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+16-Jul-2021 18:58:31	-32.9186	48.7666	61.6569	144.925	147.031	1	-32.9168	48.8031	61.6874	149.5
