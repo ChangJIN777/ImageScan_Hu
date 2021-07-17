@@ -1380,6 +1380,7 @@ classdef EsrPulsedSweep < handle
             
             % enabling only the first srs for the pulse ESR sequence
             obj.srs.enableNType();
+            obj.srs2.enableNType();
             
             useSRS2inPESR = get(esrGUI.useSRS2inPESR,'Value'); % added by Chang 07/10/21 for sweeping SRS2 frequency
             
@@ -1575,6 +1576,7 @@ classdef EsrPulsedSweep < handle
                         % last pulse duration = 0, which is not good
                     end
             obj.pulseBlaster.setCurrentPulse(totalSequence);
+            func_PulseSeqVisual(esrGUI, totalSequence) % Yuanqi: for display of pulse sequence (Jul 16, 2021)
             obj.pulseBlaster.loadToPulseblaster();
             obj.pulseBlaster.runPulse();
             pause(str2num(get(esrGUI.preMeasurePause,'String')));

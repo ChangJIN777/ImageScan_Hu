@@ -93,7 +93,7 @@ classdef EsrCWSweep < handle
             set(esrGUI.numCompleted,'String', num2str(0));
             
             % create a list of frequency states in the SRS sig-gen
-            obj.srs.create_list(freqValues);
+            obj.srs.create_list(freqValues*(10^6)); % need to be in Hz
             
             %Initialize the DAQ to collect data
             obj.gesr.NsamplesAcquired = 0;
@@ -300,7 +300,7 @@ classdef EsrCWSweep < handle
 %             % enable the list
 %             fprintf(obj.srs,'LSTE 1');  % 1 or 0 for enabled or disabled
 %             
-            obj.srs.create_list(freqValues);
+            obj.srs.create_list(freqValues*(10^6));
 
             %Initialize the DAQ to collect data
             YData = zeros(1,length(freqValues));
@@ -460,7 +460,7 @@ classdef EsrCWSweep < handle
 %             end
 %             % enable the list
 %             fprintf(obj.srs,'LSTE 1');  % 1 or 0 for enabled or disabled
-            obj.srs.create_list(freqValues);
+            obj.srs.create_list(freqValues*(10^6)); % change to Hz
             
             
             %Initialize the DAQ to collect data

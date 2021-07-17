@@ -76,7 +76,7 @@ classdef EsrGlobalMethods < handle
             %Sets the frequency to the passed in value
             
             inputFreq = str2double(get(esrGUI.centerFreq,'String'));
-            obj.srs.set_freq(inputFreq*(10^6));
+            obj.srs.set_freq(inputFreq*());
 %             fopen(obj.srs);
 %             fprintf(obj.srs,['FREQ ', num2str(inputFreq),' MHz']); % write to the SG384
 %             fclose(obj.srs);
@@ -97,7 +97,7 @@ classdef EsrGlobalMethods < handle
             %Sets the frequency to the passed in value
             
             inputFreq = str2double(get(esrGUI.centerFreqB,'String'));
-            obj.srs2.set_freq(inputFreq*(10^6));
+            obj.srs2.set_freq(inputFreq);
 %             fopen(obj.srs);
 %             fprintf(obj.srs,['FREQ ', num2str(inputFreq),' MHz']); % write to the SG384
 %             fclose(obj.srs);
@@ -119,7 +119,7 @@ classdef EsrGlobalMethods < handle
             %Sets the frequency to the passed in value
             
             inputFreq = str2double(get(esrGUI.centerFreqC,'String'));
-            obj.srs3.set_freq(inputFreq*(10^6));
+            obj.srs3.set_freq(inputFreq);
 %             fopen(obj.srs);
 %             fprintf(obj.srs,['FREQ ', num2str(inputFreq),' MHz']); % write to the SG384
 %             fclose(obj.srs);
