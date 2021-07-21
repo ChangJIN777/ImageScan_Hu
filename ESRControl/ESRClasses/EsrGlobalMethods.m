@@ -201,8 +201,10 @@ classdef EsrGlobalMethods < handle
            % Currently only allowing IQ modulation on SRS1
             switch newValue
                 case 0
+                    disp('IQ mod off');
                     obj.srs.set_IQ_off(); % disable IQ modulation
                 case 1
+                    disp('IQ mod on');
                      obj.srs.set_IQ_on(); % enable IQ modulation
             end
         end
@@ -422,8 +424,8 @@ classdef EsrGlobalMethods < handle
             
             if (numSigBuffers == 1)
                 
-                saveToFullPath = [obj.fileWritePathname obj.fileWriteFilename obj.fileWriteFileNum '\'];
-                %saveToFullPath = [obj.fileWritePathname '\'];
+%                 saveToFullPath = [obj.fileWritePathname obj.fileWriteFilename obj.fileWriteFileNum '\'];
+                saveToFullPath = [obj.fileWritePathname '\'];
                 saveToPathFile = [ saveToFullPath obj.fileWriteFilename obj.fileWriteFileNum '_' get(esrGUI.numCompleted,'String') '.txt']; 
                 if exist(obj.fileWritePathname,'dir') ==0 %path does not exist?
                     mkdir(obj.fileWritePathname);

@@ -51,7 +51,7 @@ classdef EsrCWSweep < handle
             if obj.gesr.CheckAmp(inputAmp,-12) % if amplitude is higher than -12 dBm
                 return % interrupt the function
             end
-            
+            fclose(obj.srs.srs);
             % in case there is any frequency modulation, turn off.
             obj.srs.set_IQ_off();
             
@@ -124,7 +124,7 @@ classdef EsrCWSweep < handle
                 
                 tstep = timeStep*10^-6;
                 for i = 1:flength
-                    fprintf(obj.srs, '*TRG'); % faster CW scan than the wrapper program
+                    fprintf(obj.srs.srs, '*TRG'); % faster CW scan than the wrapper program
 %                     obj.srs.list_trigger();% trigger the list
                     obj.DAQ.StartTask('RunningCounter');
                     obj.DAQ.StartTask('RunningPulseTrain');

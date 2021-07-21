@@ -20,6 +20,7 @@ classdef SG384
        
         function command(obj, varargin)
             narg = length(varargin);
+            fclose(obj.srs);
             fopen(obj.srs);
             if narg == 1    % one command, no argument
                 fprintf(obj.srs, varargin{1});

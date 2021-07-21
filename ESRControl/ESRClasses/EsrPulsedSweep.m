@@ -266,6 +266,10 @@ classdef EsrPulsedSweep < handle
             obj.gesr.UpdateFileNumber(esrGUI);
             obj.gesr.UpdateFolder(esrGUI);
             
+            % added to make sure that the pulse sequence uses IQ modulation
+            useIQ = get(esrGUI.checkboxIQEnabled,'Value');
+            obj.gesr.IQmodulationON(useIQ);
+            
             % this new Perform sequence (replacing SweepControl...) will
             % now include all the combinations of # of counter
             % buffers/trigger channels and total signal traces.
@@ -1139,8 +1143,8 @@ classdef EsrPulsedSweep < handle
                             struct2dataset(IQMDataStruct),struct2dataset(XY8MDataStruct));
 
                         %writes table to same place as data, called Metadata.txt
-                        saveToFullPath = [obj.gesr.fileWritePathname obj.gesr.fileWriteFilename obj.gesr.fileWriteFileNum '\'];
-                        MDfilename = [ saveToFullPath obj.gesr.fileWriteFilename obj.gesr.fileWriteFileNum '_Metadata.txt'];
+                        saveToFullPath = [obj.gesr.fileWritePathname ];
+                        MDfilename = [ saveToFullPath obj.gesr.fileWriteFilename '_Metadata.txt'];
                         export(Metadata,'file',MDfilename,'Delimiter','\t');
                         'Metadata saved'
                     end
@@ -1368,6 +1372,10 @@ classdef EsrPulsedSweep < handle
         function PerformPulsedESRSequence(obj, esrGUI) 
             obj.gesr.UpdateFileNumber(esrGUI); % update the number attached after the filename
             obj.gesr.UpdateFolder(esrGUI); 
+            
+            % added to make sure that the pulse sequence uses IQ modulation
+            useIQ = get(esrGUI.checkboxIQEnabled,'Value');
+            obj.gesr.IQmodulationON(useIQ);
             
              %safety check 
             inputAmp = str2double(get(esrGUI.amplitude,'String'));
