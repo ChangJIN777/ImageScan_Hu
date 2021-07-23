@@ -266,6 +266,10 @@ classdef EsrPulsedSweep < handle
             obj.gesr.UpdateFileNumber(esrGUI);
             obj.gesr.UpdateFolder(esrGUI);
             
+            % added to make sure that the pulse sequence uses IQ modulation
+            useIQ = get(esrGUI.checkboxIQEnabled,'Value');
+            obj.gesr.IQmodulationON(useIQ);
+            
             % this new Perform sequence (replacing SweepControl...) will
             % now include all the combinations of # of counter
             % buffers/trigger channels and total signal traces.
@@ -1139,8 +1143,8 @@ classdef EsrPulsedSweep < handle
                             struct2dataset(IQMDataStruct),struct2dataset(XY8MDataStruct));
 
                         %writes table to same place as data, called Metadata.txt
-                        saveToFullPath = [obj.gesr.fileWritePathname obj.gesr.fileWriteFilename obj.gesr.fileWriteFileNum '\'];
-                        MDfilename = [ saveToFullPath obj.gesr.fileWriteFilename obj.gesr.fileWriteFileNum '_Metadata.txt'];
+                        saveToFullPath = [obj.gesr.fileWritePathname ];
+                        MDfilename = [ saveToFullPath obj.gesr.fileWriteFilename '_Metadata.txt'];
                         export(Metadata,'file',MDfilename,'Delimiter','\t');
                         'Metadata saved'
                     end
@@ -1369,6 +1373,10 @@ classdef EsrPulsedSweep < handle
             obj.gesr.UpdateFileNumber(esrGUI); % update the number attached after the filename
             obj.gesr.UpdateFolder(esrGUI); 
             
+            % added to make sure that the pulse sequence uses IQ modulation
+            useIQ = get(esrGUI.checkboxIQEnabled,'Value');
+            obj.gesr.IQmodulationON(useIQ);
+            
              %safety check 
             inputAmp = str2double(get(esrGUI.amplitude,'String'));
             inputAmp2 = str2double(get(esrGUI.amplitudeB,'String'));
@@ -1587,14 +1595,22 @@ classdef EsrPulsedSweep < handle
             jPlot = 1;
             while jPlot <= numAverages && obj.gesr.stopScan == false
                 jFreqStep = 1;
+                % added by Chang 07/16/21 (speeding up the scan)
+                fopen(obj.srs.srs);
+                fopen(obj.srs2.srs);
+                
                 % we cut and paste the ClearTasks from here for tracking
                 while jFreqStep <= length(listFreq) && obj.gesr.stopScan == false
                     % added by Chang to allow for frequency sweeps of SRS 2
                     % (07/10/21)
                     if useSRS2inPESR == 1
-                        obj.srs2.list_trigger(); % trigger the list to next frequency
+                        % added for speeding up the scan
+%                         obj.srs2.list_trigger(); % trigger the list to next frequency
+                          fprintf(obj.srs.srs, '*TRG');
                     else
-                        obj.srs.list_trigger(); % trigger the list to next frequency
+                        % added for speeding up the scan
+%                         obj.srs.list_trigger(); % trigger the list to next frequency
+                          fprintf(obj.srs2.srs, '*TRG');
                     end 
                     % -----------------------------------------------------
                     
@@ -1767,6 +1783,9 @@ classdef EsrPulsedSweep < handle
                 % ################### Tracking done ########################## 
                 end % end loop through frequency points sweep
               
+                fclose(obj.srs.srs);
+                fclose(obj.srs2.srs);
+                
                 rawNormPlot(:,1) = rawSignalPlot(:,1)./rawRefPlot(:,1);
                 
                 avgSignalPlot = (avgSignalPlot.*(jPlot-1)+rawSignalPlot(:,1) )/jPlot;
