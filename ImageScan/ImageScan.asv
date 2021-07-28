@@ -321,7 +321,7 @@ function toggleRedAOM_Callback(hObject, ~, handles)
 %         %obj.pulseBlaster.stopPulse();
 %         set(handles.toggleGreenAOM, 'String', 'turn on');        
 %     end
-    if get(hObject,'Value') == false && get(handles.toggleGreenAOM, 'Value') == true && get(handles.toggleYellowAOM, 'Value') == false 
+    if get(hObject,'Value') == true && get(handles.toggleRedAOM, 'Value') == false && get(handles.toggleYellowAOM, 'Value') == false 
         % turn green laser on
         % green ON; 
         % red OFF;
@@ -341,7 +341,7 @@ function toggleRedAOM_Callback(hObject, ~, handles)
         handles.PulseInterpreter.loadToPulseblaster();
         handles.PulseInterpreter.runPulse()
         set(handles.toggleRedAOM,'String','Turn Off');
-    elseif get(hObject,'Value') == true && get(handles.toggleGreenAOM, 'Value') == false && get(handles.toggleYellowAOM, 'Value') == false
+    elseif get(hObject,'Value') == false && get(handles.toggleGreenAOM, 'Value') == true && get(handles.toggleYellowAOM, 'Value') == false
         % turn green laser off, keep red running
         % green OFF; 
         % red ON;
@@ -351,7 +351,7 @@ function toggleRedAOM_Callback(hObject, ~, handles)
         handles.PulseInterpreter.loadToPulseblaster();
         handles.PulseInterpreter.runPulse()
         set(handles.toggleRedAOM, 'String', 'Turn Off');
-    elseif get(hObject,'Value') == false && get(handles.toggleGreenAOM, 'Value') == true && get(handles.toggleYellowAOM, 'Value') == true
+    elseif get(hObject,'Value') == true && get(handles.toggleGreenAOM, 'Value') == false && get(handles.toggleYellowAOM, 'Value') == true
         % turn green laser off, keep red running
         % green ON; 
         % red OFF;
@@ -371,7 +371,7 @@ function toggleRedAOM_Callback(hObject, ~, handles)
         handles.PulseInterpreter.loadToPulseblaster();
         handles.PulseInterpreter.runPulse()
         set(handles.toggleRedAOM, 'String', 'Turn Off');
-    elseif get(hObject,'Value') == true && get(handles.toggleGreenAOM, 'Value') == false && get(handles.toggleYellowAOM, 'Value') == true
+    elseif get(hObject,'Value') == false && get(handles.toggleGreenAOM, 'Value') == true && get(handles.toggleYellowAOM, 'Value') == true
         % turn green laser off, keep red running
         % green OFF; 
         % red ON;
@@ -1556,8 +1556,7 @@ function ImageScan_DeleteFcn(hObject, eventdata, handles)
 
 end
 
-% callBack for controlling the yellow AOM 
-% added by Chang 07/26/21
+
 % --- Executes on button press in toggleYellowAOM.
 function toggleYellowAOM_Callback(hObject, eventdata, handles)
 % hObject    handle to toggleYellowAOM (see GCBO)
@@ -1565,82 +1564,4 @@ function toggleYellowAOM_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 % Hint: get(hObject,'Value') returns toggle state of toggleYellowAOM
-    if get(hObject,'Value') == false && get(handles.toggleGreenAOM, 'Value') == true && get(handles.toggleRedAOM, 'Value') == false 
-        % turn green laser on
-        % green ON; 
-        % red OFF;
-        % yellow OFF;
-        handles.PulseInterpreter.clearPulseblaster();
-        handles.PulseInterpreter.setCurrentPulse([handles.configS.sequenceFolder 'greenAOM_on.txt']);
-        handles.PulseInterpreter.loadToPulseblaster();
-        handles.PulseInterpreter.runPulse();
-        set(handles.toggleYellowAOM,'String','Turn On');
-    elseif get(hObject,'Value') == false && get(handles.toggleGreenAOM, 'Value') == true && get(handles.toggleRedAOM, 'Value') == true
-        % turn green laser on, keep red running 
-        % green ON; 
-        % red ON;
-        % yellow OFF;
-        handles.PulseInterpreter.clearPulseblaster();
-        handles.PulseInterpreter.setCurrentPulse([handles.configS.sequenceFolder 'greenredAOM_on.txt']);
-        handles.PulseInterpreter.loadToPulseblaster();
-        handles.PulseInterpreter.runPulse()
-        set(handles.toggleYellowAOM,'String','Turn On');
-    elseif get(hObject,'Value') == false && get(handles.toggleGreenAOM, 'Value') == false && get(handles.toggleRedAOM, 'Value') == true
-        % turn green laser off, keep red running
-        % green OFF; 
-        % red ON;
-        % yellow OFF;
-        handles.PulseInterpreter.clearPulseblaster();
-        handles.PulseInterpreter.setCurrentPulse([handles.configS.sequenceFolder 'redAOM_on.txt']);
-        handles.PulseInterpreter.loadToPulseblaster();
-        handles.PulseInterpreter.runPulse()
-        set(handles.toggleYellowAOM, 'String', 'Turn On');
-    elseif get(hObject,'Value') == true && get(handles.toggleGreenAOM, 'Value') == true && get(handles.toggleRedAOM, 'Value') == false
-        % turn green laser off, keep red running
-        % green ON; 
-        % red OFF;
-        % yellow ON;
-        handles.PulseInterpreter.clearPulseblaster();
-        handles.PulseInterpreter.setCurrentPulse([handles.configS.sequenceFolder 'greenyellowAOM_on.txt']);
-        handles.PulseInterpreter.loadToPulseblaster();
-        handles.PulseInterpreter.runPulse()
-        set(handles.toggleYellowAOM, 'String', 'Turn Off');
-    elseif get(hObject,'Value') == true && get(handles.toggleGreenAOM, 'Value') == true && get(handles.toggleRedAOM, 'Value') == true
-        % turn green laser off, keep red running
-        % green ON; 
-        % red ON;
-        % yellow ON;
-        handles.PulseInterpreter.clearPulseblaster();
-        handles.PulseInterpreter.setCurrentPulse([handles.configS.sequenceFolder 'greenyellowredAOM_on.txt']);
-        handles.PulseInterpreter.loadToPulseblaster();
-        handles.PulseInterpreter.runPulse()
-        set(handles.toggleYellowAOM, 'String', 'Turn Off');
-    elseif get(hObject,'Value') == true && get(handles.toggleGreenAOM, 'Value') == false && get(handles.toggleRedAOM, 'Value') == true
-        % turn green laser off, keep red running
-        % green OFF; 
-        % red ON;
-        % yellow ON;
-        handles.PulseInterpreter.clearPulseblaster();
-        handles.PulseInterpreter.setCurrentPulse([handles.configS.sequenceFolder 'yellowredAOM_on.txt']);
-        handles.PulseInterpreter.loadToPulseblaster();
-        handles.PulseInterpreter.runPulse()
-        set(handles.toggleYellowAOM, 'String', 'Turn Off');
-    elseif get(hObject,'Value') == true && get(handles.toggleGreenAOM, 'Value') == false && get(handles.toggleRedAOM, 'Value') == false
-        % turn green laser off, keep red running
-        % green OFF; 
-        % red OFF;
-        % yellow ON;
-        handles.PulseInterpreter.clearPulseblaster();
-        handles.PulseInterpreter.setCurrentPulse([handles.configS.sequenceFolder 'yellowAOM_on.txt']);
-        handles.PulseInterpreter.loadToPulseblaster();
-        handles.PulseInterpreter.runPulse()
-        set(handles.toggleYellowAOM, 'String', 'Turn Off');
-    else
-        % turn green laser off
-        % green OFF; 
-        % red OFF;
-        % yellow OFF;
-        handles.PulseInterpreter.clearPulseblaster();
-        set(handles.toggleYellowAOM, 'String', 'Turn On');        
-    end
 end
