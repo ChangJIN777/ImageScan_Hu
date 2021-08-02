@@ -77,6 +77,11 @@ classdef EsrCWSweep < handle
             else
                 obj.pulseBlaster.setCurrentPulse([obj.imageScanHandles.configS.sequenceFolder 'bit1_3_on.txt']);
             end
+%             if obj.imageScanHandles.configS.bHaveInverterBoard==1 %get(esrGUI.checkboxAOMInverter,'Value')==1
+%                 obj.pulseBlaster.setCurrentPulse([obj.imageScanHandles.configS.sequenceFolder 'bit9_on.txt']);
+%             else
+%                 obj.pulseBlaster.setCurrentPulse([obj.imageScanHandles.configS.sequenceFolder 'bit1_9_on.txt']);
+%             end
             obj.pulseBlaster.loadToPulseblaster();
             obj.pulseBlaster.runPulse();
             

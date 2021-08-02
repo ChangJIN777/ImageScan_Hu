@@ -51,7 +51,7 @@ classdef EsrCWSweep < handle
             if obj.gesr.CheckAmp(inputAmp,-12) % if amplitude is higher than -12 dBm
                 return % interrupt the function
             end
-            
+            fclose(obj.srs.srs);
             % in case there is any frequency modulation, turn off.
             obj.srs.set_IQ_off();
             
@@ -72,6 +72,11 @@ classdef EsrCWSweep < handle
             indDataTraces = [];
             
             % depending on inverter board being installed, set sequence
+            if obj.imageScanHandles.configS.bHaveInverterBoard==1 %get(esrGUI.checkboxAOMInverter,'Value')==1
+                obj.pulseBlaster.setCurrentPulse([obj.imageScanHandles.configS.sequenceFolder 'bit3_on.txt']);
+            else
+                obj.pulseBlaster.setCurrentPulse([obj.imageScanHandles.configS.sequenceFolder 'bit1_3_on.txt']);
+            end
             if obj.imageScanHandles.configS.bHaveInverterBoard==1 %get(esrGUI.checkboxAOMInverter,'Value')==1
                 obj.pulseBlaster.setCurrentPulse([obj.imageScanHandles.configS.sequenceFolder 'bit3_on.txt']);
             else
@@ -112,7 +117,7 @@ classdef EsrCWSweep < handle
             obj.DAQ.CreateTask('RunningCounter');
             counterLine = 1;
             obj.DAQ.ConfigureCounterIn('RunningCounter',counterLine,obj.gesr.NSamples);
-            fopen(obj.srs.srs);
+            fopen(obj.srs.srs); 
             for j = 1:numAverages
                 obj.gesr.counterData = [];
                 flength = length(freqValues);
@@ -124,7 +129,7 @@ classdef EsrCWSweep < handle
                 
                 tstep = timeStep*10^-6;
                 for i = 1:flength
-                    fprintf(obj.srs, '*TRG');
+                    fprintf(obj.srs.srs, '*TRG'); % faster CW scan than the wrapper program
 %                     obj.srs.list_trigger();% trigger the list
                     obj.DAQ.StartTask('RunningCounter');
                     obj.DAQ.StartTask('RunningPulseTrain');
@@ -193,7 +198,8 @@ classdef EsrCWSweep < handle
                 
                 drawnow();
             end
-            flc
+            fclose(obj.srs.srs);
+
             obj.gesr.saveEsrMatFile(esrGUI,freqValues,averageYData,averageYErrorBars,indDataTraces,'PerformCWESR')
             clear indDataTraces
             

@@ -1059,10 +1059,10 @@ classdef EsrPulsedSweep < handle
                     % added by Chang 07/10/21 for storing per shot data
                     if (bPerShot)
                         % write the large matrices for the per-shot counts
-                        saveToFullPath = [obj.gesr.fileWritePathname '\' obj.gesr.fileWriteFilename obj.gesr.fileWriteFileNum '_PerShot\'];
-                        if not(exist(saveToFullPath,'dir'))
-                            mkdir(saveToFullPath);
-                        end
+                        saveToFullPath = [obj.gesr.fileWritePathname '\' obj.gesr.fileWriteFilename '_PerShot\'];
+                        if not(exist(folder_name,'dir'))
+        mkdir(folder_name)
+    end
                         fname_a = [ saveToFullPath obj.gesr.fileWriteFilename obj.gesr.fileWriteFileNum '_Scnt_1_' get(esrGUI.numCompleted,'String') '.txt'];
                         fname_c = [ saveToFullPath obj.gesr.fileWriteFilename obj.gesr.fileWriteFileNum '_Rcnt_1_' get(esrGUI.numCompleted,'String') '.txt'];
                         dlmwrite(fname_a,int16(rawSignalList),'\t');
