@@ -59,8 +59,12 @@ classdef DAQManager < handle
         
         % GPIB address:
         % Chang Jin 7/10/21
-        srsGPIB = 22;
-        srs2GPIB = 16; 
+        % original order
+         srsGPIB = 22;
+         srs2GPIB = 16; 
+%         % modified order (debugging)
+%         srsGPIB = 16;
+%         srs2GPIB = 22;
         srs3GPIB = 24;
         %-----------------
     end

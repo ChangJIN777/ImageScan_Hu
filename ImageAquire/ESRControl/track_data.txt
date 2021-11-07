@@ -1,0 +1,20 @@
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+12-Oct-2020 13:30:37	-1.1974	-0.85616	38.5503	89.76	248.83	1	-1.1751	-0.85078	38.572	192
+12-Oct-2020 13:30:45	-1.2026	-0.85676	38.5105	246.025	250.75	1	-1.1974	-0.85616	38.5503	223
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+12-Oct-2020 13:32:05	-1.2085	-0.85751	38.3579	243.88	245.03	0	-1.2026	-0.85676	38.5105	201
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+12-Oct-2020 13:50:50	-1.2191	-0.86166	38.5344	249.14	251.295	0	-1.2026	-0.85676	38.5105	186
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+13-Oct-2020 16:54:52	-1.5529	-0.81582	38.2523	235.15	232.855	0	-1.5531	-0.8173	38.2269	202
+13-Oct-2020 16:54:58	-1.5502	-0.79693	38.2362	241.56	245.56	1	-1.5531	-0.8173	38.2269	179
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+13-Oct-2020 17:16:14	-1.4286	-0.76907	38.1861	108.6	120.035	1	-1.5502	-0.79693	37.7362	73
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+13-Oct-2020 17:21:05	-1.4219	-0.76945	38.4724	121.07	122.48	1	-1.4286	-0.76907	38.6861	88

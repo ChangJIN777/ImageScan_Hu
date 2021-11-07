@@ -1617,11 +1617,11 @@ classdef EsrPulsedSweep < handle
                     if useSRS2inPESR == 1
                         % added for speeding up the scan
 %                         obj.srs2.list_trigger(); % trigger the list to next frequency
-                          fprintf(obj.srs.srs, '*TRG');
+                          fprintf(obj.srs2.srs, '*TRG');
                     else
                         % added for speeding up the scan
 %                         obj.srs.list_trigger(); % trigger the list to next frequency
-                          fprintf(obj.srs2.srs, '*TRG');
+                          fprintf(obj.srs.srs, '*TRG');
                     end 
                     % -----------------------------------------------------
                     
