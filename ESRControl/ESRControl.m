@@ -22,7 +22,7 @@ function varargout = ESRControl(varargin)
 
 % Edit the above text to modify the response to help ESRControl
 
-% Last Modified by GUIDE v2.5 10-Jul-2021 22:08:15
+% Last Modified by GUIDE v2.5 07-Nov-2021 13:38:22
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -2518,3 +2518,23 @@ function prelocateSwitch_Callback(hObject, eventdata, handles)
 
 % Hint: get(hObject,'Value') returns toggle state of prelocateSwitch
 end 
+
+
+% --- Executes on button press in useLogScale.
+function useLogScale(hObject, eventdata, handles)
+% hObject    handle to useLogScale (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of useLogScale
+end
+
+
+% --- Executes on button press in useLogScale.
+function useLogScale_Callback(hObject, eventdata, handles)
+% hObject    handle to useLogScale (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of useLogScale
+end

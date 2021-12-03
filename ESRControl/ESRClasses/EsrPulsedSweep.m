@@ -369,7 +369,16 @@ classdef EsrPulsedSweep < handle
             numTauPoints = str2num(get(esrGUI.numTauPoints,'String'));
             numAverages = str2num(get(esrGUI.numAverages,'String'));
             repsPerTau = str2num(get(esrGUI.repsPerTau,'String'));
-            listTauTime = linspace(tauStart,tauEnd,numTauPoints);
+            % taking data points on a log scale (added by Chang 11/7/21)
+            if get(esrGUI.useLogScale,'Value')==1
+                tauStartLog = round(log2(tauStart));
+                tauEndLog = round(log2(tauEnd));
+                listTauTime = round((2.^linspace(tauStartLog,tauEndLog,numTauPoints))/2)*2;
+                % listTauTime = round(listTauTime);
+                % listTauTime = listTauTime*2; % make sure the tau points are all even numbers to accomodate the pulse blaster  
+            else 
+                listTauTime = linspace(tauStart,tauEnd,numTauPoints);
+            end 
             
             %-------new 5/31/2013 to add in between tau points-----
             if get(esrGUI.checkboxUseExtraTauPoints,'Value')==1
