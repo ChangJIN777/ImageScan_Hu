@@ -85,7 +85,7 @@ handles.output = hObject;
 %      handles.Thor = ThorStage;
 %      handles.Thorfig = ThorFigure;
 %    
-system('start ThorLabsAPT.exe');
+system('start ThorLabsAPT.exe'); % starting the program named ThorLabsAPT.exe (make sure that this exists in the current path)
 %Create tip signal graph figure
 f = figure('WindowButtonDownFcn',@button_down,'WindowButtonMotionFcn',@button_drag,'WindowButtonUpFcn',@button_up,'menubar','none');
 set(f,'OuterPosition',[1308 485 600 600]);
