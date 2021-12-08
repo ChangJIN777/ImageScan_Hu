@@ -214,24 +214,12 @@ public:
        double laser_x_cal; //Calibration from laser scan voltage to MCL scan voltage
        double laser_y_cal;
        
-	   // added to adapt to the new mex file format (Chang Jin 12/7/21)
-       int laser_x_cal_index; 
-       int laser_y_cal_index;
-
        double laser_handle_x; //Handle to text box defining laser position in ImageScan window
        double laser_handle_y;
        
-	   // added to adapt to the new mex file format (Chang Jin 12/7/21)
-	   int laser_handle_x_index; 
-       int laser_handle_y_index;
-
        double MCL_x_cal;
        double MCL_y_cal;
        
-	   // added to adapt to the new mex file format (Chang Jin 12/7/21)
-	   int MCL_x_cal_index;
-       int MCL_y_cal_index;
-
        void set_tracking(double x_center, double y_center); //Recenter tip and scan area based on tracking information
        bool pulse_seq; //If true, do a scan where a pulse sequence is run at each point
        
