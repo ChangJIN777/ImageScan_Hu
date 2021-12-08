@@ -2418,22 +2418,22 @@ void mexFunction( int nlhs, mxArray *plhs[],
             
             mxArray* ch_label;
             ch_label = mxCreateString(lbl);
-            mxSetProperty(prhs[_handles.channel_item_indices[k]],_handles.channel_item_indices[k],"Label",ch_label);
+            mxSetProperty(prhs,_handles.channel_item_indices[k],"Label",ch_label);
             if(_scan.is_scan_ch[k])
             {
-                 mxSetProperty(prhs[_handles.channel_item_indices[k]],_handles.channel_item_indices[k],"Enable",on_str);
+                 mxSetProperty(prhs,_handles.channel_item_indices[k],"Enable",on_str);
             }
             else
             {
-                 mxSetProperty(prhs[_handles.channel_item_indices[k]],_handles.channel_item_indices[k],"Enable",off_str);
+                 mxSetProperty(prhs,_handles.channel_item_indices[k],"Enable",off_str);
             }
             if(_scan.num_selected_ch == k)
             {
-                 mxSetProperty(prhs[_handles.channel_item_indices[k]],_handles.channel_item_indices[k],"Checked",on_str);
+                 mxSetProperty(prhs,_handles.channel_item_indices[k],"Checked",on_str);
             }
             else
             {
-                mxSetProperty(prhs[_handles.channel_item_indices[k]],_handles.channel_item_indices[k],"Checked",off_str);
+                mxSetProperty(prhs,_handles.channel_item_indices[k],"Checked",off_str);
             }
             mxDestroyArray(ch_label);
         }

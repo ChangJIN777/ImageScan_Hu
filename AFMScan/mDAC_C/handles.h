@@ -84,19 +84,22 @@ public:
     double unfiltered_item;
     //double grid_line_item;
    // double vary_colorbar_item;
-    double tip_position_item;
+    double 
+    
+    
+    ;
     double invert_colorbar_item;
     
     // added to adapt to the new mex file format (Chang Jin 12/7/21) ====
-    double input_channel_item_index;
-    double forward_item_index;
-    double reverse_item_index;
-    double filtered_item_index;
-    double unfiltered_item_index;
-    //double grid_line_item;
-   // double vary_colorbar_item;
-    double tip_position_item_index;
-    double invert_colorbar_item_index;
+    int input_channel_item_index;
+    int forward_item_index;
+    int reverse_item_index;
+    int filtered_item_index;
+    int unfiltered_item_index;
+    //int grid_line_item;
+   // int vary_colorbar_item;
+    int tip_position_item_index;
+    int invert_colorbar_item_index;
     // =====================================================================
 
     //Input channel dialog handles
@@ -120,15 +123,15 @@ public:
     double plane_r2_text;
     
     // added to adapt to the new mex file format (Chang Jin 12/7/21) =========
-    double plane_x_edit_index;
-    double plane_y_edit_index;
-    double plane_z_edit_index;
-    double plane_listbox_index;
-    double plane_offset_edit_index;
-    double plane_a_text_index;
-    double plane_b_text_index;
-    double plane_c_text_index;
-    double plane_r2_text_index;   
+    int plane_x_edit_index;
+    int plane_y_edit_index;
+    int plane_z_edit_index;
+    int plane_listbox_index;
+    int plane_offset_edit_index;
+    int plane_a_text_index;
+    int plane_b_text_index;
+    int plane_c_text_index;
+    int plane_r2_text_index;   
     // =======================================================================
 
     double MCL_x;
@@ -137,10 +140,10 @@ public:
     double z_in_handle;
     
     // added to adapt to the new mex file format (Chang Jin 12/7/21) =========
-    double MCL_x_index;
-    double MCL_y_index;
-    double MCL_z_index;
-    double z_in_disp_handle_index;
+    int MCL_x_index;
+    int MCL_y_index;
+    int MCL_z_index;
+    int z_in_disp_handle_index;
     // =======================================================================
 
     CSerial Micronix_serial;
