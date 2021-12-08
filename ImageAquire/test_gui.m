@@ -187,11 +187,10 @@ hcmenu = uimenu('Label','Scan Options','Callback',@scan_menu_callback);
             invert_colorbar_item = uimenu(hcmenu, 'Label', 'Invert Colorbar','Callback',@invert_colorbar_callback);
              %save_data_item = uimenu(hcmenu, 'Label', 'Save Data...','separator','on');
              %item12 = uimenu(hcmenu, 'Label', 'Save Image...');    
-             
+end            
               function scan_menu_callback(src,evnt)
                  mDAC('set_scan_menu');
                   
-              end
           
          
    tip_position_x_handle = line('Visible','off','color','blue','LineWidth',1);
@@ -214,7 +213,7 @@ xlim manual;
 ylim manual;
 
 cur_line_handle = line('Visible','off','color','red','LineWidth',2);
-
+              end
  function scan_button_down(src,evnt)
       
     if strcmp(get(src,'SelectionType'),'alt')
@@ -236,7 +235,6 @@ cur_line_handle = line('Visible','off','color','red','LineWidth',2);
 
  function scan_button_up(src,evnt)
    mDAC('disable_tip_motion');
- end
 
 
 scan_info_figure = figure('OuterPosition',[88 290 400 800],'menubar','none');
@@ -389,7 +387,7 @@ set(PushButton_start_scan,'Position',[80 80 175 35],'BackgroundColor',[0.8 0.8 0
 
 PushButton_stop_scan = uicontrol('style','pushbutton');
 set(PushButton_stop_scan,'Position',[80 30 175 35],'BackgroundColor',[0.8 0.8 0.8],'FontSize',16,'String','Stop Scan','Callback',@stop_scan_callback);
-
+ end
     function snap_plane_callback(src,evnt)
        val = get(CheckBox_snap_plane,'Value');
        mDAC('snap_plane',val);
