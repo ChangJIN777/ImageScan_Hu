@@ -2418,22 +2418,22 @@ void mexFunction( int nlhs, mxArray *plhs[],
             
             mxArray* ch_label;
             ch_label = mxCreateString(lbl);
-            mxSetProperty(prhs,_handles.channel_item_indices[k],"Label",ch_label);
+            mxSetProperty(prhs[_handles.channel_item_indices[k]],_handles.channel_item_indices[k],"Label",ch_label);
             if(_scan.is_scan_ch[k])
             {
-                 mxSetProperty(prhs,_handles.channel_item_indices[k],"Enable",on_str);
+                 mxSetProperty(prhs[_handles.channel_item_indices[k]],_handles.channel_item_indices[k],"Enable",on_str);
             }
             else
             {
-                 mxSetProperty(prhs,_handles.channel_item_indices[k],"Enable",off_str);
+                 mxSetProperty(prhs[_handles.channel_item_indices[k]],_handles.channel_item_indices[k],"Enable",off_str);
             }
             if(_scan.num_selected_ch == k)
             {
-                 mxSetProperty(prhs,_handles.channel_item_indices[k],"Checked",on_str);
+                 mxSetProperty(prhs[_handles.channel_item_indices[k]],_handles.channel_item_indices[k],"Checked",on_str);
             }
             else
             {
-                mxSetProperty(prhs,_handles.channel_item_indices[k],"Checked",off_str);
+                mxSetProperty(prhs[_handles.channel_item_indices[k]],_handles.channel_item_indices[k],"Checked",off_str);
             }
             mxDestroyArray(ch_label);
         }
@@ -2498,7 +2498,7 @@ void mexFunction( int nlhs, mxArray *plhs[],
         {
          _handles.channel_item[i] = args[i]; 
         // added by Chang (12/07/21)
-        _handles.channel_item_indices[i] = i;  
+        _handles.channel_item_indices[i] = i+1;  // referring to prhs as suppose to args
         }
         
         _handles.input_channel_item = args[8];
@@ -2510,13 +2510,13 @@ void mexFunction( int nlhs, mxArray *plhs[],
         _handles.invert_colorbar_item = args[14];
         
         // added by Chang (12/07/21)
-        _handles.input_channel_item_index = 8;
-        _handles.forward_item_index = 9;
-        _handles.reverse_item_index = 10;
-        _handles.filtered_item_index = 11;
-        _handles.unfiltered_item_index = 12;  
-        _handles.tip_position_item_index = 13;
-        _handles.invert_colorbar_item_index = 14;
+        _handles.input_channel_item_index = 9;
+        _handles.forward_item_index = 10;
+        _handles.reverse_item_index = 11;
+        _handles.filtered_item_index = 12;
+        _handles.unfiltered_item_index = 13;  
+        _handles.tip_position_item_index = 14;
+        _handles.invert_colorbar_item_index = 15;
         
      }
      else if(func_name == "set_view_channel" && nargs == 1)
@@ -2534,10 +2534,10 @@ void mexFunction( int nlhs, mxArray *plhs[],
         {
            _handles.ch_checkbox[i] = args[i+1];  
            // added by Chang (12/07/21)
-           _handles.ch_checkbox_indices[i] = i+1; 
+           _handles.ch_checkbox_indices[i] = i+2; 
            _handles.ch_edit[i] = args[i+9];
            // added by Chang (12/07/21)
-           _handles.ch_edit_indices[i] = i+9;
+           _handles.ch_edit_indices[i] = i+10;
         }
         
         //Set current state of scan in dialog box
