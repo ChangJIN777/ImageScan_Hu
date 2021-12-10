@@ -299,7 +299,7 @@ void CALLBACK update_graph(HWND hwnd,
 		theta_data[buffer - 1 - j] = phase_data[phase_data.size() - 1 - j];
 	}
 
-	mxSetProperty(prhs[0],_handles.phase_axes_index, "YData", mxtheta_data); 
+	mxSetProperty(prhs[_handles.phase_axes_index],0, "YData", mxtheta_data); 
 
 
 	//-------------------------
@@ -314,7 +314,7 @@ void CALLBACK update_graph(HWND hwnd,
     sprintf_s(disp_str,50,"%.3f mV",1000*y_data[buffer - 1]);
     tip_volt = mxCreateString(disp_str);
       mexMakeArrayPersistent(tip_volt);
-	  mxSetProperty(prhs[0],textbox_tip_volt_handle_index, "String", tip_volt);
+	  mxSetProperty(prhs[textbox_tip_volt_handle_index],0, "String", tip_volt);
 
      mxDestroyArray(tip_volt);
      
@@ -323,7 +323,7 @@ void CALLBACK update_graph(HWND hwnd,
     sprintf_s(disp_str,50,"%.3f mV",1000*min_flag);
     min_volt = mxCreateString(disp_str);
       mexMakeArrayPersistent(min_volt);
-	  mxSetProperty(prhs[0],textbox_min_volt_handle_index, "String", min_volt);
+	  mxSetProperty(prhs[textbox_min_volt_handle_index],0, "String", min_volt);
 
      mxDestroyArray(min_volt);
      
@@ -332,7 +332,7 @@ void CALLBACK update_graph(HWND hwnd,
     sprintf_s(disp_str,50,"%.3f mV",1000*max_flag);
     max_volt = mxCreateString(disp_str);
       mexMakeArrayPersistent(max_volt);
-	  mxSetProperty(prhs[0],textbox_max_volt_handle_index, "String", max_volt);
+	  mxSetProperty(prhs[textbox_max_volt_handle_index],0, "String", max_volt);
 
      mxDestroyArray(max_volt);
      
