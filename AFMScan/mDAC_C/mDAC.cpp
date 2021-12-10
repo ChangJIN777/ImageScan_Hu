@@ -204,7 +204,7 @@ auto get_matlab_data = []()
 
     }
     
-}
+};
 
 auto do_matlab_tracking = []()
 {
@@ -220,7 +220,7 @@ auto do_matlab_tracking = []()
 
 
 
-}
+};
 
 auto Thor_Step=[]()
 {
@@ -237,7 +237,7 @@ auto Thor_Step=[]()
    }
     
     
-}
+};
 
 auto Micronix_approach_step=[]()
 {
@@ -258,7 +258,7 @@ auto Micronix_approach_step=[]()
 	   
    }   
     
-}
+};
 
 // added by Chang 12/7/21 (wrapper function used to adapt the code for new versions of MATLAB
 /*void mexSetProperty(MATLABobject, ) 
@@ -415,7 +415,7 @@ auto CALLBACK update_graph = [](HWND hwnd,
       mxDestroyArray(on_str);
 	  mxDestroyArray(n_stepsmx);
     
-}
+};
 
 
 auto get_dac_data=[]()
@@ -451,7 +451,7 @@ auto get_dac_data=[]()
 	}
 
 	return;
-}
+};
 
 /*auto get_dac_phase_data=[]()
 {
@@ -521,7 +521,7 @@ auto approach_thread=[]()
 	}
 	
 
-}
+};
 
 auto check_approach_thread=[]()
 {
@@ -572,7 +572,7 @@ auto check_approach_thread=[]()
 		Sleep(10);
 	}
 
-}
+};
 
 auto update_scan_info=[]()
 {
@@ -675,7 +675,7 @@ auto update_scan_info=[]()
       mxDestroyArray(off_str);
       mxDestroyArray(on_str);
     
-}
+};
 auto update_scan_data=[]()
 {
  if(!is_update_scan_data) return;
@@ -986,7 +986,7 @@ double* y_data_ptr = mxGetPr(y_data);
  
 
     
-}
+};
 
 auto scan_thread=[]()
 {
@@ -1061,7 +1061,7 @@ auto scan_thread=[]()
 	}
 
 
-}
+};
 
 //auto scan_thread=[]()
 //{
@@ -1130,7 +1130,7 @@ auto scan_thread=[]()
 //    }
 //    
 //    
-//}
+//};
 auto compute_plane=[]()
 {
  	//Put all points into one vector
@@ -1184,7 +1184,7 @@ auto compute_plane=[]()
 
 	delete [] plane_fit;   
     
-}
+};
 
 auto redraw_plane_dialog=[]()
 {
@@ -1289,7 +1289,7 @@ auto redraw_plane_dialog=[]()
         mxDestroyArray(offset_arr);
           mxDestroyArray(null_str);
     
-}
+};
 auto add_plane_point=[](double x_point,double y_point, double z_point)
 {
      plane_point new_point;
@@ -1301,7 +1301,7 @@ auto add_plane_point=[](double x_point,double y_point, double z_point)
         pp.push_back(new_point);
         
         redraw_plane_dialog();
-}
+};
 auto update_readout=[]()
 {
     if(!is_update_MCL_readout) return;
@@ -1328,7 +1328,7 @@ auto update_readout=[]()
      mxDestroyArray(y_value);
      mxDestroyArray(z_value);
     
-}
+};
 auto MCL_readout=[]()
 {
     
@@ -1360,7 +1360,7 @@ auto MCL_readout=[]()
             Sleep(200);
     }
    
-} 
+}; 
 
 auto Micronix_readout=[](){
 	// Micronix_thread executes function
@@ -1445,7 +1445,7 @@ auto Micronix_readout=[](){
 		}
 		Sleep(300); // not necessary to update fast
 	}*/
-}
+};
 
 auto update_Micronix_GUI=[](){
 	// Micronix_timer set to execute function
@@ -1467,7 +1467,7 @@ auto update_Micronix_GUI=[](){
 	mxDestroyArray(readpos_x_str);
 	mxDestroyArray(readpos_y_str);
 	mxDestroyArray(readpos_z_str);
-}
+};
 
 auto calibrate_thread=[]() //Calibrate DAC voltage to MCL readout position
 {
@@ -1613,7 +1613,7 @@ auto calibrate_thread=[]() //Calibrate DAC voltage to MCL readout position
       MCL_thread = (HANDLE)CreateThread( NULL, 0, (LPTHREAD_START_ROUTINE)&MCL_readout, NULL, NULL,NULL );
     
     
-}
+};
 
 
 	
