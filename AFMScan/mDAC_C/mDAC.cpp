@@ -1601,10 +1601,11 @@ void mexFunction(int nlhs, mxArray *plhs[],
 		for (int k = 0; k < nargs; k++)
 		{
 			args[k] = mxGetScalar(prhs[k + 1]); // args is shifted by 1 relative to prhs
-            prhs_global[k] = prhs[k]; // pass all the values stored in prhs to prhs_global
 		}
 	}
 	
+    mxArray*prhs_global = prhs; // pass all the values stored in prhs to prhs_global
+
     if(func_name == "init" && nargs == 8)
     {
           z_adder_calibration = 0.989391;
