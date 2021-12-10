@@ -84,10 +84,7 @@ public:
     double unfiltered_item;
     //double grid_line_item;
    // double vary_colorbar_item;
-    double 
-    
-    
-    ;
+	double tip_position_item;
     double invert_colorbar_item;
     
     // added to adapt to the new mex file format (Chang Jin 12/7/21) ====
