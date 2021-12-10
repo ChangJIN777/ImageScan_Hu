@@ -10,6 +10,8 @@
 #include "handles.h"
 #include "bestfit.h"
 #include "Madlib.h"
+#include <iostream>
+using namespace std;
 
 DAC _DAC;
 scan _scan;
