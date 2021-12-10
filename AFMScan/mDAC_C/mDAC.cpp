@@ -158,7 +158,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
 // get_matlab_data() runs via a timer set in the mDAC "init" function
 // but only excutes its contents given the flags which are set by the 
 // scan.cpp subroutine "scan::scan_line_sequence"
-auto get_matlab_data()
+auto get_matlab_data = []()
 {
     if(!_scan.is_matlab_data && _scan.is_measuring_matlab)
     {
@@ -206,7 +206,7 @@ auto get_matlab_data()
     
 }
 
-auto do_matlab_tracking()
+auto do_matlab_tracking = []()
 {
 	if (is_tracking)
 	{
@@ -222,7 +222,7 @@ auto do_matlab_tracking()
 
 }
 
-auto Thor_Step()
+auto Thor_Step=[]()
 {
 	/* Thor_Step is timed to occur every 100 ms
 	but it does nothing unless is_step was turned to
@@ -239,7 +239,7 @@ auto Thor_Step()
     
 }
 
-auto Micronix_approach_step()
+auto Micronix_approach_step=[]()
 {
    if(is_step)
    {
@@ -266,7 +266,7 @@ auto Micronix_approach_step()
 	
 }*/
 
-auto CALLBACK update_graph(HWND hwnd,
+auto CALLBACK update_graph = [](HWND hwnd,
     UINT uMsg,
     UINT_PTR idEvent,
     DWORD dwTime)
@@ -418,7 +418,7 @@ auto CALLBACK update_graph(HWND hwnd,
 }
 
 
-auto get_dac_data()
+auto get_dac_data=[]()
 {
 	int count = 0;
 	float* DAC_out;
@@ -453,7 +453,7 @@ auto get_dac_data()
 	return;
 }
 
-/*auto get_dac_phase_data()
+/*auto get_dac_phase_data=[]()
 {
 	int count = 0;
 	while (measure)
@@ -479,7 +479,7 @@ auto get_dac_data()
 
 }*/
 
-auto approach_thread()
+auto approach_thread=[]()
 {
 	
 	is_surface = false;
@@ -523,7 +523,7 @@ auto approach_thread()
 
 }
 
-auto check_approach_thread()
+auto check_approach_thread=[]()
 {
 	while(1)
 	{
@@ -574,7 +574,7 @@ auto check_approach_thread()
 
 }
 
-auto update_scan_info()
+auto update_scan_info=[]()
 {
     if(!is_update_scan_info) return;
      char disp_str[50];
@@ -676,7 +676,7 @@ auto update_scan_info()
       mxDestroyArray(on_str);
     
 }
-auto update_scan_data()
+auto update_scan_data=[]()
 {
  if(!is_update_scan_data) return;
     mxArray* str;
@@ -988,7 +988,7 @@ double* y_data_ptr = mxGetPr(y_data);
     
 }
 
-auto scan_thread()
+auto scan_thread=[]()
 {
 	is_tracking = true;
 	is_tracking_complete = true;
@@ -1063,7 +1063,7 @@ auto scan_thread()
 
 }
 
-//auto scan_thread()
+//auto scan_thread=[]()
 //{
 //    
 //    if(cur_line == 0)
@@ -1131,7 +1131,7 @@ auto scan_thread()
 //    
 //    
 //}
-auto compute_plane()
+auto compute_plane=[]()
 {
  	//Put all points into one vector
 	std::vector<double> plane_fit_vector;
@@ -1186,7 +1186,7 @@ auto compute_plane()
     
 }
 
-auto redraw_plane_dialog()
+auto redraw_plane_dialog=[]()
 {
         mxArray* null_str;
         null_str = mxCreateString("");
@@ -1290,7 +1290,7 @@ auto redraw_plane_dialog()
           mxDestroyArray(null_str);
     
 }
-auto add_plane_point(double x_point,double y_point, double z_point)
+auto add_plane_point=[](double x_point,double y_point, double z_point)
 {
      plane_point new_point;
         
@@ -1302,7 +1302,7 @@ auto add_plane_point(double x_point,double y_point, double z_point)
         
         redraw_plane_dialog();
 }
-auto update_readout()
+auto update_readout=[]()
 {
     if(!is_update_MCL_readout) return;
      mxArray* x_value;
@@ -1329,7 +1329,7 @@ auto update_readout()
      mxDestroyArray(z_value);
     
 }
-auto MCL_readout()
+auto MCL_readout=[]()
 {
     
     int k = 0;
@@ -1362,7 +1362,7 @@ auto MCL_readout()
    
 } 
 
-auto Micronix_readout(){
+auto Micronix_readout=[](){
 	// Micronix_thread executes function
 
 	int ax = 1;
@@ -1447,7 +1447,7 @@ auto Micronix_readout(){
 	}*/
 }
 
-auto update_Micronix_GUI(){
+auto update_Micronix_GUI=[](){
 	// Micronix_timer set to execute function
 	if (!is_update_Micronix_readout) return;
 
@@ -1469,7 +1469,7 @@ auto update_Micronix_GUI(){
 	mxDestroyArray(readpos_z_str);
 }
 
-auto calibrate_thread() //Calibrate DAC voltage to MCL readout position
+auto calibrate_thread=[]() //Calibrate DAC voltage to MCL readout position
 {
     if(is_scan) return;
     
