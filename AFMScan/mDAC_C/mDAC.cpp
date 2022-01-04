@@ -1349,7 +1349,7 @@ void redraw_plane_dialog(mxArray *plhs_global[])
         else if(pp.size() > 0)
         {
             mxArray* plane_list;
-			mwSize dims[1] = {pp.size()};
+			mwSize dims[1] = (pp.size()); // changed to allow implicit narrowing conversion
 
             plane_list = mxCreateCellArray(1,dims);
 
