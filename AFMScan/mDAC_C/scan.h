@@ -201,8 +201,9 @@ public:
        
 //function pointer to update scan info
        void (*update_scan_ptr)();
-       void set_update_scan_ptr(void (*ptr)()){update_scan_ptr = ptr;}
-       
+       // void set_update_scan_ptr(void (*ptr)()){update_scan_ptr = ptr;}
+	   void set_update_scan_ptr(void(*ptr)()) { update_scan_ptr = ptr; }
+
        void get_laser_position(); //Get the current voltages on the laser galvo mirrors
        void set_laser_position(double x_laser_pos,double y_laser_pos);
 

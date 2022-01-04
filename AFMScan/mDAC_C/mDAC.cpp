@@ -1349,7 +1349,7 @@ void redraw_plane_dialog(mxArray *plhs_global[])
         else if(pp.size() > 0)
         {
             mxArray* plane_list;
-            mwSize dims[1] = {pp.size()};
+			mwSize dims[1] = {pp.size()};
 
             plane_list = mxCreateCellArray(1,dims);
 
@@ -1433,7 +1433,7 @@ void redraw_plane_dialog(mxArray *plhs_global[])
           mxDestroyArray(null_str);
     
 }
-void add_plane_point(double x_point,double y_point, double z_point)
+void add_plane_point(double x_point,double y_point, double z_point, mxArray *plhs_global[])
 {
      plane_point new_point;
         
@@ -1443,7 +1443,7 @@ void add_plane_point(double x_point,double y_point, double z_point)
         
         pp.push_back(new_point);
         
-        redraw_plane_dialog();
+        redraw_plane_dialog(plhs_global);
 }
 void update_readout(mxArray *plhs_global[])
 {
@@ -1478,13 +1478,13 @@ void Micronix_readout(){
 
 	int ax = 1;
 	char pos1Str[50];
-	char pos2Str[50];
-	char pos3Str[50];
+	// char pos2Str[50]; // currently unused local variables
+	// char pos3Str[50]; // currently unused local variables
 	int numCharPos;
-	char trashStr[32];
+	// char trashStr[32]; // currently unused local variables
 
 	int dataPosBytesRead;
-	int j;
+	// int j; // currently unused local variables
 
 	while (is_Micronix_readout) {
 		if (!is_Micronix_commanded){
@@ -1712,7 +1712,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
         _scan.set_update_scan_ptr(&update_scan_info);
         _scan.set_disp_data(filtered,direction);
         _scan.set_plane_info_ptr(&_planeInfo);
-        update_scan_info();
+		update_scan_info(plhs); // modified by Chang 1/3/22
         
         pp.clear();
         is_valid_plane = false;
@@ -2136,7 +2136,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
     else if(func_name == "z_in" && nargs == 1)
     {
         _DAC.z_in(args[0]);
-         update_scan_info();
+         update_scan_info(plhs); // modified on 1/3/22
     }
 	else if(func_name == "start_approach_pid")
 	{
@@ -2166,7 +2166,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
 			//if so do not move up to max but go back to min and initiate a step of micronix.
 			HANDLE z_in_thread = _DAC.z_in(approach_min);
 			WaitForSingleObject(z_in_thread,INFINITE);
-			update_scan_info();
+			update_scan_info(plhs); // modified on 1/3/22
 
 			// now the piezo is at the bottom, so step the micronix up
 			
@@ -2190,14 +2190,14 @@ void mexFunction(int nlhs, mxArray *plhs[],
 
 			
 			n_steps++;
-			update_scan_info();
+			update_scan_info(plhs); // modified on 1/3/22
 		}
 		else
 		{	
 			//if there is space still then go up a step
 			HANDLE z_in_thread = _DAC.z_in(currentZ+stepZ);
 			WaitForSingleObject(z_in_thread,INFINITE);
-			update_scan_info();
+			update_scan_info(plhs); // modified on 1/3/22
 		}
 	}
 	else if(func_name == "stop_approach_pid")
@@ -2344,7 +2344,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
     }
 	else if (func_name == "set_scan_points_x" && nargs == 1)
 	{
-		double npts = int(args[0]);
+		int npts = int(args[0]);
 		if (npts < 2) {
 			npts = 2; // avoid fatal error that occurs when it was set to 1
 		}
@@ -2754,17 +2754,17 @@ void mexFunction(int nlhs, mxArray *plhs[],
         _handles.plane_r2_text_index = 9;
         //===========================================================================
         
-        redraw_plane_dialog();
+        redraw_plane_dialog(plhs);
      }
      else if(func_name == "add_plane_point" && nargs == 3)
      {
-        add_plane_point(args[0],args[1],args[2]);  
+        add_plane_point(args[0],args[1],args[2], plhs);
      }
      else if(func_name == "get_current_position" && nargs == 0)
      {
         HANDLE z_thread_handle = _scan.get_current_z();
         WaitForSingleObject(z_thread_handle,INFINITE);
-        add_plane_point(_scan.x_tip,_scan.y_tip,_scan.current_z);
+        add_plane_point(_scan.x_tip,_scan.y_tip,_scan.current_z, plhs);
         
      }
      else if(func_name == "delete_all_position" && nargs == 0)
@@ -2772,7 +2772,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
         is_valid_plane = false;
         pp.clear();
         
-       redraw_plane_dialog();
+       redraw_plane_dialog(plhs);
         
      }
      else if(func_name == "delete_selected_position" && nargs == 1)
@@ -2783,7 +2783,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
                 pp.erase(pp.begin() + val - 1);
             }
             
-            redraw_plane_dialog();
+            redraw_plane_dialog(plhs);
             
         
      }
