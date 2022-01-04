@@ -3,7 +3,7 @@
 
 //The scan class handles all DAC commands associated with scanning.
 //This class should be declared only once in a global scope.
-
+#include "mex.h"
 #include <windows.h>
 #include "NIDAQmx.h"
 #include "DAC.h"
