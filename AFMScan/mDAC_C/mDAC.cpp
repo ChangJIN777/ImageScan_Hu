@@ -2354,7 +2354,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
     {
 		 double npts = int(args[0]);
 		 if (npts < 2) {
-			 npts = 2; // avoid fatal error that occurs when it was set to 1
+			 npts = int(2); // avoid fatal error that occurs when it was set to 1
 		 }
         _scan.set(_scan.x_min,_scan.x_max,_scan.y_min,_scan.y_max,_scan.nx_step,npts,_scan.freq,_scan.theta);
     }
