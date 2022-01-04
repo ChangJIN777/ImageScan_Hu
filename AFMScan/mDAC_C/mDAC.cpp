@@ -1349,7 +1349,7 @@ void redraw_plane_dialog(mxArray *plhs_global[])
         else if(pp.size() > 0)
         {
             mxArray* plane_list;
-			mwSize dims[1] = int(pp.size()); // mwSzie is equivalent to int 
+			mwSize dims[1] = {int(pp.size())}; // mwSzie is equivalent to int 
             plane_list = mxCreateCellArray(1,dims);
 
             //Reset listbox contents
