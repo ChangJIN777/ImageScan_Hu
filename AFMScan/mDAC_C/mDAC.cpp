@@ -1591,7 +1591,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
 	std::string func_name(str);
 
 	double* args;
-	int nargs = nrhs - 1; // args has one less element than prhs 
+	int nargs = nrhs - 1; // args has one less element than prhs (the first input argument is just the name of the function)
 	nx_step_int = _scan.nx_step; 
 	ny_step_int = _scan.ny_step;
 	if (nrhs >= 1)
