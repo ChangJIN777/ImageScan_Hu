@@ -1,0 +1,6 @@
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+11-May-2016 11:25:28	1.9969	2.3303	58.966	125.5329	157.6243	1	1.9633	2.16	58.8414	163.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+11-May-2016 11:32:44	2.0122	2.2991	58.8004	73.9329	78.9871	1	1.9969	2.197	58.566	82.3
