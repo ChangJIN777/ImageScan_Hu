@@ -189,10 +189,7 @@ hcmenu = uimenu('Label','Scan Options','Callback',@scan_menu_callback);
              %item12 = uimenu(hcmenu, 'Label', 'Save Image...');    
              
               function scan_menu_callback(src,evnt)
-                 % added by Chang 01/05/22 (create c++ mex function out of process)
-                  mh = mexhost; 
-                  feval(mh,"mDAC",'set_scan_menu');
-%                   mDAC('set_scan_menu');
+                 mDAC('set_scan_menu');
                   
               end
           
@@ -223,10 +220,7 @@ cur_line_handle = line('Visible','off','color','red','LineWidth',2);
     if strcmp(get(src,'SelectionType'),'alt')
     %Right-click in scan window, move tip if enabled
      cp =  get(scan_grid_handle,'CurrentPoint');
-     % added by Chang 01/05/22 (create c++ mex function out of process)
-                  mh = mexhost; 
-                  feval(mh,"mDAC",'enable_tip_motion',cp(1,1),cp(1,2));
-%            mDAC('enable_tip_motion',cp(1,1),cp(1,2));
+           mDAC('enable_tip_motion',cp(1,1),cp(1,2));
     end
  end
 
@@ -236,18 +230,12 @@ cur_line_handle = line('Visible','off','color','red','LineWidth',2);
        
     %Right-click in scan window, move tip if enabled
             cp =  get(scan_grid_handle,'CurrentPoint');
-            % added by Chang 01/05/22 (create c++ mex function out of process)
-            mh = mexhost; 
-            feval(mh,"mDAC",'tip_motion',cp(1,1),cp(1,2));
-%             mDAC('tip_motion',cp(1,1),cp(1,2));
+            mDAC('tip_motion',cp(1,1),cp(1,2));
     end
  end
 
  function scan_button_up(src,evnt)
-   % added by Chang 01/05/22 (create c++ mex function out of process)
-   mh = mexhost; 
-   feval(mh,"mDAC",'disable_tip_motion');
-%    mDAC('disable_tip_motion');
+   mDAC('disable_tip_motion');
  end
 
 
@@ -404,49 +392,32 @@ set(PushButton_stop_scan,'Position',[80 30 175 35],'BackgroundColor',[0.8 0.8 0.
 
     function snap_plane_callback(src,evnt)
        val = get(CheckBox_snap_plane,'Value');
-       % added by Chang 01/05/22 (create c++ mex function out of process)
-       mh = mexhost; 
-       feval(mh,"mDAC",'snap_plane',val);
-%        mDAC('snap_plane',val);
+       mDAC('snap_plane',val);
     end
 
     function pulse_seq_callback(src,evnt)
        val = get(CheckBox_pulse_seq,'Value');
-       % added by Chang 01/05/22 (create c++ mex function out of process)
-       mh = mexhost; 
-       feval(mh,"mDAC",'pulse_seq',val);
-%        mDAC('pulse_seq',val);
+       mDAC('pulse_seq',val);
     end
 
     function calibrate_callback(src,evnt)
-        % added by Chang 01/05/22 (create c++ mex function out of process)
-        mh = mexhost; 
-        feval(mh,"mDAC",'calibrate');
-%         mDAC('calibrate');
+        mDAC('calibrate');
     end
 
 
     
 % Update handles structure
 guidata(hObject, handles);
- % added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'set_scan_menu_items',channel_item(1),channel_item(2),channel_item(3),channel_item(4),channel_item(5),channel_item(6),channel_item(7),channel_item(8),input_channel_item,...
+mDAC('set_scan_menu_items',channel_item(1),channel_item(2),channel_item(3),channel_item(4),channel_item(5),channel_item(6),channel_item(7),channel_item(8),input_channel_item,...
     forward_item,reverse_item,filtered_item,unfiltered_item,tip_position_item,invert_colorbar_item);
-feval(mh,"mDAC",'set_scan_handles',TextBox_tip_pos_x_value,TextBox_tip_pos_y_value,TextBox_scan_size_x_value,TextBox_scan_size_y_value,TextBox_scan_center_x_value,TextBox_scan_center_y_value,...
+mDAC('set_scan_handles',TextBox_tip_pos_x_value,TextBox_tip_pos_y_value,TextBox_scan_size_x_value,TextBox_scan_size_y_value,TextBox_scan_center_x_value,TextBox_scan_center_y_value,...
     TextBox_scan_speed_value, TextBox_scan_points_x_value, TextBox_scan_points_y_value,scan_axes_handle,scan_grid_handle,cur_line_handle,...
     tip_position_x_handle,tip_position_y_handle,PushButton_start_scan,PushButton_stop_scan,PushButton_start_app,PushButton_stop_app,CheckBox_snap_plane,PushButton_stop_graph,PushButton_start_graph);
-feval(mh,"mDAC",'set_MCL_handles',handles.text1,handles.text2,handles.text3);
-% mDAC('set_scan_menu_items',channel_item(1),channel_item(2),channel_item(3),channel_item(4),channel_item(5),channel_item(6),channel_item(7),channel_item(8),input_channel_item,...
-%     forward_item,reverse_item,filtered_item,unfiltered_item,tip_position_item,invert_colorbar_item);
-% mDAC('set_scan_handles',TextBox_tip_pos_x_value,TextBox_tip_pos_y_value,TextBox_scan_size_x_value,TextBox_scan_size_y_value,TextBox_scan_center_x_value,TextBox_scan_center_y_value,...
-%     TextBox_scan_speed_value, TextBox_scan_points_x_value, TextBox_scan_points_y_value,scan_axes_handle,scan_grid_handle,cur_line_handle,...
-%     tip_position_x_handle,tip_position_y_handle,PushButton_start_scan,PushButton_stop_scan,PushButton_start_app,PushButton_stop_app,CheckBox_snap_plane,PushButton_stop_graph,PushButton_start_graph);
-% mDAC('set_MCL_handles',handles.text1,handles.text2,handles.text3);
+mDAC('set_MCL_handles',handles.text1,handles.text2,handles.text3);
 
 
-feval(mh,"mDAC",'init',h,h_min_line,h_max_line,TextBox_tip_volt,TextBox_min_volt,TextBox_max_volt,handles.text17,buffer);
-% mDAC('init',h,h_min_line,h_max_line,TextBox_tip_volt,TextBox_min_volt,TextBox_max_volt,handles.text17,buffer);
+
+mDAC('init',h,h_min_line,h_max_line,TextBox_tip_volt,TextBox_min_volt,TextBox_max_volt,handles.text17,buffer);
 %read laser calibrations from the ini file
 
  configurationFile = 'ConfigurationImageScan.txt';
@@ -456,10 +427,7 @@ feval(mh,"mDAC",'init',h,h_min_line,h_max_line,TextBox_tip_volt,TextBox_min_volt
     % structure
     if exist(configurationFile, 'file') == 2
         configS = tdfread(configurationFile);
-        % added by Chang 01/05/22 (create c++ mex function out of process)
-        mh = mexhost; 
-        feval(mh,"mDAC",'set_cal', configS.xScanMicronsPerVolt,configS.yScanMicronsPerVolt,10.000,10.000,laser_x_handle,laser_y_handle);
-%         mDAC('set_cal', configS.xScanMicronsPerVolt,configS.yScanMicronsPerVolt,10.000,10.000,laser_x_handle,laser_y_handle);
+        mDAC('set_cal', configS.xScanMicronsPerVolt,configS.yScanMicronsPerVolt,10.000,10.000,laser_x_handle,laser_y_handle);
     end
 
     % micronix addtion:
@@ -540,8 +508,8 @@ end
                   function start_graph_callback(src,evnt)
                    % added by Chang 01/05/22 (create c++ mex function out of process)
                    mh = mexhost; 
-                   feval(mh,"mDAC",'start_graph');
-%                    mDAC('start_graph');
+                   feval(mh,"mDAC",'stop_graph');
+                   mDAC('start_graph');
                  end
                      function close_callback(src,evnt)
                      end
@@ -549,9 +517,7 @@ end
                              
                              
                                  function stop_scan_callback(src,evnt)
-                                     % added by Chang 01/05/22 (create c++ mex function out of process)
-                                     mh = mexhost; 
-                                     feval(mh,"mDAC",'stop_scan');
+                                     mDAC('stop_scan');
                                  end
                                      function start_scan_callback(src,evnt)
                                      %Get laser position
@@ -560,90 +526,48 @@ end
                                         
                                          laser_x = str2double(get(laser_x_handle,'String'));
                                          laser_y = str2double(get(laser_y_handle,'String'));
-                                         % added by Chang 01/05/22 (create c++ mex function out of process)
-                                         mh = mexhost; 
-                                         feval(mh,"mDAC",'start_scan',laser_x,laser_y);
-%                                          mDAC('start_scan',laser_x,laser_y);
+                                         mDAC('start_scan',laser_x,laser_y);
                                      end
 
   
 function view_channel0_callback(src,~)
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'set_view_channel',0);
-% mDAC('set_view_channel',0);
+mDAC('set_view_channel',0);
 end
 function view_channel1_callback(src,evnt)
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'set_view_channel',1);
-% mDAC('set_view_channel',1);
+mDAC('set_view_channel',1);
 end
 function view_channel2_callback(src,evnt)
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'set_view_channel',2);
-% mDAC('set_view_channel',2);
+mDAC('set_view_channel',2);
 end
 function view_channel3_callback(src,evnt)
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'set_view_channel',3);
-% mDAC('set_view_channel',3);
+mDAC('set_view_channel',3);
 end
 function view_channel4_callback(src,evnt)
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'set_view_channel',4);
-% mDAC('set_view_channel',4);
+mDAC('set_view_channel',4);
 end
 function view_channel5_callback(src,evnt)
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'set_view_channel',5);
-% mDAC('set_view_channel',5);
+mDAC('set_view_channel',5);
 end
 function view_channel6_callback(src,evnt)
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'set_view_channel',6);
-% mDAC('set_view_channel',6);
+mDAC('set_view_channel',6);
 end
 function view_channel7_callback(src,evnt)
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'set_view_channel',7);
-% mDAC('set_view_channel',7);
+mDAC('set_view_channel',7);
 end
 function forward_callback(src,evnt)
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'set_forward');
-% mDAC('set_forward');
+mDAC('set_forward');
 end
 function reverse_callback(src,evnt)
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'set_reverse');
-% mDAC('set_reverse');
+mDAC('set_reverse');
 end
 function filtered_callback(src,evnt)
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'set_filtered');
-% mDAC('set_filtered');
+mDAC('set_filtered');
 end
 function unfiltered_callback(src,evnt)
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'set_unfiltered');
-% mDAC('set_unfiltered');
+mDAC('set_unfiltered');
 end
 function tip_position_callback(src,evnt)
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'draw_tip_position');
-% mDAC('draw_tip_position');
+mDAC('draw_tip_position');
 end
 function invert_colorbar_callback(src,evnt)
   colormap(flipud(colormap));
@@ -660,38 +584,25 @@ end
         ch_cancel = uicontrol('style','pushbutton','String','Cancel','Position',[160 20 100 30],'FontSize',12,'Callback','close');
         
         %Populate fields in dialog box with current state
-        % added by Chang 01/05/22 (create c++ mex function out of process)
-        mh = mexhost; 
-        feval(mh,"mDAC",'input_channel_dialog_set',dbox,ch_checkbox(1),ch_checkbox(2),ch_checkbox(3),ch_checkbox(4),ch_checkbox(5),ch_checkbox(6),ch_checkbox(7),ch_checkbox(8),...
+        mDAC('input_channel_dialog_set',dbox,ch_checkbox(1),ch_checkbox(2),ch_checkbox(3),ch_checkbox(4),ch_checkbox(5),ch_checkbox(6),ch_checkbox(7),ch_checkbox(8),...
                                         ch_edit(1),ch_edit(2),ch_edit(3),ch_edit(4),ch_edit(5),ch_edit(6),ch_edit(7),ch_edit(8));
-%         mDAC('input_channel_dialog_set',dbox,ch_checkbox(1),ch_checkbox(2),ch_checkbox(3),ch_checkbox(4),ch_checkbox(5),ch_checkbox(6),ch_checkbox(7),ch_checkbox(8),...
-%                                         ch_edit(1),ch_edit(2),ch_edit(3),ch_edit(4),ch_edit(5),ch_edit(6),ch_edit(7),ch_edit(8));
  
      function input_channel_ok_callback(src,evnt)
-        % added by Chang 01/05/22 (create c++ mex function out of process)
-        mh = mexhost; 
-        feval(mh,"mDAC",'input_channel_dialog_ok');
-%         mDAC('input_channel_dialog_ok');
+        mDAC('input_channel_dialog_ok');
         close(dbox);
      end
  end
        function tip_pos_x_keypress(src,evnt)  
            if isequal(evnt.Key,'return')
               drawnow;
-              % added by Chang 01/05/22 (create c++ mex function out of process)
-              mh = mexhost; 
-              feval(mh,"mDAC",'set_tip_x',str2num(get(src,'String')));
-%               mDAC('set_tip_x',str2num(get(src,'String')));
+              mDAC('set_tip_x',str2num(get(src,'String')));
               set(src,'String','');
            end
        end
            function tip_pos_y_keypress(src,evnt)  
            if isequal(evnt.Key,'return')
               drawnow;
-              % added by Chang 01/05/22 (create c++ mex function out of process)
-              mh = mexhost; 
-              feval(mh,"mDAC",'set_tip_y',str2num(get(src,'String')));
-%               mDAC('set_tip_y',str2num(get(src,'String')));
+              mDAC('set_tip_y',str2num(get(src,'String')));
               set(src,'String','');
            end
            end
@@ -699,10 +610,7 @@ end
            function scan_size_x_keypress(src,evnt)  
            if isequal(evnt.Key,'return')
               drawnow;
-              % added by Chang 01/05/22 (create c++ mex function out of process)
-              mh = mexhost; 
-              feval(mh,"mDAC",'set_scan_size_x',str2num(get(src,'String')));
-%               mDAC('set_scan_size_x',str2num(get(src,'String')));
+              mDAC('set_scan_size_x',str2num(get(src,'String')));
               set(src,'String','');
            end
            end
@@ -710,10 +618,7 @@ end
            function scan_size_y_keypress(src,evnt)  
            if isequal(evnt.Key,'return')
               drawnow;
-              % added by Chang 01/05/22 (create c++ mex function out of process)
-              mh = mexhost; 
-              feval(mh,"mDAC",'set_scan_size_y',str2num(get(src,'String')));
-%               mDAC('set_scan_size_y',str2num(get(src,'String')));
+              mDAC('set_scan_size_y',str2num(get(src,'String')));
               set(src,'String','');
            end
            end
@@ -721,10 +626,7 @@ end
            function scan_center_x_keypress(src,evnt)  
            if isequal(evnt.Key,'return')
               drawnow;
-              % added by Chang 01/05/22 (create c++ mex function out of process)
-              mh = mexhost; 
-              feval(mh,"mDAC",'set_scan_center_x',str2num(get(src,'String')));
-%               mDAC('set_scan_center_x',str2num(get(src,'String')));
+              mDAC('set_scan_center_x',str2num(get(src,'String')));
               set(src,'String','');
            end
            end
@@ -732,10 +634,7 @@ end
            function scan_center_y_keypress(src,evnt)  
            if isequal(evnt.Key,'return')
               drawnow;
-              % added by Chang 01/05/22 (create c++ mex function out of process)
-              mh = mexhost; 
-              feval(mh,"mDAC",'set_scan_center_y',str2num(get(src,'String')));
-%               mDAC('set_scan_center_y',str2num(get(src,'String')));
+              mDAC('set_scan_center_y',str2num(get(src,'String')));
               set(src,'String','');
            end
            end
@@ -743,10 +642,7 @@ end
            function scan_speed_keypress(src,evnt)  
            if isequal(evnt.Key,'return')
               drawnow;
-              % added by Chang 01/05/22 (create c++ mex function out of process)
-              mh = mexhost; 
-              feval(mh,"mDAC",'set_scan_speed',str2num(get(src,'String')));
-%               mDAC('set_scan_speed',str2num(get(src,'String')));
+              mDAC('set_scan_speed',str2num(get(src,'String')));
               set(src,'String','');
            end
            end
@@ -754,10 +650,7 @@ end
            function scan_points_x_keypress(src,evnt)  
            if isequal(evnt.Key,'return')
               drawnow;
-              % added by Chang 01/05/22 (create c++ mex function out of process)
-              mh = mexhost; 
-              feval(mh,"mDAC",'set_scan_points_x',str2num(get(src,'String')));
-%               mDAC('set_scan_points_x',str2num(get(src,'String')));
+              mDAC('set_scan_points_x',str2num(get(src,'String')));
               set(src,'String','');
            end
            end
@@ -765,10 +658,7 @@ end
            function scan_points_y_keypress(src,evnt)  
            if isequal(evnt.Key,'return')
               drawnow;
-              % added by Chang 01/05/22 (create c++ mex function out of process)
-              mh = mexhost; 
-              feval(mh,"mDAC",'set_scan_points_y',str2num(get(src,'String')));
-%               mDAC('set_scan_points_y',str2num(get(src,'String')));
+              mDAC('set_scan_points_y',str2num(get(src,'String')));
               set(src,'String','');
            end
            end
@@ -816,49 +706,32 @@ plane_b_text = uicontrol('style','text','String','','Position',[470 160 80 30],'
 plane_c_text = uicontrol('style','text','String','','Position',[470 130 80 30],'FontSize',12,'BackgroundColor',[0.8 0.8 0.8],'HorizontalAlignment','right','FontName','Courier New');
 plane_r2_text = uicontrol('style','text','String','','Position',[470 100 80 30],'FontSize',12,'BackgroundColor',[0.8 0.8 0.8],'HorizontalAlignment','right','FontName','Courier New');
 
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'set_plane_dialog_items',plane_x_edit,plane_y_edit,plane_z_edit,plane_listbox,plane_offset_edit,plane_a_text,plane_b_text,plane_c_text,plane_r2_text);
-% mDAC('set_plane_dialog_items',plane_x_edit,plane_y_edit,plane_z_edit,plane_listbox,plane_offset_edit,plane_a_text,plane_b_text,plane_c_text,plane_r2_text);
+mDAC('set_plane_dialog_items',plane_x_edit,plane_y_edit,plane_z_edit,plane_listbox,plane_offset_edit,plane_a_text,plane_b_text,plane_c_text,plane_r2_text);
 
 
     function plane_add_callback(src,evnt)
         x_val = get(plane_x_edit,'string');
         y_val = get(plane_y_edit,'string');
         z_val = get(plane_z_edit,'string');
-        % added by Chang 01/05/22 (create c++ mex function out of process)
-        mh = mexhost; 
-        feval(mh,"mDAC",'add_plane_point',str2num(x_val),str2num(y_val),str2num(z_val));
-%         mDAC('add_plane_point',str2num(x_val),str2num(y_val),str2num(z_val));
+        
+        mDAC('add_plane_point',str2num(x_val),str2num(y_val),str2num(z_val));
     end
 
     function delete_all_callback(src,evnt)
-        % added by Chang 01/05/22 (create c++ mex function out of process)
-        mh = mexhost; 
-        feval(mh,"mDAC",'delete_all_position');
-%         mDAC('delete_all_position');
+        mDAC('delete_all_position');
     end
 
     function delete_selected_callback(src,evnt)
        num_sel = get(plane_listbox,'Value');
-       % added by Chang 01/05/22 (create c++ mex function out of process)
-       mh = mexhost; 
-       feval(mh,"mDAC",'delete_selected_position',num_sel);
-%        mDAC('delete_selected_position',num_sel);
+       mDAC('delete_selected_position',num_sel);
     end
 
     function get_current_pos_callback(src,evnt)
-        % added by Chang 01/05/22 (create c++ mex function out of process)
-        mh = mexhost; 
-        feval(mh,"mDAC",'get_current_position');
-%         mDAC('get_current_position');
+        mDAC('get_current_position');
     end
 
     function plane_ok_callback(src,envt)
-       % added by Chang 01/05/22 (create c++ mex function out of process)
-        mh = mexhost; 
-        feval(mh,"mDAC",'plane_ok');
-%        mDAC('plane_ok');
+       mDAC('plane_ok');
        close(pbox);
     end
 
@@ -881,10 +754,7 @@ function figure1_CloseRequestFcn(hObject, eventdata, handles)
 % hObject    handle to figure1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'close');
-% mDAC('close');
+mDAC('close');
 clear mDAC;
 %delete(handles.Thorfig);
 %set(handles.tip_figure,'CloseRequestFcn','closereq');
@@ -998,10 +868,7 @@ function pushbutton3_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 y_edit = get(handles.edit2,'String');
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'move_MCL',2,str2num(y_edit));
-% mDAC('move_MCL',2,str2num(y_edit));
+mDAC('move_MCL',2,str2num(y_edit));
 end
 
 % --- Executes on button press in pushbutton4.
@@ -1010,10 +877,7 @@ function pushbutton4_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 y_edit = get(handles.edit2,'String');
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'move_MCL',2,-str2num(y_edit));
-% mDAC('move_MCL',2,-str2num(y_edit));
+mDAC('move_MCL',2,-str2num(y_edit));
 end
 
 % --- Executes on button press in pushbutton5.
@@ -1022,10 +886,7 @@ function pushbutton5_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 z_edit = get(handles.edit3,'String');
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'move_MCL',3,str2num(z_edit));
-% mDAC('move_MCL',3,str2num(z_edit));
+mDAC('move_MCL',3,str2num(z_edit));
 end
 
 % --- Executes on button press in pushbutton6.
@@ -1034,10 +895,7 @@ function pushbutton6_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 z_edit = get(handles.edit3,'String');
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'move_MCL',3,-str2num(z_edit));
-% mDAC('move_MCL',3,-str2num(z_edit));
+mDAC('move_MCL',3,-str2num(z_edit));
 end
 
 
@@ -1072,10 +930,7 @@ function pushbutton9_Callback(hObject, eventdata, handles)
 %y = sin(x);
 %plot(handles.approach_plot,x,y);
 z_in = get(handles.edit4,'String');
-% added by Chang 01/05/22 (create c++ mex function out of process)
-mh = mexhost; 
-feval(mh,"mDAC",'z_in',str2num(z_in));
-% mDAC('z_in',str2num(z_in));
+mDAC('z_in',str2num(z_in));
 end
 
 % --- Executes on button press in pushbutton11.
