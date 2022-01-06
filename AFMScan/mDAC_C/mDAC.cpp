@@ -49,7 +49,7 @@ static mxArray* mxy_data;
 double* y_data;
 static mxArray* mxtheta_data;
 double* theta_data;
-mxArray* plhs_global;
+mxArray *plhs_global[];
 
 HANDLE tip_read_thread;
 HANDLE phase_read_thread;
@@ -1604,7 +1604,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
 	ny_step_int = _scan.ny_step;
 
     plhs_global = plhs; // Chang 1/5/22
-    
+
 	if (nrhs >= 1)
 	{
 
