@@ -49,7 +49,7 @@ static mxArray* mxy_data;
 double* y_data;
 static mxArray* mxtheta_data;
 double* theta_data;
-mxArray *plhs_global[];
+mxArray**plhs_global;
 
 HANDLE tip_read_thread;
 HANDLE phase_read_thread;
