@@ -1603,7 +1603,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
 	nx_step_int = _scan.nx_step; 
 	ny_step_int = _scan.ny_step;
 
-    for (int k = 0; k < nlhs, k++)
+    for (int k = 0; k < nlhs; k++)
     {
         plhs_global[k] = plhs[k]; // Chang 1/5/22
     }
