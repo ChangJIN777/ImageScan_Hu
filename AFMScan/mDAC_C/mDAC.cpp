@@ -49,6 +49,7 @@ static mxArray* mxy_data;
 double* y_data;
 static mxArray* mxtheta_data;
 double* theta_data;
+mxArray* plhs_global;
 
 HANDLE tip_read_thread;
 HANDLE phase_read_thread;
@@ -241,11 +242,18 @@ void Thor_Step()
     
 }
 
-void CALLBACK update_graph(mxArray *plhs_global[],
-	HWND hwnd,
-    UINT uMsg,
-    UINT_PTR idEvent,
-    DWORD dwTime){
+// extra paramters
+// HWND hwnd,
+// UINT uMsg,
+// UINT_PTR idEvent,
+// DWORD dwTime
+
+void CALLBACK update_graph(
+HWND hwnd,
+UINT uMsg,
+UINT_PTR idEvent,
+DWORD dwTime)
+{
   // if(!measure) return;
    if(bridge_data.size() < buffer)
    {
@@ -291,35 +299,35 @@ void CALLBACK update_graph(mxArray *plhs_global[],
      
     sprintf_s(disp_str,50,"%.3f mV",1000*y_data[buffer - 1]);
     tip_volt = mxCreateString(disp_str);
-      mexMakeArrayPersistent(tip_volt);
-	  mxSetProperty(plhs_global[textbox_tip_volt_handle_index],0, "String", tip_volt);
+    mexMakeArrayPersistent(tip_volt);
+	mxSetProperty(plhs_global[textbox_tip_volt_handle_index],0, "String", tip_volt);
 
-     mxDestroyArray(tip_volt);
+    mxDestroyArray(tip_volt);
      
-       mxArray* min_volt;
+    mxArray* min_volt;
      
     sprintf_s(disp_str,50,"%.3f mV",1000*min_flag);
     min_volt = mxCreateString(disp_str);
-      mexMakeArrayPersistent(min_volt);
-	  mxSetProperty(plhs_global[textbox_min_volt_handle_index],0, "String", min_volt);
+    mexMakeArrayPersistent(min_volt);
+	mxSetProperty(plhs_global[textbox_min_volt_handle_index],0, "String", min_volt);
 
-     mxDestroyArray(min_volt);
+    mxDestroyArray(min_volt);
      
-      mxArray* max_volt;
+    mxArray* max_volt;
      
     sprintf_s(disp_str,50,"%.3f mV",1000*max_flag);
     max_volt = mxCreateString(disp_str);
-      mexMakeArrayPersistent(max_volt);
-	  mxSetProperty(plhs_global[textbox_max_volt_handle_index],0, "String", max_volt);
+    mexMakeArrayPersistent(max_volt);
+	mxSetProperty(plhs_global[textbox_max_volt_handle_index],0, "String", max_volt);
 
-     mxDestroyArray(max_volt);
+    mxDestroyArray(max_volt);
      
-      mxArray* z_in_disp;
+    mxArray* z_in_disp;
      
-      sprintf_s(disp_str,50,"%.3f",_DAC.z_in_current);
+    sprintf_s(disp_str,50,"%.3f",_DAC.z_in_current);
     z_in_disp = mxCreateString(disp_str);
-      mexMakeArrayPersistent(z_in_disp);
-	  mxSetProperty(plhs_global[z_in_disp_handle_index],0, "String", z_in_disp);
+    mexMakeArrayPersistent(z_in_disp);
+	mxSetProperty(plhs_global[z_in_disp_handle_index],0, "String", z_in_disp);
 
      mxDestroyArray(z_in_disp);
 
@@ -366,7 +374,7 @@ void CALLBACK update_graph(mxArray *plhs_global[],
          }
          else
          {
-             mxSetProperty(plhs_global[_handles.start_graph_handle_index],0,"Enable",off_str);
+            mxSetProperty(plhs_global[_handles.start_graph_handle_index],0,"Enable",off_str);
 			mxSetProperty(plhs_global[_handles.stop_graph_handle_index],0,"Enable",on_str);  
             mxSetProperty(plhs_global[_handles.start_approach_handle_index],0,"Enable",on_str);
             mxSetProperty(plhs_global[_handles.stop_approach_handle_index],0,"Enable",off_str);
@@ -544,7 +552,7 @@ void check_approach_thread()
 
 }
 
-void update_scan_info(mxArray *plhs_global[])
+void update_scan_info()
 {
     if(!is_update_scan_info) return;
      char disp_str[50];
@@ -647,7 +655,7 @@ void update_scan_info(mxArray *plhs_global[])
     
 }
 
-void update_scan_data(mxArray *plhs_global[]){
+void update_scan_data(){
  if(!is_update_scan_data) return;
     mxArray* str;
  
@@ -1329,7 +1337,7 @@ void calibrate_thread() //Calibrate DAC voltage to MCL readout position
 //}
 
 
-void redraw_plane_dialog(mxArray *plhs_global[])
+void redraw_plane_dialog()
 {
         mxArray* null_str;
         null_str = mxCreateString("");
@@ -1432,7 +1440,7 @@ void redraw_plane_dialog(mxArray *plhs_global[])
           mxDestroyArray(null_str);
     
 }
-void add_plane_point(double x_point,double y_point, double z_point, mxArray *plhs_global[])
+void add_plane_point(double x_point,double y_point, double z_point)
 {
      plane_point new_point;
         
@@ -1444,7 +1452,7 @@ void add_plane_point(double x_point,double y_point, double z_point, mxArray *plh
         
         redraw_plane_dialog(plhs_global);
 }
-void update_readout(mxArray *plhs_global[])
+void update_readout()
 {
     if(!is_update_MCL_readout) return;
      mxArray* x_value;
@@ -1557,7 +1565,7 @@ void Micronix_readout(){
 	}*/
 }
 
-void update_Micronix_GUI(mxArray *plhs_global[]){
+void update_Micronix_GUI(){
 	// Micronix_timer set to execute function
 	if (!is_update_Micronix_readout) return;
 
@@ -1594,6 +1602,9 @@ void mexFunction(int nlhs, mxArray *plhs[],
 	int nargs = nrhs - 1; // args has one less element than prhs (the first input argument is just the name of the function)
 	nx_step_int = _scan.nx_step; 
 	ny_step_int = _scan.ny_step;
+
+    plhs_global = plhs; // Chang 1/5/22
+    
 	if (nrhs >= 1)
 	{
 
@@ -1711,7 +1722,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
         _scan.set_update_scan_ptr(&update_scan_info);
         _scan.set_disp_data(filtered,direction);
         _scan.set_plane_info_ptr(&_planeInfo);
-		update_scan_info(plhs); // modified by Chang 1/3/22
+		update_scan_info(); // modified by Chang 1/3/22
         
         pp.clear();
         is_valid_plane = false;
@@ -2135,7 +2146,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
     else if(func_name == "z_in" && nargs == 1)
     {
         _DAC.z_in(args[0]);
-         update_scan_info(plhs); // modified on 1/3/22
+         update_scan_info(); // modified on 1/3/22
     }
 	else if(func_name == "start_approach_pid")
 	{
@@ -2165,7 +2176,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
 			//if so do not move up to max but go back to min and initiate a step of micronix.
 			HANDLE z_in_thread = _DAC.z_in(approach_min);
 			WaitForSingleObject(z_in_thread,INFINITE);
-			update_scan_info(plhs); // modified on 1/3/22
+			update_scan_info(); // modified on 1/3/22
 
 			// now the piezo is at the bottom, so step the micronix up
 			
@@ -2189,14 +2200,14 @@ void mexFunction(int nlhs, mxArray *plhs[],
 
 			
 			n_steps++;
-			update_scan_info(plhs); // modified on 1/3/22
+			update_scan_info(); // modified on 1/3/22
 		}
 		else
 		{	
 			//if there is space still then go up a step
 			HANDLE z_in_thread = _DAC.z_in(currentZ+stepZ);
 			WaitForSingleObject(z_in_thread,INFINITE);
-			update_scan_info(plhs); // modified on 1/3/22
+			update_scan_info(); // modified on 1/3/22
 		}
 	}
 	else if(func_name == "stop_approach_pid")
@@ -2753,17 +2764,17 @@ void mexFunction(int nlhs, mxArray *plhs[],
         _handles.plane_r2_text_index = 9;
         //===========================================================================
         
-        redraw_plane_dialog(plhs);
+        redraw_plane_dialog();
      }
      else if(func_name == "add_plane_point" && nargs == 3)
      {
-        add_plane_point(args[0],args[1],args[2], plhs);
+        add_plane_point(args[0],args[1],args[2]);
      }
      else if(func_name == "get_current_position" && nargs == 0)
      {
         HANDLE z_thread_handle = _scan.get_current_z();
         WaitForSingleObject(z_thread_handle,INFINITE);
-        add_plane_point(_scan.x_tip,_scan.y_tip,_scan.current_z, plhs);
+        add_plane_point(_scan.x_tip,_scan.y_tip,_scan.current_z);
         
      }
      else if(func_name == "delete_all_position" && nargs == 0)
@@ -2771,7 +2782,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
         is_valid_plane = false;
         pp.clear();
         
-       redraw_plane_dialog(plhs);
+       redraw_plane_dialog();
         
      }
      else if(func_name == "delete_selected_position" && nargs == 1)
@@ -2782,7 +2793,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
                 pp.erase(pp.begin() + val - 1);
             }
             
-            redraw_plane_dialog(plhs);
+            redraw_plane_dialog();
             
         
      }
