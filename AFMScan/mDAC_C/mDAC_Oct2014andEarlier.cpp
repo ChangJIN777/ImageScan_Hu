@@ -439,6 +439,7 @@ void update_scan_info()
              mexSet(_handles.snap_plane_handle,"Enable",on_str);
      
         }
+
         else
         {
               mexSet(_handles.snap_plane_handle,"Enable",off_str);
