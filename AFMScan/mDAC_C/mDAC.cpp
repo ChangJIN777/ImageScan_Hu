@@ -1450,7 +1450,7 @@ void add_plane_point(double x_point,double y_point, double z_point)
         
         pp.push_back(new_point);
         
-        redraw_plane_dialog(plhs_global);
+        redraw_plane_dialog();
 }
 void update_readout()
 {
