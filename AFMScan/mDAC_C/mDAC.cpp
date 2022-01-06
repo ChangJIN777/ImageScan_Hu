@@ -49,7 +49,7 @@ static mxArray* mxy_data;
 double* y_data;
 static mxArray* mxtheta_data;
 double* theta_data;
-mxArray* plhs_global[];
+mxArray **plhs_global;
 
 HANDLE tip_read_thread;
 HANDLE phase_read_thread;
@@ -162,7 +162,7 @@ void get_matlab_data()
 
         // this calls the scan_pulse_seq.m file in "ImageScan/ImageAquire"
         // the function "presses the start button" of the ESRControl pulse sequence
-		//mexCallMATLAB(nlhs,plhs,nrhs,plhs_global[0],functionName)
+		//mexCallMATLAB(nlhs,plhs,nrhs,*plhs_global[0],functionName)
         //mexCallMATLAB(numDataChan,lhs,1,rhs,"scan_pulse_seq_nchan");
 		mexCallMATLAB(7, lhs, 0, NULL, "scan_pulse_seq_7chan");
 
@@ -269,7 +269,7 @@ DWORD dwTime)
      }
    
     // mexSet(axes_handle, "YData", mxy_data); // updated by Chang 12/6/21 
-    mxSetProperty(plhs_global[_handles.phase_axes_index],0, "YData", mxy_data); 
+    mxSetProperty(*plhs_global[_handles.phase_axes_index],0, "YData", mxy_data); 
 
 	//---- for phase measurement
 	if (phase_data.size() < buffer)
@@ -285,7 +285,7 @@ DWORD dwTime)
 		theta_data[buffer - 1 - j] = phase_data[phase_data.size() - 1 - j];
 	}
 
-	mxSetProperty(plhs_global[_handles.phase_axes_index],0, "YData", mxtheta_data); 
+	mxSetProperty(*plhs_global[_handles.phase_axes_index],0, "YData", mxtheta_data); 
 
 
 	//-------------------------
@@ -300,7 +300,7 @@ DWORD dwTime)
     sprintf_s(disp_str,50,"%.3f mV",1000*y_data[buffer - 1]);
     tip_volt = mxCreateString(disp_str);
     mexMakeArrayPersistent(tip_volt);
-	mxSetProperty(plhs_global[textbox_tip_volt_handle_index],0, "String", tip_volt);
+	mxSetProperty(*plhs_global[textbox_tip_volt_handle_index],0, "String", tip_volt);
 
     mxDestroyArray(tip_volt);
      
@@ -309,7 +309,7 @@ DWORD dwTime)
     sprintf_s(disp_str,50,"%.3f mV",1000*min_flag);
     min_volt = mxCreateString(disp_str);
     mexMakeArrayPersistent(min_volt);
-	mxSetProperty(plhs_global[textbox_min_volt_handle_index],0, "String", min_volt);
+	mxSetProperty(*plhs_global[textbox_min_volt_handle_index],0, "String", min_volt);
 
     mxDestroyArray(min_volt);
      
@@ -318,7 +318,7 @@ DWORD dwTime)
     sprintf_s(disp_str,50,"%.3f mV",1000*max_flag);
     max_volt = mxCreateString(disp_str);
     mexMakeArrayPersistent(max_volt);
-	mxSetProperty(plhs_global[textbox_max_volt_handle_index],0, "String", max_volt);
+	mxSetProperty(*plhs_global[textbox_max_volt_handle_index],0, "String", max_volt);
 
     mxDestroyArray(max_volt);
      
@@ -327,7 +327,7 @@ DWORD dwTime)
     sprintf_s(disp_str,50,"%.3f",_DAC.z_in_current);
     z_in_disp = mxCreateString(disp_str);
     mexMakeArrayPersistent(z_in_disp);
-	mxSetProperty(plhs_global[z_in_disp_handle_index],0, "String", z_in_disp);
+	mxSetProperty(*plhs_global[z_in_disp_handle_index],0, "String", z_in_disp);
 
      mxDestroyArray(z_in_disp);
 
@@ -335,14 +335,14 @@ DWORD dwTime)
 	 sprintf_s(disp_str, 50, "%.3f mV", 1000 * phase_data[buffer - 1]);
 	 mxphase_volt = mxCreateString(disp_str);
 	 mexMakeArrayPersistent(mxphase_volt);
-	 mxSetProperty(plhs_global[_handles.phase_volt_index],0, "String", mxphase_volt);
+	 mxSetProperty(*plhs_global[_handles.phase_volt_index],0, "String", mxphase_volt);
 	 mxDestroyArray(mxphase_volt);
 
 	 mxArray* mxphase_deg;
 	 sprintf_s(disp_str, 50, "%.3f", 1000 * (1/phase_mVPerDeg) * phase_data[buffer - 1]);
 	 mxphase_deg = mxCreateString(disp_str);
 	 mexMakeArrayPersistent(mxphase_deg);
-	 mxSetProperty(plhs_global[_handles.phase_deg_index],0, "String", mxphase_deg);
+	 mxSetProperty(*plhs_global[_handles.phase_deg_index],0, "String", mxphase_deg);
 	 mxDestroyArray(mxphase_deg);
      
          mxArray* off_str;
@@ -360,36 +360,36 @@ DWORD dwTime)
         if(is_thread)
          {
 
-            mxSetProperty(plhs_global[_handles.start_approach_handle_index],0,"Enable",off_str);
-            mxSetProperty(plhs_global[_handles.stop_approach_handle_index],0,"Enable",on_str); 
-            mxSetProperty(plhs_global[_handles.start_graph_handle_index],0,"Enable",off_str);
-            mxSetProperty(plhs_global[_handles.stop_graph_handle_index],0,"Enable",off_str);  
-			mxSetProperty(plhs_global[_handles.mic_radio_x_index],0, "Enable", off_str);
-			mxSetProperty(plhs_global[_handles.mic_radio_y_index],0, "Enable", off_str);
-			mxSetProperty(plhs_global[_handles.mic_radio_z_index],0, "Enable", off_str);
+            mxSetProperty(*plhs_global[_handles.start_approach_handle_index],0,"Enable",off_str);
+            mxSetProperty(*plhs_global[_handles.stop_approach_handle_index],0,"Enable",on_str); 
+            mxSetProperty(*plhs_global[_handles.start_graph_handle_index],0,"Enable",off_str);
+            mxSetProperty(*plhs_global[_handles.stop_graph_handle_index],0,"Enable",off_str);  
+			mxSetProperty(*plhs_global[_handles.mic_radio_x_index],0, "Enable", off_str);
+			mxSetProperty(*plhs_global[_handles.mic_radio_y_index],0, "Enable", off_str);
+			mxSetProperty(*plhs_global[_handles.mic_radio_z_index],0, "Enable", off_str);
 
 			sprintf_s(step_str, 16, "%i", n_steps);
 			n_stepsmx = mxCreateString(step_str);
-			mxSetProperty(plhs_global[_handles.mic_n_steps_index],0, "String", n_stepsmx);
+			mxSetProperty(*plhs_global[_handles.mic_n_steps_index],0, "String", n_stepsmx);
          }
          else
          {
-            mxSetProperty(plhs_global[_handles.start_graph_handle_index],0,"Enable",off_str);
-			mxSetProperty(plhs_global[_handles.stop_graph_handle_index],0,"Enable",on_str);  
-            mxSetProperty(plhs_global[_handles.start_approach_handle_index],0,"Enable",on_str);
-            mxSetProperty(plhs_global[_handles.stop_approach_handle_index],0,"Enable",off_str);
-			mxSetProperty(plhs_global[_handles.mic_radio_x_index],0, "Enable", on_str);
-			mxSetProperty(plhs_global[_handles.mic_radio_y_index],0, "Enable", on_str);
-			mxSetProperty(plhs_global[_handles.mic_radio_z_index],0, "Enable", on_str);
+            mxSetProperty(*plhs_global[_handles.start_graph_handle_index],0,"Enable",off_str);
+			mxSetProperty(*plhs_global[_handles.stop_graph_handle_index],0,"Enable",on_str);  
+            mxSetProperty(*plhs_global[_handles.start_approach_handle_index],0,"Enable",on_str);
+            mxSetProperty(*plhs_global[_handles.stop_approach_handle_index],0,"Enable",off_str);
+			mxSetProperty(*plhs_global[_handles.mic_radio_x_index],0, "Enable", on_str);
+			mxSetProperty(*plhs_global[_handles.mic_radio_y_index],0, "Enable", on_str);
+			mxSetProperty(*plhs_global[_handles.mic_radio_z_index],0, "Enable", on_str);
 
          }
      }
      else
      {
-        mxSetProperty(plhs_global[_handles.start_graph_handle_index],0,"Enable",on_str);
-        mxSetProperty(plhs_global[_handles.stop_graph_handle_index],0,"Enable",off_str);
-        mxSetProperty(plhs_global[_handles.start_approach_handle_index],0,"Enable",off_str);
-        mxSetProperty(plhs_global[_handles.stop_approach_handle_index],0,"Enable",off_str);  
+        mxSetProperty(*plhs_global[_handles.start_graph_handle_index],0,"Enable",on_str);
+        mxSetProperty(*plhs_global[_handles.stop_graph_handle_index],0,"Enable",off_str);
+        mxSetProperty(*plhs_global[_handles.start_approach_handle_index],0,"Enable",off_str);
+        mxSetProperty(*plhs_global[_handles.stop_approach_handle_index],0,"Enable",off_str);  
      }
         
     
@@ -560,13 +560,13 @@ void update_scan_info()
      
     sprintf_s(disp_str,50,"%.4f V",_scan.x_tip);
     disp_array = mxCreateString(disp_str);
-     mxSetProperty(plhs_global[_handles.x_tip_position_index],0,"String",disp_array);  
+     mxSetProperty(*plhs_global[_handles.x_tip_position_index],0,"String",disp_array);  
      mxDestroyArray(disp_array);
 
      
     sprintf_s(disp_str,50,"%.4f V",_scan.y_tip);
     disp_array = mxCreateString(disp_str);
-     mxSetProperty(plhs_global[_handles.y_tip_position_index],0,"String",disp_array);  
+     mxSetProperty(*plhs_global[_handles.y_tip_position_index],0,"String",disp_array);  
      
      mxDestroyArray(disp_array);
      
@@ -574,7 +574,7 @@ void update_scan_info()
      
        sprintf_s(disp_str,50,"%.4f V",x_size);
     disp_array = mxCreateString(disp_str);
-     mxSetProperty(plhs_global[_handles.x_scan_size_index],0,"String",disp_array);  
+     mxSetProperty(*plhs_global[_handles.x_scan_size_index],0,"String",disp_array);  
      
      mxDestroyArray(disp_array);
      
@@ -582,39 +582,39 @@ void update_scan_info()
      
        sprintf_s(disp_str,50,"%.4f V",y_size);
     disp_array = mxCreateString(disp_str);
-     mxSetProperty(plhs_global[_handles.y_scan_size_index],0,"String",disp_array);  
+     mxSetProperty(*plhs_global[_handles.y_scan_size_index],0,"String",disp_array);  
      
      mxDestroyArray(disp_array);
     
      
        sprintf_s(disp_str,50,"%.4f V",_scan.x_center);
     disp_array = mxCreateString(disp_str);
-     mxSetProperty(plhs_global[_handles.x_scan_center_index],0,"String",disp_array);  
+     mxSetProperty(*plhs_global[_handles.x_scan_center_index],0,"String",disp_array);  
      
      mxDestroyArray(disp_array);
      
        sprintf_s(disp_str,50,"%.4f V",_scan.y_center);
     disp_array = mxCreateString(disp_str);
-     mxSetProperty(plhs_global[_handles.y_scan_center_index],0,"String",disp_array);  
+     mxSetProperty(*plhs_global[_handles.y_scan_center_index],0,"String",disp_array);  
      
      mxDestroyArray(disp_array);
      
      
      sprintf_s(disp_str,50,"%d Hz",(int)_scan.freq);
     disp_array = mxCreateString(disp_str);
-     mxSetProperty(plhs_global[_handles.scan_speed_index],0,"String",disp_array);  
+     mxSetProperty(*plhs_global[_handles.scan_speed_index],0,"String",disp_array);  
      
      mxDestroyArray(disp_array);
      
       sprintf_s(disp_str,50,"%d",_scan.nx_step);
     disp_array = mxCreateString(disp_str);
-     mxSetProperty(plhs_global[_handles.x_points_index],0,"String",disp_array);  
+     mxSetProperty(*plhs_global[_handles.x_points_index],0,"String",disp_array);  
      
      mxDestroyArray(disp_array);
      
        sprintf_s(disp_str,50,"%d",_scan.ny_step);
     disp_array = mxCreateString(disp_str);
-    mxSetProperty(plhs_global[_handles.y_points_index],0,"String",disp_array);  
+    mxSetProperty(*plhs_global[_handles.y_points_index],0,"String",disp_array);  
      
     mxDestroyArray(disp_array);
      
@@ -628,25 +628,25 @@ void update_scan_info()
     if(is_scan)
     {
 
-        mxSetProperty(plhs_global[_handles.start_scan_handle_index],0,"Enable",off_str);
-        mxSetProperty(plhs_global[_handles.stop_scan_handle_index],0,"Enable",on_str);  
+        mxSetProperty(*plhs_global[_handles.start_scan_handle_index],0,"Enable",off_str);
+        mxSetProperty(*plhs_global[_handles.stop_scan_handle_index],0,"Enable",on_str);  
     }
      else
      {
     
-        mxSetProperty(plhs_global[_handles.start_scan_handle_index],0,"Enable",on_str);
-        mxSetProperty(plhs_global[_handles.stop_scan_handle_index],0,"Enable",off_str);
+        mxSetProperty(*plhs_global[_handles.start_scan_handle_index],0,"Enable",on_str);
+        mxSetProperty(*plhs_global[_handles.stop_scan_handle_index],0,"Enable",off_str);
  
      }
         
     if(is_valid_plane)
     {
-        mxSetProperty(plhs_global[_handles.snap_plane_handle_index],0,"Enable",on_str);
+        mxSetProperty(*plhs_global[_handles.snap_plane_handle_index],0,"Enable",on_str);
      
     }
     else
     {
-        mxSetProperty(plhs_global[_handles.snap_plane_handle_index],0,"Enable",off_str);
+        mxSetProperty(*plhs_global[_handles.snap_plane_handle_index],0,"Enable",off_str);
     }
     
     
@@ -661,7 +661,7 @@ void update_scan_data(){
  
  str = mxCreateString("on");
  
- mxSetProperty(plhs_global[_handles.scan_axes_handle_index],0,"Visible",str);
+ mxSetProperty(*plhs_global[_handles.scan_axes_handle_index],0,"Visible",str);
  
  mxDestroyArray(str);
 
@@ -756,10 +756,10 @@ double* y_data_ptr = mxGetPr(y_data);
 
       
      
-    mxSetProperty(plhs_global[_handles.cur_line_handle_index],0,"XData",x_line_data);
-    mxSetProperty(plhs_global[_handles.cur_line_handle_index],0,"YData",y_line_data);
-    mxSetProperty(plhs_global[_handles.cur_line_handle_index],0,"ZData",z_line_data);
-    mxSetProperty(plhs_global[_handles.cur_line_handle_index],0,"Visible",on_str);
+    mxSetProperty(*plhs_global[_handles.cur_line_handle_index],0,"XData",x_line_data);
+    mxSetProperty(*plhs_global[_handles.cur_line_handle_index],0,"YData",y_line_data);
+    mxSetProperty(*plhs_global[_handles.cur_line_handle_index],0,"ZData",z_line_data);
+    mxSetProperty(*plhs_global[_handles.cur_line_handle_index],0,"Visible",on_str);
     
     mxDestroyArray(x_line_data);
     mxDestroyArray(y_line_data);
@@ -771,7 +771,7 @@ double* y_data_ptr = mxGetPr(y_data);
  {
       
        
-      mxSetProperty(plhs_global[_handles.cur_line_handle_index],0,"Visible",off_str);
+      mxSetProperty(*plhs_global[_handles.cur_line_handle_index],0,"Visible",off_str);
 
      
  }
@@ -818,9 +818,9 @@ double* y_data_ptr = mxGetPr(y_data);
        z_tip_data_ptr[0] = 1e6;
        z_tip_data_ptr[1] = 1e6;
        
-        mxSetProperty(plhs_global[_handles.tip_position_x_handle_index],0,"XData",x_tip_data);
-        mxSetProperty(plhs_global[_handles.tip_position_x_handle_index],0,"YData",y_tip_data);
-        mxSetProperty(plhs_global[_handles.tip_position_x_handle_index],0,"ZData",z_tip_data);
+        mxSetProperty(*plhs_global[_handles.tip_position_x_handle_index],0,"XData",x_tip_data);
+        mxSetProperty(*plhs_global[_handles.tip_position_x_handle_index],0,"YData",y_tip_data);
+        mxSetProperty(*plhs_global[_handles.tip_position_x_handle_index],0,"ZData",z_tip_data);
         
        if(_scan.x_tip < _scan.x_min)
        {
@@ -842,9 +842,9 @@ double* y_data_ptr = mxGetPr(y_data);
        y_tip_data_ptr[0] = _scan.y_min;
        y_tip_data_ptr[1] = _scan.y_max;
        
-        mxSetProperty(plhs_global[_handles.tip_position_y_handle_index],0,"XData",x_tip_data);
-        mxSetProperty(plhs_global[_handles.tip_position_y_handle_index],0,"YData",y_tip_data);
-        mxSetProperty(plhs_global[_handles.tip_position_y_handle_index],0,"ZData",z_tip_data);
+        mxSetProperty(*plhs_global[_handles.tip_position_y_handle_index],0,"XData",x_tip_data);
+        mxSetProperty(*plhs_global[_handles.tip_position_y_handle_index],0,"YData",y_tip_data);
+        mxSetProperty(*plhs_global[_handles.tip_position_y_handle_index],0,"ZData",z_tip_data);
         
         mxArray* green_str;
         mxArray* blue_str;
@@ -856,28 +856,28 @@ double* y_data_ptr = mxGetPr(y_data);
         
         if(is_enable_tip_position)
         {
-             mxSetProperty(plhs_global[_handles.tip_position_x_handle_index],0,"Color",green_str);
-             mxSetProperty(plhs_global[_handles.tip_position_y_handle_index],0,"Color",green_str);
+             mxSetProperty(*plhs_global[_handles.tip_position_x_handle_index],0,"Color",green_str);
+             mxSetProperty(*plhs_global[_handles.tip_position_y_handle_index],0,"Color",green_str);
         }
         else
         {
             if(_scan.x_tip < _scan.x_min || _scan.x_tip > _scan.x_max || _scan.y_tip < _scan.y_min || _scan.y_tip > _scan.y_max)
             {
-                mxSetProperty(plhs_global[_handles.tip_position_x_handle_index],0,"Color",red_str);
-                mxSetProperty(plhs_global[_handles.tip_position_y_handle_index],0,"Color",red_str);
+                mxSetProperty(*plhs_global[_handles.tip_position_x_handle_index],0,"Color",red_str);
+                mxSetProperty(*plhs_global[_handles.tip_position_y_handle_index],0,"Color",red_str);
                 
             }
             else
             {
-                mxSetProperty(plhs_global[_handles.tip_position_x_handle_index],0,"Color",blue_str);
-                mxSetProperty(plhs_global[_handles.tip_position_y_handle_index],0,"Color",blue_str);   
+                mxSetProperty(*plhs_global[_handles.tip_position_x_handle_index],0,"Color",blue_str);
+                mxSetProperty(*plhs_global[_handles.tip_position_y_handle_index],0,"Color",blue_str);   
             }
             
             
         }
      
-      mxSetProperty(plhs_global[_handles.tip_position_x_handle_index],0,"Visible",on_str);
-       mxSetProperty(plhs_global[_handles.tip_position_y_handle_index],0,"Visible",on_str);
+      mxSetProperty(*plhs_global[_handles.tip_position_x_handle_index],0,"Visible",on_str);
+       mxSetProperty(*plhs_global[_handles.tip_position_y_handle_index],0,"Visible",on_str);
        
        mxDestroyArray(x_tip_data);
        mxDestroyArray(y_tip_data);
@@ -889,8 +889,8 @@ double* y_data_ptr = mxGetPr(y_data);
  }
  else
  {
-     mxSetProperty(plhs_global[_handles.tip_position_x_handle_index],0,"Visible",off_str);
-       mxSetProperty(plhs_global[_handles.tip_position_y_handle_index],0,"Visible",off_str);
+     mxSetProperty(*plhs_global[_handles.tip_position_x_handle_index],0,"Visible",off_str);
+       mxSetProperty(*plhs_global[_handles.tip_position_y_handle_index],0,"Visible",off_str);
      
  }
       
@@ -925,17 +925,17 @@ double* y_data_ptr = mxGetPr(y_data);
   
  // mexCallMATLAB(0,NULL,1,xrhs,"xlim");
  // mexCallMATLAB(0,NULL,1,yrhs,"ylim");
-   mxSetProperty(plhs_global[_handles.scan_grid_handle_index],0,"XLim",x_lim);
-   mxSetProperty(plhs_global[_handles.scan_grid_handle_index],0,"YLim",y_lim);
+   mxSetProperty(*plhs_global[_handles.scan_grid_handle_index],0,"XLim",x_lim);
+   mxSetProperty(*plhs_global[_handles.scan_grid_handle_index],0,"YLim",y_lim);
  
   mxDestroyArray(x_lim);
   mxDestroyArray(y_lim);
        
 
- mxSetProperty(plhs_global[_handles.scan_axes_handle_index],0,"XData",x_data);
- mxSetProperty(plhs_global[_handles.scan_axes_handle_index],0,"YData",y_data);
- mxSetProperty(plhs_global[_handles.scan_axes_handle_index],0,"ZData",scan_data);
-  mxSetProperty(plhs_global[_handles.scan_axes_handle_index],0,"CData",c_data);
+ mxSetProperty(*plhs_global[_handles.scan_axes_handle_index],0,"XData",x_data);
+ mxSetProperty(*plhs_global[_handles.scan_axes_handle_index],0,"YData",y_data);
+ mxSetProperty(*plhs_global[_handles.scan_axes_handle_index],0,"ZData",scan_data);
+  mxSetProperty(*plhs_global[_handles.scan_axes_handle_index],0,"CData",c_data);
  //Set scaling for colormap
   /* mxArray* color_data;
        mwSize color_dim[2] = {1,2};
@@ -947,7 +947,7 @@ double* y_data_ptr = mxGetPr(y_data);
       
        
  
-  mxSetProperty(plhs_global[_handles.scan_axes_handle_index],0,"CLim",color_data);
+  mxSetProperty(*plhs_global[_handles.scan_axes_handle_index],0,"CLim",color_data);
  
  mxDestroyArray(color_data);
   */ 
@@ -1342,16 +1342,16 @@ void redraw_plane_dialog()
         mxArray* null_str;
         null_str = mxCreateString("");
         
-        mxSetProperty(plhs_global[_handles.plane_x_edit_index],0,"String",null_str);
-        mxSetProperty(plhs_global[_handles.plane_y_edit_index],0,"String",null_str);
-        mxSetProperty(plhs_global[_handles.plane_z_edit_index],0,"String",null_str);
+        mxSetProperty(*plhs_global[_handles.plane_x_edit_index],0,"String",null_str);
+        mxSetProperty(*plhs_global[_handles.plane_y_edit_index],0,"String",null_str);
+        mxSetProperty(*plhs_global[_handles.plane_z_edit_index],0,"String",null_str);
         
       
         
         if(pp.size() == 0)
         {
 
-          mxSetProperty(plhs_global[_handles.plane_listbox_index],0,"String",null_str);
+          mxSetProperty(*plhs_global[_handles.plane_listbox_index],0,"String",null_str);
 
         }
         else if(pp.size() > 0)
@@ -1374,8 +1374,8 @@ void redraw_plane_dialog()
 
             mxArray* one_arr;
             one_arr = mxCreateDoubleScalar(1);
-            mxSetProperty(plhs_global[_handles.plane_listbox_index],0,"Value",one_arr);
-            mxSetProperty(plhs_global[_handles.plane_listbox_index],0,"String",plane_list);
+            mxSetProperty(*plhs_global[_handles.plane_listbox_index],0,"Value",one_arr);
+            mxSetProperty(*plhs_global[_handles.plane_listbox_index],0,"String",plane_list);
             
             mxDestroyArray(one_arr);
             mxDestroyArray(plane_list);
@@ -1395,22 +1395,22 @@ void redraw_plane_dialog()
             char atxt[30];
             sprintf_s(atxt,30,"%.5f",_planeInfo.a);
             a_str = mxCreateString(atxt);
-            mxSetProperty(plhs_global[_handles.plane_a_text_index],0,"String",a_str);
+            mxSetProperty(*plhs_global[_handles.plane_a_text_index],0,"String",a_str);
 
             char btxt[30];
             sprintf_s(btxt,30,"%.5f",_planeInfo.b);
             b_str = mxCreateString(btxt);
-            mxSetProperty(plhs_global[_handles.plane_b_text_index],0,"String",b_str);
+            mxSetProperty(*plhs_global[_handles.plane_b_text_index],0,"String",b_str);
 
             char ctxt[30];
             sprintf_s(ctxt,30,"%.5f",_planeInfo.c);
             c_str = mxCreateString(ctxt);
-            mxSetProperty(plhs_global[_handles.plane_c_text_index],0,"String",c_str);
+            mxSetProperty(*plhs_global[_handles.plane_c_text_index],0,"String",c_str);
 
             char r2txt[30];
             sprintf_s(r2txt,30,"%.4f",_planeInfo.r2);
             r2_str = mxCreateString(r2txt);
-            mxSetProperty(plhs_global[_handles.plane_r2_text_index],0,"String",r2_str);
+            mxSetProperty(*plhs_global[_handles.plane_r2_text_index],0,"String",r2_str);
             
             mxDestroyArray(a_str);
              mxDestroyArray(b_str);
@@ -1422,10 +1422,10 @@ void redraw_plane_dialog()
         {
          
             is_valid_plane = false;
-            mxSetProperty(plhs_global[_handles.plane_a_text_index],0,"String",null_str);
-            mxSetProperty(plhs_global[_handles.plane_b_text_index],0,"String",null_str);
-            mxSetProperty(plhs_global[_handles.plane_c_text_index],0,"String",null_str);
-            mxSetProperty(plhs_global[_handles.plane_r2_text_index],0,"String",null_str);
+            mxSetProperty(*plhs_global[_handles.plane_a_text_index],0,"String",null_str);
+            mxSetProperty(*plhs_global[_handles.plane_b_text_index],0,"String",null_str);
+            mxSetProperty(*plhs_global[_handles.plane_c_text_index],0,"String",null_str);
+            mxSetProperty(*plhs_global[_handles.plane_r2_text_index],0,"String",null_str);
     
         }
         
@@ -1434,7 +1434,7 @@ void redraw_plane_dialog()
         
         mxArray* offset_arr;
         offset_arr = mxCreateString(offstr);
-        mxSetProperty(plhs_global[_handles.plane_offset_edit_index],0,"String",offset_arr);
+        mxSetProperty(*plhs_global[_handles.plane_offset_edit_index],0,"String",offset_arr);
         
         mxDestroyArray(offset_arr);
           mxDestroyArray(null_str);
@@ -1470,9 +1470,9 @@ void update_readout()
      sprintf_s(disp_str,50,"%.3f",MCL_z_pos);
      z_value = mxCreateString(disp_str);
 
-     mxSetProperty(plhs_global[_handles.MCL_x_index],0,"String",x_value);  
-     mxSetProperty(plhs_global[_handles.MCL_y_index],0,"String",y_value);  
-     mxSetProperty(plhs_global[_handles.MCL_z_index],0,"String",z_value);  
+     mxSetProperty(*plhs_global[_handles.MCL_x_index],0,"String",x_value);  
+     mxSetProperty(*plhs_global[_handles.MCL_y_index],0,"String",y_value);  
+     mxSetProperty(*plhs_global[_handles.MCL_z_index],0,"String",z_value);  
      
      mxDestroyArray(x_value);
      mxDestroyArray(y_value);
@@ -1572,15 +1572,15 @@ void update_Micronix_GUI(){
 	//x
 	mxArray* readpos_x_str;
 	readpos_x_str = mxCreateString(read_Micronix_x_pos);
-	mxSetProperty(plhs_global[_handles.mic_xpos_index],0, "String", readpos_x_str);
+	mxSetProperty(*plhs_global[_handles.mic_xpos_index],0, "String", readpos_x_str);
 	//y
 	mxArray* readpos_y_str;
 	readpos_y_str = mxCreateString(read_Micronix_y_pos);
-	mxSetProperty(plhs_global[_handles.mic_ypos_index],0, "String", readpos_y_str);
+	mxSetProperty(*plhs_global[_handles.mic_ypos_index],0, "String", readpos_y_str);
 	//z
 	mxArray* readpos_z_str;
 	readpos_z_str = mxCreateString(read_Micronix_z_pos);
-	mxSetProperty(plhs_global[_handles.mic_zpos_index],0, "String", readpos_z_str);
+	mxSetProperty(*plhs_global[_handles.mic_zpos_index],0, "String", readpos_z_str);
 
 	mxDestroyArray(readpos_x_str);
 	mxDestroyArray(readpos_y_str);
@@ -1603,10 +1603,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
 	nx_step_int = _scan.nx_step; 
 	ny_step_int = _scan.ny_step;
 
-    for (int k = 0; k < nlhs; k++)
-    {
-        plhs_global[k] = plhs[k]; // Chang 1/5/22
-    }
+    plhs_global = &plhs; // Chang 1/5/22
 
 	if (nrhs >= 1)
 	{
