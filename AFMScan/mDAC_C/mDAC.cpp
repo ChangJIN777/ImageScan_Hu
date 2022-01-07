@@ -60,7 +60,7 @@ HANDLE micronix_approach_thread_handle;
 
 double axes_handle;
 double min_line_handle;
-double max_line_handle;
+double max_line_handle; 
 double textbox_tip_volt_handle;
 double textbox_min_volt_handle;
 double textbox_max_volt_handle;
@@ -242,11 +242,6 @@ void Thor_Step()
     
 }
 
-// extra paramters
-// HWND hwnd,
-// UINT uMsg,
-// UINT_PTR idEvent,
-// DWORD dwTime
 
 void CALLBACK update_graph(
 HWND hwnd,
@@ -1593,7 +1588,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
 
 {
 	char str[100];
-
+    
 	mxGetString(prhs[0], str, 100);
 
 	std::string func_name(str);
@@ -1603,10 +1598,13 @@ void mexFunction(int nlhs, mxArray *plhs[],
 	nx_step_int = _scan.nx_step; 
 	ny_step_int = _scan.ny_step;
 
-    for (int k = 0; k < nlhs; k++)
-    {
-        plhs_global[k] = plhs[k]; // Chang 1/5/22
-    }
+    // for (int k = 0; k < nlhs; k++)
+    // {
+    //     plhs_global[k] = plhs[k]; // Chang 1/5/22
+    // }
+    
+    // added by Chang 1/6/22
+    memcpy(plhs_global,plhs,nlhs*sizeof(mxArray*));
 
 	if (nrhs >= 1)
 	{
