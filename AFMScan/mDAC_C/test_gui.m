@@ -431,22 +431,23 @@ set(PushButton_stop_scan,'Position',[80 30 175 35],'BackgroundColor',[0.8 0.8 0.
 guidata(hObject, handles);
  % added by Chang 01/05/22 (create c++ mex function out of process)
 mh = mexhost; 
-feval(mh,"mDAC",'set_scan_menu_items',channel_item(1),channel_item(2),channel_item(3),channel_item(4),channel_item(5),channel_item(6),channel_item(7),channel_item(8),input_channel_item,...
-    forward_item,reverse_item,filtered_item,unfiltered_item,tip_position_item,invert_colorbar_item);
-feval(mh,"mDAC",'set_scan_handles',TextBox_tip_pos_x_value,TextBox_tip_pos_y_value,TextBox_scan_size_x_value,TextBox_scan_size_y_value,TextBox_scan_center_x_value,TextBox_scan_center_y_value,...
-    TextBox_scan_speed_value, TextBox_scan_points_x_value, TextBox_scan_points_y_value,scan_axes_handle,scan_grid_handle,cur_line_handle,...
-    tip_position_x_handle,tip_position_y_handle,PushButton_start_scan,PushButton_stop_scan,PushButton_start_app,PushButton_stop_app,CheckBox_snap_plane,PushButton_stop_graph,PushButton_start_graph);
-feval(mh,"mDAC",'set_MCL_handles',handles.text1,handles.text2,handles.text3);
-% mDAC('set_scan_menu_items',channel_item(1),channel_item(2),channel_item(3),channel_item(4),channel_item(5),channel_item(6),channel_item(7),channel_item(8),input_channel_item,...
+mDAC('button_up',0,0);
+% feval(mh,"mDAC",'set_scan_menu_items',channel_item(1),channel_item(2),channel_item(3),channel_item(4),channel_item(5),channel_item(6),channel_item(7),channel_item(8),input_channel_item,...
 %     forward_item,reverse_item,filtered_item,unfiltered_item,tip_position_item,invert_colorbar_item);
-% mDAC('set_scan_handles',TextBox_tip_pos_x_value,TextBox_tip_pos_y_value,TextBox_scan_size_x_value,TextBox_scan_size_y_value,TextBox_scan_center_x_value,TextBox_scan_center_y_value,...
+% feval(mh,"mDAC",'set_scan_handles',TextBox_tip_pos_x_value,TextBox_tip_pos_y_value,TextBox_scan_size_x_value,TextBox_scan_size_y_value,TextBox_scan_center_x_value,TextBox_scan_center_y_value,...
 %     TextBox_scan_speed_value, TextBox_scan_points_x_value, TextBox_scan_points_y_value,scan_axes_handle,scan_grid_handle,cur_line_handle,...
 %     tip_position_x_handle,tip_position_y_handle,PushButton_start_scan,PushButton_stop_scan,PushButton_start_app,PushButton_stop_app,CheckBox_snap_plane,PushButton_stop_graph,PushButton_start_graph);
-% mDAC('set_MCL_handles',handles.text1,handles.text2,handles.text3);
+% feval(mh,"mDAC",'set_MCL_handles',handles.text1,handles.text2,handles.text3);
+mDAC('set_scan_menu_items',channel_item(1),channel_item(2),channel_item(3),channel_item(4),channel_item(5),channel_item(6),channel_item(7),channel_item(8),input_channel_item,...
+    forward_item,reverse_item,filtered_item,unfiltered_item,tip_position_item,invert_colorbar_item);
+mDAC('set_scan_handles',TextBox_tip_pos_x_value,TextBox_tip_pos_y_value,TextBox_scan_size_x_value,TextBox_scan_size_y_value,TextBox_scan_center_x_value,TextBox_scan_center_y_value,...
+    TextBox_scan_speed_value, TextBox_scan_points_x_value, TextBox_scan_points_y_value,scan_axes_handle,scan_grid_handle,cur_line_handle,...
+    tip_position_x_handle,tip_position_y_handle,PushButton_start_scan,PushButton_stop_scan,PushButton_start_app,PushButton_stop_app,CheckBox_snap_plane,PushButton_stop_graph,PushButton_start_graph);
+mDAC('set_MCL_handles',handles.text1,handles.text2,handles.text3);
 
 
-feval(mh,"mDAC",'init',h,h_min_line,h_max_line,TextBox_tip_volt,TextBox_min_volt,TextBox_max_volt,handles.text17,buffer);
-% mDAC('init',h,h_min_line,h_max_line,TextBox_tip_volt,TextBox_min_volt,TextBox_max_volt,handles.text17,buffer);
+% feval(mh,"mDAC",'init',h,h_min_line,h_max_line,TextBox_tip_volt,TextBox_min_volt,TextBox_max_volt,handles.text17,buffer);
+mDAC('init',h,h_min_line,h_max_line,TextBox_tip_volt,TextBox_min_volt,TextBox_max_volt,handles.text17,buffer);
 %read laser calibrations from the ini file
 
  configurationFile = 'ConfigurationImageScan.txt';
@@ -883,8 +884,8 @@ function figure1_CloseRequestFcn(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 % added by Chang 01/05/22 (create c++ mex function out of process)
 mh = mexhost; 
-feval(mh,"mDAC",'close');
-% mDAC('close');
+% feval(mh,"mDAC",'close');
+mDAC('close');
 clear mDAC;
 %delete(handles.Thorfig);
 %set(handles.tip_figure,'CloseRequestFcn','closereq');

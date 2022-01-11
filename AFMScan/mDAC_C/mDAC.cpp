@@ -1588,15 +1588,16 @@ void mexFunction(int nlhs, mxArray *plhs[],
 
 {
 	char str[100];
-    
-	mxGetString(prhs[0], str, 100);
 
+	mxGetString(prhs[0], str, 100);
+	
 	std::string func_name(str);
 
 	double* args;
 	int nargs = nrhs - 1; // args has one less element than prhs (the first input argument is just the name of the function)
 	nx_step_int = _scan.nx_step; 
 	ny_step_int = _scan.ny_step;
+	
 
     // for (int k = 0; k < nlhs; k++)
     // {
@@ -1658,7 +1659,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
         _planeInfo.r2 = 0; 
         _planeInfo.offset = 0; 
         _planeInfo.is_plane_active = false; 
-        
+		
         _DAC.set_z_cal_factor(z_adder_calibration);
         _DAC.set_plane_info_ptr(&_planeInfo);
         _DAC.z_in(0);
@@ -1704,10 +1705,12 @@ void mexFunction(int nlhs, mxArray *plhs[],
         is_update_scan_data = true;
         is_update_MCL_readout = true;
 		is_update_Micronix_readout = true;
+
+
         tip_read_thread = CreateThread(NULL,0,(LPTHREAD_START_ROUTINE)&get_dac_data,NULL,NULL,NULL);
 		//phase_read_thread = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)&get_dac_phase_data, NULL, NULL, NULL);
-        
-        SetTimer(NULL,timer_graph,50,(TIMERPROC)update_graph);
+
+		SetTimer(NULL,timer_graph,50,(TIMERPROC)update_graph);
         
         SetTimer(NULL,update_scan_timer,250,(TIMERPROC)update_scan_info);
         
@@ -1715,6 +1718,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
         
         SetTimer(NULL,matlab_data_timer,100,(TIMERPROC)get_matlab_data);
         
+
         //Initialize scan class
         _scan.set_DAC_ptr(&_DAC);
         _scan.set_plane_info_ptr(&_planeInfo);
@@ -1760,7 +1764,9 @@ void mexFunction(int nlhs, mxArray *plhs[],
 		phase_mVPerDeg = 28;
        
     }
-    else  if(func_name == "set_cal" && nargs == 6)
+	return;
+    if(func_name == "set_cal" && nargs == 6)
+	//else  if (func_name == "set_cal" && nargs == 6)
     {
          double x_laser_cal = mxGetScalar(prhs[1]);
          double y_laser_cal = mxGetScalar(prhs[2]);

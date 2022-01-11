@@ -7,4 +7,4 @@ mex  -g -compatibleArrayDims -I'C:\Program Files\MySQL\MySQL Server 5.6\include'
     '-LC:\Program Files\MySQL\MySQL Server 5.6\lib' ...
     -lNIDAQmx -llibmysql -lFreeImage -lMadlib -llibMatlabCppSharedLib mDAC.cpp Serial.cpp DAC.cpp scan.cpp bestfit.cpp
 
-copyfile('mDAC.mexw64','..\')
+ copyfile('mDAC.mexw64','..\')
