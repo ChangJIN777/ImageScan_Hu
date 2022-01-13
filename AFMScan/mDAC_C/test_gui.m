@@ -447,7 +447,14 @@ mDAC('set_MCL_handles',handles.text1,handles.text2,handles.text3);
 
 
 % feval(mh,"mDAC",'init',h,h_min_line,h_max_line,TextBox_tip_volt,TextBox_min_volt,TextBox_max_volt,handles.text17,buffer);
-mDAC('init',h,h_min_line,h_max_line,TextBox_tip_volt,TextBox_min_volt,TextBox_max_volt,handles.text17,buffer);
+Y=[1:10];
+figure; h1=plot(Y);
+figure; h2=plot(Y);
+
+%mDAC(h1,h2); %h1, and h2 are becoming plhs[0],plhs[1] within the mexFunction
+[ret1,ret2] = mDAC(h1,h2);
+
+%mDAC('init',h,h_min_line,h_max_line,TextBox_tip_volt,TextBox_min_volt,TextBox_max_volt,handles.text17,buffer);
 %read laser calibrations from the ini file
 
  configurationFile = 'ConfigurationImageScan.txt';

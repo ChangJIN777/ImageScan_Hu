@@ -547,7 +547,8 @@ void check_approach_thread()
 
 }
 
-void update_scan_info()
+void update_scan_info(int nlhs, mxArray *plhs[],
+	int nrhs)
 {
     if(!is_update_scan_info) return;
      char disp_str[50];
@@ -555,8 +556,10 @@ void update_scan_info()
      
     sprintf_s(disp_str,50,"%.4f V",_scan.x_tip);
     disp_array = mxCreateString(disp_str);
-     mxSetProperty(plhs_global[_handles.x_tip_position_index],0,"String",disp_array);  
-     mxDestroyArray(disp_array);
+	
+	mxSetProperty(plhs[_handles.x_tip_position_index], 0, "String", disp_array);
+    mxDestroyArray(disp_array);
+	return;
 
      
     sprintf_s(disp_str,50,"%.4f V",_scan.y_tip);
@@ -1331,6 +1334,18 @@ void calibrate_thread() //Calibrate DAC voltage to MCL readout position
 //    
 //}
 
+#define RED   0
+#define GREEN 1
+#define BLUE 2
+void fill_array(double *x)
+{
+	int i = 0;
+	for (i = 0; i < 20; i++)
+	{
+		x[i] = i + 1;
+	}
+}
+
 
 void redraw_plane_dialog()
 {
@@ -1598,7 +1613,32 @@ void mexFunction(int nlhs, mxArray *plhs[],
 	nx_step_int = _scan.nx_step; 
 	ny_step_int = _scan.ny_step;
 	
+	{
+		mxArray *color;
+		int ret;
 
+		mxArray *copycolor;
+		double *acolor;
+
+		mxArray *data = mxCreateDoubleMatrix(1, 20, mxREAL);
+		fill_array(mxGetPr(data));
+
+		ret = mexCallMATLAB(1, &plhs[1], 1, &data, "plot");
+		if (!ret)
+		{
+			color = mxGetProperty(plhs[1], 0, "Color");
+			copycolor = mxDuplicateArray(color);
+			acolor = mxGetPr(copycolor);
+			acolor[RED] = (1 + acolor[RED]) / 2;
+			acolor[GREEN] = acolor[GREEN] / 2;
+			acolor[BLUE] = acolor[BLUE] / 2;
+
+			mxSetProperty(plhs[1], 0, "Color", copycolor);
+		}
+	}
+		prhs[0] = 0;
+		prhs[1] = 0;
+	return;
     // for (int k = 0; k < nlhs; k++)
     // {
     //     plhs_global[k] = plhs[k]; // Chang 1/5/22
@@ -1619,116 +1659,129 @@ void mexFunction(int nlhs, mxArray *plhs[],
 		}
 	}
 
-    if(func_name == "init" && nargs == 8)
-    {
-          z_adder_calibration = 0.989391;
-                
-         axes_handle = mxGetScalar(prhs[1]);
-         min_line_handle = mxGetScalar(prhs[2]);
-         max_line_handle = mxGetScalar(prhs[3]);
-         textbox_tip_volt_handle = mxGetScalar(prhs[4]);
-         textbox_min_volt_handle = mxGetScalar(prhs[5]);
-		 textbox_max_volt_handle = mxGetScalar(prhs[6]);
-        // thor_handle = mxGetScalar(prhs[7]);
-         z_in_disp_handle = mxGetScalar(prhs[7]);
-         buffer = int (mxGetScalar(prhs[8])); // buffer input in test_gui has been 2500. 2013-2015..
-         
-		 // added to adapt the code to the new format of mex files (Chang Jin 12/7/21)
-		 axes_handle_index = 1;
-		 min_line_handle_index = 2;
-		 max_line_handle_index = 3;
-		 textbox_tip_volt_handle_index = 4;
-		 textbox_min_volt_handle_index = 5;
-		 textbox_max_volt_handle_index = 6;
-		 z_in_disp_handle_index = 7;
-		 buffer_index = 8; // buffer input in test_gui has been 2500. 2013-2015..
+	if (func_name == "init" && nargs == 8)
+	{
+		z_adder_calibration = 0.989391;
 
-		 mwSize dims[2] = { 1,buffer };
-     
-           mxy_data = mxCreateNumericArray(2,dims,mxDOUBLE_CLASS,mxREAL);
-           mexMakeArrayPersistent(mxy_data);
-           y_data = mxGetPr(mxy_data);
+		axes_handle = mxGetScalar(prhs[1]);
+		min_line_handle = mxGetScalar(prhs[2]);
+		max_line_handle = mxGetScalar(prhs[3]);
+		textbox_tip_volt_handle = mxGetScalar(prhs[4]);
+		textbox_min_volt_handle = mxGetScalar(prhs[5]);
+		textbox_max_volt_handle = mxGetScalar(prhs[6]);
+		// thor_handle = mxGetScalar(prhs[7]);
+		z_in_disp_handle = mxGetScalar(prhs[7]);
+		buffer = int(mxGetScalar(prhs[8])); // buffer input in test_gui has been 2500. 2013-2015..
 
-		   mxtheta_data = mxCreateNumericArray(2, dims, mxDOUBLE_CLASS, mxREAL);
-		   mexMakeArrayPersistent(mxtheta_data);
-		   theta_data = mxGetPr(mxtheta_data);
-           
-        _planeInfo.a = 0; 
-        _planeInfo.b = 0; 
-        _planeInfo.c = 0; 
-        _planeInfo.r2 = 0; 
-        _planeInfo.offset = 0; 
-        _planeInfo.is_plane_active = false; 
-		
-        _DAC.set_z_cal_factor(z_adder_calibration);
-        _DAC.set_plane_info_ptr(&_planeInfo);
-        _DAC.z_in(0);
-        measure = false;
-        current_bridge = 0;
+		// added to adapt the code to the new format of mex files (Chang Jin 12/7/21)
+		axes_handle_index = 1;
+		min_line_handle_index = 2;
+		max_line_handle_index = 3;
+		textbox_tip_volt_handle_index = 4;
+		textbox_min_volt_handle_index = 5;
+		textbox_max_volt_handle_index = 6;
+		z_in_disp_handle_index = 7;
+		buffer_index = 8; // buffer input in test_gui has been 2500. 2013-2015..
+
+		mwSize dims[2] = { 1, buffer };
+
+		mxy_data = mxCreateNumericArray(2, dims, mxDOUBLE_CLASS, mxREAL);
+		mexMakeArrayPersistent(mxy_data);
+		y_data = mxGetPr(mxy_data);
+
+		mxtheta_data = mxCreateNumericArray(2, dims, mxDOUBLE_CLASS, mxREAL);
+		mexMakeArrayPersistent(mxtheta_data);
+		theta_data = mxGetPr(mxtheta_data);
+
+		_planeInfo.a = 0;
+		_planeInfo.b = 0;
+		_planeInfo.c = 0;
+		_planeInfo.r2 = 0;
+		_planeInfo.offset = 0;
+		_planeInfo.is_plane_active = false;
+
+		_DAC.set_z_cal_factor(z_adder_calibration);
+		_DAC.set_plane_info_ptr(&_planeInfo);
+		_DAC.z_in(0);
+		measure = false;
+		current_bridge = 0;
 		current_phase = 0;
-        
-        is_button_down = false;
-        is_min_move = false;
-        is_max_move = false;
-        is_step = false;
-        
-        min_flag = -0.5;
-        max_flag = 0.5;
-        
-        axes_min = -1;
-        axes_max = 1;
-        
-        approach_min = 1; // MCL min 1 volt = 10 um
-        approach_max = 9; // MCL max 9 volt = 90 um
+
+		is_button_down = false;
+		is_min_move = false;
+		is_max_move = false;
+		is_step = false;
+
+		min_flag = -0.5;
+		max_flag = 0.5;
+
+		axes_min = -1;
+		axes_max = 1;
+
+		approach_min = 1; // MCL min 1 volt = 10 um
+		approach_max = 9; // MCL max 9 volt = 90 um
 		approach_rate = 0.004; //0.0725; // rate for first Si-tip test Nov 2014 was 0.0725, decrease
-								// value for 3/30/15 was 0.03.
-								// changed back to 40 nm/s on 4/30/15, same value Matt used for Gd
-        approach_retract = 0.05;
-        
-        n_steps = 0;
-        
-        cur_line = 0;
-        is_scan = false;
-        
-        direction = true;
-        filtered = true;
-        
-        is_draw_tip_position = false;
-        is_enable_tip_position = false;
-      
-        
-        _DAC.define_approach_task();
+		// value for 3/30/15 was 0.03.
+		// changed back to 40 nm/s on 4/30/15, same value Matt used for Gd
+		approach_retract = 0.05;
+
+		n_steps = 0;
+
+		cur_line = 0;
+		is_scan = false;
+
+		direction = true;
+		filtered = true;
+
+		is_draw_tip_position = false;
+		is_enable_tip_position = false;
+
+
+		_DAC.define_approach_task();
 		//_DAC.define_phase_task();
-        
-        measure = true;
-        is_update_scan_info = true;
-        is_update_scan_data = true;
-        is_update_MCL_readout = true;
+
+		measure = true;
+		is_update_scan_info = true;
+		is_update_scan_data = true;
+		is_update_MCL_readout = true;
 		is_update_Micronix_readout = true;
 
 
-        tip_read_thread = CreateThread(NULL,0,(LPTHREAD_START_ROUTINE)&get_dac_data,NULL,NULL,NULL);
+		tip_read_thread = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)&get_dac_data, NULL, NULL, NULL);
 		//phase_read_thread = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)&get_dac_phase_data, NULL, NULL, NULL);
 
-		SetTimer(NULL,timer_graph,50,(TIMERPROC)update_graph);
-        
-        SetTimer(NULL,update_scan_timer,250,(TIMERPROC)update_scan_info);
-        
-        SetTimer(NULL,update_scan_data_timer,200,(TIMERPROC)update_scan_data);
-        
-        SetTimer(NULL,matlab_data_timer,100,(TIMERPROC)get_matlab_data);
-        
+		SetTimer(NULL, timer_graph, 50, (TIMERPROC)update_graph);
 
-        //Initialize scan class
-        _scan.set_DAC_ptr(&_DAC);
-        _scan.set_plane_info_ptr(&_planeInfo);
-        _scan.set(0,1,0,1,200,200,50,0); 
-        _scan.set_tip_xy(0,0);
-        _scan.set_update_scan_ptr(&update_scan_info);
-        _scan.set_disp_data(filtered,direction);
-        _scan.set_plane_info_ptr(&_planeInfo);
-		update_scan_info(); // modified by Chang 1/3/22
-        
+		SetTimer(NULL, update_scan_timer, 250, (TIMERPROC)update_scan_info);
+
+		SetTimer(NULL, update_scan_data_timer, 200, (TIMERPROC)update_scan_data);
+
+		SetTimer(NULL, matlab_data_timer, 100, (TIMERPROC)get_matlab_data);
+
+
+
+		//Initialize scan class
+		_scan.set_DAC_ptr(&_DAC);
+		_scan.set_plane_info_ptr(&_planeInfo);
+		_scan.set(0, 1, 0, 1, 200, 200, 50, 0);
+		_scan.set_tip_xy(0, 0);
+		{
+		char disp_str[50];
+		mxArray* disp_array;
+		sprintf_s(disp_str, 50, "%.4f V", _scan.x_tip);
+		disp_array = mxCreateString(disp_str);
+		return;
+		mxSetProperty(plhs[_handles.x_tip_position_index], 0, "String", disp_array);
+		}
+		return;
+		_scan.set_update_scan_ptr(&update_scan_info);
+		_scan.set_disp_data(filtered, direction);
+		_scan.set_plane_info_ptr(&_planeInfo);
+		
+		update_scan_info(nlhs,plhs,nrhs); // modified by Chang 1/3/22
+
+		
+
         pp.clear();
         is_valid_plane = false;
         
@@ -2153,7 +2206,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
     else if(func_name == "z_in" && nargs == 1)
     {
         _DAC.z_in(args[0]);
-         update_scan_info(); // modified on 1/3/22
+		update_scan_info(nlhs,plhs,nrhs); // modified on 1/3/22
     }
 	else if(func_name == "start_approach_pid")
 	{
@@ -2183,7 +2236,7 @@ void mexFunction(int nlhs, mxArray *plhs[],
 			//if so do not move up to max but go back to min and initiate a step of micronix.
 			HANDLE z_in_thread = _DAC.z_in(approach_min);
 			WaitForSingleObject(z_in_thread,INFINITE);
-			update_scan_info(); // modified on 1/3/22
+			update_scan_info(nlhs, plhs, nrhs); // modified on 1/3/22
 
 			// now the piezo is at the bottom, so step the micronix up
 			
@@ -2207,14 +2260,14 @@ void mexFunction(int nlhs, mxArray *plhs[],
 
 			
 			n_steps++;
-			update_scan_info(); // modified on 1/3/22
+			update_scan_info(nlhs, plhs, nrhs); // modified on 1/3/22
 		}
 		else
 		{	
 			//if there is space still then go up a step
 			HANDLE z_in_thread = _DAC.z_in(currentZ+stepZ);
 			WaitForSingleObject(z_in_thread,INFINITE);
-			update_scan_info(); // modified on 1/3/22
+			update_scan_info(nlhs, plhs, nrhs); // modified on 1/3/22
 		}
 	}
 	else if(func_name == "stop_approach_pid")
