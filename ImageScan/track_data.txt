@@ -473,3 +473,3719 @@ date	x	y	z	old	new	moved	xmax	ymax	zmax	max
 12-Oct-2020 11:14:56	-1.5084	-0.85078	38.572	94.86	248.69	1	-1.51	-0.84	38.5	214
 12-Oct-2020 11:15:03	-1.5048	-0.85898	38.5899	251.235	250.42	0	-1.5084	-0.85078	39.072	191
 12-Oct-2020 11:15:09	-1.4964	-0.85494	38.3616	246.38	239.14	0	-1.5084	-0.85078	38.072	191
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 16:47:16	17.3121	-1.7659	66.8209	548.535	564.093	1	17.28	-1.77	66.8663	555.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 16:51:10	17.315	-1.8534	66.6843	561.713	573.962	1	17.3121	-1.9326	66.6834	571.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 17:34:10	7.3953	-6.6311	59.5906	420.353	571.69	1	7.36	-6.6267	59.5	545.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 17:34:33	7.3944	-6.6682	59.6078	568.99	573.217	0	7.3953	-6.6311	59.5906	567.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 17:41:30	7.5329	-6.6503	59.7032	522.08	564.602	1	7.5433	-6.64	59.5906	537.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 17:45:39	7.5499	-6.6361	59.763	544.956	559.354	1	7.6162	-6.6503	59.7032	540.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 17:49:53	7.5474	-6.574	59.8596	517.1111	556.58	1	7.5499	-6.4694	59.763	532.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 17:54:06	7.4863	-6.4884	59.9254	499.223	545.758	1	7.4641	-6.4073	59.8596	545.4
+19-Jan-2022 17:54:23	7.4736	-6.4634	59.9459	543.76	558.331	1	7.403	-6.4051	59.9254	569.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 17:57:58	7.4161	-6.3851	60.0151	499.056	538.3822	1	7.3903	-6.2967	59.9459	538.8
+19-Jan-2022 17:58:15	7.3973	-6.3297	60.0365	540.092	558.958	1	7.4161	-6.3018	60.0151	559.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 18:02:21	7.3013	-6.3237	60.1184	488.963	543.15	1	7.314	-6.3297	60.0365	534.5
+19-Jan-2022 18:02:38	7.2819	-6.3008	60.1379	539.792	551.874	1	7.218	-6.2404	60.1184	546.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 18:07:01	7.2008	-6.3371	60.2305	480.208	539.973	1	7.1986	-6.3841	60.1379	512
+19-Jan-2022 18:07:18	7.1823	-6.353	60.2459	542.9656	547.467	0	7.2008	-6.3371	60.2305	544
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 18:11:22	7.2608	-6.368	60.2308	535.327	544.221	1	7.2841	-6.4204	60.2305	552.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 18:14:54	7.2588	-6.3354	60.2327	541.312	545.3256	0	7.2608	-6.368	60.2308	553.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 18:18:25	7.3238	-6.3194	60.2259	531.7	551.68	1	7.3441	-6.368	60.2308	551.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 18:23:49	7.9204	-7.2997	60.2222	465.827	481.373	1	8.0567	-7.3767	60.226	503.5
+19-Jan-2022 18:24:05	7.9373	-7.3623	60.2183	480.851	487.467	1	8.0037	-7.383	60.2222	508.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 18:24:24	8.1093	-6.4141	60.2137	509.285	507.579	0	8.0267	-6.42	60.2183	525.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 18:28:01	8.1144	-6.4074	60.2123	506.2589	507.461	0	8.11	-6.42	60.2183	518.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 18:36:51	8.1416	-6.4242	60.2077	257.403	259.6391	0	8.1933	-6.42	60.2183	260
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 18:38:39	8.1343	-6.4234	60.207	256.499	258.835	0	8.1933	-6.42	60.2183	260.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 18:45:48	8.0685	-6.343	60.2294	482.401	499.297	1	8.11	-6.3367	60.2183	510
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+19-Jan-2022 18:50:05	7.9906	-6.3325	60.2831	476.214	497.989	1	7.9852	-6.343	60.2294	479.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 16:14:05	6.7687	-7.3706	56.038	532.4167	546.389	1	6.7067	-7.34	56	533.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 16:20:05	6.7764	-7.3825	56.0808	275.564	282.653	1	6.7687	-7.3706	56.038	281.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 16:21:54	6.7869	-7.3844	56.1025	282.419	283.236	0	6.7764	-7.3825	56.0808	283
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 16:31:55	6.7745	-7.3656	56.1206	536.329	549.299	1	6.7764	-7.3825	56.0808	542.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 16:44:35	6.8172	-7.2958	56.1247	526.939	548.143	1	6.7745	-7.2823	56.1206	555.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 16:45:52	6.7875	-7.3624	56.0849	603.405	633.368	1	6.7339	-7.3791	56.1247	618.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 16:47:26	6.7993	-7.3616	56.069	650.467	656.893	0	6.8708	-7.3624	56.0849	642.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 16:54:14	6.7735	-7.4073	56.0645	619.325	627.245	1	6.7042	-7.4457	56.0849	626.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 16:56:29	6.783	-7.4203	56.0484	627.863	627.131	0	6.7735	-7.4073	56.0645	629.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 17:00:49	6.7787	-7.4149	56.0489	622.218	628.041	0	6.7735	-7.4073	56.0645	632.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 17:02:32	6.7975	-7.4119	56.0453	622.368	0	0	6.7735	-7.4073	56.0645	614.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 17:04:15	6.702	-7.4434	56.084	573.6833	615.466	1	6.6902	-7.4073	56.0645	625.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 17:10:58	6.515	-7.2811	56.1574	580.185	608.706	1	6.5533	-7.27	56.084	595.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 17:15:49	6.4327	-7.2677	56.2195	521.773	564.784	1	6.4317	-7.1978	56.1574	559.6
+20-Jan-2022 17:16:06	6.4125	-7.2609	56.2402	560.311	569.293	1	6.3494	-7.1844	56.2195	565.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 17:21:26	6.3034	-7.2556	56.2706	523.771	586.925	1	6.2458	-7.1776	56.2402	591.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 17:26:57	6.0018	-7.2418	56.5145	511.498	587.383	1	5.9667	-7.1867	56.2706	513.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 17:31:52	5.9218	-7.2107	56.5332	540.417	572.812	1	5.9185	-7.1585	56.5145	576.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 17:37:12	5.8126	-7.1909	56.5578	510.554	554.616	1	5.7551	-7.1274	56.5332	567.2
+20-Jan-2022 17:37:29	5.777	-7.1747	56.5725	552.466	566.023	1	5.7293	-7.1076	56.5578	566.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 17:44:47	5.7169	-7.1019	56.5812	523.323	550.66	1	5.6937	-7.008	56.5725	564.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 17:45:04	5.702	-7.0653	56.5889	549.406	557.988	1	5.7169	-7.1019	56.5812	563.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+20-Jan-2022 18:21:18	5.7355	-7.0712	56.5764	557.492	563.071	1	5.7853	-7.0653	56.5889	550.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 14:13:15	5.5369	-6.8766	55.6255	554.5844	559.752	0	5.51	-6.89	55.63	551.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 15:34:54	5.4446	-6.9092	56.0323	427.3789	556.08	1	5.4267	-6.89	56.13	525
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 15:43:14	4.6879	-6.2984	56.512	411.3589	570.9756	1	4.7	-6.2367	56.5323	572.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 15:52:42	4.7029	-6.2975	56.4941	291.9311	294.5589	0	4.6879	-6.3817	56.512	293.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 15:55:23	4.7023	-6.3117	56.4932	295.0344	296.3589	0	4.6046	-6.2151	56.512	291.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:03:54	4.7181	-6.3183	56.4867	568.9433	573.0656	0	4.6879	-6.3817	56.512	557.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:04:56	4.7194	-6.3183	56.4895	567.0122	571.1344	0	4.6879	-6.2984	56.512	572.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:07:23	5.5228	-6.4242	56.4841	521.9689	527.4822	1	5.4767	-6.3467	56.512	521.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:13:31	5.5215	-6.44	56.4643	268.5011	271.8389	1	5.5228	-6.4242	56.4841	270.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:16:10	5.5074	-6.433	56.4422	269.4511	271.8711	0	5.5215	-6.44	56.4643	276.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:18:49	5.492	-6.4509	56.4325	265.1078	270.0244	1	5.6048	-6.5233	56.4643	266.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:21:28	5.4866	-6.4502	56.4166	270.9656	271.6656	0	5.492	-6.4509	56.4325	279.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:24:07	5.4907	-6.4638	56.4131	269.0511	272.4433	1	5.5753	-6.4509	56.4325	273.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:26:46	5.5011	-6.4526	56.3994	271.5056	271.7011	0	5.574	-6.4638	56.4131	272.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:29:25	5.4948	-6.4417	56.4012	270.1156	272.9778	1	5.574	-6.3805	56.4131	275.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:32:03	5.4887	-6.4761	56.3907	271.4856	272.2911	0	5.4948	-6.4417	56.4012	271.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:34:42	5.4721	-6.4367	56.3929	271.321	272.968	0	5.4115	-6.4417	56.4012	277
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:37:20	5.4798	-6.4662	56.3921	271.9222	271.6356	0	5.4948	-6.4417	56.4012	273.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:42:59	5.4773	-6.4463	56.3929	273.8367	273.1578	0	5.4948	-6.4417	56.4012	276.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:45:25	5.4946	-6.4472	56.3939	271.8611	272.5411	0	5.4948	-6.525	56.4012	277.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:47:51	5.4776	-6.4442	56.3942	273.94	273.2189	0	5.4948	-6.4417	56.4012	273.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:50:17	5.4725	-6.4434	56.3946	271.4811	272.27	0	5.4115	-6.4417	56.4012	268.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:54:55	5.4752	-6.4599	56.3949	272.0789	272.8667	0	5.4948	-6.4417	56.4012	276.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:57:21	5.4778	-6.4444	56.3928	272.4022	272.4267	0	5.4948	-6.4417	56.4012	276.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 16:59:47	5.4628	-6.4346	56.3922	271.6478	272.0956	0	5.5781	-6.4417	56.4012	275.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 17:02:13	5.4623	-6.4249	56.3909	268.0767	267.576	0	5.4948	-6.3584	56.4012	269.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 17:04:38	5.4624	-6.4141	56.3918	267.9622	269.5756	0	5.4948	-6.4417	56.4012	270.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 17:08:18	4.9875	-5.59	56.3927	375.0822	392.81	1	4.99	-5.73	56.4012	406.4
+21-Jan-2022 17:08:34	5.0079	-5.6821	56.3884	392.3911	402.5833	1	5.0708	-5.84	56.3927	406.8
+21-Jan-2022 17:08:51	5.0194	-5.7502	56.3838	404.82	408.3778	0	5.0912	-5.8488	56.3884	413.6
+21-Jan-2022 17:09:07	5.0146	-5.7475	56.3831	407.2433	409.3744	0	5.0079	-5.8488	56.3884	417.2
+21-Jan-2022 17:09:23	5.0076	-5.7573	56.3853	406.8978	410.0144	0	5.0079	-5.7654	56.3884	412.2
+21-Jan-2022 17:09:40	5.0182	-5.7539	56.386	405.0789	409.4433	1	5.0079	-5.7654	56.3884	412.3
+21-Jan-2022 17:09:56	5.0187	-5.8114	56.3839	410.6389	409.2178	0	5.0182	-5.7539	56.386	416.7
+21-Jan-2022 17:10:13	5.0222	-5.8014	56.3838	408.7333	408.5789	0	5.0182	-5.7539	56.386	410.4
+21-Jan-2022 17:10:29	5.0145	-5.8053	56.3833	411.6078	410.38	0	4.7682	-6.0039	56.386	413.1
+21-Jan-2022 17:10:45	5.0139	-5.8018	56.3828	410.0222	409.8422	0	5.0182	-5.7539	56.386	411.4
+21-Jan-2022 17:11:02	5.0196	-5.8008	56.3829	411.69	411.3422	0	5.0182	-5.8372	56.386	414.7
+21-Jan-2022 17:11:18	5.0046	-5.8052	56.3829	413.1911	409.3833	0	5.0182	-5.8372	56.386	411.4
+21-Jan-2022 17:11:35	5.0049	-5.8024	56.383	406.8433	406.6956	0	5.0182	-5.7539	56.386	416
+21-Jan-2022 17:11:51	5.0077	-5.8085	56.3823	408.5922	409.0033	0	5.0182	-5.8372	56.386	413.3
+21-Jan-2022 17:12:08	5.002	-5.7983	56.3822	408.67	361.6589	0	4.9349	-5.6706	56.386	410
+21-Jan-2022 17:12:24	5.1385	-5.7823	56.2393	0.17222	0.15556	0	5.1015	-5.5872	54.886	0.5
+21-Jan-2022 17:12:41	5.0905	-5.8866	56.0749	0.15556	0.14778	0	5.1015	-5.9206	55.886	0.6
+21-Jan-2022 17:12:57	5.0139	-5.7882	56.4137	0.13111	0.12778	0	5.1015	-6.0039	54.886	0.5
+21-Jan-2022 17:13:14	4.8217	-5.8563	56.5426	0.12333	0.13889	1	4.7682	-5.9206	56.886	0.6
+21-Jan-2022 17:13:30	4.7028	-5.8469	56.6249	0.12778	0.12667	0	4.7384	-6.1063	55.5426	0.5
+21-Jan-2022 17:13:46	5.0386	-5.9852	56.2201	0.14444	0.11778	0	5.0717	-6.023	56.0426	0.7
+21-Jan-2022 17:14:03	4.853	-5.6498	56.6951	0.14111	0.15667	1	4.905	-5.6063	56.5426	0.7
+21-Jan-2022 17:14:19	4.8685	-5.7801	56.502	0.13111	0.14111	1	4.603	-5.8998	55.1951	0.5
+21-Jan-2022 17:14:36	4.8621	-5.8571	56.7925	0.16333	0.12111	0	4.9518	-6.0301	56.502	0.5
+21-Jan-2022 17:14:52	4.96	-5.5638	56.7559	0.15222	0.13	0	5.0352	-5.5301	57.002	0.6
+21-Jan-2022 17:15:09	4.8941	-5.8369	55.2706	0.093333	0.145	1	4.8685	-5.8634	55.002	0.6
+21-Jan-2022 17:15:26	4.952	-5.9152	55.4443	0.11444	0.12333	1	4.8108	-5.7536	54.2706	0.5
+21-Jan-2022 17:15:42	4.8791	-6.0652	54.517	0.13889	0.12111	0	4.8687	-6.0819	54.4443	0.8
+21-Jan-2022 17:15:59	4.8505	-5.7535	55.3925	0.14	0.11778	0	4.8687	-5.7485	55.4443	0.6
+21-Jan-2022 17:16:15	4.8369	-5.7983	55.9891	0.14889	0.11778	0	4.7853	-5.8319	54.4443	0.5
+21-Jan-2022 17:16:32	5.0052	-5.9215	55.7016	0.12333	0.14889	1	5.202	-5.9152	54.9443	0.5
+21-Jan-2022 17:16:49	5.1039	-5.9813	56.8702	0.12	0.141	1	5.1719	-5.9215	57.2016	0.6
+21-Jan-2022 17:17:05	5.2465	-6.1962	58.1834	0.13111	0.11333	0	5.2706	-6.2313	58.3702	0.7
+21-Jan-2022 17:17:21	5.0567	-6.0182	56.9595	0.11778	0.13	1	5.1039	-5.7313	55.8702	0.5
+21-Jan-2022 17:17:38	4.9039	-5.8374	56.9186	0.12333	0.13889	1	4.89	-5.7682	56.9595	0.7
+21-Jan-2022 17:17:54	4.9569	-5.7618	57.629	0.11111	0.12889	1	4.9039	-5.8374	57.9186	0.5
+21-Jan-2022 17:18:11	4.7883	-5.8343	57.8736	0.11889	0.121	1	4.7069	-5.9285	58.129	0.6
+21-Jan-2022 17:18:46	5.0377	-6.0011	56.3736	12.7989	400.26	1Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 17:26:25	0.87634	-11.3648	56.3043	52.1611	54.9356	1	0.87	-11.33	56.3736	51.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 17:28:56	0.8529	-11.3586	56.2062	77.6967	81.88	1	0.87634	-11.2815	56.3043	82.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 17:30:46	0.7434	-12.7984	56.1948	50.8311	50.0622	0	0.75	-12.77	56.2062	52.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 17:53:28	0.70779	-12.8201	56.1648	47.0836	49.6182	1	0.75	-12.8533	56.2062	49.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 17:59:13	0.69975	-12.7737	56.1502	25.7827	25.8291	0	0.79112	-12.7368	56.1648	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:00:52	0.68649	-12.7896	56.1433	25.2236	26.0845	1	0.70779	-12.8201	56.1648	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:02:30	0.69095	-12.7942	56.1323	25.5409	25.5709	0	0.76982	-12.8729	56.1433	26
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:04:08	0.69435	-12.8031	56.1361	25.7891	25.8355	0	0.68649	-12.7896	56.1433	28.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:05:46	0.70482	-12.7946	56.135	25.7518	25.8218	0	0.68649	-12.7896	56.1433	26.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:07:24	0.69833	-12.7928	56.1312	25.2545	25.9418	1	0.68649	-12.7896	56.1433	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:09:02	0.68843	-12.7827	56.1247	25.6945	25.9345	0	0.615	-12.7095	56.1312	26
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:10:40	0.71826	-12.7958	56.1215	25.6945	25.7682	0	0.78166	-12.7928	56.1312	26
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:12:19	0.70473	-12.8022	56.1242	25.89	25.7436	0	0.69833	-12.8761	56.1312	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:13:57	0.68853	-12.8336	56.1225	25.7918	25.6364	0	0.615	-12.8761	56.1312	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:15:35	0.70689	-12.8094	56.1232	25.73	25.8336	0	0.69833	-12.7928	56.1312	27
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:17:13	0.70005	-12.797	56.1253	25.7636	25.9373	0	0.615	-12.7928	56.1312	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:18:51	0.69511	-12.7961	56.1223	25.8782	26.0745	0	0.69833	-12.8761	56.1312	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:20:30	0.71155	-12.8074	56.1233	25.9482	25.9627	0	0.78166	-12.7928	56.1312	28.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:22:08	0.68858	-12.8373	56.1245	25.5436	25.86	1	0.615	-12.8761	56.1312	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:23:46	0.71464	-12.8272	56.1176	25.5345	25.9564	1	0.68858	-12.8373	56.1245	29.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:25:24	0.70054	-12.7855	56.1073	25.79	26.0545	1	0.71464	-12.8272	56.1176	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:27:02	0.69784	-12.7982	56.1028	25.7164	25.8664	0	0.78387	-12.7855	56.1073	26.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:28:40	0.69717	-12.791	56.0997	26.2327	26.29	0	0.70054	-12.7855	56.1073	27.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:30:18	0.68616	-12.7808	56.0933	26.1091	25.7618	0	0.61721	-12.7855	56.1073	25.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:31:56	0.67958	-12.7812	56.1001	25.9427	25.8473	0	0.61721	-12.8688	56.1073	25.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:33:35	0.66985	-12.7711	56.1027	26.0709	26.1145	0	0.70054	-12.7855	56.1073	28.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:35:13	0.6955	-12.7877	56.0975	26.1082	25.7455	0	0.70054	-12.7855	56.1073	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:36:51	0.70475	-12.788	56.1014	25.7473	26.0673	1	0.70054	-12.7855	56.1073	28.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:38:29	0.67232	-12.8233	56.0924	25.4691	25.9536	1	0.62142	-12.8713	56.1014	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:40:07	0.6685	-12.7882	56.0875	25.6864	25.94	0	0.58899	-12.8233	56.0924	26
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:41:45	0.65629	-12.7738	56.0849	25.5627	25.8864	1	0.58899	-12.74	56.0924	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:43:23	0.65367	-12.7912	56.0806	25.6818	25.8191	0	0.65629	-12.7738	56.0849	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:45:02	0.69182	-12.7806	56.0756	26.0345	25.9727	0	0.73962	-12.7738	56.0849	25.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:46:40	0.66588	-12.813	56.0755	25.8718	25.78	0	0.65629	-12.8571	56.0849	26.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:48:18	0.65167	-12.8045	56.0785	25.9127	25.6927	0	0.65629	-12.7738	56.0849	27
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:49:56	0.65084	-12.8189	56.079	25.6164	26.0045	1	0.65629	-12.7738	56.0849	26
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:51:34	0.65439	-12.8278	56.0731	26.0473	25.8909	0	0.65084	-12.9022	56.079	25
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:53:12	0.64676	-12.8244	56.0742	25.7718	25.58	0	0.65084	-12.9022	56.079	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:54:50	0.63958	-12.7919	56.074	25.7118	26.1064	1	0.65084	-12.7356	56.079	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:56:29	0.67567	-12.7944	56.0668	25.7427	25.76	0	0.63958	-12.8752	56.074	26.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:58:07	0.6615	-12.7945	56.0677	25.6009	25.9245	1	0.63958	-12.7086	56.074	26.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 18:59:45	0.64971	-12.8115	56.0649	25.8291	25.5791	0	0.6615	-12.8778	56.0677	26
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:01:23	0.62127	-12.87	56.0625	25.3645	25.9064	1	0.57817	-12.8778	56.0677	29.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:03:01	0.63494	-12.8352	56.0572	25.5464	26.2455	1	0.7046	-12.87	56.0625	25.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:04:40	0.63175	-12.7947	56.0535	25.8064	26.0664	1	0.71827	-12.8352	56.0572	25.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:06:18	0.61738	-12.803	56.0462	26.2382	26.3218	0	0.54842	-12.7947	56.0535	25.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:07:56	0.63022	-12.805	56.0506	26.0727	26.0273	0	0.63175	-12.878	56.0535	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:09:34	0.64242	-12.8424	56.0507	25.7482	26.1873	1	0.63175	-12.7947	56.0535	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:11:12	0.63051	-12.8293	56.0502	25.79	25.6945	0	0.64242	-12.7591	56.0507	28.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:12:51	0.64632	-12.8411	56.0481	25.5991	25.7409	0	0.72575	-12.9257	56.0507	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:14:29	0.63618	-12.8146	56.0478	25.6182	26.1445	1	0.64242	-12.7591	56.0507	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:16:07	0.61194	-12.8331	56.0473	25.8918	25.8455	0	0.63618	-12.8979	56.0478	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:17:45	0.5919	-12.8331	56.0434	25.9945	26.1136	0	0.63618	-12.8146	56.0478	26.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:19:23	0.61651	-12.8159	56.0463	25.8818	25.8864	0	0.55285	-12.8146	56.0478	26
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:21:01	0.62362	-12.821	56.0454	26.08	25.9855	0	0.63618	-12.8979	56.0478	25.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:22:40	0.6269	-12.8048	56.0427	26.1436	26.1827	0	0.63618	-12.8146	56.0478	25.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:24:18	0.61124	-12.8135	56.0463	25.4718	26.0127	1	0.63618	-12.8146	56.0478	28.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:25:56	0.62729	-12.8272	56.0445	26.1936	26.0864	0	0.69457	-12.8135	56.0463	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:27:34	0.59565	-12.8462	56.0446	26.0091	25.9036	0	0.61124	-12.8135	56.0463	26.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:29:12	0.58257	-12.7975	56.0436	25.8282	26.2309	1	0.52791	-12.7302	56.0463	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:30:50	0.59688	-12.8499	56.0416	25.8245	25.9182	0	0.58257	-12.8808	56.0436	25
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:32:29	0.59112	-12.8786	56.0418	25.61	26.1255	1	0.58257	-12.7975	56.0436	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:34:07	0.58866	-12.8483	56.0372	25.27	25.5973	1	0.59112	-12.8786	56.0418	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:35:45	0.58898	-12.8202	56.0347	25.9782	25.9509	0	0.67199	-12.8483	56.0372	26.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:37:23	0.57378	-12.8415	56.0334	25.9736	25.8327	0	0.58866	-12.8483	56.0372	28.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:39:01	0.5701	-12.8397	56.034	25.4345	25.5045	0	0.58866	-12.8483	56.0372	26.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:40:40	0.55358	-12.8521	56.0317	25.4755	25.63	0	0.58866	-12.8483	56.0372	26.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:42:18	0.53686	-12.8268	56.0305	24.8573	25.6064	1	0.58866	-12.9316	56.0372	25.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:43:56	0.52624	-12.8212	56.0233	25.7445	25.6245	0	0.53686	-12.8268	56.0305	25.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:45:34	0.55558	-12.85	56.0226	25.6218	25.8982	1	0.62019	-12.8268	56.0305	27.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:47:12	0.55093	-12.8201	56.0192	25.8718	26.0209	0	0.55558	-12.7667	56.0226	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:48:51	0.56716	-12.8573	56.0169	26.0164	25.9364	0	0.55558	-12.85	56.0226	26.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:50:29	0.54686	-12.8189	56.0156	25.4518	25.6555	0	0.55558	-12.85	56.0226	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:52:07	0.52663	-12.841	56.0174	25.6909	25.7755	0	0.47225	-12.9333	56.0226	26.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:53:45	0.53106	-12.8381	56.0199	25.54	25.7991	1	0.47225	-12.9333	56.0226	25.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:55:23	0.52801	-12.8462	56.0162	26.0182	25.6409	0	0.53106	-12.8381	56.0199	26.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:57:01	0.51275	-12.8557	56.0172	25.79	25.7327	0	0.53106	-12.9214	56.0199	26.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 19:58:40	0.5035	-12.8611	56.015	26.1727	25.5955	0	0.44773	-12.9214	56.0199	25.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 20:00:18	0.5203	-12.8451	56.0111	25.9473	25.6991	0	0.61439	-12.8381	56.0199	26.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 20:01:56	0.47723	-12.8828	56.01	25.9827	25.6809	0	0.44773	-12.9214	56.0199	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 20:03:34	0.47074	-12.8533	56.0118	25.8382	25.0145	0	0.44773	-12.9214	56.0199	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 20:05:12	0.52487	-12.8243	56.0187	26.0355	25.8718	0	0.53106	-12.8381	56.0199	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 20:06:51	0.49007	-12.8373	56.0168	25.9418	25.72	0	0.44773	-12.8381	56.0199	26.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 20:08:29	0.49513	-12.8371	56.014	26.1045	25.8582	0	0.53106	-12.9214	56.0199	25.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 20:12:21	0.50087	-12.8407	56.0134	26.1173	26.1227	0	0.53106	-12.8381	56.0199	25.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 20:14:07	0.47909	-12.8247	56.0175	51.2111	50.61	0	0.53106	-12.8381	56.0199	52.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 20:16:59	-0.10287	-12.2975	56.4529	41.0189	49.7344	1	-0.16333	-12.2667	56.5199	50.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 20:26:17	4.5361	-5.7856	56.4527	539.4967	537.7656	0	4.6133	-5.8	56.4529	545.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 20:29:59	4.5359	-5.8103	56.4514	276.0356	276.6678	0	4.53	-5.8	56.4529	280.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 20:31:44	4.5366	-5.8138	56.451	275.3556	275.1178	0	4.6133	-5.8	56.4529	276.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 20:35:35	4.5312	-5.8264	56.45	273.09	274.5578	0	4.53	-5.8833	56.4529	278
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 20:38:16	4.5395	-5.824	56.4497	272.9933	273.6411	0	4.53	-5.8833	56.4529	283.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 20:42:55	2.7956	-3.2721	57.4373	490.7022	507.3133	1	2.8967	-3.26	57.44	520.1
+21-Jan-2022 20:43:12	2.832	-3.2819	57.435	505.9144	512.1811	1	2.9623	-3.2721	57.4373	514.9
+21-Jan-2022 20:43:29	2.8444	-3.2933	57.4334	510.4278	510.2322	0	2.832	-3.2819	57.435	510.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 20:49:18	3.7498	-4.5632	56.936	274.6322	491.5367	1	3.6867	-4.6067	56.935	510.3
+21-Jan-2022 20:49:35	3.7282	-4.6355	56.9342	491.01	507.8367	1	3.7498	-4.6465	56.936	512.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 20:53:58	3.9944	-5.1154	56.8229	395.8533	490.9389	1	4.15	-5.23	56.9342	488.3
+21-Jan-2022 20:54:15	4.0605	-5.1711	56.801	495.9767	516.2878	1	4.0777	-5.1987	56.8229	523.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 20:58:55	3.9614	-5.1535	56.8221	431.8533	453.3356	1	3.8938	-5.1711	56.801	450.6
+21-Jan-2022 20:59:12	3.9047	-5.1482	56.8339	451.7622	459.2989	1	3.8781	-5.1535	56.8221	454.3
+21-Jan-2022 20:59:29	3.8773	-5.1467	56.8424	457.75	459.7111	0	3.8214	-5.1482	56.8339	460.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 21:06:57	4.3536	-5.1428	56.7143	465.78	512.1033	1	4.36	-5.1533	56.8339	479.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 21:12:36	4.3171	-5.0636	56.7089	492.1312	512.8278	1	4.2703	-5.0595	56.7143	518.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 21:16:46	4.1672	-5.0462	56.7313	429.2811	502.8567	1	4.1504	-5.0636	56.7089	517.5
+21-Jan-2022 21:17:03	4.0976	-5.0402	56.747	502.0289	511.91	1	4.1672	-5.0462	56.7313	504.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 21:21:25	3.8114	-5.023	56.942	426.6089	485.7389	1	3.7367	-5.0633	56.747	437.3
+21-Jan-2022 21:21:42	3.8108	-5.043	56.9428	484.1633	482.9189	0	3.8947	-5.1063	56.942	491.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 21:26:08	3.8711	-5.0334	56.9369	504.04	511.46	1	3.8947	-5.1063	56.942	522.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 21:29:55	4.1124	-5.0402	56.8223	478.1978	514.325	1	4.1933	-5.03	56.9369	484
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 21:33:39	3.9107	-4.8264	56.8304	512.2522	513.1537	0	3.9833	-4.8	56.8223	515.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 21:37:01	4.1864	-5.1884	56.7957	470.4425	514.8712	1	4.19	-5.2367	56.8223	518.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 21:40:43	4.3617	-5.3959	56.7116	469.4175	519.9838	1	4.4	-5.4667	56.7957	494.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 21:44:26	4.4829	-5.5715	56.6083	481.1775	525.5525	1	4.4467	-5.6033	56.7116	486.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 21:48:42	4.6988	-5.8202	56.3786	443.17	531.6137	1	4.7	-5.8767	56.6083	476
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 21:51:55	4.6127	-5.7638	56.3838	506.4187	526.0638	1	4.6155	-5.7369	56.3786	527.1
+21-Jan-2022 21:52:11	4.594	-5.7706	56.3886	524.71	524.6938	0	4.6127	-5.7638	56.3838	533.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 21:55:11	4.5451	-5.7287	56.3954	518.645	527.805	1	4.5294	-5.7638	56.3838	536.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 21:58:21	4.566	-5.7566	56.4	531.9713	533.905	0	4.6284	-5.812	56.3954	533.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:10:27	4.5708	-5.764	56.4022	269.655	269.4667	0	4.6284	-5.812	56.3954	267.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:13:01	4.5685	-5.7597	56.4013	271.6	273.3512	0	4.5451	-5.7287	56.3954	270.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:15:35	4.5653	-5.7651	56.4011	272.4162	272.46	0	4.6284	-5.812	56.3954	278.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:18:10	4.558	-5.7726	56.402	270.9533	272.7663	0	4.6284	-5.8954	56.3954	270
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:20:44	4.5585	-5.7736	56.402	270.6013	273.3175	1	4.5451	-5.812	56.3954	277.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:23:18	4.5646	-5.7879	56.4096	273.6025	273.8867	0	4.5585	-5.7736	56.402	281.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:25:53	4.5623	-5.768	56.4083	271.6662	272.5211	0	4.4752	-5.7736	56.402	280.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:28:26	4.5665	-5.7703	56.4096	271.5462	273.8062	0	4.6418	-5.7736	56.402	281.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:31:01	4.5478	-5.7926	56.408	272.31	274.2722	0	4.4752	-5.7736	56.402	268.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:33:35	4.5558	-5.7958	56.4077	273.0925	272.3633	0	4.5585	-5.7736	56.402	278.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:36:10	4.5476	-5.7872	56.4092	272.5575	273.5867	0	4.4752	-5.7736	56.402	278.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:38:44	4.5313	-5.8122	56.4094	270.1675	273.9675	1	4.5585	-5.8569	56.402	270.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:41:18	4.5298	-5.8032	56.4138	271.9637	274.2578	0	4.6146	-5.8122	56.4094	270.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:43:52	4.5142	-5.8098	56.4126	272.725	274.4413	0	4.448	-5.7289	56.4094	273.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:46:26	4.5158	-5.805	56.4133	273.58	272.985	0	4.6146	-5.8122	56.4094	273
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:49:00	4.5179	-5.8063	56.4126	272.315	273.5187	0	4.5313	-5.8122	56.4094	274.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:51:34	4.4984	-5.8077	56.4113	272.125	274.9112	1	4.6146	-5.8122	56.4094	274.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:54:08	4.4696	-5.8202	56.4118	273.2062	273.34	0	4.4151	-5.8077	56.4113	272.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:56:43	4.4855	-5.7969	56.4115	273.3475	274.0675	0	4.4984	-5.8077	56.4113	273.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 22:59:17	4.4853	-5.8033	56.4107	275.1463	273.0512	0	4.4984	-5.8077	56.4113	277.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:01:51	4.4692	-5.7983	56.4101	273.3212	273.6725	0	4.4984	-5.8077	56.4113	282.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:04:25	4.4464	-5.8114	56.4096	271.9675	273.985	0	4.4151	-5.8077	56.4113	282.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:06:59	4.4559	-5.8195	56.4093	272.93	274.8338	0	4.4984	-5.8077	56.4113	276.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:09:34	4.4432	-5.8364	56.4076	269.4722	274.7262	1	4.3317	-5.891	56.4113	270.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:12:07	4.4192	-5.8382	56.4046	272.7063	273.0375	0	4.3599	-5.8364	56.4076	274
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:14:42	4.413	-5.8087	56.4012	270.105	274.1944	1	4.3599	-5.7531	56.4076	278.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:17:16	4.3872	-5.8248	56.3951	273.725	274.4038	0	4.413	-5.892	56.4012	278.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:19:50	4.3652	-5.8397	56.3917	271.5775	271.665	0	4.3297	-5.892	56.4012	277.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:22:24	4.368	-5.8197	56.3914	268.985	272.8863	1	4.3297	-5.892	56.4012	269.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:24:59	4.3452	-5.8277	56.382	271.3187	272.7856	0	4.2847	-5.8197	56.3914	277.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:27:33	4.3374	-5.8396	56.3797	270.5213	272.4737	0	4.368	-5.8197	56.3914	274.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:30:07	4.3166	-5.8328	56.3771	268.77	272.7738	1	4.368	-5.8197	56.3914	281.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:32:41	4.2956	-5.8353	56.3643	271.35	274.17	1	4.3166	-5.9161	56.3771	275.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:35:16	4.2812	-5.8356	56.3521	270.3587	271.4778	0	4.2956	-5.752	56.3643	272
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:37:50	4.2652	-5.8388	56.3487	270.0412	270.8212	0	4.2123	-5.8353	56.3643	276.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:40:24	4.2581	-5.8128	56.3451	266.4611	269.375	1	4.2123	-5.8353	56.3643	268.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:42:58	4.2299	-5.8353	56.3223	266.44	269.9938	1	4.1748	-5.8128	56.3451	278.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:45:33	4.2195	-5.865	56.3039	268.6587	268.8467	0	4.2299	-5.8353	56.3223	278.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:48:07	4.2024	-5.8467	56.2986	268.0075	268.9756	0	4.1466	-5.9186	56.3223	269.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:50:41	4.1837	-5.8599	56.2923	260.5575	266.9937	1	4.2299	-5.9186	56.3223	271.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+21-Jan-2022 23:53:15	4.1636	-5.8619	56.2721	265.9475	268.9963	1	4.1837	-5.7766	56.2923	262.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 13:54:35	3.8049	-5.9931	55.769	272.4967	502.585	1	3.86	-6.0567	55.7721	523.1
+23-Jan-2022 13:54:52	3.7855	-6.0397	55.7637	508.56	514.2433	1	3.7216	-6.0764	55.769	511.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 14:00:10	3.7953	-6.0559	55.7683	263.7763	263.4937	0	3.7855	-6.0397	55.7637	265.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 14:02:45	3.7898	-6.0437	55.77	262.2088	262.7013	0	3.7855	-6.0397	55.7637	269.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 14:05:20	3.7984	-6.0454	55.7744	261.0638	263.095	0	3.7855	-6.0397	55.7637	264.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 14:07:55	3.7962	-6.0462	55.7787	261.9563	262.0813	0	3.8688	-6.0397	55.7637	266.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 14:10:30	3.8181	-6.036	55.7822	258.1687	262.1438	1	3.8688	-6.0397	55.7637	269.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 14:13:04	3.8264	-6.0393	55.7982	260.2212	261.2137	0	3.9014	-6.036	55.7822	262.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 14:15:39	3.8095	-6.032	55.8014	259.9975	260.7688	0	3.8181	-6.036	55.7822	270.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 14:18:14	3.8227	-6.0558	55.8044	259.5913	260.9938	0	3.9014	-6.036	55.7822	261.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 14:20:49	3.8257	-6.0516	55.8053	258.6113	262.1338	1	3.8181	-6.036	55.7822	266.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 14:39:36	3.8115	-6.0749	55.8059	264.3762	264.44	0	3.8257	-5.9683	55.8053	265.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 14:42:11	3.8019	-6.071	55.8065	263.5275	262.8125	0	3.8257	-6.0516	55.8053	262.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 14:44:47	3.8223	-6.069	55.8103	262.0412	261.75	0	3.7424	-6.0516	55.8053	259.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 14:47:23	3.8346	-6.0548	55.8177	260.9875	260.9725	0	3.909	-6.0516	55.8053	262.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 14:49:58	3.8325	-6.0381	55.8205	258.3338	260.5238	0	3.8257	-5.9683	55.8053	262
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 14:52:34	3.8388	-6.01	55.8324	252.8763	259.8963	1	3.8257	-5.9683	55.8053	261.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 15:04:28	3.8861	-6.0222	55.9585	242.1525	259.9562	1	3.9221	-6.01	55.8324	247.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 15:11:31	3.9354	-6.0109	55.9898	253.63	258.9338	1	3.9694	-5.9389	55.9585	257.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 15:18:34	3.9929	-5.9951	56.037	252.0763	260.0475	1	4.0187	-6.0109	55.9898	258.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 15:25:38	4.0435	-5.9697	56.0637	256.2075	261.2988	1	4.0762	-5.9951	56.037	260.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 15:32:41	4.074	-5.9468	56.0795	263.4714	264.7663	0	4.1268	-5.9697	56.0637	261.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 15:39:44	4.0858	-5.9415	56.0758	258.5037	264.2862	1	4.1268	-5.9697	56.0637	269.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 15:46:47	4.1168	-5.9503	56.0813	268.91	269.4925	0	4.0858	-5.9415	56.0758	278.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 15:53:50	4.1238	-5.914	56.0726	269.5114	269.68	0	4.0858	-5.8582	56.0758	273.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 16:00:54	4.1038	-5.9335	56.0588	267.18	267.7275	0	4.0858	-5.8582	56.0758	273.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 16:07:57	4.1168	-5.951	56.0466	263.1043	268.0337	1	4.0858	-5.9415	56.0758	266.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 16:15:00	4.1273	-5.9406	56.0137	263.4643	266.9262	1	4.1168	-6.0343	56.0466	267.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 16:22:02	4.1097	-5.9224	55.9818	263.0213	266.3438	1	4.044	-5.8573	56.0137	269.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 16:29:02	4.1128	-5.9025	55.9592	265.3312	266.995	0	4.1097	-5.8391	55.9818	270.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 16:36:01	4.1303	-5.9067	55.9665	265.86	268.67	1	4.193	-5.9224	55.9818	268.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 16:43:01	4.1629	-5.8923	55.9592	268.995	269.7937	0	4.2136	-5.9067	55.9665	271.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 16:50:02	4.1639	-5.8383	55.9572	261.6375	268.68	1	4.1303	-5.74	55.9665	267.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 16:57:02	4.1808	-5.818	55.9466	268.1087	269.1338	0	4.2472	-5.8383	55.9572	267.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 17:04:02	4.188	-5.8208	55.9399	264.8963	268.8913	1	4.1639	-5.755	55.9572	265.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 17:11:01	4.1911	-5.8182	55.9211	266.95	267.3363	0	4.188	-5.8208	55.9399	267.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 17:18:01	4.1983	-5.7921	55.8982	260.3075	266.8438	1	4.188	-5.8208	55.9399	260.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 17:25:00	4.1865	-5.795	55.8532	262.4387	268.47	1	4.1983	-5.8754	55.8982	267
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 17:31:59	4.1762	-5.8109	55.8119	263.9038	267.9162	1	4.2698	-5.795	55.8532	259.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 17:38:58	4.1631	-5.8096	55.7831	265.6137	267.2675	0	4.1762	-5.8109	55.8119	271.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 17:45:57	4.1762	-5.8004	55.7753	263.0737	267.8825	1	4.1762	-5.8109	55.8119	269.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 17:52:57	4.1688	-5.7834	55.7479	265.6062	268.3625	1	4.0929	-5.8004	55.7753	263.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 17:59:56	4.165	-5.7991	55.7332	267.3612	269.575	0	4.1688	-5.7834	55.7479	271.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 18:06:56	4.1361	-5.7703	55.7376	269.2563	269.0437	0	4.0855	-5.7001	55.7479	271.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 18:13:55	4.126	-5.7866	55.7377	267.3225	269.575	0	4.1688	-5.8667	55.7479	272.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 18:20:54	4.1315	-5.7825	55.7412	268.4337	268.425	0	4.0855	-5.7834	55.7479	271.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 18:27:54	4.1236	-5.7493	55.7437	266.9787	269.9175	1	4.1688	-5.7834	55.7479	271.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 18:34:53	4.1137	-5.7428	55.7393	267.3813	270.8625	1	4.1236	-5.7493	55.7437	278.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 18:41:53	4.1002	-5.7406	55.7337	269.3388	270.8963	0	4.1137	-5.7428	55.7393	280
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 18:48:53	4.1012	-5.741	55.7321	269.9537	268.5238	0	4.1137	-5.6595	55.7393	266.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 18:55:52	4.0876	-5.7299	55.7317	269.95	268.3687	0	4.0304	-5.7428	55.7393	267
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 19:02:52	4.0869	-5.698	55.7308	268.6538	271.4087	1	4.1137	-5.7428	55.7393	273
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 19:09:51	4.0791	-5.6921	55.7211	270.6556	271.0575	0	4.1702	-5.7813	55.7308	274.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 19:16:51	4.0707	-5.7026	55.7204	268.9788	269.2788	0	4.0869	-5.698	55.7308	281.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 19:23:50	4.0531	-5.6731	55.7175	267.9038	269.1325	0	4.0036	-5.698	55.7308	269.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 19:30:50	4.0892	-5.6685	55.7161	268.3525	269.64	0	4.0869	-5.698	55.7308	273.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 19:37:50	4.0679	-5.6869	55.7151	266.3625	266.8663	0	4.0869	-5.698	55.7308	273.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 19:44:49	4.0708	-5.6737	55.7151	266.8213	268.8225	0	4.0869	-5.698	55.7308	273.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 19:51:49	4.0857	-5.6666	55.7166	269.1725	271.3413	0	4.0869	-5.6147	55.7308	273.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 19:58:48	4.0943	-5.6629	55.7119	265.905	269.6337	1	4.1702	-5.6147	55.7308	274.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 20:05:51	4.1026	-5.6551	55.6984	270.3262	269.3737	0	4.0943	-5.6629	55.7119	273.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 20:12:54	4.0807	-5.6688	55.6919	269.05	270.3275	0	4.0943	-5.6629	55.7119	271.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 20:18:16	4.0946	-5.6488	55.6915	525.8988	531.8612	1	4.1776	-5.6629	55.7119	538.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 20:26:25	4.1035	-5.6871	55.6775	269.39	270.0512	0	4.0113	-5.6488	55.6915	274.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 20:29:05	4.104	-5.6926	55.6778	268.0412	271.6125	1	4.0946	-5.7321	55.6915	274.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 20:31:46	4.1016	-5.6843	55.6674	271.2738	272.0788	0	4.104	-5.6926	55.6778	270.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 20:34:26	4.0964	-5.6765	55.6663	270.4212	270.6525	0	4.1873	-5.6093	55.6778	266
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 20:37:07	4.0935	-5.6955	55.6684	270.405	271.0837	0	4.104	-5.6926	55.6778	275.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 20:39:48	4.0909	-5.6915	55.6672	272.18	272.1625	0	4.0207	-5.6093	55.6778	271.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 20:42:29	4.1087	-5.7044	55.6683	271.8714	271.6475	0	4.1873	-5.6926	55.6778	277.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 20:45:10	4.1079	-5.694	55.6677	271.8137	271.935	0	4.1873	-5.6926	55.6778	275.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 20:47:51	4.1037	-5.7138	55.6665	271.8829	273.2138	0	4.1873	-5.6926	55.6778	271.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 20:50:31	4.1002	-5.7089	55.6689	272.6837	272.645	0	4.104	-5.6926	55.6778	277.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 20:53:12	4.1015	-5.7107	55.6692	272.6414	272.645	0	4.1873	-5.6926	55.6778	283.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 20:55:53	4.1175	-5.7098	55.6679	270.8587	272.4737	0	4.1873	-5.7759	55.6778	270.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 20:58:34	4.1185	-5.7076	55.6685	272.605	274.1263	0	4.104	-5.6926	55.6778	271.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:01:15	4.1178	-5.7406	55.6683	270.5071	272.5	0	4.104	-5.7759	55.6778	276.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:03:56	4.1157	-5.7366	55.6672	270.4887	272.4375	0	4.104	-5.7759	55.6778	277.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:06:37	4.1056	-5.7356	55.6662	270.9762	272.5763	0	4.104	-5.7759	55.6778	275.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:09:19	4.0938	-5.7305	55.6602	269.3113	271.5688	0	4.104	-5.6926	55.6778	273.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:11:59	4.11	-5.7373	55.6628	269.48	272.1637	0	4.0207	-5.7759	55.6778	272.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:14:40	4.102	-5.7539	55.6614	266.9975	271.0863	1	4.104	-5.7759	55.6778	274
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:17:21	4.1032	-5.754	55.6502	270.8986	269.8888	0	4.1853	-5.7539	55.6614	281.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:20:02	4.0937	-5.7494	55.6498	270.8388	272.135	0	4.102	-5.6706	55.6614	274.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:22:42	4.0846	-5.7588	55.6502	269.5683	271.385	0	4.1853	-5.7539	55.6614	273.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:25:22	4.0925	-5.7763	55.6495	270.46	272.46	0	4.102	-5.7539	55.6614	273.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:28:03	4.0958	-5.7598	55.6479	269.99	269.9087	0	4.1853	-5.7539	55.6614	269.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:30:43	4.0883	-5.7514	55.6503	271.2583	272.4475	0	4.102	-5.7539	55.6614	277.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:33:24	4.095	-5.7605	55.6508	270.85	271.97	0	4.0187	-5.7539	55.6614	275.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:36:05	4.1029	-5.776	55.6525	270.0757	270.5337	0	4.1853	-5.8372	55.6614	271.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:38:45	4.0896	-5.7747	55.6543	270.0238	270.3838	0	4.0187	-5.7539	55.6614	272.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:41:26	4.0892	-5.7622	55.6529	270.7614	270.0675	0	4.102	-5.7539	55.6614	278.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:44:06	4.0877	-5.7762	55.6524	272.15	272.1262	0	4.0187	-5.8372	55.6614	268.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:46:47	4.0933	-5.7763	55.6529	271.3371	271.145	0	4.102	-5.8372	55.6614	271.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:49:27	4.0828	-5.7525	55.655	271.0843	271.1963	0	4.102	-5.7539	55.6614	273.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:52:08	4.1123	-5.769	55.6563	271.4071	270.1163	0	4.102	-5.8372	55.6614	269.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:54:50	4.1008	-5.7684	55.658	271.8375	271.5913	0	4.102	-5.7539	55.6614	276.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 21:57:30	4.1029	-5.748	55.6589	272.0257	272.4388	0	4.2687	-5.7539	55.6614	274.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 22:00:11	4.0958	-5.7586	55.6601	271.0688	271.5675	0	4.1853	-5.7539	55.6614	272
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 22:02:52	4.1107	-5.7635	55.6612	270.9817	271.6625	0	4.102	-5.7539	55.6614	271
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 22:05:33	4.1137	-5.751	55.6618	272.5543	271.6963	0	4.1853	-5.7539	55.6614	278.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 22:08:14	4.1077	-5.7552	55.6629	270.9829	272.4375	0	4.102	-5.7539	55.6614	273
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 22:10:54	4.1133	-5.7574	55.665	271.0414	271.2825	0	4.102	-5.7539	55.6614	274.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 22:13:35	4.1063	-5.777	55.6674	270.6014	269.2787	0	4.102	-5.8372	55.6614	268.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 22:16:16	4.0991	-5.7583	55.6655	271.6171	269.2788	0	4.102	-5.7539	55.6614	274.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 22:18:57	4.1189	-5.7602	55.6647	270.78	271.3362	0	4.1853	-5.8372	55.6614	275.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 22:21:38	4.0879	-5.7743	55.6647	270.3843	270.2225	0	4.102	-5.7539	55.6614	285.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 22:24:19	4.0948	-5.783	55.6644	271.0917	270.4638	0	4.0187	-5.7539	55.6614	272.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 22:26:59	4.0967	-5.7644	55.6643	269.93	270.6775	0	4.0187	-5.7539	55.6614	272.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 22:42:32	4.0553	-5.7706	55.6606	269.4	271.5188	0	4.102	-5.7539	55.6614	272.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 22:45:28	4.0533	-5.7616	55.6611	269.35	269.5863	0	4.0187	-5.7539	55.6614	272.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 22:48:23	4.0566	-5.7531	55.6608	267.985	270.66	0	4.0187	-5.7539	55.6614	274.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 22:51:19	4.0466	-5.7721	55.6604	268.87	270.3913	0	4.0187	-5.7539	55.6614	275.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 22:58:45	4.0413	-5.7745	55.6573	265.7325	269.5575	1	3.9353	-5.7539	55.6614	271.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 22:59:47	4.0333	-5.7746	55.6528	271.585	270.7	0	4.1246	-5.7745	55.6573	277.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 23:14:20	3.9985	-5.7614	55.6512	267.6137	269.1025	0	3.8746	-5.6912	55.6573	270.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 23:16:55	4.0091	-5.7735	55.6511	267.7343	269.0062	0	4.0413	-5.7745	55.6573	273.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 23:19:31	4.0156	-5.7509	55.6496	267.6529	268.2537	0	4.0413	-5.7745	55.6573	275.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 23:22:07	3.9953	-5.7577	55.6489	264.6071	269.1538	1	3.958	-5.6912	55.6573	271.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 23:24:42	3.9894	-5.7728	55.64	268.11	268.5137	0	3.9953	-5.7577	55.6489	269
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 23:27:18	3.9802	-5.7835	55.6395	266.6475	267.755	0	3.912	-5.7577	55.6489	269.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 23:29:54	3.9824	-5.7864	55.6401	266.8029	267.9063	0	3.912	-5.7577	55.6489	268.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 23:32:29	3.9727	-5.7859	55.6392	266.6771	267.24	0	3.9953	-5.7577	55.6489	268.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 23:35:04	3.9693	-5.7908	55.6379	265.1975	267.8813	1	4.0786	-5.841	55.6489	268.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 23:37:38	3.9667	-5.801	55.6286	267.2875	266.415	0	3.9693	-5.7908	55.6379	270.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 23:40:13	3.9547	-5.7961	55.6294	267.1625	266.51	0	3.9693	-5.7908	55.6379	274
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 23:42:47	3.9525	-5.817	55.6288	267.6837	267.2088	0	3.9693	-5.8741	55.6379	271
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 23:45:22	3.942	-5.7965	55.629	267.0813	267.7763	0	3.9693	-5.7908	55.6379	271.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 23:47:56	3.9303	-5.8062	55.6295	266.56	266.825	0	3.9693	-5.8741	55.6379	272
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 23:50:31	3.9338	-5.7945	55.6294	268.025	268.0825	0	3.886	-5.7908	55.6379	275.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 23:53:05	3.9357	-5.8087	55.6296	266.895	268.1413	0	3.9693	-5.8741	55.6379	271.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 23:55:39	3.9251	-5.7894	55.63	265.9362	268.7362	1	3.886	-5.7908	55.6379	275.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+23-Jan-2022 23:58:14	3.9123	-5.8095	55.6238	268.9413	269.64	0	3.9251	-5.7894	55.63	277.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:00:49	3.9088	-5.8067	55.6224	267.18	266.4037	0	3.9251	-5.8727	55.63	273.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:05:31	3.901	-5.8092	55.6258	268.07	269.6163	0	3.9251	-5.7894	55.63	272.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:08:07	3.9067	-5.8086	55.6272	266.9671	267.8963	0	4.0084	-5.8727	55.63	271.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:10:43	3.915	-5.7938	55.6281	266.8775	266.7437	0	3.8418	-5.8727	55.63	264.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:13:19	3.9197	-5.8154	55.6292	265.1925	266.08	0	3.9251	-5.8727	55.63	272.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:15:54	3.9186	-5.8048	55.6291	266.8457	267.4763	0	3.9251	-5.8727	55.63	268.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:18:30	3.9279	-5.7998	55.6311	267.7471	267.9638	0	3.8418	-5.7894	55.63	269.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:21:06	3.9327	-5.8001	55.6321	268.2814	266.8525	0	4.0084	-5.7894	55.63	266.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:23:42	3.9312	-5.7936	55.6308	267.885	265.645	0	4.0084	-5.7894	55.63	275
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:26:18	3.9074	-5.7788	55.6312	266.3562	268.1325	0	3.8418	-5.7894	55.63	270.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:28:54	3.9046	-5.7744	55.6307	267.6317	267.1837	0	3.8418	-5.7894	55.63	276.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:31:30	3.9165	-5.7769	55.6305	268.7043	266.5313	0	3.8418	-5.7061	55.63	272.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:34:06	3.9163	-5.7967	55.6305	268.2986	267.3625	0	3.9251	-5.7894	55.63	273.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:36:41	3.8995	-5.7704	55.6305	267.7014	267.3471	0	3.9251	-5.7894	55.63	270.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:39:17	3.9145	-5.8064	55.6312	267.435	266.6257	0	3.8418	-5.8727	55.63	267.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:41:53	3.8921	-5.802	55.6297	266.845	267.5412	0	3.9251	-5.7894	55.63	267.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:44:28	3.8946	-5.7938	55.6297	265.5783	264.8813	0	3.8418	-5.7894	55.63	268.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:47:04	3.9129	-5.7979	55.6301	267.7043	267.065	0	3.9251	-5.7894	55.63	273
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:49:39	3.8942	-5.8144	55.6306	265.3529	267.565	0	3.8418	-5.7894	55.63	277.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:52:15	3.8846	-5.8118	55.6307	264.7025	266.7113	0	3.9251	-5.7061	55.63	265
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:54:51	3.895	-5.8196	55.63	263.1083	267.1125	1	3.8418	-5.8727	55.63	262.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 00:57:27	3.8836	-5.8274	55.6301	266.9971	266.7725	0	3.895	-5.8196	55.63	268.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:00:03	3.8637	-5.8398	55.6321	264.8971	265.1862	0	3.8117	-5.8196	55.63	266
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:02:38	3.8734	-5.8351	55.6314	266.4986	266.4162	0	3.8117	-5.8196	55.63	269.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:05:14	3.8658	-5.8186	55.6312	264.7514	265.0113	0	3.8117	-5.8196	55.63	268.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:07:50	3.865	-5.8262	55.6331	266.02	266.4463	0	3.895	-5.9029	55.63	265
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:10:25	3.8531	-5.825	55.6318	264.6262	265.2338	0	3.895	-5.8196	55.63	268.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:13:01	3.867	-5.8122	55.6318	264.0114	267.2488	1	3.8117	-5.8196	55.63	270.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:15:36	3.8347	-5.8285	55.6325	265.5243	267.0738	0	3.867	-5.8122	55.6318	267.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:18:11	3.8487	-5.829	55.6336	263.9837	265.9625	0	3.7837	-5.8122	55.6318	268.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:20:46	3.8423	-5.8293	55.6333	265.2925	266.3788	0	3.7837	-5.8122	55.6318	274
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:23:20	3.8353	-5.8285	55.6337	264.4037	267.0775	1	3.867	-5.8122	55.6318	270.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:25:55	3.8112	-5.8404	55.6343	265.1425	267.725	0	3.8353	-5.8285	55.6337	272.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:28:29	3.8063	-5.8593	55.6339	264.14	265.9013	0	3.8353	-5.8285	55.6337	266.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:31:04	3.806	-5.8582	55.634	263.7412	265.5637	0	3.752	-5.9118	55.6337	274.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:33:39	3.8119	-5.8639	55.6336	264.39	266.4237	0	3.6686	-5.8285	55.6337	262.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:36:13	3.8054	-5.8783	55.633	262.9112	265.65	1	3.752	-5.9118	55.6337	272
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:38:48	3.7955	-5.8734	55.6312	265.5362	266.415	0	3.8054	-5.8783	55.633	271.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:41:23	3.789	-5.8724	55.6315	263.99	266.0713	0	3.7221	-5.795	55.633	267.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:43:57	3.8082	-5.8702	55.6309	266.1362	265.905	0	3.8054	-5.8783	55.633	265
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:46:32	3.7874	-5.8554	55.6306	264.0075	265.9325	0	3.7221	-5.8783	55.633	264.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:49:06	3.8013	-5.8745	55.6307	266.0587	266.3088	0	3.8887	-5.8783	55.633	274
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:51:41	3.794	-5.8492	55.6301	265.165	264.9912	0	3.8054	-5.795	55.633	270
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:54:16	3.7789	-5.8603	55.6291	265.825	264.9663	0	3.7221	-5.8783	55.633	274.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:56:50	3.7927	-5.8601	55.6295	263.9912	265.1875	0	3.8887	-5.8783	55.633	265.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 01:59:25	3.7806	-5.8825	55.6292	265.905	267.0975	0	3.7221	-5.8783	55.633	270
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:02:00	3.7767	-5.8348	55.6283	262.6988	265.25	0	3.8887	-5.8783	55.633	270.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:04:34	3.7548	-5.8576	55.6285	263.2287	265.4575	0	3.7221	-5.8783	55.633	269.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:07:09	3.7794	-5.8463	55.6294	263.1775	264.7237	0	3.7221	-5.795	55.633	272.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:09:43	3.7706	-5.8606	55.6288	263.8062	265.3425	0	3.7221	-5.795	55.633	271
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:12:18	3.7736	-5.8824	55.6288	264.9575	264.125	0	3.8054	-5.8783	55.633	273.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:14:52	3.7733	-5.8845	55.6287	264.5888	265.6763	0	3.7221	-5.8783	55.633	266.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:17:27	3.7726	-5.8884	55.6288	264.5	264.755	0	3.7221	-5.8783	55.633	270.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:20:01	3.7653	-5.8875	55.6274	262.8425	264.7562	0	3.8054	-5.8783	55.633	269.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:22:36	3.7677	-5.8698	55.6274	262.5238	263.8462	0	3.7221	-5.8783	55.633	276.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:25:10	3.7717	-5.885	55.6268	262.5238	264.945	0	3.8054	-5.8783	55.633	269.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:27:45	3.7711	-5.8962	55.6276	262.0825	263.6913	0	3.7221	-5.9616	55.633	261.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:30:19	3.7749	-5.9199	55.6272	262.0525	263.8838	0	3.8887	-6.045	55.633	265.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:32:54	3.7616	-5.8997	55.6265	259.605	262.9225	1	3.7221	-5.8783	55.633	267.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:35:28	3.7353	-5.9175	55.623	262.8	265.1363	0	3.6783	-5.983	55.6265	261.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:38:03	3.7295	-5.9197	55.6214	264.0775	265.0213	0	3.6783	-5.8997	55.6265	263.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:40:38	3.724	-5.9298	55.6206	262.43	263.7275	0	3.7616	-5.983	55.6265	269
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:43:12	3.7367	-5.9198	55.6206	260.61	263.9413	1	3.6783	-5.983	55.6265	264.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:45:47	3.7365	-5.9472	55.6159	264.7013	265.975	0	3.7367	-5.9198	55.6206	264.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:48:21	3.7113	-5.9275	55.6157	265.1775	264.5	0	3.6534	-5.9198	55.6206	264.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:50:56	3.7086	-5.9387	55.6147	263.0775	263.4613	0	3.7367	-6.0031	55.6206	268.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:53:30	3.6972	-5.9417	55.6143	262.5525	262.8675	0	3.6534	-6.0031	55.6206	263.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:56:05	3.7064	-5.9368	55.6156	263.3737	265.125	0	3.6534	-6.0031	55.6206	264.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 02:58:39	3.6908	-5.9333	55.6153	260.84	264.2687	1	3.6534	-5.9198	55.6206	264.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:01:14	3.6833	-5.9271	55.6108	263.8725	262.8275	0	3.7741	-5.9333	55.6153	267.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:03:49	3.6879	-5.9484	55.612	263.6738	263.3675	0	3.6908	-5.9333	55.6153	271.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:06:23	3.6824	-5.9326	55.6124	264.4262	263.2962	0	3.6908	-5.9333	55.6153	270.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:08:58	3.68	-5.9434	55.6116	262.6725	263.8288	0	3.7741	-5.9333	55.6153	273
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:11:32	3.6842	-5.9412	55.6114	262.5288	264.3	0	3.6908	-5.9333	55.6153	264.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:14:07	3.6757	-5.9459	55.6129	263.7825	263.84	0	3.6075	-5.9333	55.6153	274.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:16:41	3.6754	-5.9669	55.6129	264.5562	264.8325	0	3.6075	-5.9333	55.6153	271.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:19:16	3.6753	-5.9728	55.6112	262.96	263.49	0	3.6075	-5.9333	55.6153	267.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:21:50	3.6765	-5.9636	55.6119	261.785	264.36	0	3.7741	-6.0166	55.6153	266.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:24:25	3.6698	-5.9701	55.6108	261.005	263.0337	0	3.6075	-6.0166	55.6153	265.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:26:59	3.6752	-5.9604	55.6113	261.7975	263.7425	0	3.6908	-6.0166	55.6153	265.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:29:34	3.6717	-5.9629	55.6128	262.7262	262.2238	0	3.6908	-6.0166	55.6153	273.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:32:08	3.6723	-5.9529	55.6125	263.01	263.7025	0	3.6075	-5.9333	55.6153	270.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:34:43	3.6693	-5.9855	55.6133	260.3925	262.3738	0	3.6908	-6.0166	55.6153	267.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:37:18	3.6593	-5.9689	55.6136	260.6325	264.6662	1	3.6908	-6.0166	55.6153	268.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:39:52	3.6577	-5.9795	55.6121	264.2425	265.0325	0	3.6593	-6.0522	55.6136	271.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:42:27	3.6557	-5.9749	55.6119	264.0875	265.6463	0	3.7426	-5.9689	55.6136	264.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:45:02	3.6473	-5.9854	55.613	264.3888	264.06	0	3.576	-5.9689	55.6136	273.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:47:36	3.6553	-5.9779	55.6129	263.7563	265.0362	0	3.576	-5.9689	55.6136	264.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:50:11	3.6527	-5.9945	55.6123	262.3813	264.585	0	3.576	-6.0522	55.6136	270.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:52:45	3.662	-6.0004	55.6132	263.6025	262.4287	0	3.6593	-5.9689	55.6136	270.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:55:20	3.6611	-5.999	55.614	262.8913	263.975	0	3.7426	-5.9689	55.6136	266
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 03:57:54	3.6529	-6.0175	55.6129	263.2412	263.645	0	3.6593	-6.0522	55.6136	268.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:00:29	3.6694	-6.0156	55.6118	260.9525	262.5412	0	3.6593	-6.0522	55.6136	265.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:03:04	3.6505	-6.0217	55.6122	259.5775	262.7525	1	3.6593	-6.0522	55.6136	261.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:05:38	3.6417	-6.0453	55.6091	262.9588	261.7675	0	3.6505	-6.105	55.6122	265.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:08:13	3.6509	-6.0344	55.6107	263.7663	263.87	0	3.7338	-6.0217	55.6122	265.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:10:47	3.6634	-6.0205	55.6116	261.765	262.5863	0	3.7338	-5.9384	55.6122	264.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:13:22	3.6422	-6.0412	55.6129	262.475	262.6525	0	3.5672	-6.105	55.6122	264.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:15:56	3.6613	-6.0275	55.6118	261.875	263.71	0	3.6505	-6.0217	55.6122	265.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:18:31	3.6597	-6.0528	55.6123	262.505	262.9262	0	3.6505	-6.105	55.6122	269.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:21:05	3.6638	-6.0381	55.6128	261.3325	262.0462	0	3.5672	-6.105	55.6122	258.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:23:40	3.6367	-6.0602	55.6136	259.875	260.3825	0	3.6505	-6.105	55.6122	266.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:26:15	3.6531	-6.0708	55.6143	259.7912	262.8313	1	3.6505	-6.105	55.6122	264.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:28:49	3.6471	-6.0579	55.6151	261.7925	262.22	0	3.5698	-5.9875	55.6143	259.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:31:24	3.634	-6.0634	55.6141	261.9625	262.6612	0	3.6531	-5.9875	55.6143	263.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:33:58	3.6521	-6.0775	55.6145	261.6412	261.7013	0	3.5698	-6.0708	55.6143	258.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:36:33	3.6456	-6.0619	55.6143	260.8425	262.105	0	3.7364	-6.0708	55.6143	263.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:39:07	3.6526	-6.0656	55.6152	261.6375	261.4437	0	3.7364	-6.0708	55.6143	255.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:41:42	3.6339	-6.0784	55.6149	261.8938	262.625	0	3.5698	-6.0708	55.6143	270.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:44:17	3.6354	-6.0791	55.6132	262.7788	261.61	0	3.4864	-6.1541	55.6143	258.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:46:51	3.6168	-6.0814	55.6131	261.3162	262.1963	0	3.5698	-6.1541	55.6143	264.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:49:26	3.6263	-6.0844	55.6143	260.7725	260.155	0	3.4864	-6.1541	55.6143	261.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:52:00	3.6078	-6.0705	55.6144	260.0188	259.8637	0	3.5698	-6.1541	55.6143	261.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:54:35	3.6146	-6.073	55.6129	260.9213	261.4212	0	3.5698	-6.1541	55.6143	263.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:57:10	3.6232	-6.0921	55.6134	261.3125	261.315	0	3.6531	-6.0708	55.6143	264
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 04:59:45	3.6223	-6.0965	55.6133	259.5387	261.5412	0	3.6531	-6.0708	55.6143	268
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:02:20	3.6126	-6.0891	55.6128	261.5	260.605	0	3.5698	-6.0708	55.6143	268.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:04:54	3.6216	-6.0838	55.6134	261.0275	260.93	0	3.6531	-6.0708	55.6143	265.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:07:29	3.6221	-6.0785	55.6141	259.9	261.2412	0	3.6531	-6.1541	55.6143	262.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:10:03	3.6083	-6.0825	55.6141	260.9013	260.9675	0	3.6531	-6.0708	55.6143	260.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:12:38	3.6213	-6.0814	55.6144	259.8612	262.7813	1	3.6531	-6.1541	55.6143	268.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:15:13	3.6267	-6.1062	55.6155	261.8475	261.2125	0	3.6213	-6.1647	55.6144	270.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:17:47	3.6033	-6.1319	55.6153	257.8425	262.1237	1	3.6213	-6.1647	55.6144	267.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:20:22	3.6021	-6.1253	55.615	259.8637	261.19	0	3.6033	-6.2152	55.6153	265.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:22:56	3.6048	-6.1101	55.6163	259.9912	260.7038	0	3.6033	-6.0486	55.6153	259.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:25:31	3.6073	-6.1306	55.6163	259.3162	260.795	0	3.6866	-6.1319	55.6153	262
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:28:06	3.5968	-6.1182	55.6161	261.9788	263.3213	0	3.6033	-6.1319	55.6153	267.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:30:40	3.5931	-6.1163	55.617	262.3338	261.7125	0	3.6033	-6.1319	55.6153	266.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:33:15	3.5964	-6.121	55.6157	261.9987	261.7512	0	3.6033	-6.0486	55.6153	262.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:35:49	3.6069	-6.1208	55.6174	261.0838	262.6	0	3.6033	-6.1319	55.6153	264.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:38:24	3.5987	-6.122	55.6175	262.8687	262.8413	0	3.6033	-6.1319	55.6153	267.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:40:59	3.5891	-6.1274	55.6175	262.0962	261.47	0	3.6033	-6.1319	55.6153	269.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:43:33	3.5946	-6.1286	55.6193	262.8675	260.975	0	3.52	-6.2152	55.6153	267.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:46:08	3.5878	-6.12	55.6199	260.9588	262.5438	0	3.6033	-6.1319	55.6153	258.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:48:43	3.5841	-6.1307	55.6201	261.4375	261.9787	0	3.6033	-6.1319	55.6153	268.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:51:17	3.5815	-6.1194	55.6206	259.83	261.575	0	3.6033	-6.1319	55.6153	269.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:53:52	3.5731	-6.1185	55.6208	261.16	261.7513	0	3.52	-6.1319	55.6153	262.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:56:26	3.5712	-6.1126	55.621	259.2388	261.855	1	3.6033	-6.1319	55.6153	267.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 05:59:01	3.5529	-6.1125	55.6241	261.7788	262.4088	0	3.4879	-6.1126	55.621	262.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:01:36	3.5572	-6.116	55.6249	261.1738	262.4625	0	3.6545	-6.1126	55.621	267
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:04:10	3.5484	-6.1214	55.6232	263.1675	261.8338	0	3.5712	-6.1959	55.621	268.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:06:45	3.535	-6.1339	55.6225	260.6475	260.6763	0	3.5712	-6.1126	55.621	260.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:09:20	3.5406	-6.1357	55.623	260.4837	262.9663	0	3.4045	-6.1959	55.621	265.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:11:54	3.538	-6.1338	55.6241	260.53	261.8087	0	3.5712	-6.1126	55.621	269.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:14:29	3.5403	-6.1481	55.6235	258.735	260.5325	0	3.5712	-6.1959	55.621	267.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:17:03	3.5346	-6.1446	55.6252	260.4287	262.285	0	3.4045	-6.1126	55.621	260.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:19:38	3.5345	-6.1451	55.6241	259.8462	261.9762	0	3.4879	-6.1959	55.621	257.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:22:13	3.5366	-6.1496	55.6248	259.1762	263.0038	1	3.5712	-6.1959	55.621	274.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:24:47	3.5269	-6.1531	55.6283	261.8388	259.13	0	3.4533	-6.1496	55.6248	268.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:27:22	3.5372	-6.1515	55.628	259.97	260.0412	0	3.5366	-6.1496	55.6248	263.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:29:56	3.5487	-6.1499	55.6281	259.3938	260.2275	0	3.5366	-6.1496	55.6248	261.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:32:31	3.5348	-6.1641	55.6302	259.3487	258.8625	0	3.5366	-6.1496	55.6248	261.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:35:05	3.5291	-6.1642	55.6305	259.6962	259.3475	0	3.5366	-6.1496	55.6248	261.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:37:40	3.5304	-6.1651	55.6303	259.5788	259.01	0	3.5366	-6.2329	55.6248	262.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:40:15	3.5244	-6.1666	55.6326	260.4175	262.3963	0	3.5366	-6.2329	55.6248	260.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:42:49	3.5093	-6.1682	55.6318	258.705	259.7725	0	3.4533	-6.1496	55.6248	264.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:45:24	3.5111	-6.1661	55.631	259.7387	259.6875	0	3.4533	-6.1496	55.6248	262.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:47:59	3.4998	-6.1734	55.6291	258.21	259.3375	0	3.5366	-6.1496	55.6248	263.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:50:33	3.507	-6.1697	55.6301	259.1737	259.605	0	3.4533	-6.2329	55.6248	264.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:53:08	3.5081	-6.1741	55.6323	259.385	260.1687	0	3.5366	-6.2329	55.6248	263.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:55:43	3.4898	-6.1872	55.6338	258.5688	260.0138	0	3.4533	-6.1496	55.6248	258
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 06:58:17	3.4975	-6.1679	55.6354	257.1425	259.8575	1	3.5366	-6.1496	55.6248	262.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:00:52	3.4814	-6.2003	55.6448	258.7175	260.4025	0	3.4975	-6.2512	55.6354	259.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:03:27	3.4916	-6.1905	55.6459	257.6738	259.4787	0	3.4975	-6.2512	55.6354	257.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:06:02	3.4959	-6.1795	55.6481	258.4538	259.44	0	3.4975	-6.1679	55.6354	258.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:08:36	3.4895	-6.1909	55.6489	257.6625	258.1062	0	3.4142	-6.2512	55.6354	256.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:11:11	3.4758	-6.1691	55.6515	256.6475	258.165	0	3.4975	-6.1679	55.6354	260.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:13:45	3.4806	-6.1587	55.6513	257.7413	260.7175	1	3.4975	-6.1679	55.6354	259.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:16:20	3.4614	-6.1559	55.6628	258.4912	260.0613	0	3.3973	-6.1587	55.6513	261.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:18:54	3.4568	-6.1658	55.6657	259.3113	258.9425	0	3.3973	-6.0754	55.6513	255
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:21:29	3.4753	-6.1609	55.6631	259.81	260.2862	0	3.4806	-6.0754	55.6513	260.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:24:03	3.4644	-6.167	55.6654	258.78	259.3813	0	3.4806	-6.1587	55.6513	260
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:26:38	3.4715	-6.151	55.6632	258.7212	259.3863	0	3.4806	-6.1587	55.6513	260.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:29:13	3.4732	-6.1485	55.6661	257.715	260.0013	0	3.4806	-6.1587	55.6513	260.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:31:47	3.4764	-6.1512	55.6653	256.3462	257.9138	0	3.3973	-6.1587	55.6513	252.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:34:22	3.4863	-6.1631	55.6681	257.0575	257.9187	0	3.5639	-6.1587	55.6513	254.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:36:57	3.4812	-6.1549	55.6666	256.7037	257.9675	0	3.4806	-6.242	55.6513	258.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:39:31	3.4902	-6.1657	55.6687	258.2987	259.15	0	3.5639	-6.1587	55.6513	261.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:42:06	3.4848	-6.168	55.6687	258.8875	259.6413	0	3.4806	-6.1587	55.6513	259.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:44:41	3.4697	-6.1624	55.6702	258.6237	259.845	0	3.4806	-6.1587	55.6513	259.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:47:15	3.4854	-6.1482	55.6675	256.585	258.3013	0	3.4806	-6.1587	55.6513	269
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:49:50	3.4952	-6.1728	55.6698	257.6	257.8875	0	3.5639	-6.1587	55.6513	256.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:52:24	3.492	-6.168	55.6695	257.0925	261.0688	1	3.5639	-6.1587	55.6513	262.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:54:59	3.4851	-6.1625	55.6803	258.7013	258.7688	0	3.4087	-6.168	55.6695	258.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 07:57:34	3.498	-6.1537	55.6812	259.2987	259.0025	0	3.5753	-6.168	55.6695	263.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 08:00:09	3.5021	-6.1559	55.6797	258.795	259.5175	0	3.492	-6.168	55.6695	258.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 08:02:43	3.4879	-6.1574	55.6828	259.1375	259.625	0	3.5753	-6.168	55.6695	264.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 08:05:18	3.4935	-6.1675	55.6832	258.7813	258.9625	0	3.492	-6.168	55.6695	258
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 08:07:53	3.4969	-6.1692	55.6848	259.0387	258.7837	0	3.5753	-6.168	55.6695	259.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 08:10:27	3.495	-6.1709	55.6847	258.8062	258.2525	0	3.492	-6.168	55.6695	263.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 08:13:02	3.4939	-6.1523	55.6849	258.9362	259.045	0	3.492	-6.0847	55.6695	258.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 08:15:36	3.5046	-6.1609	55.6879	256.26	258.2813	0	3.5753	-6.168	55.6695	264.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 08:18:11	3.5025	-6.1545	55.6909	257.1675	258.4112	0	3.5753	-6.168	55.6695	259.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 08:20:47	3.5035	-6.1587	55.69	256.8486	257.9937	0	3.492	-6.2513	55.6695	260.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 08:23:22	3.5075	-6.1701	55.6918	254.4213	257.8463	1	3.492	-6.2513	55.6695	260.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 08:25:58	3.5129	-6.1605	55.7082	255.4363	259.965	1	3.5908	-6.1701	55.6918	260.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 08:28:34	3.5295	-6.1721	55.722	259.515	261.4912	0	3.5962	-6.1605	55.7082	261.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 08:37:08	3.5503	-6.1524	55.7514	248.8587	256.3288	1	3.6796	-6.1605	55.7082	262.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 08:42:05	3.5854	-6.139	55.7952	249.3257	257.49	1	3.6336	-6.1524	55.7514	254.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 08:47:03	3.6176	-6.1262	55.8287	253.9437	256.8825	1	3.7521	-6.139	55.7952	259.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 08:52:00	3.6407	-6.1204	55.867	252.1287	258.1562	1	3.7009	-6.1262	55.8287	259.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 08:56:57	3.6532	-6.1262	55.9012	255.3112	258.78	1	3.724	-6.2037	55.867	261.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 09:01:54	3.6763	-6.1045	55.9191	258.2925	261.0538	1	3.7365	-6.1262	55.9012	268.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 09:06:48	3.6688	-6.1142	55.9352	259.5588	260.44	0	3.6763	-6.1045	55.9191	261.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 09:11:41	3.6859	-6.1139	55.9361	259.0975	260.0362	0	3.7596	-6.1878	55.9191	262.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 09:17:47	3.6778	-6.0968	55.9348	260.6237	261.0738	0	3.7596	-6.1045	55.9191	265.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 09:22:41	3.6874	-6.1139	55.9355	257.9237	260.55	1	3.6763	-6.1878	55.9191	260.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 09:27:35	3.7102	-6.0739	55.9488	258.3525	261.2113	1	3.7707	-6.1139	55.9355	261.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 09:32:29	3.7212	-6.0341	55.9596	261.7013	262.2925	0	3.7935	-6.0739	55.9488	265.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 09:37:23	3.7346	-6.0474	55.9595	262.3913	261.985	0	3.7102	-6.0739	55.9488	270.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 09:42:17	3.7196	-6.0431	55.9576	259.7525	262.2837	0	3.7935	-6.0739	55.9488	263.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 09:50:47	3.736	-6.0308	55.9546	260.8788	262.55	0	3.7935	-6.0739	55.9488	270.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 09:55:44	3.7478	-6.0176	55.9519	257.5587	264.39	1	3.7935	-5.9906	55.9488	278.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 10:00:41	3.7657	-6.0096	55.9522	262.9262	264.1363	0	3.8311	-6.1009	55.9519	262.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 10:05:38	3.7565	-5.9769	55.9466	262.7362	264.5338	0	3.7478	-5.9343	55.9519	273.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 10:10:34	3.7615	-5.9774	55.941	262.585	266.1837	1	3.7478	-6.0176	55.9519	267.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 10:15:28	3.7692	-5.9736	55.9231	263.165	264.3763	0	3.8448	-5.9774	55.941	265.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 10:20:23	3.7557	-5.996	55.9112	260.3925	264.09	1	3.5948	-6.0607	55.941	259.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 10:25:16	3.7594	-6.0065	55.8803	260.4225	262.085	0	3.7557	-5.996	55.9112	263.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 10:30:10	3.7603	-5.9953	55.8671	257.6537	261.4812	1	3.7557	-5.996	55.9112	271.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 10:35:05	3.7388	-6.0155	55.8278	257.4913	261.7013	1	3.677	-5.9953	55.8671	262.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 10:39:59	3.7235	-6.0013	55.7932	255.7512	261.3462	1	3.6555	-6.0155	55.8278	261.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 10:44:53	3.7033	-5.9948	55.7646	257.1525	261.2512	1	3.6402	-6.0013	55.7932	255.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 10:49:47	3.6805	-6.0054	55.7344	260.17	262.54	0	3.7033	-6.0781	55.7646	259.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 10:54:42	3.6844	-6.024	55.7291	256.7663	261.3662	1	3.7033	-5.9948	55.7646	251.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 10:59:36	3.6816	-6.0329	55.7067	261.3012	263.1612	0	3.6844	-6.024	55.7291	259
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:04:30	3.6617	-6.0291	55.7064	258.5487	261.5138	1	3.6844	-6.024	55.7291	264.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:09:24	3.661	-5.9772	55.6953	262.0163	263.795	0	3.745	-6.0291	55.7064	266.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:16:44	3.6567	-5.9702	55.7024	258.235	263.0075	1	3.6617	-5.9458	55.7064	264.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:19:19	3.6741	-5.9559	55.6998	262.5862	264.545	0	3.6567	-5.8869	55.7024	264.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:21:54	3.683	-5.9433	55.7021	262.325	264.7675	0	3.6567	-5.9702	55.7024	263.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:24:29	3.7072	-5.9316	55.7031	258.1025	263.765	1	3.74	-5.8869	55.7024	271.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:27:04	3.7297	-5.9156	55.7039	262.9825	264.5562	0	3.7072	-5.9316	55.7031	266
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:29:39	3.7181	-5.937	55.7045	263.2325	264.4013	0	3.7072	-5.9316	55.7031	268.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:32:13	3.7309	-5.949	55.7049	262.7788	264.89	0	3.7072	-5.9316	55.7031	266.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:34:48	3.731	-5.9529	55.7041	262.5875	262.9862	0	3.7905	-5.9316	55.7031	262.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:37:23	3.7329	-5.9381	55.7061	261.5538	263.96	0	3.7905	-6.0149	55.7031	265.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:39:58	3.7427	-5.9344	55.7075	257.4538	261.9125	1	3.7905	-5.9316	55.7031	263.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:42:33	3.777	-5.936	55.7135	262.4212	261.9275	0	3.826	-5.9344	55.7075	262.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:45:08	3.7648	-5.9409	55.7169	259.85	260.9775	0	3.7427	-5.9344	55.7075	268.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:47:43	3.7703	-5.929	55.7152	258.5125	263.1237	1	3.9094	-6.0177	55.7075	265.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:50:17	3.7876	-5.903	55.7225	261.3112	261.985	0	3.8536	-5.8457	55.7152	265.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:52:52	3.7953	-5.9075	55.7244	259.2763	261.4137	0	3.7703	-5.929	55.7152	264.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:55:27	3.791	-5.9161	55.7209	261.5188	263.4588	0	3.7703	-5.8457	55.7152	264.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 11:58:02	3.7968	-5.8975	55.7199	260.1112	262.1888	0	3.7703	-5.8457	55.7152	266.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:00:37	3.8086	-5.9143	55.7177	259.3825	261.2763	0	3.7703	-5.929	55.7152	265.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:03:12	3.784	-5.9267	55.7173	262.1063	263.9437	0	3.8536	-5.929	55.7152	267.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:05:47	3.7917	-5.9467	55.7145	263.2262	263.1138	0	3.8536	-5.929	55.7152	274.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:08:22	3.7854	-5.9271	55.7126	263.45	263.6538	0	3.8536	-5.929	55.7152	263.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:10:57	3.79	-5.9274	55.7118	262.0738	262.4112	0	3.937	-5.929	55.7152	263.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:13:33	3.7924	-5.9481	55.7096	261.7188	263.1437	0	3.7703	-6.0123	55.7152	264.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:16:08	3.7767	-5.9452	55.7075	262.4288	261.7975	0	3.7703	-5.929	55.7152	269.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:18:43	3.7817	-5.9239	55.708	261.1125	262.7525	0	3.8536	-5.929	55.7152	265.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:21:18	3.783	-5.9273	55.7066	261.0288	263.0712	0	3.7703	-5.8457	55.7152	264.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:23:53	3.7858	-5.9233	55.7069	261.9163	260.3612	0	3.8536	-5.929	55.7152	267.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:26:27	3.7829	-5.9267	55.7072	262.105	263.14	0	3.8536	-5.929	55.7152	272.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:29:02	3.7706	-5.9465	55.7084	262.5163	263.0575	0	3.8536	-5.929	55.7152	260.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:31:37	3.781	-5.9321	55.7079	261.6625	261.9325	0	3.7703	-5.8457	55.7152	261.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:34:12	3.7734	-5.9229	55.7084	261.555	262.1	0	3.8536	-5.929	55.7152	263.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:36:48	3.8055	-5.9094	55.709	260.4237	263.2675	1	3.8536	-5.929	55.7152	275
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:39:23	3.8144	-5.9068	55.7037	263.38	263.8012	0	3.8888	-5.9927	55.709	262.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:41:58	3.8112	-5.9248	55.7057	264.9913	263.4513	0	3.8055	-5.9094	55.709	272.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:44:32	3.8261	-5.9172	55.7048	263.9925	263.7113	0	3.8055	-5.9094	55.709	266
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:47:07	3.8322	-5.9157	55.7054	261.38	263.66	0	3.8888	-5.9094	55.709	265.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:49:42	3.8296	-5.8968	55.7061	261.6212	261.4463	0	3.8888	-5.9094	55.709	260.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:52:16	3.8257	-5.8978	55.7072	262.7887	262.4237	0	3.8888	-5.9094	55.709	272.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:54:51	3.8266	-5.9046	55.7059	261.515	263.0587	0	3.8055	-5.8261	55.709	268.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 12:57:26	3.8313	-5.9115	55.7065	261.9425	261.7475	0	3.8888	-5.9927	55.709	259.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:00:01	3.8355	-5.9118	55.7065	261.0838	263.575	0	3.8888	-5.9094	55.709	262.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:02:36	3.8364	-5.8797	55.7079	257.9663	261.6288	1	3.9722	-5.9094	55.709	263.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:05:10	3.8319	-5.8899	55.7061	263.8313	262.7637	0	3.8364	-5.963	55.7079	261.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:07:45	3.8476	-5.8828	55.7073	262.7412	264.1575	0	3.8364	-5.8797	55.7079	264.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:10:20	3.8491	-5.8864	55.708	261.9712	262.5088	0	3.8364	-5.8797	55.7079	273.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:12:55	3.8414	-5.8795	55.7083	262.0775	262.11	0	3.7531	-5.8797	55.7079	262.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:15:30	3.8562	-5.8866	55.7097	261.92	265.1037	1	3.9197	-5.963	55.7079	268.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:18:05	3.8651	-5.8806	55.7111	263.305	264.3163	0	3.8562	-5.8033	55.7097	267.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:20:39	3.8755	-5.9117	55.7098	262.3925	261.7075	0	3.8562	-5.8866	55.7097	265.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:23:14	3.8757	-5.9096	55.71	263.5425	261.6125	0	3.9395	-5.8866	55.7097	263.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:25:49	3.8768	-5.8946	55.7094	261.4875	263.48	0	3.9395	-5.8866	55.7097	270.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:28:24	3.8713	-5.8747	55.7102	263.3963	263.6625	0	3.8562	-5.8866	55.7097	266.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:30:58	3.8761	-5.8916	55.7102	263.6712	263.2738	0	3.9395	-5.8866	55.7097	270.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:33:33	3.8879	-5.8722	55.7095	261.9225	263.6575	0	3.8562	-5.8033	55.7097	269.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:36:08	3.8779	-5.8878	55.7095	262.9275	263.3837	0	3.9395	-5.9699	55.7097	269
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:38:43	3.8866	-5.8705	55.7093	262.5025	264.3325	0	3.8562	-5.8033	55.7097	265.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:41:17	3.8981	-5.8819	55.7093	260.6388	263.3713	1	3.9395	-5.8866	55.7097	268.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:43:52	3.9001	-5.8512	55.7103	261.5663	264.6137	1	3.8981	-5.9652	55.7093	262.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:46:28	3.9118	-5.8535	55.7116	266.4475	264.0525	0	3.9834	-5.8512	55.7103	272.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:49:03	3.9077	-5.8649	55.7123	264.4212	265.115	0	3.9001	-5.9345	55.7103	264.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:51:38	3.917	-5.8734	55.7122	262.9963	265.38	0	3.9834	-5.9345	55.7103	264.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:54:12	3.9145	-5.8407	55.7134	264.295	264.5975	0	3.9001	-5.8512	55.7103	269.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:56:47	3.9297	-5.8479	55.7138	264.0213	264.3863	0	3.9001	-5.7679	55.7103	265.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 13:59:22	3.9375	-5.8446	55.7148	260.98	264.1788	1	3.9834	-5.9345	55.7103	268.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 14:01:57	3.9608	-5.8354	55.7177	263.8012	262.5412	0	4.0208	-5.8446	55.7148	270.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 14:04:32	3.9563	-5.835	55.7195	263.4063	266.0337	0	4.0208	-5.8446	55.7148	271.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 14:07:06	3.9493	-5.831	55.7189	263.54	263.4075	0	3.9375	-5.7613	55.7148	266.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 14:09:41	3.9679	-5.8356	55.7212	263.3925	263.625	0	4.1042	-5.8446	55.7148	263.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 14:12:16	3.9858	-5.8304	55.7222	261.5875	264.6825	1	4.1042	-5.8446	55.7148	264
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 14:14:51	3.9992	-5.8164	55.7284	265.4925	265.97	0	4.0691	-5.8304	55.7222	268.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 14:17:25	4.0044	-5.8254	55.7305	263.9663	265.4775	0	4.0691	-5.8304	55.7222	276.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 14:20:00	4.016	-5.7911	55.728	261.375	263.3725	0	3.9858	-5.7471	55.7222	273.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 14:22:35	4.0401	-5.8139	55.7298	261.8863	265.3575	1	4.0691	-5.8304	55.7222	265.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 14:25:10	4.0655	-5.796	55.7358	264.095	265.8425	0	4.0401	-5.7306	55.7298	275.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 14:27:44	4.0704	-5.788	55.736	262.585	267.2038	1	4.0401	-5.8139	55.7298	268.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 14:30:19	4.1086	-5.7918	55.7409	267.545	267.0538	0	4.0704	-5.788	55.736	269.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 14:32:54	4.1134	-5.7891	55.7409	263.6263	266.53	1	4.1537	-5.788	55.736	266.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 14:35:29	4.1292	-5.7714	55.7431	266.4875	267.0525	0	4.1967	-5.7058	55.7409	267.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 14:38:04	4.1405	-5.7861	55.7431	265.8763	268.5487	1	4.1967	-5.7891	55.7409	273
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 14:40:39	4.1573	-5.7906	55.7453	266.8738	267.4825	0	4.1405	-5.7861	55.7431	272
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 14:43:14	4.1516	-5.7673	55.7438	266.5725	266.8025	0	4.2238	-5.7861	55.7431	267.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 14:45:49	4.1846	-5.7804	55.7428	264.555	265.7913	0	4.2238	-5.7861	55.7431	266.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 15:10:00	4.1856	-5.7608	55.715	259.565	264.6025	1	4.2238	-5.7861	55.7431	263.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 15:20:44	4.2346	-5.7708	55.685	259.5888	265.3863	1	4.3523	-5.7608	55.715	265
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 15:31:29	4.2621	-5.7549	55.664	261.785	266.6587	1	4.2346	-5.6875	55.685	268.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 15:42:13	4.3121	-5.761	55.6509	266.5125	268.98	0	4.3454	-5.8382	55.664	270.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 15:52:59	4.3085	-5.7435	55.6489	262.3225	266.7275	1	4.4288	-5.7549	55.664	266.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 16:03:44	4.3142	-5.7474	55.6379	265.78	267.4912	0	4.3918	-5.7435	55.6489	269.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 16:14:28	4.3164	-5.7296	55.634	264.605	266.0613	0	4.3918	-5.7435	55.6489	267.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 16:25:12	4.2883	-5.705	55.6312	261.1187	265.7563	1	4.2252	-5.6602	55.6489	266.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 16:35:57	4.2737	-5.6875	55.6127	263.6263	264.39	0	4.205	-5.705	55.6312	267.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 16:46:41	4.2706	-5.6599	55.6003	259.3175	264.085	1	4.2883	-5.705	55.6312	265.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 16:57:26	4.2534	-5.644	55.5765	261.0375	264.1075	1	4.2706	-5.6599	55.6003	261.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 17:08:10	4.2401	-5.625	55.5518	261.725	265.7138	1	4.1701	-5.5607	55.5765	265.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 17:18:55	4.2555	-5.62	55.5336	263.4563	265.5612	0	4.3234	-5.625	55.5518	274.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 17:29:39	4.24	-5.6305	55.534	264.5075	266.805	0	4.3234	-5.625	55.5518	263.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 17:46:40	4.2548	-5.6165	55.5288	264.34	265.9712	0	4.3234	-5.625	55.5518	268.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 17:57:25	4.2636	-5.6094	55.5292	263.5225	267.6075	1	4.2401	-5.625	55.5518	270
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 18:08:11	4.286	-5.6295	55.5175	267.0371	266.9688	0	4.3469	-5.6927	55.5292	276.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 18:18:59	4.2779	-5.6397	55.5184	263.435	266.9137	1	4.2636	-5.6927	55.5292	276.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 18:29:47	4.3004	-5.6424	55.5118	267.05	267.7837	0	4.3612	-5.6397	55.5184	281
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 18:40:34	4.2997	-5.6658	55.51	266.4429	267.8712	0	4.2779	-5.723	55.5184	271
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 18:51:21	4.2908	-5.6644	55.5103	268.0314	267.8012	0	4.2779	-5.6397	55.5184	275.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 19:02:08	4.2899	-5.6711	55.5097	265.8575	267.225	0	4.3612	-5.723	55.5184	270.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 19:12:52	4.2821	-5.6641	55.5106	265.6187	266.59	0	4.1946	-5.723	55.5184	267.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 19:23:38	4.2937	-5.6682	55.5102	266.0125	265.1675	0	4.2779	-5.723	55.5184	268.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 19:29:02	-0.75157	-13.0139	55.4743	50.48	52.6963	1	-0.72	-12.9567	55.5184	54.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 22:52:22	-0.84208	-13.0816	55.4574	48.4138	51.1288	1	-0.8349	-13.0972	55.4743	53.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 22:54:51	-0.81203	-13.0722	55.4382	50.34	51.4971	1	-0.75875	-13.0816	55.4574	49.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 22:58:14	-0.82425	-13.0641	55.4301	51.7688	51.3875	0	-0.89536	-13.0722	55.4382	50.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:00:10	-0.78764	-13.0649	55.4308	51.155	50.9563	0	-0.7287	-13.0722	55.4382	52.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:02:06	-0.82239	-13.0499	55.429	51.6138	51.7775	0	-0.81203	-12.9889	55.4382	52.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:06:30	-0.84218	-13.0962	55.4311	26.818	26.0857	0	-0.89536	-13.1555	55.4382	29.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:08:08	-0.81885	-13.0765	55.4251	26.6967	26.6429	0	-0.81203	-13.1555	55.4382	26.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:09:47	-0.82369	-13.0981	55.423	26.0957	26.39	1	-0.81203	-13.0722	55.4382	26
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:11:25	-0.84398	-13.0943	55.4175	26.5543	26.23	0	-0.90702	-13.1814	55.423	27.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:13:03	-0.82186	-13.072	55.4184	25.99	26.3586	1	-0.90702	-13.0981	55.423	25.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:14:41	-0.81038	-13.0804	55.411	26.7971	26.8125	0	-0.73853	-13.072	55.4184	26.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:16:20	-0.81128	-13.1167	55.4128	26.916	26.7257	0	-0.82186	-13.1553	55.4184	28.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:17:58	-0.82556	-13.1204	55.4092	26.6533	26.8386	0	-0.90519	-13.1553	55.4184	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:19:36	-0.82304	-13.1127	55.4146	26.7362	26.67	0	-0.82186	-13.1553	55.4184	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:21:14	-0.77995	-13.0749	55.4145	26.5367	26.5325	0	-0.73853	-13.072	55.4184	26.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:22:52	-0.81258	-13.1053	55.4151	26.4314	26.6557	0	-0.82186	-13.1553	55.4184	27.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:24:31	-0.79466	-13.1166	55.4154	26.796	26.4157	0	-0.73853	-13.072	55.4184	28.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:26:09	-0.80448	-13.1165	55.4159	26.56	26.7929	0	-0.82186	-13.072	55.4184	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:27:48	-0.82234	-13.091	55.4163	26.524	26.6386	0	-0.82186	-13.072	55.4184	26.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:29:25	-0.82941	-13.1391	55.4139	26.678	25.9871	0	-0.82186	-13.1553	55.4184	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:31:04	-0.80537	-13.103	55.4152	26.5862	26.8538	1	-0.73853	-13.1553	55.4184	26.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:45:05	-0.84982	-13.0851	55.4126	25.8225	26.785	1	-0.8887	-13.1863	55.4152	26.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+24-Jan-2022 23:57:15	-0.84354	-13.1121	55.4109	26.6314	26.785	0	-0.84982	-13.0851	55.4126	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 00:09:25	-0.81167	-13.1126	55.4105	26.4914	26.8438	1	-0.84982	-13.0851	55.4126	28.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 00:21:35	-0.82768	-13.1009	55.408	26.8614	27.0763	0	-0.895	-13.1126	55.4105	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 00:33:45	-0.82117	-13.1054	55.4075	26.75	27.2113	1	-0.81167	-13.1126	55.4105	29.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 00:46:22	-0.84136	-13.1275	55.4058	26.66	26.8225	0	-0.82117	-13.1887	55.4075	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 00:56:13	-0.82883	-13.1161	55.4083	26.7843	26.9588	0	-0.82117	-13.1054	55.4075	30.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 01:06:01	-0.83774	-13.1268	55.4097	26.5412	27.2338	1	-0.82117	-13.1887	55.4075	28.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 01:15:48	-0.86535	-13.1585	55.4103	27.4412	27.1088	0	-0.92107	-13.2101	55.4097	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 01:25:35	-0.87644	-13.0757	55.4112	27.0663	27.2425	0	-0.92107	-12.9601	55.4097	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 01:35:23	-0.90705	-13.1079	55.4107	26.4212	27.3975	1	-0.92107	-13.0435	55.4097	30.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 01:45:10	-0.92453	-13.1302	55.4106	27.1	27.3837	1	-0.90705	-13.1079	55.4107	30.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 01:54:58	-0.91812	-13.1571	55.407	27.2737	27.03	0	-0.92453	-13.2135	55.4106	28.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 02:04:45	-0.97991	-13.1334	55.4092	27.2413	27.4113	0	-1.0079	-13.1302	55.4106	32.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 02:14:33	-0.9727	-13.1217	55.4026	26.7313	27.305	1	-0.92453	-13.0469	55.4106	28.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 02:24:20	-1.0086	-13.1044	55.399	27.085	27.3775	1	-0.9727	-13.0384	55.4026	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 02:34:08	-0.98014	-13.1385	55.3981	27.0787	27.1087	0	-0.92527	-13.1044	55.399	29.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 02:43:55	-1.0265	-13.148	55.3965	26.62	27.0362	1	-1.0086	-13.1877	55.399	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 02:53:43	-1.0431	-13.1077	55.3924	26.3975	26.6563	0	-1.0265	-13.148	55.3965	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 03:03:30	-1.0473	-13.1443	55.393	26.3175	26.6363	1	-1.0265	-13.0647	55.3965	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 03:13:17	-1.053	-13.1335	55.392	26.6038	26.2762	0	-1.0473	-13.1443	55.393	27.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 03:23:05	-1.0382	-13.158	55.3896	26.38	26.4787	0	-0.96397	-13.1443	55.393	25.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 03:32:52	-1.0545	-13.1897	55.3906	26.4775	26.5838	0	-1.1306	-13.2276	55.393	28.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 03:42:40	-1.064	-13.1485	55.3916	26.9725	26.8362	0	-1.0473	-13.061	55.393	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 03:52:28	-1.0267	-13.2028	55.3919	26.725	26.3525	0	-1.0473	-13.2276	55.393	28.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 04:02:15	-1.0789	-13.2199	55.3919	26.1475	26.7975	1	-1.1306	-13.1443	55.393	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 04:12:03	-1.059	-13.2203	55.393	26.81	26.29	0	-0.99557	-13.2199	55.3919	28.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 04:21:51	-1.042	-13.2128	55.3929	26.4125	26.3588	0	-0.99557	-13.2199	55.3919	29.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 04:31:38	-1.0687	-13.2269	55.3971	26.4488	26.6913	0	-1.0789	-13.2199	55.3919	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 04:41:26	-1.0569	-13.2639	55.3975	26.1125	25.9025	0	-1.0789	-13.3032	55.3919	25.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 04:51:14	-1.043	-13.2462	55.4005	25.5525	26.99	1	-1.0789	-13.2199	55.3919	26.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 05:01:01	-1.0388	-13.2512	55.408	26.525	26.315	0	-1.043	-13.3295	55.4005	26.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 05:10:49	-1.0504	-13.2411	55.4061	26.245	26.3075	0	-1.1263	-13.1629	55.4005	28.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 05:20:36	-1.0408	-13.2669	55.4078	26.5137	26.4275	0	-1.043	-13.2462	55.4005	30
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 05:30:24	-1.0647	-13.2482	55.4064	26.0813	26.2488	0	-1.043	-13.1629	55.4005	26.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 05:40:11	-1.0743	-13.2631	55.405	26.08	26.3387	0	-1.043	-13.1629	55.4005	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 05:49:58	-1.0757	-13.2508	55.4029	25.6525	26.7238	1	-1.1263	-13.2462	55.4005	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 05:59:45	-1.0729	-13.2636	55.4089	26.4187	26.095	0	-1.0757	-13.3341	55.4029	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 06:09:32	-1.0723	-13.2594	55.406	26.0913	26.2563	0	-1.0757	-13.3341	55.4029	26.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 06:19:20	-1.0551	-13.2918	55.4062	26.175	26.1612	0	-1.0757	-13.3341	55.4029	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 06:29:07	-1.0973	-13.3145	55.4049	26.2188	26.0962	0	-1.0757	-13.2508	55.4029	28.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 06:38:54	-1.0878	-13.3068	55.4109	26.7037	26.2112	0	-0.99237	-13.2508	55.4029	25.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 06:48:41	-1.1062	-13.2948	55.4182	26.1487	26.225	0	-1.159	-13.3341	55.4029	26.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 06:58:29	-1.1137	-13.3024	55.4171	25.6837	26.34	1	-1.0757	-13.3341	55.4029	26.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 07:08:17	-1.0843	-13.3123	55.4267	26.3012	26.0525	0	-1.1137	-13.3857	55.4171	26.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 07:18:04	-1.104	-13.2871	55.4283	25.7225	25.895	0	-1.1137	-13.3024	55.4171	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 07:27:52	-1.102	-13.2999	55.4286	26.045	26.0137	0	-1.1137	-13.3024	55.4171	27.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 07:37:40	-1.0796	-13.2813	55.4547	25.1	25.8588	1	-1.1137	-13.2191	55.4171	25.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 07:47:27	-1.0605	-13.2556	55.4677	25.8225	25.945	0	-1.0796	-13.3646	55.4547	25.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 07:57:15	-1.0708	-13.3065	55.4649	25.8925	25.8	0	-1.0796	-13.2813	55.4547	25.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 08:07:02	-1.089	-13.2712	55.4613	26.145	25.9675	0	-1.0796	-13.198	55.4547	27.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 08:16:50	-1.0462	-13.2978	55.4605	26.1163	26.0763	0	-1.0796	-13.2813	55.4547	28.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 08:26:37	-1.0487	-13.3111	55.4666	25.845	25.6675	0	-1.0796	-13.3646	55.4547	26.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 08:36:25	-0.98341	-13.2557	55.4922	23.6088	25.8287	1	-0.91293	-13.2813	55.4547	25.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 08:46:13	-0.95033	-13.2569	55.5276	25.59	26.1575	1	-0.90008	-13.1724	55.4922	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 08:56:00	-0.91466	-13.2384	55.5606	25.8875	25.8025	0	-0.95033	-13.1736	55.5276	24.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 09:05:48	-0.8694	-13.1794	55.5668	22.4225	26.1137	1	-0.867	-13.0902	55.5276	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 09:15:36	-0.80324	-13.2043	55.6121	25.33	26.2088	1	-0.78607	-13.2627	55.5668	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 09:25:24	-0.77655	-13.1631	55.6275	25.6	26.4737	1	-0.80324	-13.121	55.6121	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 09:35:15	-0.73716	-13.1575	55.6334	26.3186	27.105	1	-0.69322	-13.1631	55.6275	26.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 09:45:05	-0.70533	-13.0939	55.6325	26.9886	27.4113	1	-0.73716	-13.1575	55.6334	26.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 09:54:53	-0.69068	-13.1123	55.6268	27.5512	27.4125	0	-0.70533	-13.1772	55.6325	29.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 10:04:41	-0.70939	-13.0115	55.6205	26.9888	27.195	0	-0.70533	-13.0106	55.6325	30.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 10:14:30	-0.73975	-13.0765	55.5747	25.055	26.2112	1	-0.70533	-13.0939	55.6325	28.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 10:24:20	-0.71703	-13.0401	55.5117	25.0829	26.3975	1	-0.73975	-13.0765	55.5747	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 10:34:11	-0.69467	-13.0491	55.4726	26.2175	26.7875	1	-0.71703	-12.9568	55.5117	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 10:44:01	-0.67542	-13.0426	55.453	26.6271	26.8963	1	-0.61134	-13.0491	55.4726	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 10:53:52	-0.68309	-13.0488	55.4396	26.7088	26.9438	0	-0.67542	-13.0426	55.453	28.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 11:03:43	-0.68795	-13.0348	55.4347	27.0643	27.5138	1	-0.67542	-13.1259	55.453	27.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 11:13:35	-0.68347	-13.0265	55.4239	27.1586	27.4038	0	-0.68795	-13.0348	55.4347	28.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 11:23:25	-0.67584	-12.9928	55.4249	26.645	26.85	0	-0.68795	-13.1181	55.4347	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 11:33:12	-0.69738	-13.0148	55.3989	26.7925	26.74	0	-0.77128	-13.1181	55.4347	25.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 11:43:03	-0.68033	-12.9817	55.4131	26.1	26.6687	1	-0.68795	-12.9515	55.4347	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 11:52:51	-0.70724	-12.9863	55.3895	27.0712	26.8637	0	-0.76366	-12.9817	55.4131	27
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 12:02:41	-0.71412	-12.9799	55.3891	26.9557	26.7863	0	-0.68033	-12.9817	55.4131	28.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 12:12:32	-0.68837	-12.9842	55.3871	26.84	27.335	1	-0.68033	-13.065	55.4131	29.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 12:22:22	-0.69285	-12.9643	55.3701	26.845	26.85	0	-0.68837	-12.9842	55.3871	30.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 12:32:09	-0.72031	-12.9477	55.3596	25.6571	26.785	1	-0.7717	-12.9842	55.3871	28.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 12:41:56	-0.71387	-12.9419	55.3395	26.99	26.4812	0	-0.72031	-12.9477	55.3596	29.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 12:51:44	-0.75754	-12.9376	55.3252	26.1325	26.2862	0	-0.80364	-12.8644	55.3596	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 13:01:31	-0.74559	-12.9411	55.3294	25.6612	26.3287	1	-0.80364	-12.8644	55.3596	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 13:11:19	-0.7255	-12.9621	55.3156	26.225	26.4325	0	-0.66226	-12.9411	55.3294	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 13:21:06	-0.76819	-12.9906	55.2977	25.5375	25.9487	1	-0.74559	-13.0244	55.3294	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 13:30:54	-0.80772	-13.0086	55.2765	25.8588	26.105	0	-0.85152	-12.9906	55.2977	26.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 13:40:42	-0.83205	-12.9821	55.2488	25.1312	26.3588	1	-0.76819	-13.0739	55.2977	25.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 13:50:29	-0.86254	-12.993	55.2366	26.1662	26.2863	0	-0.83205	-13.0654	55.2488	28.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 14:00:17	-0.864	-13.0325	55.2403	26.1225	26.205	0	-0.83205	-12.9821	55.2488	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 14:10:04	-0.86895	-13.0408	55.2389	25.775	26.625	1	-0.91538	-12.9821	55.2488	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 14:19:52	-0.80216	-13.0188	55.2417	25.8313	26.9825	1	-0.70228	-13.0408	55.2389	27.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 14:29:39	-0.82631	-13.0691	55.2506	26.0862	26.5812	1	-0.80216	-13.1021	55.2417	28.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 14:39:27	-0.85689	-13.0662	55.2561	26.1662	26.7187	1	-0.82631	-13.0691	55.2506	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 14:49:14	-0.89062	-13.0664	55.2589	26.1113	26.5313	1	-0.85689	-13.0662	55.2561	29.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 14:59:01	-0.86235	-13.0246	55.2621	25.8063	25.9625	0	-0.89062	-12.9831	55.2589	28.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 15:08:49	-0.817	-13.0281	55.2762	25.645	26.575	1	-0.72395	-12.9831	55.2589	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 15:18:36	-0.82715	-13.0414	55.2969	25.9675	26.18	0	-0.817	-13.0281	55.2762	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 15:28:24	-0.78575	-13.0458	55.307	25.8825	26.2425	1	-0.73367	-13.0281	55.2762	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 15:38:12	-0.78187	-13.0288	55.3256	26.2387	26.32	0	-0.86908	-13.0458	55.307	28.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 15:48:00	-0.77512	-13.0334	55.3168	26.7187	26.0937	0	-0.78575	-13.0458	55.307	29.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 15:57:49	-0.75057	-13.0291	55.3234	26.1983	26.2775	0	-0.70242	-13.0458	55.307	26.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 16:07:39	-0.71127	-13.0599	55.3251	24.76	26.1375	1	-0.70242	-13.1291	55.307	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 16:17:30	-0.66606	-13.0347	55.3388	26.1257	26.6663	1	-0.71127	-12.9766	55.3251	26.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 16:27:21	-0.65918	-13.0593	55.3483	26.5657	26.9363	1	-0.58273	-13.0347	55.3388	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 16:37:12	-0.63198	-13.0852	55.3538	26.5057	26.4238	0	-0.65918	-13.1426	55.3483	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 16:47:03	-0.64086	-13.0437	55.3551	26.2386	27.1425	1	-0.65918	-12.976	55.3483	28.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 16:56:54	-0.62658	-13.0327	55.3584	26.7457	26.6788	0	-0.55753	-13.0437	55.3551	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 17:25:01	-0.58803	-12.9857	55.358	26.3083	26.9838	1	-0.55753	-12.9604	55.3551	28.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 17:57:05	-0.56439	-13.0225	55.3578	27.2071	27.1429	0	-0.5047	-12.9857	55.358	28.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 18:17:18	-0.59659	-13.0111	55.351	26.7457	26.4388	0	-0.58803	-12.9857	55.358	29.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 18:37:30	-0.62269	-12.9928	55.3491	26.3387	26.7312	1	-0.58803	-12.9857	55.358	29
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 18:57:40	-0.63272	-13.0321	55.3331	27.1325	27.4763	1	-0.70602	-12.9928	55.3491	28.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 19:17:49	-0.74296	-13.0235	55.3228	24.0587	27.365	1	-0.79939	-13.0321	55.3331	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 19:37:58	-0.80002	-13.0322	55.3026	26.4488	27.025	1	-0.82629	-13.0235	55.3228	28.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 19:58:08	-0.83699	-12.9702	55.2926	25.5663	27.005	1	-0.80002	-12.9489	55.3026	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 20:18:17	-0.82295	-12.9374	55.2926	27.0612	27.04	0	-0.83699	-12.9702	55.2926	30.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 20:38:26	-0.83284	-12.9469	55.2931	26.39	26.8438	1	-0.92032	-12.9702	55.2926	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 20:58:38	-0.78262	-12.9968	55.2918	26.5186	26.5471	0	-0.74951	-13.0302	55.2931	29.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 21:18:51	-0.72652	-13.0174	55.2921	22.92	26.775	1	-0.74951	-13.0302	55.2931	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 21:39:04	-0.73904	-13.0074	55.2937	26.8367	26.6013	0	-0.80985	-12.9341	55.2921	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 21:59:17	-0.68525	-13.0117	55.2966	26.2071	27.0214	1	-0.72652	-12.9341	55.2921	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 22:19:31	-0.68687	-13.0287	55.2971	27.4133	27.7786	1	-0.68525	-13.0117	55.2966	29.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 22:39:45	-0.6898	-13.0344	55.2984	27.1333	27.09	0	-0.7702	-13.0287	55.2971	27.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 22:59:57	-0.67673	-13.0129	55.2969	27.0187	27.3375	1	-0.68687	-13.0287	55.2971	28.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 23:20:06	-0.71918	-13.0312	55.2976	26.7737	27.1088	1	-0.67673	-13.0129	55.2969	28.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+25-Jan-2022 23:40:15	-0.75847	-13.0138	55.298	26.67	26.5825	0	-0.80251	-13.1145	55.2976	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 00:00:24	-0.74428	-13.0568	55.2958	26.2686	26.655	1	-0.80251	-13.1145	55.2976	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 00:14:08	-0.75196	-13.0129	55.2936	26.2886	26.86	1	-0.74428	-12.9735	55.2958	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 00:17:07	-0.72773	-13.0129	55.2909	26.8529	26.8788	0	-0.66863	-13.0129	55.2936	29.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 00:20:05	-0.7584	-13.0309	55.2914	26.9857	27.0437	0	-0.75196	-13.0962	55.2936	28.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 00:23:04	-0.73649	-13.0681	55.2912	26.5843	27.1814	1	-0.75196	-13.0129	55.2936	28.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 00:26:02	-0.72224	-13.0884	55.2893	26.8267	26.8012	0	-0.73649	-13.0681	55.2912	28.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 00:29:01	-0.73449	-13.0652	55.2885	27.0457	27.1714	0	-0.73649	-13.0681	55.2912	29.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 00:32:00	-0.73434	-13.0664	55.2893	27.1529	26.8362	0	-0.73649	-13.1514	55.2912	28.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 00:34:58	-0.7434	-13.0573	55.2874	26.97	27.0643	0	-0.73649	-13.0681	55.2912	27.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 00:37:57	-0.76564	-13.0799	55.2847	26.9014	27.18	1	-0.81982	-13.1514	55.2912	27.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 00:40:56	-0.71907	-13.0573	55.2792	26.6529	26.7512	0	-0.68231	-13.0799	55.2847	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 00:43:54	-0.76232	-13.085	55.2817	27.2729	27.3263	0	-0.76564	-13.0799	55.2847	28.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 00:46:53	-0.77474	-13.0516	55.2795	26.9857	27.1586	0	-0.76564	-13.0799	55.2847	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 00:49:52	-0.76217	-13.0748	55.2797	26.9814	27.1986	0	-0.76564	-13.0799	55.2847	30.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 00:52:50	-0.78607	-13.0957	55.2766	27.3757	27.235	0	-0.76564	-13.0799	55.2847	28.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 00:55:49	-0.7808	-13.0872	55.2804	27.1743	27.1586	0	-0.84897	-13.0799	55.2847	28.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 00:58:48	-0.7648	-13.0804	55.2809	27.2543	27.0471	0	-0.76564	-12.9966	55.2847	28.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:01:46	-0.78144	-13.0881	55.2809	27.6529	27.4786	0	-0.76564	-12.9966	55.2847	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:04:46	-0.77415	-13.0907	55.283	27.7486	27.5538	0	-0.76564	-13.1632	55.2847	27.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:07:44	-0.76544	-13.0969	55.2819	27.3957	27.81	1	-0.84897	-13.1632	55.2847	27.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:10:43	-0.77751	-13.0615	55.28	26.7943	27.0886	1	-0.84877	-13.0136	55.2819	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:13:42	-0.76948	-13.0717	55.2779	28.1486	27.6412	0	-0.77751	-13.0615	55.28	31.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:16:40	-0.78188	-13.0548	55.2785	27.5414	27.7314	0	-0.77751	-13.0615	55.28	28.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:19:39	-0.76125	-13.0701	55.2807	27.8257	27.8737	0	-0.77751	-13.1448	55.28	27.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:22:37	-0.75296	-13.0835	55.2829	27.5414	27.5614	0	-0.69418	-13.0615	55.28	29.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:25:36	-0.76191	-13.0909	55.2812	27.15	27.0086	0	-0.69418	-13.0615	55.28	28.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:28:34	-0.7654	-13.0855	55.282	27.9529	27.5771	0	-0.77751	-13.0615	55.28	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:31:33	-0.79599	-13.0767	55.2808	27.2243	27.5129	1	-0.77751	-13.0615	55.28	30.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:34:31	-0.7775	-13.0867	55.2839	27.5743	27.655	0	-0.79599	-12.9934	55.2808	28.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:37:29	-0.78543	-13.0964	55.2826	27.7829	27.575	0	-0.79599	-13.0767	55.2808	29.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:40:26	-0.81502	-13.0825	55.2793	27.4129	27.1637	0	-0.79599	-13.0767	55.2808	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:43:24	-0.81589	-13.0934	55.2791	27.0371	26.9438	0	-0.79599	-13.16	55.2808	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:46:21	-0.83996	-13.0744	55.2807	26.6714	27.1187	1	-0.87932	-13.0767	55.2808	27.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:49:19	-0.83534	-13.0796	55.2784	27.0329	27.1725	0	-0.83996	-13.0744	55.2807	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:52:17	-0.82874	-13.0797	55.2771	27.0429	26.7686	0	-0.83996	-13.1577	55.2807	27
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:55:15	-0.86631	-13.0832	55.2739	26.2557	26.705	1	-0.83996	-13.1577	55.2807	26.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 01:58:13	-0.83145	-13.0921	55.2708	26.4875	26.3788	0	-0.78298	-13.0832	55.2739	28.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:01:13	-0.84547	-13.112	55.2673	26.714	26.7914	0	-0.78298	-12.9999	55.2739	26.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:04:15	-0.82806	-13.1194	55.2693	26.668	26.845	0	-0.78298	-13.0832	55.2739	28.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:07:16	-0.82583	-13.1016	55.2716	26.7	26.685	0	-0.86631	-13.0832	55.2739	26.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:10:18	-0.81825	-13.0741	55.2736	26.396	26.7383	1	-0.78298	-13.0832	55.2739	27.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:13:20	-0.85223	-13.094	55.272	26.718	26.98	0	-0.81825	-13.0741	55.2736	27.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:16:22	-0.8385	-13.1016	55.2748	26.648	26.74	0	-0.81825	-13.0741	55.2736	27.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:19:23	-0.83278	-13.1091	55.2736	26.738	27.125	1	-0.90158	-13.1574	55.2736	28.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:22:25	-0.80873	-13.121	55.2745	26.722	26.9133	0	-0.83278	-13.1091	55.2736	28.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:25:27	-0.81196	-13.0989	55.2722	26.852	27.2333	1	-0.83278	-13.1091	55.2736	26.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:28:28	-0.81804	-13.0718	55.2751	26.836	27.065	0	-0.81196	-13.0156	55.2722	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:31:30	-0.80384	-13.099	55.2778	27.356	27.2633	0	-0.81196	-13.0156	55.2722	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:34:32	-0.79718	-13.1122	55.2737	27.404	27.0183	0	-0.72863	-13.0989	55.2722	28.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:37:34	-0.81712	-13.122	55.2752	27.108	27.6233	1	-0.81196	-13.0989	55.2722	29.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:40:36	-0.78353	-13.1443	55.2782	27.07	27.4314	1	-0.81712	-13.122	55.2752	29.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:43:38	-0.80009	-13.1639	55.2809	27.21	27.0183	0	-0.86686	-13.2276	55.2782	28.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:46:40	-0.78847	-13.1635	55.2824	27.504	27.4117	0	-0.86686	-13.2276	55.2782	30
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:49:42	-0.78326	-13.1395	55.2837	27.204	27.0933	0	-0.78353	-13.2276	55.2782	28.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:52:43	-0.78303	-13.134	55.2842	26.986	26.925	0	-0.86686	-13.061	55.2782	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:55:45	-0.77752	-13.1233	55.2864	27.258	26.9667	0	-0.78353	-13.061	55.2782	27.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 02:58:47	-0.79812	-13.128	55.2862	27.146	27.3567	0	-0.78353	-13.1443	55.2782	28.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:01:49	-0.79411	-13.1731	55.286	27.344	27.015	0	-0.78353	-13.1443	55.2782	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:04:50	-0.79	-13.1743	55.2878	26.834	26.785	0	-0.78353	-13.2276	55.2782	31.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:07:52	-0.77635	-13.143	55.287	26.914	26.9933	0	-0.78353	-13.1443	55.2782	30.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:10:54	-0.76091	-13.1681	55.2837	26.598	26.7	0	-0.78353	-13.2276	55.2782	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:13:56	-0.77562	-13.1367	55.2878	27.216	26.8833	0	-0.78353	-13.1443	55.2782	29.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:16:58	-0.79504	-13.1617	55.2802	26.97	26.9667	0	-0.78353	-13.2276	55.2782	28.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:20:01	-0.81354	-13.1426	55.282	26.88	26.8967	0	-0.78353	-13.1443	55.2782	29
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:23:00	-0.82738	-13.1598	55.286	26.6229	26.6863	0	-0.86686	-13.2276	55.2782	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:25:57	-0.79336	-13.1408	55.2829	26.4729	26.7	0	-0.78353	-13.1443	55.2782	28.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:28:55	-0.8029	-13.1577	55.2821	26.39	26.7588	1	-0.78353	-13.1443	55.2782	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:31:52	-0.83046	-13.1439	55.2875	26.6829	26.6825	0	-0.8029	-13.241	55.2821	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:34:50	-0.81676	-13.1258	55.2864	26.25	26.8714	1	-0.8029	-13.1577	55.2821	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:37:47	-0.83691	-13.1506	55.2877	26.9986	26.6975	0	-0.81676	-13.1258	55.2864	30.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:40:45	-0.82073	-13.1654	55.2897	26.9229	26.3875	0	-0.81676	-13.2091	55.2864	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:43:42	-0.81565	-13.1327	55.2871	26.85	26.8225	0	-0.73343	-13.1258	55.2864	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:46:40	-0.83543	-13.1606	55.2866	27.08	26.9413	0	-0.81676	-13.1258	55.2864	26.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:49:38	-0.81859	-13.195	55.2886	26.6171	27.2363	1	-0.81676	-13.2091	55.2864	26.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:52:35	-0.817	-13.1881	55.2903	26.3729	26.7788	1	-0.73526	-13.1117	55.2886	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:55:33	-0.87141	-13.1683	55.2939	27.1786	26.7875	0	-0.90033	-13.1048	55.2903	29.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 03:58:31	-0.84031	-13.1359	55.2938	26.4214	27.1813	1	-0.817	-13.1048	55.2903	27.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:01:28	-0.86934	-13.1748	55.2959	27.2257	26.9437	0	-0.92364	-13.2192	55.2938	29.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:04:25	-0.86785	-13.1486	55.2953	27.0071	27.0329	0	-0.92364	-13.2192	55.2938	26.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:07:23	-0.87347	-13.1871	55.2955	26.6186	26.63	0	-0.84031	-13.0526	55.2938	26.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:10:21	-0.88014	-13.1664	55.296	26.9714	26.8575	0	-0.92364	-13.2192	55.2938	28.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:13:18	-0.86262	-13.1852	55.2971	26.5429	26.855	1	-0.92364	-13.2192	55.2938	28.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:16:16	-0.89034	-13.1518	55.2975	26.6943	27.1288	1	-0.86262	-13.1019	55.2971	26.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:19:13	-0.89981	-13.1353	55.2971	26.89	26.7714	0	-0.97367	-13.0685	55.2975	26.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:22:11	-0.87387	-13.2037	55.2981	27.2171	26.5837	0	-0.89034	-13.1518	55.2975	28.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:25:08	-0.90901	-13.1723	55.2961	26.4414	26.7775	1	-0.89034	-13.1518	55.2975	29
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:28:06	-0.92954	-13.1921	55.2936	26.8286	27.1488	1	-0.90901	-13.1723	55.2961	28.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:31:04	-0.93951	-13.1644	55.2943	26.1971	26.5	1	-0.92954	-13.1921	55.2936	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:34:01	-0.91109	-13.1747	55.291	26.8814	27.2937	1	-0.85618	-13.1644	55.2943	26.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:36:59	-0.9212	-13.1871	55.289	26.7714	27.0063	0	-0.91109	-13.1747	55.291	28.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:39:56	-0.91771	-13.1958	55.2831	26.4357	25.9075	0	-0.82776	-13.1747	55.291	26.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:42:54	-0.95762	-13.1809	55.291	26.1157	26.4357	1	-0.91109	-13.1747	55.291	28.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:45:52	-0.93767	-13.1756	55.2903	26.1457	26.4612	1	-0.87429	-13.2642	55.291	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:48:49	-0.9578	-13.1629	55.2888	26.0514	25.9875	0	-1.021	-13.1756	55.2903	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:51:47	-0.95254	-13.1614	55.2883	25.6843	25.96	1	-1.021	-13.2589	55.2903	26.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:54:44	-0.95411	-13.1836	55.2862	26.5386	25.9763	0	-0.95254	-13.2447	55.2883	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 04:57:42	-0.95568	-13.1544	55.2846	26.3471	26.3538	0	-0.86921	-13.1614	55.2883	25.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:00:39	-0.93399	-13.1723	55.2864	26.7657	26.05	0	-0.86921	-13.1614	55.2883	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:03:37	-0.98566	-13.1418	55.2872	26.3671	26.3062	0	-0.95254	-13.1614	55.2883	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:06:35	-0.96189	-13.1555	55.2871	26.23	26.6125	1	-0.95254	-13.1614	55.2883	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:09:32	-0.96126	-13.1679	55.2872	26.2857	26.4329	0	-0.96189	-13.1555	55.2871	28.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:12:29	-0.92823	-13.1476	55.2866	26.6514	26.5	0	-0.87856	-13.1555	55.2871	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:15:27	-0.9754	-13.1704	55.2905	26.2843	26.1225	0	-0.96189	-13.1555	55.2871	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:18:24	-0.95008	-13.1828	55.2911	26.9014	26.8012	0	-0.87856	-13.2388	55.2871	26.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:21:22	-0.94201	-13.1565	55.2913	26.4314	26.1675	0	-0.87856	-13.1555	55.2871	28.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:24:19	-0.94174	-13.1559	55.2961	26.6957	26.325	0	-0.87856	-13.1555	55.2871	25.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:27:17	-0.9644	-13.1766	55.2958	26.2229	26.1288	0	-0.96189	-13.2388	55.2871	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:30:15	-0.94108	-13.1826	55.2963	25.9257	25.8787	0	-0.96189	-13.1555	55.2871	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:33:12	-0.9556	-13.1487	55.2954	26.2443	26.09	0	-0.96189	-13.0722	55.2871	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:36:10	-0.93946	-13.1769	55.2927	26.3143	26.2625	0	-0.96189	-13.1555	55.2871	27.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:39:07	-0.95244	-13.1643	55.2938	26.2386	26.5786	1	-0.96189	-13.0722	55.2871	27
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:42:05	-0.94775	-13.1628	55.2981	26.4443	26.7957	1	-0.95244	-13.1643	55.2938	26
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:45:02	-0.93916	-13.1635	55.2994	26.5843	26.2286	0	-0.94775	-13.1628	55.2981	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:48:00	-0.96485	-13.1843	55.3012	26.5957	26.605	0	-0.94775	-13.1628	55.2981	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:50:58	-0.9696	-13.1827	55.2981	26.1471	26.22	0	-0.94775	-13.2461	55.2981	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:53:55	-0.96342	-13.1844	55.2975	26.5357	26.0938	0	-1.0311	-13.2461	55.2981	26.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:56:53	-0.95847	-13.1823	55.2937	26.1771	26.1314	0	-1.0311	-13.1628	55.2981	25.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 05:59:50	-0.96454	-13.1678	55.297	26.4714	26.0487	0	-0.86442	-13.1628	55.2981	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:02:48	-0.9988	-13.1471	55.297	25.9671	26.2338	1	-1.0311	-13.1628	55.2981	28.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:05:46	-0.96425	-13.2055	55.2941	26.0171	25.835	0	-0.9988	-13.1471	55.297	28.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:08:43	-0.99544	-13.1812	55.2913	26.1829	26.715	1	-0.9988	-13.1471	55.297	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:11:41	-1.034	-13.2364	55.2904	26.2914	25.7387	0	-1.0788	-13.2645	55.2913	27
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:14:39	-0.98467	-13.1854	55.2863	26.2771	26.2625	0	-0.99544	-13.1812	55.2913	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:17:37	-1.0111	-13.2135	55.288	26.2857	26.1537	0	-0.99544	-13.1812	55.2913	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:20:34	-1.0281	-13.2247	55.2868	26.1686	26.2013	0	-1.0788	-13.2645	55.2913	28.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:23:32	-1.0091	-13.2168	55.2843	26.1943	26.105	0	-0.99544	-13.1812	55.2913	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:26:30	-1.0295	-13.2656	55.2865	25.9171	25.4838	0	-1.0788	-13.2645	55.2913	29.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:29:28	-1.0174	-13.2481	55.2874	25.3386	26.2212	1	-0.99544	-13.2645	55.2913	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:32:25	-1.0252	-13.2332	55.2854	25.7529	25.8625	0	-1.0174	-13.2481	55.2874	28.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:35:23	-1.0321	-13.2431	55.2828	26.1714	26.0188	0	-1.0174	-13.2481	55.2874	26.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:38:21	-1.0122	-13.2286	55.2826	25.8271	26.3112	1	-1.0174	-13.3314	55.2874	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:41:18	-1.0182	-13.2542	55.28	26.2386	26.0287	0	-1.0122	-13.3119	55.2826	29.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:44:16	-0.9997	-13.2096	55.2786	26.1643	26.0488	0	-0.92887	-13.2286	55.2826	28.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:47:13	-1.0094	-13.2255	55.2803	26.4257	26.105	0	-1.0122	-13.2286	55.2826	29.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:50:11	-1.0321	-13.2658	55.2798	26.3257	25.9425	0	-1.0955	-13.3119	55.2826	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:53:09	-1.0268	-13.2459	55.2796	26.3557	26.3212	0	-1.0122	-13.2286	55.2826	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:56:06	-1.0102	-13.2256	55.2802	26.2757	25.9	0	-1.0122	-13.3119	55.2826	28.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 06:59:04	-1.0451	-13.249	55.2824	26.2086	26.24	0	-1.0122	-13.3119	55.2826	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:02:02	-1.0294	-13.2183	55.2788	26.62	26.8025	0	-1.0955	-13.1453	55.2826	27
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:04:59	-0.99901	-13.2372	55.282	26.47	26.3588	0	-0.92887	-13.3119	55.2826	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:07:57	-1.0373	-13.2261	55.2808	26.5514	26.4575	0	-1.0955	-13.2286	55.2826	28.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:10:55	-1.014	-13.2357	55.2839	26.4571	26.5825	0	-1.0122	-13.2286	55.2826	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:13:52	-1.0501	-13.2601	55.2826	26.1143	26.5687	1	-1.0122	-13.3119	55.2826	27.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:16:50	-1.0326	-13.2762	55.2823	26.3429	26.3125	0	-1.0501	-13.2601	55.2826	29.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:19:48	-1.0479	-13.2779	55.2833	26.2329	26.1337	0	-1.0501	-13.2601	55.2826	28.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:22:45	-1.0574	-13.2654	55.2849	26.1271	26.2963	0	-1.0501	-13.2601	55.2826	29.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:25:43	-1.0596	-13.2759	55.2857	25.5414	25.6713	0	-1.0501	-13.3434	55.2826	27.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:28:41	-1.0658	-13.2756	55.2858	25.6557	25.8175	0	-1.0501	-13.2601	55.2826	26.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:31:38	-1.0551	-13.2578	55.2868	26.32	26.3313	0	-1.0501	-13.2601	55.2826	28.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:34:36	-1.0625	-13.258	55.2857	26.1143	26.3312	0	-1.0501	-13.1768	55.2826	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:37:33	-1.0487	-13.2767	55.2898	26.07	25.7875	0	-1.0501	-13.2601	55.2826	28.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:40:31	-1.0507	-13.3061	55.287	26.26	25.6875	0	-1.0501	-13.4268	55.2826	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:43:29	-1.0409	-13.2895	55.292	26.2429	26.2488	0	-1.1334	-13.3434	55.2826	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:46:26	-1.0345	-13.2837	55.2877	25.8986	25.955	0	-1.0501	-13.3434	55.2826	29.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:49:24	-1.0174	-13.2385	55.2924	25.58	26.095	1	-0.96677	-13.0934	55.2826	25.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:52:22	-1.0066	-13.2381	55.3083	26.3757	26.3	0	-1.0174	-13.2385	55.2924	27.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:55:19	-1.0178	-13.259	55.3198	25.7286	26.0775	1	-1.1007	-13.3218	55.2924	25.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 07:58:17	-1.0448	-13.2253	55.328	25.43	26.1438	1	-1.0178	-13.1757	55.3198	25.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 08:01:15	-0.99152	-13.2477	55.3313	26.1071	26.21	0	-1.0448	-13.3086	55.328	26.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 08:04:13	-1.0126	-13.2511	55.3323	25.4486	26.225	1	-1.0448	-13.2253	55.328	29
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 08:07:10	-1.0059	-13.286	55.3365	26.3386	25.79	0	-1.0126	-13.3344	55.3323	29.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 08:10:08	-1.0097	-13.2773	55.3375	25.8557	26.1488	1	-1.0126	-13.1678	55.3323	26.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 08:13:05	-0.98974	-13.267	55.3405	26.3	25.8788	0	-1.0097	-13.194	55.3375	28.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 08:16:03	-0.99134	-13.264	55.3423	26.1271	26.4825	1	-1.0097	-13.194	55.3375	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 08:19:01	-0.9957	-13.2808	55.3458	26.4971	26.185	0	-0.99134	-13.264	55.3423	26.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 08:21:59	-0.98319	-13.2674	55.3476	26.2529	26.1525	0	-0.99134	-13.1807	55.3423	28.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 08:24:56	-1.0076	-13.2892	55.3466	26.2414	26.2314	0	-0.99134	-13.264	55.3423	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 08:27:54	-0.97639	-13.2932	55.3459	26.5443	26.1013	0	-0.90801	-13.264	55.3423	26.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 08:30:52	-0.99548	-13.2798	55.3459	26.4071	26.3825	0	-0.99134	-13.1807	55.3423	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 08:33:49	-1.0024	-13.3006	55.3483	26.3914	26.0012	0	-0.99134	-13.3473	55.3423	27
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 08:36:47	-0.99777	-13.2883	55.3448	26.5257	26.4475	0	-0.99134	-13.3473	55.3423	28.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 08:47:25	-0.96498	-13.2673	55.3464	25.8667	25.92	0	-0.99134	-13.3473	55.3423	27.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 08:53:07	-0.99033	-13.3047	55.3477	25.4043	25.97	1	-0.99134	-13.1807	55.3423	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 08:58:51	-0.96696	-13.3024	55.3527	25.8429	26.4671	1	-0.907	-13.3047	55.3477	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 09:04:33	-0.95742	-13.2741	55.375	25.8871	26.2186	1	-0.96696	-13.3024	55.3527	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 09:10:16	-0.93428	-13.2829	55.3896	26.0214	25.7175	0	-0.95742	-13.3574	55.375	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 09:15:58	-0.89849	-13.2493	55.3996	25.77	26.7814	1	-0.87409	-13.1908	55.375	25.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 09:21:40	-0.90234	-13.217	55.4167	26.6686	26.1586	0	-0.89849	-13.166	55.3996	30.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 09:27:22	-0.88921	-13.2103	55.4195	26.5443	26.7714	0	-0.81516	-13.166	55.3996	26
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 09:33:04	-0.91099	-13.258	55.405	26.9429	27.1129	0	-0.89849	-13.2493	55.3996	28.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 09:38:46	-0.93705	-13.2495	55.4017	26.73	26.7171	0	-0.98182	-13.2493	55.3996	28.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 09:44:28	-0.91135	-13.291	55.399	26.4457	26.6757	0	-0.89849	-13.3326	55.3996	28.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 09:50:11	-0.94161	-13.2514	55.3984	27.1283	26.8271	0	-0.98182	-13.2493	55.3996	26.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 09:55:53	-0.96605	-13.2759	55.3915	25.8229	26.7086	1	-0.98182	-13.2493	55.3996	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 10:01:35	-0.97879	-13.2866	55.3851	27.2629	26.5557	0	-1.0494	-13.3592	55.3915	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 10:07:17	-0.96626	-13.2991	55.3825	26.81	26.5443	0	-0.96605	-13.3592	55.3915	26.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 10:12:59	-1.0097	-13.2478	55.3844	25.72	26.8043	1	-0.96605	-13.2759	55.3915	28.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 10:18:41	-0.98765	-13.244	55.3761	26.515	27.09	1	-0.92637	-13.2478	55.3844	25.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 10:24:23	-1.0002	-13.2715	55.3703	26.27	26.5071	0	-0.98765	-13.3273	55.3761	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 10:30:06	-1.0145	-13.2626	55.3694	26.38	26.6443	1	-0.98765	-13.3273	55.3761	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 10:35:48	-1.0245	-13.2534	55.3653	26.12	26.6743	1	-1.0145	-13.1793	55.3694	28.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 10:41:30	-1.0299	-13.2589	55.3591	26.8133	26.6986	0	-0.94117	-13.2534	55.3653	26.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 10:47:12	-1.0525	-13.2751	55.36	26.5943	26.7743	0	-1.0245	-13.3367	55.3653	28.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 10:52:53	-1.0548	-13.2532	55.3624	26.6857	26.5925	0	-1.1078	-13.1701	55.3653	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 10:58:34	-1.0571	-13.2742	55.3573	26.6433	26.7443	0	-1.1078	-13.2534	55.3653	25.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 11:04:16	-1.0421	-13.2627	55.3602	26.4883	27.1243	1	-1.0245	-13.2534	55.3653	27.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 11:09:58	-1.0237	-13.2791	55.3429	26.6933	26.5843	0	-1.0421	-13.346	55.3602	25.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 11:15:41	-1.0661	-13.2842	55.3501	26.3	26.62	1	-1.1254	-13.2627	55.3602	27.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 11:21:00	-1.0669	-13.2461	55.3383	26.1414	26.7757	1	-1.0661	-13.2842	55.3501	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 11:23:58	-1.0988	-13.2663	55.3291	26.4533	26.2614	0	-1.0669	-13.3294	55.3383	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 11:26:57	-1.0734	-13.2725	55.3341	26.7833	26.4714	0	-1.0669	-13.3294	55.3383	28.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 11:29:55	-1.0666	-13.258	55.3338	26.4671	26.5986	0	-1.0669	-13.2461	55.3383	27.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 11:32:54	-1.0817	-13.2856	55.3337	26.6771	26.5743	0	-1.0669	-13.2461	55.3383	28.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 11:35:53	-1.0825	-13.2725	55.3307	26.5571	26.7386	0	-1.0669	-13.2461	55.3383	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 11:38:52	-1.079	-13.2415	55.3308	26.47	26.2914	0	-1.0669	-13.1628	55.3383	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 11:41:51	-1.0715	-13.248	55.3317	26.8233	26.6957	0	-1.0669	-13.2461	55.3383	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 11:44:50	-1.0634	-13.2363	55.3301	26.6343	26.5229	0	-1.0669	-13.2461	55.3383	25.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 11:47:48	-1.07	-13.2389	55.3349	26.9017	26.5514	0	-1.0669	-13.1628	55.3383	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 11:50:47	-1.0922	-13.2627	55.334	27.1957	27.19	0	-1.0669	-13.3294	55.3383	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 11:53:45	-1.1043	-13.2658	55.3365	26.7633	26.9529	0	-1.0669	-13.3294	55.3383	25.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 11:56:44	-1.0752	-13.2395	55.3354	26.9567	26.5814	0	-1.0669	-13.1628	55.3383	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 11:59:43	-1.0555	-13.2678	55.3364	26.9517	26.9486	0	-0.98357	-13.2461	55.3383	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:02:41	-1.0757	-13.2812	55.3371	27.068	27.08	0	-1.0669	-13.3294	55.3383	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:05:40	-1.0877	-13.2374	55.337	26.22	26.7757	1	-1.1502	-13.2461	55.3383	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:08:39	-1.0609	-13.2574	55.3368	26.6583	26.9129	0	-1.0044	-13.2374	55.337	28.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:11:37	-1.0817	-13.2939	55.3367	26.7371	26.5443	0	-1.0877	-13.3207	55.337	29.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:14:36	-1.1126	-13.2776	55.3383	26.7067	26.3929	0	-1.171	-13.3207	55.337	29.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:17:34	-1.0616	-13.2894	55.3381	26.665	25.9257	0	-1.0044	-13.3207	55.337	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:20:33	-1.0698	-13.2411	55.3409	26.6071	26.5343	0	-1.0044	-13.2374	55.337	26.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:23:32	-1.093	-13.2436	55.3384	26.4883	26.7871	1	-1.171	-13.2374	55.337	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:26:31	-1.0615	-13.2545	55.3392	26.7083	26.3957	0	-1.0097	-13.2436	55.3384	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:29:29	-1.0639	-13.2616	55.3435	26.37	26.2914	0	-1.093	-13.3269	55.3384	26.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:32:28	-1.0634	-13.2284	55.3424	26.095	26.6557	1	-1.0097	-13.1603	55.3384	29.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:35:27	-1.063	-13.2436	55.3454	26.5783	26.54	0	-1.0634	-13.3117	55.3424	27.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:38:25	-1.0513	-13.2458	55.341	26.5967	26.4586	0	-1.0634	-13.3117	55.3424	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:41:24	-1.0727	-13.2537	55.3427	26.64	26.8457	0	-1.0634	-13.2284	55.3424	29.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:44:23	-1.0989	-13.2595	55.3436	26.4029	26.9057	1	-1.1467	-13.2284	55.3424	26.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:47:21	-1.0889	-13.2513	55.3441	26.3443	26.3329	0	-1.1822	-13.1762	55.3436	26.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:50:20	-1.1066	-13.2425	55.3381	26.4114	26.4943	0	-1.0989	-13.2595	55.3436	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:53:19	-1.103	-13.256	55.3435	26.705	26.7071	0	-1.0989	-13.2595	55.3436	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:56:18	-1.0984	-13.2583	55.3454	26.4271	26.41	0	-1.0156	-13.3428	55.3436	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 12:59:17	-1.0852	-13.2536	55.3436	26.8443	26.0957	0	-1.0989	-13.2595	55.3436	29.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:02:16	-1.123	-13.2607	55.3467	26.5729	26.4471	0	-1.0989	-13.2595	55.3436	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:05:14	-1.1138	-13.2753	55.3434	26.4983	26.4357	0	-1.0156	-13.2595	55.3436	26
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:08:13	-1.1051	-13.2777	55.3437	26.3171	25.9063	0	-1.0989	-13.2595	55.3436	28.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:11:11	-1.1374	-13.213	55.3419	26.1057	26.7675	1	-1.0989	-13.2595	55.3436	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:14:09	-1.1208	-13.2375	55.3432	26.5143	26.6563	0	-1.1374	-13.2963	55.3419	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:17:06	-1.1661	-13.1898	55.3431	26.3414	26.1914	0	-1.2207	-13.1297	55.3419	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:20:04	-1.1683	-13.2012	55.3432	25.5543	26.43	1	-1.1374	-13.213	55.3419	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:23:02	-1.2041	-13.1965	55.3428	26.3043	26.65	1	-1.1683	-13.2012	55.3432	26.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:26:00	-1.1607	-13.2219	55.3433	26.14	25.8975	0	-1.2041	-13.1965	55.3428	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:28:58	-1.1617	-13.1874	55.3479	26.0814	26.0688	0	-1.2041	-13.1965	55.3428	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:31:56	-1.1797	-13.1661	55.343	25.8243	26.4975	1	-1.2874	-13.1132	55.3428	27.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:34:54	-1.1944	-13.1789	55.3435	26.1929	25.9963	0	-1.263	-13.0828	55.343	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:37:52	-1.152	-13.218	55.3455	25.8657	25.945	0	-1.1797	-13.2494	55.343	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:40:50	-1.1702	-13.2115	55.3464	26.1429	26.13	0	-1.0964	-13.2494	55.343	25.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:43:47	-1.1414	-13.2054	55.3456	25.91	25.9029	0	-1.0964	-13.2494	55.343	26.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:46:45	-1.1546	-13.1765	55.3463	26.2043	26.0825	0	-1.0964	-13.0828	55.343	25.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:49:43	-1.1533	-13.1709	55.3489	25.9857	26.215	0	-1.0964	-13.1661	55.343	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:52:41	-1.1531	-13.1922	55.3479	26.1614	25.8575	0	-1.1797	-13.1661	55.343	27.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:55:39	-1.1381	-13.1886	55.3458	25.9429	25.7737	0	-1.1797	-13.2494	55.343	26.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 13:58:37	-1.1423	-13.1891	55.3463	25.99	26.1125	0	-1.0964	-13.1661	55.343	25
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:01:35	-1.1299	-13.1898	55.3477	25.8629	26.1438	1	-1.0964	-13.1661	55.343	27.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:04:32	-1.1346	-13.156	55.3485	25.5317	26.1571	1	-1.1299	-13.1065	55.3477	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:07:30	-1.1319	-13.1729	55.3517	25.8857	25.9343	0	-1.1346	-13.156	55.3485	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:10:28	-1.1414	-13.193	55.3502	26.2929	26.275	0	-1.1346	-13.156	55.3485	27.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:13:26	-1.0948	-13.1695	55.35	26.0529	25.2713	0	-1.0513	-13.156	55.3485	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:16:24	-1.1172	-13.1545	55.3489	25.9186	26.1725	0	-1.0513	-13.0727	55.3485	26.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:19:22	-1.1027	-13.2084	55.3515	26.0014	26.1163	0	-1.1346	-13.156	55.3485	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:22:19	-1.1069	-13.1761	55.3483	25.9057	25.6238	0	-1.1346	-13.156	55.3485	26.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:25:18	-1.1417	-13.1765	55.3495	26.0814	25.8487	0	-1.1346	-13.156	55.3485	28.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:28:15	-1.1141	-13.144	55.349	25.5443	26.05	1	-1.0513	-12.9893	55.3485	26.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:31:13	-1.1296	-13.1483	55.3528	26.0514	26.19	0	-1.1141	-13.144	55.349	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:34:11	-1.1124	-13.1524	55.351	25.9157	26.07	0	-1.1141	-13.2273	55.349	25.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:37:09	-1.093	-13.1647	55.35	26.0757	26.01	0	-1.1141	-13.144	55.349	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:40:07	-1.0799	-13.1856	55.3496	25.9543	25.9613	0	-1.0308	-13.2273	55.349	27.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:43:05	-1.1045	-13.1698	55.3482	25.9343	25.9862	0	-1.1141	-13.144	55.349	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:46:03	-1.1444	-13.205	55.3474	26.4643	24.7475	0	-1.1974	-13.2273	55.349	28.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:49:01	-1.0978	-13.1768	55.3484	26.38	25.6212	0	-1.1141	-13.144	55.349	26.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:51:59	-1.0777	-13.1663	55.3496	25.8086	26.0625	0	-1.1141	-13.144	55.349	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:54:57	-1.0953	-13.1936	55.3495	25.5086	25.4375	0	-1.1141	-13.2273	55.349	29.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 14:57:55	-1.0669	-13.1743	55.3477	25.7157	25.4737	0	-1.1141	-13.0607	55.349	25
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:00:53	-1.0531	-13.1855	55.3472	25.2986	25.9588	1	-1.0308	-13.2273	55.349	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:03:51	-1.0692	-13.1748	55.3513	26.02	25.97	0	-1.1364	-13.1022	55.3472	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:06:48	-1.0661	-13.1939	55.3488	26.345	26.0471	0	-1.0531	-13.1855	55.3472	26.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:09:46	-1.0727	-13.2022	55.3479	25.7086	25.7462	0	-1.0531	-13.1855	55.3472	28.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:12:44	-1.0683	-13.1724	55.3494	26.2414	26.165	0	-1.0531	-13.1022	55.3472	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:15:42	-1.0619	-13.1785	55.3483	25.69	25.99	1	-1.0531	-13.1022	55.3472	27.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:18:40	-1.0664	-13.2029	55.3495	26.2486	25.66	0	-1.0619	-13.1785	55.3483	28.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:21:38	-1.0767	-13.1985	55.3506	26.1414	25.7713	0	-1.0619	-13.1785	55.3483	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:24:36	-1.0676	-13.2112	55.3511	25.8943	25.8275	0	-1.0619	-13.1785	55.3483	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:27:34	-1.0471	-13.2005	55.3492	25.5957	26.1237	1	-0.97857	-13.1785	55.3483	25.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:30:33	-1.0565	-13.2086	55.3474	26.1229	25.66	0	-1.0471	-13.2005	55.3492	26
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:33:30	-1.0573	-13.1609	55.3512	25.8367	26.0186	0	-1.0471	-13.2005	55.3492	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:36:28	-1.0274	-13.1925	55.3498	26.1014	26.1225	0	-1.0471	-13.2005	55.3492	28.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:39:26	-1.0497	-13.2072	55.3498	26.0433	25.73	0	-1.0471	-13.2005	55.3492	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:42:24	-1.0229	-13.2024	55.3491	25.5014	25.4188	0	-1.0471	-13.2838	55.3492	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:45:21	-1.0265	-13.1914	55.3486	26.1414	25.825	0	-1.0471	-13.2005	55.3492	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:48:19	-1.0244	-13.2002	55.3482	25.6343	25.99	1	-1.0471	-13.2005	55.3492	29.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:51:18	-1.0372	-13.1791	55.3456	25.7614	26.0475	1	-1.0244	-13.1169	55.3482	26.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:54:15	-1.0221	-13.1919	55.3466	26.0217	25.8543	0	-1.0372	-13.1791	55.3456	26.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 15:57:13	-1.0441	-13.1861	55.343	25.8671	25.9537	0	-1.0372	-13.1791	55.3456	26.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 16:00:11	-1.0271	-13.1914	55.3458	25.9529	26.0986	0	-1.0372	-13.1791	55.3456	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 16:03:09	-1.0181	-13.1838	55.3472	25.97	25.6925	0	-1.0372	-13.1791	55.3456	25.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 16:06:07	-1.0287	-13.1829	55.3467	25.9843	25.7	0	-1.0372	-13.0958	55.3456	29
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 16:09:05	-0.99441	-13.176	55.3466	25.5543	25.8138	1	-1.0372	-13.1791	55.3456	27
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 16:12:03	-0.97173	-13.1737	55.348	25.8914	25.9162	0	-0.99441	-13.0927	55.3466	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 16:15:00	-0.97515	-13.1342	55.3476	25.9857	25.9629	0	-0.99441	-13.0927	55.3466	29.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 16:17:58	-0.94916	-13.1788	55.3497	25.62	26.32	1	-0.91108	-13.2593	55.3466	27
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 16:20:56	-0.94454	-13.1582	55.3518	25.9129	26.1325	0	-0.94916	-13.0955	55.3497	28.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 16:23:55	-0.92466	-13.186	55.3556	25.7943	26.1288	1	-0.86583	-13.0955	55.3497	25.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 16:26:52	-0.94997	-13.181	55.363	25.8186	25.8086	0	-1.008	-13.1027	55.3556	26.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 16:29:50	-0.94118	-13.1636	55.3617	26.1767	26.0843	0	-0.92466	-13.186	55.3556	27
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 16:32:48	-0.93262	-13.1377	55.3611	25.6	25.8425	0	-0.92466	-13.1027	55.3556	28.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 16:35:46	-0.93124	-13.1802	55.3658	26.0217	25.48	0	-1.008	-13.1027	55.3556	27.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 16:38:44	-0.91067	-13.1616	55.3666	25.2857	25.5975	1	-0.84133	-13.2693	55.3556	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 16:41:41	-0.9102	-13.1375	55.3757	25.525	25.9457	1	-0.91067	-13.1616	55.3666	28.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 16:50:04	-0.8255	-13.1435	55.3853	47.93	51.2129	1	-0.74353	-13.1375	55.3757	51
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 17:16:26	-0.77092	-13.0694	55.385	25.1943	26.4086	1	-0.74217	-12.9768	55.3853	26.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 17:42:17	-0.70164	-13.1451	55.3772	24.5686	26.4829	1	-0.68759	-13.1527	55.385	30.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 18:08:06	-0.73173	-13.1185	55.3637	25.5586	26.2086	1	-0.70164	-13.1451	55.3772	29.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 18:33:54	-0.8641	-13.0926	55.3191	20.8014	25.7057	1	-0.8984	-13.1185	55.3637	25.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 18:59:45	-0.891	-13.0836	55.2698	25.9029	25.6186	0	-0.8641	-13.0926	55.3191	26.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 19:25:34	-0.95022	-13.0869	55.1893	21.8633	25.8086	1	-0.94743	-13.0093	55.3191	24.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 19:51:23	-1.0088	-13.1305	55.1638	25.0129	25.6657	1	-0.95022	-13.1702	55.1893	25.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 20:17:12	-0.95385	-13.1295	55.1669	25.9886	26.2743	1	-1.0088	-13.1305	55.1638	25.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 20:43:01	-0.91237	-13.145	55.182	25.4643	25.5929	0	-0.95385	-13.2128	55.1669	26.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 21:08:50	-0.91771	-13.1263	55.1764	25.8043	26.1143	1	-0.87052	-13.0462	55.1669	25.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 21:34:39	-0.882	-13.1646	55.1946	25.82	26.3971	1	-0.91771	-13.2096	55.1764	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 22:00:28	-0.84831	-13.2114	55.2005	27.2286	26.9386	0	-0.79867	-13.2479	55.1946	28.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 22:26:17	-0.96062	-13.1799	55.2013	25.9629	27.3543	1	-0.96533	-13.2479	55.1946	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 22:52:11	-1.0465	-13.1896	55.2013	25.9317	26.5257	1	-1.044	-13.1799	55.2013	29.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 23:18:06	-1.0425	-13.2109	55.2021	26.9471	26.97	0	-1.0465	-13.1896	55.2013	29.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+26-Jan-2022 23:44:02	-1.062	-13.2054	55.2027	26.6117	26.3929	0	-1.1298	-13.1896	55.2013	28
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 00:09:58	-1.1041	-13.1743	55.1989	25.0957	26.3743	1	-1.1298	-13.1063	55.2013	28.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 00:35:53	-1.0787	-13.1907	55.2039	27.0529	26.9843	0	-1.1041	-13.2576	55.1989	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 01:01:49	-1.057	-13.2328	55.2084	25.55	26.57	1	-1.1041	-13.1743	55.1989	26.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 01:27:41	-1.0788	-13.2391	55.213	27.3386	27.3086	0	-0.97367	-13.2328	55.2084	28.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 01:53:30	-1.1282	-13.2641	55.2095	26.3483	27.5714	1	-1.1403	-13.2328	55.2084	29.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 02:19:18	-1.1768	-13.2613	55.2096	26.0557	26.21	0	-1.1282	-13.2641	55.2095	28.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 02:45:07	-1.1024	-13.1921	55.2926	24.3	26.3414	1	-1.0449	-13.2641	55.2095	24.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 03:10:56	-1.1535	-13.2227	55.2889	26.2229	26.6714	1	-1.1857	-13.2754	55.2926	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 03:36:46	-1.158	-13.2355	55.2715	25.9529	25.9186	0	-1.1535	-13.1394	55.2889	27.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 04:02:34	-1.1963	-13.2643	55.2657	24.5314	24.7229	0	-1.1535	-13.306	55.2889	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 04:28:21	-1.2197	-13.2664	55.24	24.2571	25.4457	1	-1.2368	-13.306	55.2889	26.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 04:54:10	-1.2408	-13.2985	55.2169	25.5286	26	1	-1.2197	-13.2664	55.24	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 05:19:59	-1.2321	-13.2491	55.2115	25.3857	26.32	1	-1.2408	-13.1318	55.2169	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 05:45:48	-1.2723	-13.2956	55.2086	26.1171	25.89	0	-1.2321	-13.3324	55.2115	27
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 06:11:37	-1.2901	-13.328	55.2088	25.1671	25.9029	1	-1.2321	-13.2491	55.2115	25.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 06:37:26	-1.3343	-13.3618	55.2009	25.2717	25.5071	0	-1.2901	-13.328	55.2088	24.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 07:03:14	-1.3398	-13.3298	55.2033	24.91	25.9757	1	-1.3734	-13.328	55.2088	29.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 07:29:03	-1.3594	-13.3416	55.1953	25.1429	25.5757	1	-1.3398	-13.4131	55.2033	25.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 07:54:52	-1.3734	-13.3746	55.2	25.65	25.6686	0	-1.4427	-13.4249	55.1953	24.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 08:20:41	-1.3633	-13.3973	55.2006	25.4386	25.4171	0	-1.3594	-13.4249	55.1953	26.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 08:46:30	-1.3062	-13.4268	55.2089	24.0529	25.6257	1	-1.3594	-13.4249	55.1953	29.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 09:12:18	-1.2928	-13.3524	55.2829	24.4417	26.0214	1	-1.3062	-13.3435	55.2089	27.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 09:38:08	-1.2307	-13.3569	55.3149	25.4414	26.3014	1	-1.2095	-13.4357	55.2829	25.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 10:03:57	-1.2935	-13.3496	55.3125	25.5186	26.3714	1	-1.314	-13.3569	55.3149	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 10:29:44	-1.2894	-13.3828	55.3059	26.18	26.2814	0	-1.2935	-13.3496	55.3125	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 11:32:56	-1.2384	-13.3696	55.3107	26.548	25.9886	0	-1.2102	-13.3496	55.3125	29.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 12:41:55	-1.315	-13.4024	55.2706	24.4683	25.3114	1	-1.3768	-13.3496	55.3125	25.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 13:01:48	-1.3898	-13.4701	55.2005	23.2667	25.4971	1	-1.3983	-13.4857	55.2706	26.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 13:21:40	-1.3976	-13.425	55.1829	25.4783	25.7771	1	-1.3898	-13.3868	55.2005	25.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 13:41:32	-1.3841	-13.446	55.1796	26.54	26.7386	0	-1.3976	-13.425	55.1829	27.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 14:01:24	-1.492	-13.5124	55.1555	24.2483	26.6886	1	-1.4809	-13.5917	55.1829	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 14:21:16	-1.5652	-13.4822	55.1279	23.5883	25.9443	1	-1.6587	-13.4291	55.1555	24.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 14:41:08	-1.6059	-13.5015	55.1192	25.68	25.1257	0	-1.6485	-13.5655	55.1279	27.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 15:01:01	-1.4907	-13.4142	55.1835	21.4017	24.6329	1	-1.5652	-13.3989	55.1279	25.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 15:20:51	-1.4072	-13.3476	55.5121	21.44	26	1	-1.4074	-13.2475	55.6835	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 15:40:43	-1.332	-13.43	55.501	24.4683	25.9057	1	-1.3239	-13.4309	55.5121	29.2
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 16:00:35	-1.2851	-13.362	55.4999	25.8533	26.61	1	-1.332	-13.43	55.501	26.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 16:20:27	-1.299	-13.3698	55.4781	26.2317	26.4614	0	-1.2851	-13.362	55.4999	28.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 16:40:18	-1.3734	-13.4405	55.304	23.6817	27.8914	1	-1.4518	-13.4453	55.4999	27.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 17:00:11	-1.4038	-13.4396	55.2775	26.705	27.2943	1	-1.3734	-13.4405	55.304	28.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 17:20:05	-1.4735	-13.3928	55.2581	26.0717	27.8786	1	-1.4871	-13.4396	55.2775	30
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 17:39:55	-1.4512	-13.4205	55.2427	27.5917	27.7414	0	-1.3902	-13.3928	55.2581	29.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 17:59:39	-1.4726	-13.3718	55.2528	28.0933	28.0514	0	-1.4735	-13.3095	55.2581	28.7
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 18:19:23	-1.4823	-13.371	55.2554	27.43	28.17	1	-1.4735	-13.3095	55.2581	29.4
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 18:39:07	-1.4775	-13.314	55.251	27.225	27.7629	1	-1.4823	-13.2877	55.2554	29.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 18:58:52	-1.4408	-13.3372	55.2588	27.6583	28.0171	1	-1.3942	-13.3973	55.251	29.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 19:18:36	-1.4142	-13.3302	55.2658	27.9133	28.0286	0	-1.4408	-13.3372	55.2588	30.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 19:38:20	-1.4371	-13.3028	55.2629	27.74	28.5786	1	-1.3575	-13.3372	55.2588	27.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 19:58:05	-1.4756	-13.248	55.2625	26.945	27.4971	1	-1.5204	-13.3028	55.2629	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 20:17:52	-1.4487	-13.2452	55.262	26.795	26.6971	0	-1.4756	-13.248	55.2625	27.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 20:37:45	-1.4873	-13.2648	55.2331	25.822	25.7829	0	-1.4756	-13.248	55.2625	28.1
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 20:57:38	-1.4707	-13.2585	55.236	25.94	25.9157	0	-1.5589	-13.248	55.2625	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 21:17:32	-1.4757	-13.2615	55.2164	25.668	26.07	1	-1.4756	-13.248	55.2625	24.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 21:37:25	-1.4984	-13.2498	55.1911	26.1483	26.3129	0	-1.559	-13.1782	55.2164	25.3
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 21:57:19	-1.4751	-13.2994	55.1979	26.2117	26.6271	1	-1.4757	-13.3448	55.2164	28.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 22:17:11	-1.4714	-13.3105	55.1884	27.49	28.2843	1	-1.4751	-13.3827	55.1979	28.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 22:36:59	-1.5161	-13.2927	55.183	27.72	28.3286	1	-1.5547	-13.2272	55.1884	28.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 22:56:44	-1.4913	-13.242	55.1797	26.1083	26.72	1	-1.5161	-13.2094	55.183	29.9
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 23:16:30	-1.535	-13.2916	55.1767	25.6567	26.6329	1	-1.5746	-13.3253	55.1797	28.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 23:36:15	-1.5367	-13.292	55.1688	26.4633	26.0543	0	-1.535	-13.3749	55.1767	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+27-Jan-2022 23:56:01	-1.5621	-13.3317	55.1699	25.4617	25.8029	1	-1.6183	-13.3749	55.1767	25.6
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+28-Jan-2022 00:15:46	-1.5796	-13.2989	55.1559	25.4783	25.0614	0	-1.6454	-13.2484	55.1699	26.8
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+28-Jan-2022 00:35:31	-1.6131	-13.3158	55.1597	24.3167	25.1914	1	-1.6454	-13.3317	55.1699	26.5
+Starting Tracking
+date	x	y	z	old	new	moved	xmax	ymax	zmax	max
+28-Jan-2022 00:55:17	-1.5715	-13.3596	55.1527	24.73	25.3257	1	-1.5298	-13.3991	55.1597	26.3

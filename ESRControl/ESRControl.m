@@ -22,7 +22,7 @@ function varargout = ESRControl(varargin)
 
 % Edit the above text to modify the response to help ESRControl
 
-% Last Modified by GUIDE v2.5 07-Nov-2021 13:38:22
+% Last Modified by GUIDE v2.5 18-Jan-2022 16:54:22
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -2537,4 +2537,14 @@ function useLogScale_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 % Hint: get(hObject,'Value') returns toggle state of useLogScale
+end
+
+
+% --- Executes on button press in radio1Trig2Sig.
+function radio1Trig2Sig_Callback(hObject, eventdata, handles)
+% hObject    handle to radio1Trig2Sig (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of radio1Trig2Sig
 end

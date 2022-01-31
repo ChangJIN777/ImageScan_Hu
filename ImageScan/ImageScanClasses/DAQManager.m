@@ -62,7 +62,7 @@ classdef DAQManager < handle
         % original order
          srsGPIB = 22;
          srs2GPIB = 16; 
-%         % modified order (debugging)
+%         % modified order (debugging --> switching srs1 and srs2)
 %         srsGPIB = 16;
 %         srs2GPIB = 22;
         srs3GPIB = 24;
