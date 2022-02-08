@@ -22,7 +22,7 @@ function varargout = ImageScan(varargin)
 
 % Edit the above text to modify the response to help ImageScan
 
-% Last Modified by GUIDE v2.5 26-Jul-2021 19:59:11
+% Last Modified by GUIDE v2.5 08-Feb-2022 14:41:46
 % This is a new version of ImageScan to transfer to new Matlab versions
 % (past R2015b) - created based previous Matlab GUI with improved
 % functionality. (June 2017, SB)
@@ -120,7 +120,9 @@ function ImageScan_OpeningFcn(hObject, ~, handles, varargin)
     
     % disable SavePath editing and SaveFileNumber editing, because the
     % program will update the data folder and file number automatically
-    handles.inputSaveImagePath.String = handles.configS.dataFolder;    
+    d = datestr(now,'yyyy_mmm_dd');
+    tempFolder = handles.configS.dataFolder;
+    handles.inputSaveImagePath.String = [tempFolder '\' d '\'];    
     set(handles.inputSaveImagePath,'Enable','off')
     set(handles.inputSaveImageFileNum,'Enable','off')
     
@@ -715,8 +717,9 @@ function buttonStartStopLargeXYScan_Callback(hObject, ~, handles)
 % handles    structure with handles and user data (see GUIDATA)
     handles.ScanParameters.bEnable = [1 1 0]; % enable xy scan direction
     for k = 1:2                                      % set the current ScanParameters to +/50um
-        handles.ScanParameters.MinValues(k) = -50;
-        handles.ScanParameters.MaxValues(k) = 50;
+        
+        handles.ScanParameters.MinValues(k) = -80;
+        handles.ScanParameters.MaxValues(k) = 80;
     end
     handles.ScanParameters.DwellTime = str2double(handles.editXYDwell.String); 
     
