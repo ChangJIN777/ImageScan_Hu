@@ -133,10 +133,7 @@ classdef ScanControl < handle
             end
         end
         
-        function [data] = exportRawImageData(obj)
-            data = obj.imageData;
-        end
-        %---- automatic saving on function (also automatically update the ref image for image registration tracking) ----------------------------------------------------------------
+        %---- automatic saving on function ----------------------------------------------------------------
         function AutomaticSaveScan(obj,handles)
             
             imageToSave = obj.imageData;
@@ -163,9 +160,6 @@ classdef ScanControl < handle
                 case {'.tif', '.tiff'}
                     imwrite(imageToSave,file,'Description',imageInfo1);
             end
-            
-            % with each autosave, we update the reference image scan path for the image registration algorithm
-            set(handles.refImagePath,'String', imageInfo1.file); 
             
             %save the image also as .mat file including all paramters
             obj.SaveMatFile(handles);
@@ -867,7 +861,9 @@ classdef ScanControl < handle
             myFormattedPathname = get(handles.inputSaveImagePath,'String');
             myFormattedFilePrefix = get(handles.inputSaveImageFilePrefix,'String');
             myFormattedFileNum = ImageSaveCounter;            
-                        
+            
+            
+            
             clear fileDateFolder d newestIndex k* newestFile* 
             clear d fileDateFolder newfileDateFolder
 
