@@ -753,7 +753,22 @@ function buttonStartStopLocalXYScan_Callback(hObject, ~, handles)
     hObject.String = 'Start Local XY-Scan';
 end
 
-function takeCu
+function [currentIm] = takeCurrentImage()
+    handles.ScanParameters.bEnable = [1 1 0]; % enable xy scan direction
+    handles.ScanParameters.DwellTime = str2double(handles.editXYDwell.String);
+    % turn zoom-box usage on
+    handles.checkUseZoomboxLimits.Value = 1;
+    handles.configS.bAutoSave = false; % turn off autosave
+    % then start scan as usual
+    if handles.StateControl.state == StateControl.SCANNING
+        handles.StateControl.changeToIdleState(handles,3);
+    else
+        handles.StateControl.changeToScanningState(handles,3);
+    end
+    hObject.String = 'taking the current image';
+    currentIm = handles.ScanControl.exportRawImageData();
+    handles.configS.bAutoSave = true; % turn on autosave after finishing the scan
+end
 
 % --- Executes on button press in buttonStartStopZScan.
 function buttonStartStopZScan_Callback(hObject, ~, handles)
@@ -970,9 +985,10 @@ function buttonStartTracking_Callback(~, ~, handles)
 % hObject    handle to buttonStartTracking (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-    if handles.If_imageRegistration == 1
-        refImage = importdata(handles.refImagePath);
-        %currentImage = 
+    if get(handles.If_imageRegistration,'Value') == 1
+        refData = importdata(get(handles.refImagePath,'String'));
+        refImage = 
+        currentImage = takeCurrentImage();
     else
         if handles.StateControl.state == StateControl.TRACKING
             handles.StateControl.changeToIdleState(handles,6);

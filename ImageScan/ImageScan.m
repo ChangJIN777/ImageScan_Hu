@@ -753,7 +753,7 @@ function buttonStartStopLocalXYScan_Callback(hObject, ~, handles)
     hObject.String = 'Start Local XY-Scan';
 end
 
-function [currentIm] = takeCurrentImage()
+function [currentIm] = takeCurrentImage(handles)
     handles.ScanParameters.bEnable = [1 1 0]; % enable xy scan direction
     handles.ScanParameters.DwellTime = str2double(handles.editXYDwell.String);
     % turn zoom-box usage on
@@ -985,16 +985,18 @@ function buttonStartTracking_Callback(~, ~, handles)
 % hObject    handle to buttonStartTracking (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-    if handles.If_imageRegistration == 1
-        refImage = importdata(handles.refImagePath);
-        currentImage = takeCurrentImage();
-    else
+%     if get(handles.If_imageRegistration,'Value') == 1
+% %         refData = importdata(get(handles.refImagePath,'String'));
+% %         refImage = refData.data; % the reference image used for image registration tracking
+% %         currentImage = takeCurrentImage(handles); % the current image used for image registration tracking
+%         % implement the image registration algorithms
+%     else
         if handles.StateControl.state == StateControl.TRACKING
             handles.StateControl.changeToIdleState(handles,6);
         else
             handles.StateControl.changeToTrackingState(handles,6);
         end
-    end
+%     end
 end
 
 % --- Executes on button press in buttonTrackingParameters.
