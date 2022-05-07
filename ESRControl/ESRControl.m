@@ -22,7 +22,7 @@ function varargout = ESRControl(varargin)
 
 % Edit the above text to modify the response to help ESRControl
 
-% Last Modified by GUIDE v2.5 18-Jan-2022 16:54:22
+% Last Modified by GUIDE v2.5 29-Mar-2022 15:14:59
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -1494,6 +1494,7 @@ settingsS.checkboxSaveDataPerShot = get(handles.checkboxSaveDataPerShot,'Value')
 % settingsS.radio2Channel = get(handles.radio2Channel,'Value');
 % settingsS.radio4Channel = get(handles.radio4Channel,'Value');
 settingsS.radio1Trig2Sig = get(handles.radio1Trig2Sig,'Value');
+settingsS.radio1Trig4Sig = get(handles.radio1Trig4Sig,'Value'); % added 3/29/22 for allowing 4 signal traces
 settingsS.radioTauSweep = get(handles.radioTauSweep,'Value');
 settingsS.radioPulsedESR = get(handles.radioPulsedESR,'Value');
 settingsS.radioCheckPiPulse = get(handles.radioCheckPiPulse,'Value');
@@ -1559,6 +1560,7 @@ set(handles.radio1Channel,'Value',settingsS.radio1Channel);
 % set(handles.radio2Channel,'Value',settingsS.radio2Channel);
 % set(handles.radio4Channel,'Value',settingsS.radio4Channel);
 set(handles.radio1Trig2Sig,'Value',settingsS.radio1Trig2Sig);
+set(handles.radio1Trig4Sig,'Value',settingsS.radio1Trig4Sig);
 set(handles.radioTauSweep,'Value',settingsS.radioTauSweep);
 set(handles.radioPulsedESR,'Value',settingsS.radioPulsedESR);
 set(handles.radioPulsedESR,'Value',settingsS.radioPulsedESR);

@@ -420,7 +420,7 @@ classdef EsrGlobalMethods < handle
             end
         end
         
-        function [fileIdentifier1,fileIdentifier2] = DefineESRDataSavePath(obj, esrGUI,numSigBuffers)
+        function [fileIdentifier1,fileIdentifier2,fileIdentifier3,fileIdentifier4] = DefineESRDataSavePath(obj, esrGUI,numSigBuffers)
             
             if (numSigBuffers == 1)
                 
@@ -436,6 +436,8 @@ classdef EsrGlobalMethods < handle
 
                 fileIdentifier1 = fopen(saveToPathFile, 'w');
                 fileIdentifier2 = -1;
+                fileIdentifier3 = -1;
+                fileIdentifier4 = -1;
             end
             
             if (numSigBuffers == 2)
@@ -452,6 +454,28 @@ classdef EsrGlobalMethods < handle
 
                 fileIdentifier1 = fopen(saveToPathFile, 'w');
                 fileIdentifier2 = fopen(saveToPathFile2, 'w');
+                fileIdentifier3 = -1;
+                fileIdentifier4 = -1;
+            end
+            if (numSigBuffers == 4) % for 1 trace 4 signal option 
+                saveToFullPath = [obj.fileWritePathname obj.fileWriteFilename obj.fileWriteFileNum '\'];
+                %saveToFullPath = [obj.fileWritePathname '\'];
+                saveToPathFile = [ saveToFullPath obj.fileWriteFilename obj.fileWriteFileNum '_1_' get(esrGUI.numCompleted,'String') '.txt'];
+                saveToPathFile2 = [ saveToFullPath obj.fileWriteFilename obj.fileWriteFileNum '_2_' get(esrGUI.numCompleted,'String') '.txt'];
+                saveToPathFile3 = [ saveToFullPath obj.fileWriteFilename obj.fileWriteFileNum '_3_' get(esrGUI.numCompleted,'String') '.txt'];
+                saveToPathFile4 = [ saveToFullPath obj.fileWriteFilename obj.fileWriteFileNum '_4_' get(esrGUI.numCompleted,'String') '.txt'];
+                
+                if exist(obj.fileWritePathname,'dir') ==0 %path does not exist?
+                    mkdir(obj.fileWritePathname);
+                end
+                if exist(saveToFullPath,'dir') ==0 %path does not exist?
+                    mkdir(saveToFullPath);
+                end
+
+                fileIdentifier1 = fopen(saveToPathFile, 'w');
+                fileIdentifier2 = fopen(saveToPathFile2, 'w');
+                fileIdentifier3 = fopen(saveToPathFile3, 'w');
+                fileIdentifier4 = fopen(saveToPathFile4, 'w');
             end
         end
         
