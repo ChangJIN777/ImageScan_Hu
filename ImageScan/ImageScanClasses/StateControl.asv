@@ -105,7 +105,7 @@ classdef StateControl < handle
                         if usedButtonNr < 5
                             handles.(p{usedButtonNr}).String = StateControl.scanButtonStopText; % displays "Stop Scanning"
                         elseif usedButtonNr > 4
-                            handles.(p{usedButtonNr}).String = StateControl.runningCountButtonStopText; % displays "Stop Running Counts"
+                            handles.(p{usedButtonNr}).String = StateControl.runningCountButtonStopText;
                         end
 
                         clear p k usedButtonNr

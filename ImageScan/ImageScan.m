@@ -985,40 +985,11 @@ function buttonStartTracking_Callback(~, ~, handles)
 % hObject    handle to buttonStartTracking (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-    if get(handles.If_imageRegistration,'Value') == 1
-        refData = importdata(get(handles.refImagePath,'String')); 
-        refImage = refData.data.scan; % the reference image used for image registration tracking
-        refImage_param = refData.param; % get the parameters associated with the reference image 
-        currentImage = takeCurrentImage(handles); % the current image used for image registration tracking
-        % implement the image registration algorithms
-        [abc,def] = dftregistration(fft2(refImage), fft2(currentImage), 20); 
-        % 'pixel drift in x is'
-        drift_pixel_tip_x = abc(3);
-        %'pixel drift in y is'
-        drift_pixel_tip_y = abc(4);
-        % converting pixel drifts to um   
-        scan_size_x = abs(refImage_param.XAxisMicrons(1)-refImage_param.XAxisMicrons(2)); % um
-        scan_size_y = abs(refImage_param.YAxisMicrons(1)-refImage_param.YAxisMicrons(2)); % um
-        scan_size_x_pixels = refImage_param.NPoints(1);
-        scan_size_y_pixels = refImage_param.NPoints(2);
-        x_pixel_to_um_ratio = scan_size_x/scan_size_x_pixels;
-        y_pixel_to_um_ratio = scan_size_y/scan_size_y_pixels;
-        drift_um_tip_x = drift_pixel_tip_x*x_pixel_to_um_ratio; % in um
-        drift_um_tip_y = drift_pixel_tip_y*y_pixel_to_um_ratio; % in um
-        % need to update the graphical cursor:
-        init_x_pos = get(handles.editPositionX,'String');
-        init_y_pos = get(handles.editPositionY,'String');
-        final_x_pos = init_x_pos - drift_um_tip_x;
-        final_y_pos = init_y_pos - drift_um_tip_y;
-        obj.deleteManualCursor(handles);
-        obj.createTrackingCursor(handles);
-    else
         if handles.StateControl.state == StateControl.TRACKING
             handles.StateControl.changeToIdleState(handles,6);
         else
             handles.StateControl.changeToTrackingState(handles,6);
         end
-     end
 end
 
 % --- Executes on button press in buttonTrackingParameters.

@@ -463,17 +463,17 @@ classdef CursorControl < handle
 %             end
             
             
-            if obj.bDebug == true
-                figXY = figure(obj.hTrackFig1);
-                set(figXY,'Position',[20,50,300,200]);
-                clf(figXY);
-                axesXY = axes;
+            if obj.bDebug == true % the figures are mainly used for debugging
+                figXY = figure(obj.hTrackFig1); % tracking figure number 1 
+                set(figXY,'Position',[20,50,300,200]); % positioning the tracking figure within the display 
+                clf(figXY); 
+                axesXY = axes; 
                 xlabel(axesXY,'X (V)');
                 ylabel(axesXY,'Y (V)');
                 title(axesXY,'Tracking XY View');
-                figXZ = figure(obj.hTrackFig2);
+                figXZ = figure(obj.hTrackFig2); % tracking figure number 2 
                 clf(figXZ);
-                set(figXZ,'Position',[350,50,300,200]);
+                set(figXZ,'Position',[350,50,300,200]); % positioning the tracking figure within the display 
                 axesXZ = axes;
                 xlabel(axesXZ, 'X (V)');
                 ylabel(axesXZ, 'Z (V)');
@@ -481,6 +481,7 @@ classdef CursorControl < handle
 
                 
             end
+            % save the tracking data 
 			fid = fopen('track_data.txt', 'a');
 			fprintf(fid,'Starting Tracking\ndate\tx\ty\tz\told\tnew\tmoved\txmax\tymax\tzmax\tmax\n');
 			fclose(fid);
@@ -512,7 +513,7 @@ classdef CursorControl < handle
                 %Get the data from a scan
                 set(handles.indicatorTrackingStatus,'String','3D scanning');
                 set(handles.buttonStartTracking,'String','tracking');
-                scandata = handles.ScanControl.performScan(handles, true);
+                scandata = handles.ScanControl.performScan(handles, true); % set bTracking to true to interrupt tracking
                 if size(scandata, 1) == length(handles.ScanControl.XVoltages) ...
                         && size(scandata,2) == length(handles.ScanControl.YVoltages)...
                         && size(scandata, 3) == length(handles.ScanControl.ZVoltages)
