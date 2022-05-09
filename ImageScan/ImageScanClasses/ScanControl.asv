@@ -852,11 +852,11 @@ classdef ScanControl < handle
             else
                 newestFile = allfiles(newestIndex).name;
                 k = strfind(newestFile,'_');
-                d = strfind(newestFile,'.');
+                d = strfind
                 if max(size(k))>= 2
                     ImageSaveCounter = newestFile(k(end-2)+1:k(end-1)-1);
                 else
-                    ImageSaveCounter = newestFile(k+1:d-1); % this case should not happen but if it does, just assume the number is 6 digits long
+                    ImageSaveCounter = newestFile(k+1:k(end-1)-1); % this case should not happen but if it does, just assume the number is 6 digits long
                 end
             end
             ImageSaveCounter = sprintf('%06d', str2double(ImageSaveCounter)+1); % add 1 to last counter

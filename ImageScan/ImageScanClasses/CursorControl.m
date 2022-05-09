@@ -421,7 +421,7 @@ classdef CursorControl < handle
         function startImageRegistrationTracking(obj,handles,bSingleTrack)
             % first, do a z scan of the image and find the z value
             % corresponding to the maxium brightness ======================
-            zScan = takeCurrentZScan(handles);
+            zScan = obj.takeCurrentZScan(handles);
             [zCenter zi] = max(zScan); % find the z value where the PL measured is maximum 
             final_z_pos = zCenter; 
             % =============================================================
@@ -430,7 +430,7 @@ classdef CursorControl < handle
             refImage = refData.data.scan; % the reference image used for image registration tracking
             refImage_param = refData.param; % get the parameters associated with the reference image
             % -------------------------------------------------------------
-            currentImage = takeCurrentImage(handles); % the current image used for image registration tracking
+            currentImage = obj.takeCurrentImage(handles); % the current image used for image registration tracking
             % implement the image registration algorithms
             [abc,def] = dftregistration(fft2(refImage), fft2(currentImage), 20); 
             % 'pixel drift in x is'
@@ -460,7 +460,7 @@ classdef CursorControl < handle
         end 
         
         % ------ take an image with the current parameters -------------------------------------------------
-        function [currentIm] = takeCurrentImage(handles)
+        function [currentIm] = takeCurrentImage(obj,handles)
             handles.ScanParameters.bEnable = [1 1 0]; % enable xy scan direction
             handles.ScanParameters.DwellTime = str2double(handles.editXYDwell.String);
             % turn zoom-box usage on
@@ -472,13 +472,13 @@ classdef CursorControl < handle
             else
                 handles.StateControl.changeToScanningState(handles,3);
             end
-            hObject.String = 'taking the current image';
+%             hObject.String = 'taking the current image';
             currentIm = handles.ScanControl.exportRawImageData();
             handles.configS.bAutoSave = true; % turn on autosave after finishing the scan
         end
         
         % ----- take a z scan with the current parameters -------------------------------------------------
-        function [zScan] = takeCurrentZScan(handles)
+        function [zScan] = takeCurrentZScan(obj,handles)
             handles.ScanParameters.bEnable = [0 0 1]; % enable z scan direction
             handles.ScanParameters.DwellTime = str2double(handles.editZDwell.String);
             % turn zoom-box usage on
@@ -490,7 +490,7 @@ classdef CursorControl < handle
             else
                 handles.StateControl.changeToScanningState(handles,4);
             end
-            hObject.String = 'taking the current Z scan';
+%             hObject.String = 'taking the current Z scan';
             zScan = handles.ScanControl.exportRawImageData();
             handles.configS.bAutoSave = true; % turn on autosave after finishing the scan
         end
