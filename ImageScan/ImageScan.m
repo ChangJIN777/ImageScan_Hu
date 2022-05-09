@@ -22,7 +22,7 @@ function varargout = ImageScan(varargin)
 
 % Edit the above text to modify the response to help ImageScan
 
-% Last Modified by GUIDE v2.5 08-Feb-2022 15:35:05
+% Last Modified by GUIDE v2.5 09-May-2022 15:03:03
 % This is a new version of ImageScan to transfer to new Matlab versions
 % (past R2015b) - created based previous Matlab GUI with improved
 % functionality. (June 2017, SB)
@@ -753,6 +753,23 @@ function buttonStartStopLocalXYScan_Callback(hObject, ~, handles)
     hObject.String = 'Start Local XY-Scan';
 end
 
+function [currentIm] = takeCurrentImage(handles)
+    handles.ScanParameters.bEnable = [1 1 0]; % enable xy scan direction
+    handles.ScanParameters.DwellTime = str2double(handles.editXYDwell.String);
+    % turn zoom-box usage on
+    handles.checkUseZoomboxLimits.Value = 1;
+    handles.configS.bAutoSave = false; % turn off autosave
+    % then start scan as usual
+    if handles.StateControl.state == StateControl.SCANNING
+        handles.StateControl.changeToIdleState(handles,3);
+    else
+        handles.StateControl.changeToScanningState(handles,3);
+    end
+    hObject.String = 'taking the current image';
+    currentIm = handles.ScanControl.exportRawImageData();
+    handles.configS.bAutoSave = true; % turn on autosave after finishing the scan
+end
+
 % --- Executes on button press in buttonStartStopZScan.
 function buttonStartStopZScan_Callback(hObject, ~, handles)
 % hObject    handle to buttonStartStopZScan (see GCBO)
@@ -968,11 +985,40 @@ function buttonStartTracking_Callback(~, ~, handles)
 % hObject    handle to buttonStartTracking (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+%     if get(handles.If_imageRegistration,'Value') == 1
+% %         refData = importdata(get(handles.refImagePath,'String'));
+% %         refImage = refData.data; % the reference image used for image registration tracking
+% %         refImage_param = refData.param; % get the parameters associated with the reference image 
+% %         currentImage = takeCurrentImage(handles); % the current image used for image registration tracking
+% %         % implement the image registration algorithms
+% %         [abc,def] = dftregistration(fft2(refImage), fft2(currentImage), 20); 
+% %         % 'pixel drift in x is'
+% %         drift_pixel_tip_x = abc(3);
+% %         %'pixel drift in y is'
+% %         drift_pixel_tip_y = abc(4);
+% %         % converting pixel drifts to um   
+% %         scan_size_x = abs(refImage_param.XAxisMicrons(1)-refImage_param.XAxisMicrons(2));
+% %         scan_size_y = abs(refImage_param.YAxisMicrons(1)-refImage_param.YAxisMicrons(2));
+% %         scan_size_x_pixels = refImage_param.NPoints(1);
+% %         scan_size_y_pixels = refImage_param.NPoints(2);
+% %         x_pixel_to_um_ratio = scan_size_x./scan_size_x_pixels;
+% %         y_pixel_to_um_ratio = scan_size_y./scan_size_y_pixels;
+% %         drift_nm_tip_x = drift_pixel_tip_x*x_pixel_to_um_ratio; % in um
+% %         drift_nm_tip_y = drift_pixel_tip_y*y_pixel_to_um_ratio; % in um
+% %         % need to update the graphical cursor:
+% %         init_x_pos = get(handles.editPositionX,'String');
+% %         init_y_pos = get(handles.editPositionY,'String');
+% %         final_x_pos = init_x_pos - drift_nm_tip_x;
+% %         final_y_pos = init_y_pos - drift_nm_tip_y;
+% %         obj.deleteManualCursor(handles);
+% %         obj.createTrackingCursor(handles);
+%     else
         if handles.StateControl.state == StateControl.TRACKING
             handles.StateControl.changeToIdleState(handles,6);
         else
             handles.StateControl.changeToTrackingState(handles,6);
         end
+%     end
 end
 
 % --- Executes on button press in buttonTrackingParameters.
@@ -1680,4 +1726,17 @@ function refImagePath_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+end
+
+
+% --- Executes on button press in setRefImage.
+function setRefImage_Callback(hObject, eventdata, handles)
+% hObject    handle to setRefImage (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+currentImagePath = get(handles.inputSaveImagePath,'String');
+currentImageFilePrefix = get(handles.inputSaveImageFilePrefix,'String');
+currentImageFileNum = get(handles.inputSaveImageFileNum,'String');
+currentImage = [currentImagePath, currentImageFilePrefix, currentImageFileNum, '.mat'];
+set(handles.refImagePath,'String',currentImage);
 end

@@ -404,12 +404,12 @@ classdef CursorControl < handle
             YMicron = linspace(min(refImage_param.YAxisMicrons),max(refImage_param.YAxisMicrons),refImage_param.NPoints(2));
             % plot the reference image for reference ----------------------
             figReference = figure(obj.refFig); 
-            set(figReference,'Position',[20,50,300,200]);
+            set(figReference,'Position',[20,50,800,800]);
             clf(figReference);
             axesRef = axes;
             imagesc(XMicron,YMicron,refImage,'Parent',axesRef);
             xlabel(axesRef,'X (um)'); ylabel(axesRef,'Y (um)');
-            colorbar('pink',axesRef);
+            colormap pink; colorbar;
             hold(axesRef,'on');
             RefCursorX = refImage_param.ConfocalSpotPosition(1); 
             RefCursorY = refImage_param.ConfocalSpotPosition(2); 

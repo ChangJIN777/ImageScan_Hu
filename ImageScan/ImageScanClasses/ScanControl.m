@@ -164,8 +164,8 @@ classdef ScanControl < handle
                     imwrite(imageToSave,file,'Description',imageInfo1);
             end
             
-            % with each autosave, we update the reference image scan path for the image registration algorithm
-            set(handles.refImagePath,'String', imageInfo1.file); 
+%             % with each autosave, we update the reference image scan path for the image registration algorithm
+%             set(handles.refImagePath,'String', imageInfo1.file); 
             
             %save the image also as .mat file including all paramters
             obj.SaveMatFile(handles);
@@ -938,7 +938,8 @@ classdef ScanControl < handle
 %             [Bx,By,Bz] = readMagField;
             enAxis = obj.currentScanParameters.bEnable;
             
-            Image.param.FileName = [get(handles.inputSaveImageFilePrefix,'String') get(handles.inputSaveImageFileNum,'String') '_' datestr(now,'yyyymmdd_HHMM')] ;
+%             Image.param.FileName = [get(handles.inputSaveImageFilePrefix,'String') get(handles.inputSaveImageFileNum,'String') '_' datestr(now,'yyyymmdd_HHMM')] ;
+Image.param.FileName = [get(handles.inputSaveImageFilePrefix,'String') get(handles.inputSaveImageFileNum,'String')] ;
             Image.param.FilePath = get(handles.inputSaveImagePath,'String');
             Image.param.enableAxis = enAxis; % enabled scan axis [x y z], 1 = enabled, 0 = disabled
             Image.param.NPoints = obj.currentScanParameters.NPoints.*enAxis; %number of points per axis
