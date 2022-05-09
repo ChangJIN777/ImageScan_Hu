@@ -513,7 +513,7 @@ classdef CursorControl < handle
                 %Get the data from a scan
                 set(handles.indicatorTrackingStatus,'String','3D scanning');
                 set(handles.buttonStartTracking,'String','tracking');
-                scandata = handles.ScanControl.performScan(handles, true); % set bTracking to true to interrupt tracking
+                scandata = handles.ScanControl.performScan(handles, true); % get a 3D scan of the current region with the number of points specified by tracking parameters 
                 if size(scandata, 1) == length(handles.ScanControl.XVoltages) ...
                         && size(scandata,2) == length(handles.ScanControl.YVoltages)...
                         && size(scandata, 3) == length(handles.ScanControl.ZVoltages)
@@ -522,9 +522,9 @@ classdef CursorControl < handle
                     %Calculate the X-, Y-, and Z-coordinates of the "center of mass"
                     % 9-17-12, 9-18-12 this center be calculated in units
                     % of [microns] and not [volts], use "cmpv(...)"
-                    centerY = sum(sum((double(scandata).^n),3)*handles.ScanControl.YVoltages'*cmpv(2))/matsum;      %Discrete integral for the Y-coordinate
-                    centerX = sum(handles.ScanControl.XVoltages*cmpv(1)*(sum((double(scandata).^n),3)))/matsum;     %Discrete integral for X
-                    centerZ = sum(handles.ScanControl.ZVoltages*cmpv(3)*(sum((permute(double(scandata), [3 1 2]).^n),3)))/matsum;   %Discrete Integral for Z
+                    centerY = sum(sum((double(scandata).^n),3)*handles.ScanControl.YVoltages'*cmpv(2))/matsum;      %Discrete integral for the Y-coordinate ('center of mass' y coordinate)
+                    centerX = sum(handles.ScanControl.XVoltages*cmpv(1)*(sum((double(scandata).^n),3)))/matsum;     %Discrete integral for X ('center of mass' x coordinate)
+                    centerZ = sum(handles.ScanControl.ZVoltages*cmpv(3)*(sum((permute(double(scandata), [3 1 2]).^n),3)))/matsum;   %Discrete Integral for Z ('center of mass' z coordinate)
                     if isnan(centerZ)   %I've had some problems with getting NaN for centerZ, so this just keeps the z-location
                                         %steady if that happens
                         centerZ = str2double(get(handles.editPositionZ, 'String'));
@@ -550,9 +550,9 @@ classdef CursorControl < handle
                         yshift = (ybounds(2)-ybounds(1));
                         zbounds = [min(handles.ScanControl.ZVoltages*cmpv(3)) max(handles.ScanControl.ZVoltages*cmpv(3))];
                         zshift = (zbounds(2)-zbounds(1));
-                        [xval xi] = min(abs(handles.ScanControl.XVoltages*cmpv(1)-centerX));
-                        [yval yi] = min(abs(handles.ScanControl.YVoltages*cmpv(2)-centerY));
-                        [zval zi] = min(abs(handles.ScanControl.ZVoltages*cmpv(3)-centerZ));
+                        [xval xi] = min(abs(handles.ScanControl.XVoltages*cmpv(1)-centerX)); % find the closest x in the imagescan to the calculated COM x 
+                        [yval yi] = min(abs(handles.ScanControl.YVoltages*cmpv(2)-centerY)); % find the closest y in the imagescan to the calculated COM y 
+                        [zval zi] = min(abs(handles.ScanControl.ZVoltages*cmpv(3)-centerZ)); % find the closest z in the imagescan to the calculated COM z 
 
 %                         oldVal = obj.oldVal;
 %                         newVal = obj.newVal;
