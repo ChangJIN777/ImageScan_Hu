@@ -31,18 +31,20 @@ classdef StateControl < handle
             handles.CursorControl.deleteManualCursor(handles);
             obj.state = StateControl.SCANNING;
             
-            % disable all scanning buttons
+            % disable all scanning buttonsb ==========================
             p = {'buttonStartStopScan' 'buttonStartStopLargeXYScan' 'buttonStartStopLocalXYScan' 'buttonStartStopZScan' 'buttonStartStopRunningCount' 'buttonStartTracking'}; % array with scanning buttons
             for k = 1:max(size(p))
                 handles.(p{k}).Enable = 'off';   
             end    
-            % reanable the currently used button          
+            % ========================================================
+            % reanable the currently used button =====================         
             handles.(p{usedButtonNr}).Enable = 'on';
             if usedButtonNr < 5
                 handles.(p{usedButtonNr}).String = StateControl.scanButtonStopText;
             elseif usedButtonNr > 4
                 handles.(p{usedButtonNr}).String = StateControl.runningCountButtonStartText;
             end
+            % ========================================================
             
             bTracking = false;
             handles.ScanControl.performScan(handles,bTracking);

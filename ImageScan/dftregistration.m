@@ -1,5 +1,3 @@
-
-
 function [output Greg] = dftregistration(buf1ft,buf2ft,usfac)
 % function [output Greg] = dftregistration(buf1ft,buf2ft,usfac);
 % Efficient subpixel image registration by crosscorrelation. This code
