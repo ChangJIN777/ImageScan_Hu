@@ -753,23 +753,6 @@ function buttonStartStopLocalXYScan_Callback(hObject, ~, handles)
     hObject.String = 'Start Local XY-Scan';
 end
 
-function [currentIm] = takeCurrentImage(handles)
-    handles.ScanParameters.bEnable = [1 1 0]; % enable xy scan direction
-    handles.ScanParameters.DwellTime = str2double(handles.editXYDwell.String);
-    % turn zoom-box usage on
-    handles.checkUseZoomboxLimits.Value = 1;
-    handles.configS.bAutoSave = false; % turn off autosave
-    % then start scan as usual
-    if handles.StateControl.state == StateControl.SCANNING
-        handles.StateControl.changeToIdleState(handles,3);
-    else
-        handles.StateControl.changeToScanningState(handles,3);
-    end
-    hObject.String = 'taking the current image';
-    currentIm = handles.ScanControl.exportRawImageData();
-    handles.configS.bAutoSave = true; % turn on autosave after finishing the scan
-end
-
 % --- Executes on button press in buttonStartStopZScan.
 function buttonStartStopZScan_Callback(hObject, ~, handles)
 % hObject    handle to buttonStartStopZScan (see GCBO)

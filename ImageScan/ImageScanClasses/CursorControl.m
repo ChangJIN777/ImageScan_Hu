@@ -33,6 +33,7 @@ classdef CursorControl < handle
         hTrackFig1 = 1001;      % tracking figure number 1
         hTrackFig2 = 1002;      % tracking figure number 2
         hTrackFig3 = 1003;      % tracking figure number 3
+        refFig = 1004; % reference figure number 4 for implementing image registration 
         trackingHistory = zeros(5000,3);
         trackingHistIndex = 1;
         bTestNewVsOld = true;
@@ -386,13 +387,127 @@ classdef CursorControl < handle
             set(handles.editCountDwellTime,'String',num2str(obj.dwellTime));
         end
         
+        %---- plot the reference image ------------------------------------
+        function plotRefImage(obj,handles)
+            % import the reference image data -----------------------------
+            refData = importdata(get(handles.refImagePath,'String')); 
+            refImage = refData.data.scan; % the reference image used for image registration tracking
+            refImage_param = refData.param; % get the parameters associated with the reference image
+            % get the necessary conversion parameters ---------------------
+%             scan_size_x = abs(refImage_param.XAxisMicrons(1)-refImage_param.XAxisMicrons(2)); % um
+%             scan_size_y = abs(refImage_param.YAxisMicrons(1)-refImage_param.YAxisMicrons(2)); % um
+%             scan_size_x_pixels = refImage_param.NPoints(1);
+%             scan_size_y_pixels = refImage_param.NPoints(2);
+%             x_pixel_to_um_ratio = scan_size_x/scan_size_x_pixels;
+%             y_pixel_to_um_ratio = scan_size_y/scan_size_y_pixels;
+            XMicron = linspace(min(refImage_param.XAxisMicrons),max(refImage_param.XAxisMicrons),refImage_param.NPoints(1));
+            YMicron = linspace(min(refImage_param.YAxisMicrons),max(refImage_param.YAxisMicrons),refImage_param.NPoints(2));
+            % plot the reference image for reference ----------------------
+            figReference = figure(obj.refFig); 
+            set(figReference,'Position',[20,50,300,200]);
+            clf(figReference);
+            axesRef = axes;
+            imagesc(XMicron,YMicron,refImage,'Parent',axesRef);
+            xlabel(axesRef,'X (um)'); ylabel(axesRef,'Y (um)');
+            colorbar('pink',axesRef);
+            hold(axesRef,'on');
+            RefCursorX = refImage_param.ConfocalSpotPosition(1); 
+            RefCursorY = refImage_param.ConfocalSpotPosition(2); 
+            plot(RefCursorX,RefCursorY,'y+','MarkerSize',20);
+            hold(axesRef,'off');
+        end
+        
+        %---- image registration tracking ---------------------------------
+        function startImageRegistrationTracking(obj,handles,bSingleTrack)
+            % first, do a z scan of the image and find the z value
+            % corresponding to the maxium brightness ======================
+            zScan = takeCurrentZScan(handles);
+            [zCenter zi] = max(zScan); % find the z value where the PL measured is maximum 
+            final_z_pos = zCenter; 
+            % =============================================================
+            % code added to implement image registration tracking (05/09/22) ==========
+            refData = importdata(get(handles.refImagePath,'String')); 
+            refImage = refData.data.scan; % the reference image used for image registration tracking
+            refImage_param = refData.param; % get the parameters associated with the reference image
+            % -------------------------------------------------------------
+            currentImage = takeCurrentImage(handles); % the current image used for image registration tracking
+            % implement the image registration algorithms
+            [abc,def] = dftregistration(fft2(refImage), fft2(currentImage), 20); 
+            % 'pixel drift in x is'
+            drift_pixel_tip_x = abc(3);
+            %'pixel drift in y is'
+            drift_pixel_tip_y = abc(4);
+            % converting pixel drifts to um   
+            scan_size_x = abs(refImage_param.XAxisMicrons(1)-refImage_param.XAxisMicrons(2)); % um
+            scan_size_y = abs(refImage_param.YAxisMicrons(1)-refImage_param.YAxisMicrons(2)); % um
+            scan_size_x_pixels = refImage_param.NPoints(1);
+            scan_size_y_pixels = refImage_param.NPoints(2);
+            x_pixel_to_um_ratio = scan_size_x/scan_size_x_pixels;
+            y_pixel_to_um_ratio = scan_size_y/scan_size_y_pixels;
+            drift_um_tip_x = drift_pixel_tip_x*x_pixel_to_um_ratio; % in um
+            drift_um_tip_y = drift_pixel_tip_y*y_pixel_to_um_ratio; % in um
+            % need to update the graphical cursor:
+            init_x_pos = get(handles.editPositionX,'String');
+            init_y_pos = get(handles.editPositionY,'String');
+            final_x_pos = init_x_pos - drift_um_tip_x;
+            final_y_pos = init_y_pos - drift_um_tip_y;
+            handles.CursorControl.deleteManualCursor(handles);
+            handles.CursorControl.createTrackingCursor(handles);
+            % Set the edit box values 
+            set(handles.editPositionX, 'String', num2str(final_x_pos));
+            set(handles.editPositionY, 'String', num2str(final_y_pos));
+            set(handles.editPositionZ, 'String', num2str(final_z_pos));
+        end 
+        
+        % ------ take an image with the current parameters -------------------------------------------------
+        function [currentIm] = takeCurrentImage(handles)
+            handles.ScanParameters.bEnable = [1 1 0]; % enable xy scan direction
+            handles.ScanParameters.DwellTime = str2double(handles.editXYDwell.String);
+            % turn zoom-box usage on
+            handles.checkUseZoomboxLimits.Value = 1;
+            handles.configS.bAutoSave = false; % turn off autosave
+            % then start scan as usual
+            if handles.StateControl.state == StateControl.SCANNING
+                handles.StateControl.changeToIdleState(handles,3);
+            else
+                handles.StateControl.changeToScanningState(handles,3);
+            end
+            hObject.String = 'taking the current image';
+            currentIm = handles.ScanControl.exportRawImageData();
+            handles.configS.bAutoSave = true; % turn on autosave after finishing the scan
+        end
+        
+        % ----- take a z scan with the current parameters -------------------------------------------------
+        function [zScan] = takeCurrentZScan(handles)
+            handles.ScanParameters.bEnable = [0 0 1]; % enable z scan direction
+            handles.ScanParameters.DwellTime = str2double(handles.editZDwell.String);
+            % turn zoom-box usage on
+%             handles.checkUseZoomboxLimits.Value = 1;
+            handles.configS.bAutoSave = false; % turn off autosave
+            % then start scan as usual
+            if handles.StateControl.state == StateControl.SCANNING
+                handles.StateControl.changeToIdleState(handles,4);
+            else
+                handles.StateControl.changeToScanningState(handles,4);
+            end
+            hObject.String = 'taking the current Z scan';
+            zScan = handles.ScanControl.exportRawImageData();
+            handles.configS.bAutoSave = true; % turn on autosave after finishing the scan
+        end
+        
+        
         %---- initialize confocal tracking ----------------------------------------------------------------
         function startTrackingMode(obj,handles, bSingleTrack)
             %Starts tracking the weighted center of a user-defined region
             handles.DAQManager.DAQ.ClearAllTasks();
             obj.deleteManualCursor(handles);
             obj.createTrackingCursor(handles);
-            obj.runTracking(handles, bSingleTrack);
+            if get(handles.If_imageRegistration,'Value') == true
+                obj.plotRefImage(handles);
+                obj.startImageRegistrationTracking(handles,bSingleTrack);
+            else 
+                obj.runTracking(handles, bSingleTrack);
+            end
         end
         
         %---- end confocal tracking -----------------------------------------------------------------------
