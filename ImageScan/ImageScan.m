@@ -22,7 +22,7 @@ function varargout = ImageScan(varargin)
 
 % Edit the above text to modify the response to help ImageScan
 
-% Last Modified by GUIDE v2.5 09-May-2022 15:03:03
+% Last Modified by GUIDE v2.5 09-May-2022 18:02:04
 % This is a new version of ImageScan to transfer to new Matlab versions
 % (past R2015b) - created based previous Matlab GUI with improved
 % functionality. (June 2017, SB)

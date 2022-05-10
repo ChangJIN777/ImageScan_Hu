@@ -428,11 +428,15 @@ classdef CursorControl < handle
 %             cvpm(1)=handles.configS.voltsPerMicronX;
 %             cvpm(2)=handles.configS.voltsPerMicronY;
 %             cvpm(3)=handles.configS.voltsPerMicronZ;
+            obj.continueTracking = true;            
+            while obj.continueTracking == true
             %bSingleTrack is set to true if tracking is meant to be
                 %interweaved with other functions, like ESR measurements --
                 if bSingleTrack == true
                     obj.continueTracking = false;
                 end
+            set(handles.indicatorTrackingStatus,'String','3D scanning');
+            set(handles.buttonStartTracking,'String','tracking');
             % -------------------------------------------------------------
             % first, do a z scan of the image and find the z value
             % corresponding to the maxium brightness ======================
@@ -478,11 +482,13 @@ classdef CursorControl < handle
             obj.updateVoltage(handles,2,final_y_pos);
             obj.updateVoltage(handles,3,final_z_pos);
             
-            if obj.continueTracking == true 
-                set(handles.indicatorTrackingStatus,'String','Okay to stop');
-                set(handles.buttomStartTracking,'String','Okay to stop');
-                obj.numCounts = 0; 
-                obj.runCount(handles,true,handles.TrackingParameters.PostDwellTime);
+                if obj.continueTracking == true 
+                    set(handles.indicatorTrackingStatus,'String','Okay to stop');
+                    set(handles.buttonStartTracking,'String','Okay to stop');
+                    obj.numCounts = 0; 
+                    handles.StateControl.state = StateControl.TRACKING;
+                    obj.runCount(handles,true,handles.TrackingParameters.PostDwellTime);
+                end
             end
         end 
         
@@ -498,6 +504,7 @@ classdef CursorControl < handle
                 handles.StateControl.changeToIdleState(handles,3);
             else
                 handles.StateControl.changeToScanningState(handles,3);
+                handles.('buttonStartTracking').Enable = 'on';
             end
 %             hObject.String = 'taking the current image';
             currentIm = handles.ScanControl.exportRawImageData();
@@ -516,6 +523,7 @@ classdef CursorControl < handle
                 handles.StateControl.changeToIdleState(handles,4);
             else
                 handles.StateControl.changeToScanningState(handles,4);
+                handles.('buttonStartTracking').Enable = 'on';
             end
 %             hObject.String = 'taking the current Z scan';
             zScan = handles.ScanControl.exportRawImageData();
