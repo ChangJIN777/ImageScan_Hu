@@ -415,10 +415,25 @@ classdef CursorControl < handle
             RefCursorY = refImage_param.ConfocalSpotPosition(2); 
             plot(RefCursorX,RefCursorY,'y+','MarkerSize',20);
             hold(axesRef,'off');
+            set(axesRef,'xdir','normal','ydir','normal');
         end
         
         %---- image registration tracking ---------------------------------
         function startImageRegistrationTracking(obj,handles,bSingleTrack)
+%             cmpv = zeros(1,3);
+%             cmpv(1)=handles.configS.micronsPerVoltX;
+%             cmpv(2)=handles.configS.micronsPerVoltY;
+%             cmpv(3)=handles.configS.micronsPerVoltZ;
+%             cvpm = zeros(1,3);
+%             cvpm(1)=handles.configS.voltsPerMicronX;
+%             cvpm(2)=handles.configS.voltsPerMicronY;
+%             cvpm(3)=handles.configS.voltsPerMicronZ;
+            %bSingleTrack is set to true if tracking is meant to be
+                %interweaved with other functions, like ESR measurements --
+                if bSingleTrack == true
+                    obj.continueTracking = false;
+                end
+            % -------------------------------------------------------------
             % first, do a z scan of the image and find the z value
             % corresponding to the maxium brightness ======================
             zScan = obj.takeCurrentZScan(handles);
@@ -447,16 +462,28 @@ classdef CursorControl < handle
             drift_um_tip_x = drift_pixel_tip_x*x_pixel_to_um_ratio; % in um
             drift_um_tip_y = drift_pixel_tip_y*y_pixel_to_um_ratio; % in um
             % need to update the graphical cursor:
-            init_x_pos = get(handles.editPositionX,'String');
-            init_y_pos = get(handles.editPositionY,'String');
+            init_x_pos = str2double(get(handles.editPositionX,'String'));
+            init_y_pos = str2double(get(handles.editPositionY,'String'));
             final_x_pos = init_x_pos - drift_um_tip_x;
             final_y_pos = init_y_pos - drift_um_tip_y;
             handles.CursorControl.deleteManualCursor(handles);
             handles.CursorControl.createTrackingCursor(handles);
-            % Set the edit box values 
+            % Set the edit box values and change the location of the cursor accordingly -------------------------------------
             set(handles.editPositionX, 'String', num2str(final_x_pos));
             set(handles.editPositionY, 'String', num2str(final_y_pos));
             set(handles.editPositionZ, 'String', num2str(final_z_pos));
+            obj.deleteTrackingCursor(handles);
+            obj.createTrackingCursor(handles);
+            obj.updateVoltage(handles,1,final_x_pos);
+            obj.updateVoltage(handles,2,final_y_pos);
+            obj.updateVoltage(handles,3,final_z_pos);
+            
+            if obj.continueTracking == true 
+                set(handles.indicatorTrackingStatus,'String','Okay to stop');
+                set(handles.buttomStartTracking,'String','Okay to stop');
+                obj.numCounts = 0; 
+                obj.runCount(handles,true,handles.TrackingParameters.PostDwellTime);
+            end
         end 
         
         % ------ take an image with the current parameters -------------------------------------------------

@@ -389,28 +389,41 @@ classdef CursorControl < handle
         
         %---- plot the reference image ------------------------------------
         function plotRefImage(obj,handles)
-            
             % import the reference image data -----------------------------
             refData = importdata(get(handles.refImagePath,'String')); 
             refImage = refData.data.scan; % the reference image used for image registration tracking
             refImage_param = refData.param; % get the parameters associated with the reference image
+            % get the necessary conversion parameters ---------------------
+%             scan_size_x = abs(refImage_param.XAxisMicrons(1)-refImage_param.XAxisMicrons(2)); % um
+%             scan_size_y = abs(refImage_param.YAxisMicrons(1)-refImage_param.YAxisMicrons(2)); % um
+%             scan_size_x_pixels = refImage_param.NPoints(1);
+%             scan_size_y_pixels = refImage_param.NPoints(2);
+%             x_pixel_to_um_ratio = scan_size_x/scan_size_x_pixels;
+%             y_pixel_to_um_ratio = scan_size_y/scan_size_y_pixels;
+            XMicron = linspace(min(refImage_param.XAxisMicrons),max(refImage_param.XAxisMicrons),refImage_param.NPoints(1));
+            YMicron = linspace(min(refImage_param.YAxisMicrons),max(refImage_param.YAxisMicrons),refImage_param.NPoints(2));
             % plot the reference image for reference ----------------------
             figReference = figure(obj.refFig); 
-            set(figReference,'Position',[20,50,300,200]);
+            set(figReference,'Position',[20,50,800,800]);
             clf(figReference);
             axesRef = axes;
-            imagesc(refImage,'Parent',axesRef);
-            colorbar('pink',axesRef);
+            imagesc(XMicron,YMicron,refImage,'Parent',axesRef);
+            xlabel(axesRef,'X (um)'); ylabel(axesRef,'Y (um)');
+            colormap pink; colorbar;
             hold(axesRef,'on');
-            RefCursorX = refImage_param.ConfocalSpotPosition(1); RefCursorY = refImage_param.ConfocalSpotPosition(2); 
+            RefCursorX = refImage_param.ConfocalSpotPosition(1); 
+            RefCursorY = refImage_param.ConfocalSpotPosition(2); 
             plot(RefCursorX,RefCursorY,'y+','MarkerSize',20);
+            hold(axesRef,'off');
         end
         
         %---- image registration tracking ---------------------------------
         function startImageRegistrationTracking(obj,handles,bSingleTrack)
+            
+            
             % first, do a z scan of the image and find the z value
             % corresponding to the maxium brightness ======================
-            zScan = takeCurrentZScan(handles);
+            zScan = obj.takeCurrentZScan(handles);
             [zCenter zi] = max(zScan); % find the z value where the PL measured is maximum 
             final_z_pos = zCenter; 
             % =============================================================
@@ -419,7 +432,7 @@ classdef CursorControl < handle
             refImage = refData.data.scan; % the reference image used for image registration tracking
             refImage_param = refData.param; % get the parameters associated with the reference image
             % -------------------------------------------------------------
-            currentImage = takeCurrentImage(handles); % the current image used for image registration tracking
+            currentImage = obj.takeCurrentImage(handles); % the current image used for image registration tracking
             % implement the image registration algorithms
             [abc,def] = dftregistration(fft2(refImage), fft2(currentImage), 20); 
             % 'pixel drift in x is'
@@ -449,7 +462,7 @@ classdef CursorControl < handle
         end 
         
         % ------ take an image with the current parameters -------------------------------------------------
-        function [currentIm] = takeCurrentImage(handles)
+        function [currentIm] = takeCurrentImage(obj,handles)
             handles.ScanParameters.bEnable = [1 1 0]; % enable xy scan direction
             handles.ScanParameters.DwellTime = str2double(handles.editXYDwell.String);
             % turn zoom-box usage on
@@ -461,13 +474,13 @@ classdef CursorControl < handle
             else
                 handles.StateControl.changeToScanningState(handles,3);
             end
-            hObject.String = 'taking the current image';
+%             hObject.String = 'taking the current image';
             currentIm = handles.ScanControl.exportRawImageData();
             handles.configS.bAutoSave = true; % turn on autosave after finishing the scan
         end
         
         % ----- take a z scan with the current parameters -------------------------------------------------
-        function [zScan] = takeCurrentZScan(handles)
+        function [zScan] = takeCurrentZScan(obj,handles)
             handles.ScanParameters.bEnable = [0 0 1]; % enable z scan direction
             handles.ScanParameters.DwellTime = str2double(handles.editZDwell.String);
             % turn zoom-box usage on
@@ -479,7 +492,7 @@ classdef CursorControl < handle
             else
                 handles.StateControl.changeToScanningState(handles,4);
             end
-            hObject.String = 'taking the current Z scan';
+%             hObject.String = 'taking the current Z scan';
             zScan = handles.ScanControl.exportRawImageData();
             handles.configS.bAutoSave = true; % turn on autosave after finishing the scan
         end
@@ -492,6 +505,7 @@ classdef CursorControl < handle
             obj.deleteManualCursor(handles);
             obj.createTrackingCursor(handles);
             if get(handles.If_imageRegistration,'Value') == true
+                obj.plotRefImage(handles);
                 obj.startImageRegistrationTracking(handles,bSingleTrack);
             else 
                 obj.runTracking(handles, bSingleTrack);
