@@ -1013,8 +1013,10 @@ function buttonStartTracking_Callback(~, ~, handles)
 % %         obj.deleteManualCursor(handles);
 % %         obj.createTrackingCursor(handles);
 %     else
-        if handles.StateControl.state == StateControl.TRACKING
+        if (handles.StateControl.state == StateControl.TRACKING)||(handles.StateControl.state == StateControl.SCANNING)
             handles.StateControl.changeToIdleState(handles,6);
+%         elseif handles.StateControl.state == StateControl.SCANNING
+%             handles.StateControl.changeToIdleState(handles,6);
         else
             handles.StateControl.changeToTrackingState(handles,6);
         end

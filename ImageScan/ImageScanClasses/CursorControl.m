@@ -430,6 +430,7 @@ classdef CursorControl < handle
 %             cvpm(3)=handles.configS.voltsPerMicronZ;
             obj.continueTracking = true;            
             while obj.continueTracking == true
+            
             %bSingleTrack is set to true if tracking is meant to be
                 %interweaved with other functions, like ESR measurements --
                 if bSingleTrack == true
@@ -501,9 +502,15 @@ classdef CursorControl < handle
             handles.configS.bAutoSave = false; % turn off autosave
             % then start scan as usual
             if handles.StateControl.state == StateControl.SCANNING
-                handles.StateControl.changeToIdleState(handles,3);
+                handles.StateControl.changeToIdleState(handles,6);
+                % enable the tracking bottom so we can stop the tracking if we
+                % want 
+                handles.('buttonStartTracking').Enable = 'on';
             else
-                handles.StateControl.changeToScanningState(handles,3);
+                handles.StateControl.changeToScanningState(handles,6);
+                handles.('buttonStartTracking').Enable = 'on';
+                % enable the tracking bottom so we can stop the tracking if we
+                % want 
                 handles.('buttonStartTracking').Enable = 'on';
             end
 %             hObject.String = 'taking the current image';
@@ -519,10 +526,16 @@ classdef CursorControl < handle
 %             handles.checkUseZoomboxLimits.Value = 1;
             handles.configS.bAutoSave = false; % turn off autosave
             % then start scan as usual
-            if handles.StateControl.state == StateControl.SCANNING
-                handles.StateControl.changeToIdleState(handles,4);
+            if handles.StateControl.state == StateControl.SCANNING 
+                handles.StateControl.changeToIdleState(handles,6);
+                % enable the tracking bottom so we can stop the tracking if we
+                % want 
+                handles.('buttonStartTracking').Enable = 'on';
             else
-                handles.StateControl.changeToScanningState(handles,4);
+                handles.StateControl.changeToScanningState(handles,6);
+                handles.('buttonStartTracking').Enable = 'on';
+                % enable the tracking bottom so we can stop the tracking if we
+                % want 
                 handles.('buttonStartTracking').Enable = 'on';
             end
 %             hObject.String = 'taking the current Z scan';
