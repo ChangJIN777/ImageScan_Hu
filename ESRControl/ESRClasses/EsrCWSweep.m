@@ -45,8 +45,20 @@ classdef EsrCWSweep < handle
             obj.gesr.UpdateFileNumber(esrGUI); % update the number attached after the filename
             obj.gesr.UpdateFolder(esrGUI); 
             
+%             %safety check
+%             inputAmp = str2double(get(esrGUI.amplitude,'String'));
             %safety check
             inputAmp = str2double(get(esrGUI.amplitude,'String'));
+            if inputAmp > -3
+                danger = questdlg('The amplitude is high for a cw esr measurement. Do you still want to run?','High power warning!','Abort','Run','Abort');
+                switch(danger)
+                    case 'Abort'
+                        return
+                        % exit the perform sequence if user chooses to stop
+                    case 'Run'
+                        % continue on  
+                end
+            end 
             
             if obj.gesr.CheckAmp(inputAmp,-12) % if amplitude is higher than -12 dBm
                 return % interrupt the function
@@ -241,13 +253,12 @@ classdef EsrCWSweep < handle
             
             %safety check
             inputAmp = str2double(get(esrGUI.amplitude,'String'));
-            if inputAmp > -3
+            if inputAmp > -30
                 danger = questdlg('The amplitude is high for a cw esr measurement. Do you still want to run?','High power warning!','Abort','Run','Abort');
                 switch(danger)
                     case 'Abort'
                         return
                         % exit the perform sequence if user chooses to stop
-
                     case 'Run'
                         % continue on  
                 end
