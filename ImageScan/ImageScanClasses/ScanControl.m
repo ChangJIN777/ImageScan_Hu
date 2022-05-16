@@ -136,6 +136,11 @@ classdef ScanControl < handle
         function [data] = exportRawImageData(obj)
             data = obj.imageData;
         end
+        function [minZ,maxZ,NPoints] = exportZScanParam(obj)
+            minZ = obj.currentScanParameters.MinValues(3);
+            maxZ = obj.currentScanParameters.MaxValues(3);
+            NPoints = obj.currentScanParameters.NPoints(3);
+        end
         %---- automatic saving on function (also automatically update the ref image for image registration tracking) ----------------------------------------------------------------
         function AutomaticSaveScan(obj,handles)
             

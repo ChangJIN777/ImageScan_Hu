@@ -441,14 +441,16 @@ classdef CursorControl < handle
             % -------------------------------------------------------------
             % first, do a z scan of the image and find the z value
             % corresponding to the maxium brightness ======================
-            zScan = obj.takeCurrentZScan(handles);
+            [zScan,zSpan] = obj.takeCurrentZScan(handles);
             [zCenter zi] = max(zScan); % find the z value where the PL measured is maximum 
-            final_z_pos = zCenter; 
+            final_z_pos = zSpan(zi); 
             % =============================================================
             % code added to implement image registration tracking (05/09/22) ==========
             refData = importdata(get(handles.refImagePath,'String')); 
             refImage = refData.data.scan; % the reference image used for image registration tracking
             refImage_param = refData.param; % get the parameters associated with the reference image
+            set(handles.editPositionZ, 'String', num2str(final_z_pos));
+            obj.updateVoltage(handles,3,final_z_pos);
             % -------------------------------------------------------------
             currentImage = obj.takeCurrentImage(handles); % the current image used for image registration tracking
             % implement the image registration algorithms
@@ -476,12 +478,10 @@ classdef CursorControl < handle
             % Set the edit box values and change the location of the cursor accordingly -------------------------------------
             set(handles.editPositionX, 'String', num2str(final_x_pos));
             set(handles.editPositionY, 'String', num2str(final_y_pos));
-            set(handles.editPositionZ, 'String', num2str(final_z_pos));
             obj.deleteTrackingCursor(handles);
             obj.createTrackingCursor(handles);
             obj.updateVoltage(handles,1,final_x_pos);
             obj.updateVoltage(handles,2,final_y_pos);
-            obj.updateVoltage(handles,3,final_z_pos);
             
                 if obj.continueTracking == true 
                     set(handles.indicatorTrackingStatus,'String','Okay to stop');
@@ -519,7 +519,7 @@ classdef CursorControl < handle
         end
         
         % ----- take a z scan with the current parameters -------------------------------------------------
-        function [zScan] = takeCurrentZScan(obj,handles)
+        function [zScan,zSpan] = takeCurrentZScan(obj,handles)
             handles.ScanParameters.bEnable = [0 0 1]; % enable z scan direction
             handles.ScanParameters.DwellTime = str2double(handles.editZDwell.String);
             % turn zoom-box usage on
@@ -540,6 +540,8 @@ classdef CursorControl < handle
             end
 %             hObject.String = 'taking the current Z scan';
             zScan = handles.ScanControl.exportRawImageData();
+            [minZ,maxZ,NPoints] = handles.ScanControl.exportZScanParam();
+            zSpan = linspace(minZ,maxZ,NPoints); 
             handles.configS.bAutoSave = true; % turn on autosave after finishing the scan
         end
         
