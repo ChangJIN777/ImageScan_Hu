@@ -71,6 +71,7 @@ function ImageScan_OpeningFcn(hObject, ~, handles, varargin)
 
     %%%% confocal scan setup (load calibrations, default scan size, etc.)
     handles.configS = ConfigureImageScan();             % load calibration for confocal scan
+    handles.scanParam = ConfigureScan();
     handles.ScanParameters = ConfocalScanParameters(handles);      % structure with current confocal scan parameters (is continuously updated with e.g. scan size, scan direction, etc.)
     handles.TrackingParameters = ConfocalScanTrackingParameters(handles); % structure with current NV tracking parameters
 

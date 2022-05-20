@@ -456,9 +456,9 @@ classdef CursorControl < handle
             % implement the image registration algorithms
             [abc,def] = dftregistration(fft2(refImage), fft2(currentImage), 20); 
             % 'pixel drift in x is'
-            drift_pixel_tip_x = abc(3);
+            drift_pixel_tip_x = abc(4);
             %'pixel drift in y is'
-            drift_pixel_tip_y = abc(4);
+            drift_pixel_tip_y = abc(3);
             % converting pixel drifts to um   
             scan_size_x = abs(refImage_param.XAxisMicrons(1)-refImage_param.XAxisMicrons(2)); % um
             scan_size_y = abs(refImage_param.YAxisMicrons(1)-refImage_param.YAxisMicrons(2)); % um
@@ -482,7 +482,10 @@ classdef CursorControl < handle
             obj.createTrackingCursor(handles);
             obj.updateVoltage(handles,1,final_x_pos);
             obj.updateVoltage(handles,2,final_y_pos);
-            
+            % debugging ===================================================
+            obj.UpdateZoomBox(handles,drift_um_tip_x,drift_um_tip_y);
+            currentImage = obj.takeCurrentImage(handles);
+            % =============================================================
                 if obj.continueTracking == true 
                     set(handles.indicatorTrackingStatus,'String','Okay to stop');
                     set(handles.buttonStartTracking,'String','Okay to stop');
@@ -493,12 +496,27 @@ classdef CursorControl < handle
             end
         end 
         
+        function UpdateZoomBox(obj,handles,drift_x,drift_y)
+            init_minX = handles.ScanParameters.MinValues(1);
+            init_minY = handles.ScanParameters.MinValues(2);
+            init_maxX = handles.ScanParameters.MaxValues(1);
+            init_maxY = handles.ScanParameters.MaxValues(2);
+            final_minX = init_minX - drift_x;
+            final_maxX = init_maxX - drift_x;
+            final_minY = init_minY - drift_y;
+            final_maxY = init_maxY - drift_y;
+            handles.ScanParameters.MinValues(1) = final_minX;
+            handles.ScanParameters.MinValues(2) = final_minY;
+            handles.ScanParameters.MaxValues(1) = final_maxX;
+            handles.ScanParameters.MaxValues(2) = final_maxY;
+        end
+        
         % ------ take an image with the current parameters -------------------------------------------------
         function [currentIm] = takeCurrentImage(obj,handles)
             handles.ScanParameters.bEnable = [1 1 0]; % enable xy scan direction
             handles.ScanParameters.DwellTime = str2double(handles.editXYDwell.String);
-            % turn zoom-box usage on
-            handles.checkUseZoomboxLimits.Value = 1;
+            % turn zoom-box usage off
+            handles.checkUseZoomboxLimits.Value = 0;
             handles.configS.bAutoSave = false; % turn off autosave
             % then start scan as usual
             if handles.StateControl.state == StateControl.SCANNING
