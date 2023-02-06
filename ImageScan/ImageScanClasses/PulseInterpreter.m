@@ -57,7 +57,7 @@ classdef PulseInterpreter < handle
             
             if ~libisloaded('spinapi')
                 try
-                    loadlibrary('spinapi64', 'C:\SpinCore\SpinAPI\dll\spinapi.h','alias','spinapi');
+                    loadlibrary('spinapi64', 'C:\SpinCore\SpinAPI\src\spinapi.h','alias','spinapi');
                 catch err %#ok<NASGU>
                     warning('Warning:libNotFound', 'Library not found. All functions except loadToPulseblaster will still work');
                 end

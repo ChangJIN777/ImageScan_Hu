@@ -46,8 +46,8 @@ classdef DAQManager < handle
 %         triggerLine3 = '/PXI1Slot3/PFI7';  % external PulseBlaster RF TTL line for counting up/down
         
         %analog in for correlated counter, voltage measurement
-        counterVoltageAI = 'PXI1Slot2/ai1';
-        photoDiodeAI = 'PXI1Slot2/ai7';
+        counterVoltageAI = 'PXI1Slot2/ai1'; % APD imput voltage
+        % photoDiodeAI = 'PXI1Slot2/ai7';
         
         strDims = 'XYZ';
         CTR1 = 1;
@@ -60,11 +60,8 @@ classdef DAQManager < handle
         % GPIB address:
         % Chang Jin 7/10/21
         % original order
-         srsGPIB = 22;
+         srsGPIB = 27; % added by Chang for the software to work on the laser writing setup
          srs2GPIB = 16; 
-%         % modified order (debugging --> switching srs1 and srs2)
-%         srsGPIB = 16;
-%         srs2GPIB = 22;
         srs3GPIB = 24;
         %-----------------
     end

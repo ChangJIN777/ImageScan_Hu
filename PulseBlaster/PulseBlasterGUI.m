@@ -4,8 +4,8 @@ function PulseBlasterGUI()
 %this is just a standard nam function that points to PulseBlaster_GUI_vX_X
 %PulseBlaster_GUI_vX_X is found in the directory /GUI_Files
 
-if (exist('C:\Users\LT-SPM\Documents\MATLAB\PulseBlaster\SpinAPI\GUI_Files', 'dir') == 7)
-    addpath('C:\Users\LT-SPM\Documents\MATLAB\PulseBlaster\SpinAPI\GUI_Files');
+if (exist('C:\Users\user\Documents\Chang\ImageScan_GUI\ImageScan_Hu', 'dir') == 7)
+    addpath('C:\Users\user\Documents\Chang\ImageScan_GUI\ImageScan_Hu\PulseBlaster\SpinAPI\GUI_Files');
 else
     error('Cannot find ./SpinAPI/GUI_Files');
 end
