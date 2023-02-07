@@ -43,7 +43,7 @@ classdef DAQManager < handle
 %         counterLine1 = '/PXI1Slot2/PFI0';
 %         counterLine2 = '/PXI1Slot2/PFI1';
 
-        % note: in this case, we are only using the first counter in 
+% note: in this case, we are only using the first counter in 
         counterLine1 = '/Dev2/PFI0';
         counterLine2 = '/Dev2/PFI1';
         
@@ -125,7 +125,7 @@ classdef DAQManager < handle
 
 %             obj.DAQ.addClockLine('PXI1Slot2/ctr1','/PXI1Slot2/PFI13');
 %             obj.DAQ.addClockLine('PXI1Slot2/ctr0','/PXI1Slot2/PFI12');             
-            obj.DAQ.addClockLine('Dev2/ctr0',obj.triggerLine1);  
+            obj.DAQ.addClockLine('PXI1Slot2/ctr0','/Dev2/PFI5');  % this is our trigger line 
 
         % 'Slot2' refers to our DAQ card being in '2' slot of the chassis.
         % the counter we use is PFI0 and trigger is PFI12
@@ -136,9 +136,9 @@ classdef DAQManager < handle
 
 %         obj.DAQ.addCounterInLine('PXI1Slot2/ctr2',obj.counterLine1,DAQManager.CLK2);
 %         obj.DAQ.addCounterInLine('PXI1Slot2/ctr3',obj.counterLine2,DAQManager.CLK1);
-%             obj.DAQ.addCounterInLine('PXI1Slot2/ctr3','/PXI1Slot2/PFI1',DAQManager.CLK1);
-%             obj.DAQ.addCounterInLine('PXI1Slot2/ctr2','/PXI1Slot2/PFI0',DAQManager.CLK2);
-            obj.DAQ.addCounterInLine('Dev2/ctr1',obj.counterLine1,DAQManager.CLK1); 
+        obj.DAQ.addCounterInLine('PXI1Slot2/ctr3','/PXI1Slot2/PFI1',DAQManager.CLK1);
+        obj.DAQ.addCounterInLine('PXI1Slot2/ctr2','/PXI1Slot2/PFI0',DAQManager.CLK2);
+            
             
 
         end
