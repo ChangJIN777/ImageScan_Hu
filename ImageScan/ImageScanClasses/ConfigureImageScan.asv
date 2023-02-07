@@ -53,12 +53,9 @@ classdef ConfigureImageScan < handle
         imageScanBGColorR = 228;
         imageScanBGColorG = 240;
         imageScanBGColorB = 230;
-        %xScanMicronsPerVolt = 143.669999999999;
-        %yScanMicronsPerVolt = 136.973;
-        %zScanMicronsPerVolt = 10;
-        % adjusted for the new galvo (Chang 2/6/23)
-        xScanMicronsPerVolt =    10.989011;      % x [mu/V];
-        yScanMicronsPerVolt =    10.989011;      % y [mu/V];
+        xScanMicronsPerVolt = 143.669999999999;
+        yScanMicronsPerVolt = 136.973;
+        zScanMicronsPerVolt = 10;
         
     end %properties
     
@@ -69,13 +66,11 @@ classdef ConfigureImageScan < handle
             % these are a copy of the calibration parameters from the ConfigureImageScan class:
             obj.voltsPerMicronX = 1/obj.micronsPerVoltX;    % inverse
             obj.voltsPerMicronY = 1/obj.micronsPerVoltY;    % inverse
-            %obj.voltsPerMicronZ = 1/obj.micronsPerVoltZ;    % inverse
+            obj.voltsPerMicronZ = 1/obj.micronsPerVoltZ;    % inverse
             
             % restructuring to allow easy dimension read out
-            % obj.AnalogOutMinVoltages = [obj.xMinVolts, obj.yMinVolts, obj.zMinVolts];
-            % obj.AnalogOutMaxVoltages = [obj.xMaxVolts, obj.yMaxVolts, obj.zMaxVolts];
-            obj.AnalogOutMinVoltages = [obj.xMinVolts, obj.yMinVolts];
-            obj.AnalogOutMaxVoltages = [obj.xMaxVolts, obj.yMaxVolts];
+            obj.AnalogOutMinVoltages = [obj.xMinVolts, obj.yMinVolts, obj.zMinVolts];
+            obj.AnalogOutMaxVoltages = [obj.xMaxVolts, obj.yMaxVolts, obj.zMaxVolts];
             
         end
     end
