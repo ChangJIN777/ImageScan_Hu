@@ -13,17 +13,21 @@ classdef ConfigureImageScan < handle
         bHaveMicronixSerial = 1;
         
         
-        dataFolder  =    'C:\Users\lab\Documents\Data';
+        dataFolder  =    'C:\Users\user\Documents\Data';
         % modified by Chang 7/11/21 (subject to change)
 %         sequenceFolder = 'C:\Users\lab\Documents\MATLAB\ImageScan_v2019\PulseBlaster\PulseSequences\';
-        sequenceFolder = 'C:\Users\lab\Documents\MATLAB\ImageScan_in_development\ImageScan_v2019_1219setup\PulseBlaster\PulseSequences\';
+        sequenceFolder = 'C:\Users\user\Documents\Chang\ImageScan_in_development\ImageScan_v2019_1219setup\PulseBlaster\PulseSequences\';
         
         % confocal piezo calibration
 %         xScanMicronsPerVolt =   6;     % x [mu/V], old definition removed with v2019
 %         yScanMicronsPerVolt =   6;     % y [mu/V]
 %         zScanMicronsPerVolt =   12.5;  % z [mu/V]
-        micronsPerVoltX =    143.66999999999999;      % x [mu/V];
-        micronsPerVoltY =    136.97300000000001;      % y [mu/V];
+% old values --> updated for the new setup
+%         micronsPerVoltX =    143.66999999999999;      % x [mu/V];
+%         micronsPerVoltY =    136.97300000000001;      % y [mu/V];
+%         micronsPerVoltZ =   10;    % z [mu/V]; 
+        micronsPerVoltX =    10.9890;      % x [mu/V];
+        micronsPerVoltY =    10.9890;      % y [mu/V];
         micronsPerVoltZ =   10;    % z [mu/V]; 
         voltsPerMicronX;
         voltsPerMicronY;
@@ -50,8 +54,11 @@ classdef ConfigureImageScan < handle
         imageScanBGColorR = 228;
         imageScanBGColorG = 240;
         imageScanBGColorB = 230;
-        xScanMicronsPerVolt = 143.669999999999;
-        yScanMicronsPerVolt = 136.973;
+% old values --> updated for the new setup
+%         xScanMicronsPerVolt = 143.669999999999;
+%         yScanMicronsPerVolt = 136.973;
+        xScanMicronsPerVolt =    10.9890;      % x [mu/V];
+        yScanMicronsPerVolt =    10.9890;      % y [mu/V];
         zScanMicronsPerVolt = 10;
         
     end %properties
