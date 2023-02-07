@@ -108,12 +108,13 @@ classdef DAQManager < handle
             % add confocal analog output lines
             obj.DAQ.addAOLine(obj.confocalX, obj.defaultVoltage, obj.AnalogOutMinVoltages(obj.X), obj.AnalogOutMaxVoltages(obj.X));%X voltage
             obj.DAQ.addAOLine(obj.confocalY, obj.defaultVoltage, obj.AnalogOutMinVoltages(obj.Y), obj.AnalogOutMaxVoltages(obj.Y));%Y voltage
-            obj.DAQ.addAOLine(obj.confocalZ, obj.defaultVoltage, obj.AnalogOutMinVoltages(obj.Z), obj.AnalogOutMaxVoltages(obj.Z));%Z voltage
+            % we do not have the capability to do a z scan yet (Chang 2/6/23)
+            % obj.DAQ.addAOLine(obj.confocalZ, obj.defaultVoltage, obj.AnalogOutMinVoltages(obj.Z), obj.AnalogOutMaxVoltages(obj.Z));%Z voltage
             %analog in for corelated counter, voltage measurment
             
             % add counter voltage analog input line
             obj.DAQ.addAILine(obj.counterVoltageAI);
-            obj.DAQ.addAILine(obj.photoDiodeAI);
+            % obj.DAQ.addAILine(obj.photoDiodeAI);
 %             obj.DAQ.addAILine('PXI1Slot2/ai1');
 %             % set all output lines to default voltage upon opening ImageScan
             obj.DAQ.WriteAnalogOutAllLines();
