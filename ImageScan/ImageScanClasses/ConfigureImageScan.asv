@@ -22,12 +22,13 @@ classdef ConfigureImageScan < handle
 %         xScanMicronsPerVolt =   6;     % x [mu/V], old definition removed with v2019
 %         yScanMicronsPerVolt =   6;     % y [mu/V]
 %         zScanMicronsPerVolt =   12.5;  % z [mu/V]
-       % micronsPerVoltX =    143.66999999999999;      % x [mu/V];
-       % micronsPerVoltY =    136.97300000000001;      % y [mu/V];
-       % micronsPerVoltZ =   10;    % z [mu/V]; 
-       % adjusted for the new galvo (Chang 2/6/23)
-       micronsPerVoltX =    10.989011;      % x [mu/V];
-       micronsPerVoltY =    10.989011;      % y [mu/V];
+% old values --> updated for the new setup
+%         micronsPerVoltX =    143.66999999999999;      % x [mu/V];
+%         micronsPerVoltY =    136.97300000000001;      % y [mu/V];
+%         micronsPerVoltZ =   10;    % z [mu/V]; 
+        micronsPerVoltX =    10.9890;      % x [mu/V];
+        micronsPerVoltY =    10.9890;      % y [mu/V];
+        micronsPerVoltZ =   10;    % z [mu/V]; 
         voltsPerMicronX;
         voltsPerMicronY;
         voltsPerMicronZ;     
@@ -53,9 +54,21 @@ classdef ConfigureImageScan < handle
         imageScanBGColorR = 228;
         imageScanBGColorG = 240;
         imageScanBGColorB = 230;
-        xScanMicronsPerVolt = 143.669999999999;
-        yScanMicronsPerVolt = 136.973;
+<<<<<<< HEAD
+% old values --> updated for the new setup
+%         xScanMicronsPerVolt = 143.669999999999;
+%         yScanMicronsPerVolt = 136.973;
+        xScanMicronsPerVolt =    10.9890;      % x [mu/V];
+        yScanMicronsPerVolt =    10.9890;      % y [mu/V];
         zScanMicronsPerVolt = 10;
+=======
+        %xScanMicronsPerVolt = 143.669999999999;
+        %yScanMicronsPerVolt = 136.973;
+        %zScanMicronsPerVolt = 10;
+        % adjusted for the new galvo (Chang 2/6/23)
+        xScanMicronsPerVolt =    10.989011;      % x [mu/V];
+        yScanMicronsPerVolt =    10.989011;      % y [mu/V];
+>>>>>>> 76b8a82e973cd0dc5e52034438e7d2d74e15869e
         
     end %properties
     
@@ -66,11 +79,13 @@ classdef ConfigureImageScan < handle
             % these are a copy of the calibration parameters from the ConfigureImageScan class:
             obj.voltsPerMicronX = 1/obj.micronsPerVoltX;    % inverse
             obj.voltsPerMicronY = 1/obj.micronsPerVoltY;    % inverse
-            obj.voltsPerMicronZ = 1/obj.micronsPerVoltZ;    % inverse
+            %obj.voltsPerMicronZ = 1/obj.micronsPerVoltZ;    % inverse
             
             % restructuring to allow easy dimension read out
-            obj.AnalogOutMinVoltages = [obj.xMinVolts, obj.yMinVolts, obj.zMinVolts];
-            obj.AnalogOutMaxVoltages = [obj.xMaxVolts, obj.yMaxVolts, obj.zMaxVolts];
+            % obj.AnalogOutMinVoltages = [obj.xMinVolts, obj.yMinVolts, obj.zMinVolts];
+            % obj.AnalogOutMaxVoltages = [obj.xMaxVolts, obj.yMaxVolts, obj.zMaxVolts];
+            obj.AnalogOutMinVoltages = [obj.xMinVolts, obj.yMinVolts];
+            obj.AnalogOutMaxVoltages = [obj.xMaxVolts, obj.yMaxVolts];
             
         end
     end
